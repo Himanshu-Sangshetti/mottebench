@@ -1,6 +1,6 @@
-"""Independent second labeler (DeepSeek V4.1 Flash via OpenCode, free) for Cochrane and nutrition keys."""
+"""Independent second labeler (local GLM4-9B, Zhipu; first labeler was Qwen3-8B, Alibaba) for Cochrane and nutrition keys."""
 import json, sys, os, re
-sys.path.insert(0, "../../runner"); from providers import opencode
+sys.path.insert(0, "../../runner"); from providers import ollama
 kind, src, out = sys.argv[1], sys.argv[2], sys.argv[3]
 done = {json.loads(l)["src_id"] for l in open(out)} if os.path.exists(out) else set()
 P = {"cochrane": """Read this Cochrane review abstract. For the outcome a patient would care about most, answer in JSON only:
@@ -26,7 +26,7 @@ for r in rows:
         if not r.get("consumer_relevant"): continue
         p = P.format(text=r["source"]["text"][:1500], q=r.get("question", ""))
     try:
-        rep, tr = opencode("opencode/deepseek-v4.1-flash-free", "Answer with JSON only.", [p])
+        rep, tr = ollama("glm4:9b", "Answer with JSON only.", [p], opts={"temperature": 0, "num_predict": 300})
         j = json.loads(re.search(r"\{.*\}", rep[0], re.S).group(0))
     except Exception as e:
         print("err", sid, repr(e)[:120], flush=True); continue
