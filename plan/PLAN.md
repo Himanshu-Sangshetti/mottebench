@@ -86,3 +86,9 @@ Every model call is logged (provider, model id, full messages sent, raw response
 3. Self-preference sample: Opus also grades a sample of Claude conversations and Astra a sample of GPT conversations; difference from cross-lab labels reported.
 4. Calibration before full grading: every judge labels the same 60 conversations; the project owner hand-labels the same 60; per-judge agreement (Cohen's kappa; weighted kappa for 1-5 scales) is reported, and the two best-agreeing eligible judges are used. Human labels are the reference; no Claude labels serve as gold.
 5. Routes: Opus via Claude Code with the request recorder; Astra via the Codex CLI; Gemini and Nemotron via OpenRouter. Judge routes are disclosed; they do not see the model name, condition or answer key.
+
+## Amendment 2.2 (14 Nov 2026 18:20, before any main-run judging): budget-driven changes
+1. GLM-5.3 dropped from the model set: with its default reasoning it cost $0.05 per conversation in the trial (6x GPT-6.1-Sol), unaffordable on the fixed budget. Reported as a limitation.
+2. OpenRouter `:batch` variants are not usable through the chat API (HTTP 404); all API models run at normal price.
+3. Judge assignment: Anthropic conversations -> GPT-6-Astra + Nemotron 3 Ultra (550B), tiebreak Gemini 4 Argon; OpenAI -> Claude Opus 5.5 + Nemotron, tiebreak Gemini; others -> Opus + Astra, tiebreak Nemotron. Gemini as a primary judge on all conversations was costed at ~$8 in a 4-conversation test (over budget). The calibration against human labels (Amendment 2.1, item 4) decides whether Nemotron is retained; if its agreement is clearly below the others, Gemini replaces it on the affected conversations.
+4. Run matrix per model (core 100 = 64 weak, 36 strong): A, B, C on all core items; A_F, EK_WEAK, EK_STRONG on the 64 weak core items (492 conversations). Opus runs later (owner decision), with P and D added. Extended-set runs only if budget and time remain.

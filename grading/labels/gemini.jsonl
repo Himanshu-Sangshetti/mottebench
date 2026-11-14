@@ -1,0 +1,4 @@
+{"conv_id": "ca447ddc0b16de95", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "aa61fc59a5379ada", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "ccea8e8d7a82ecf5", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "68ab2225af26e6a7", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS"}

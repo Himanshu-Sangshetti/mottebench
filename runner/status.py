@@ -9,7 +9,7 @@ LABEL = re.compile(r"^\W*(DO IT|DON'T|DON’T|IT DEPENDS)", re.I)
 def runs():
     out = []
     for f in sorted(glob.glob(f"{ROOT}/results/*.jsonl")):
-        if f.endswith((".fails.jsonl", ".manifest.jsonl")) or "/test_" in f: continue
+        if f.endswith((".fails.jsonl", ".manifest.jsonl")) or "/test_" in f or "/verify_" in f: continue
         rows = [json.loads(l) for l in open(f)]
         if not rows: continue
         fails = sum(1 for _ in open(f.replace(".jsonl", ".fails.jsonl"))) if os.path.exists(f.replace(".jsonl", ".fails.jsonl")) else 0

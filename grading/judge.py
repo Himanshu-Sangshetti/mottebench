@@ -16,9 +16,9 @@ PANEL = {
 }
 # Per tested lab: two primary judges from other labs, then the tiebreaker. A judge never grades its own lab (except the
 # pre-registered self-preference sample, run separately with --self).
-ASSIGN = {"anthropic": ["astra", "gemini", "nemotron"], "openai": ["opus", "gemini", "nemotron"],
+ASSIGN = {"anthropic": ["astra", "nemotron", "gemini"], "openai": ["opus", "nemotron", "gemini"],
           "google": ["opus", "astra", "nemotron"]}
-DEFAULT_ASSIGN = ["opus", "astra", "gemini"]
+DEFAULT_ASSIGN = ["opus", "astra", "nemotron"]  # Amendment 2.2: budget; Gemini as tiebreaker only
 def call_judge(J, prompt, max_usd):
     model, _, route = PANEL[J]
     if route == "claude": return claude(model, "Answer with JSON only.", [prompt])
@@ -48,7 +48,7 @@ def parse(txt):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("files", nargs="+"); ap.add_argument("--max-usd", type=float, default=2.0)
-    ap.add_argument("--judges", default=",".join(PANEL)); ap.add_argument("--self", action="store_true", help="self-preference sample: judge only conversations from the judge's own lab"); ap.add_argument("--extra", action="store_true", help="also run the third eligible judge on every conversation")
+    ap.add_argument("--judges", default=",".join(PANEL)); ap.add_argument("--self", action="store_true", help="self-preference sample: judge only conversations from the judge's own lab"); ap.add_argument("--workers", type=int, default=1); ap.add_argument("--limit", type=int, default=0); ap.add_argument("--extra", action="store_true", help="also run the third eligible judge on every conversation")
     a = ap.parse_args(); os.makedirs(f"{ROOT}/grading/labels", exist_ok=True)
     rows = [json.loads(l) for f in a.files for l in open(f) if l.strip()]
     for J in a.judges.split(","):
@@ -59,17 +59,24 @@ if __name__ == "__main__":
             todo = [r for r in rows if r["conv_id"] not in done and lab_of(r["model"]) == PANEL[J][1]]
         else:
             todo = [r for r in rows if r["conv_id"] not in done and J in eligible(r["model"])[: (3 if a.extra else 2)]]
+        if a.limit: todo = todo[:a.limit]
         print(J, "to label:", len(todo), flush=True)
-        for i in range(0, len(todo), 4):
-            b = todo[i:i + 4]; prompt = HEAD + "\n\n".join(f"=== CONVERSATION id={k} ===\n{render(r)}" for k, r in enumerate(b))
+        import threading, concurrent.futures as cf; lock = threading.Lock(); stop = threading.Event()
+        def work(i):
+            if stop.is_set(): return
+            b = todo[i:i + 4]; prompt = HEAD + "\n\n".join(f"=== CONVERSATION id={k} ===\n{render(r)}" for k, r in enumerate(b)); arr = []
             for attempt in range(4):
                 try:
-                    rep, tr = call_judge(J, prompt, a.max_usd); arr = parse(rep[0]); break
-                except LimitHit as e: print("STOP:", e); sys.exit(3)
-                except Exception as e: print(J, "retry", attempt, repr(e)[:120], flush=True); time.sleep(15 * (attempt + 1)); arr = []
-            with open(out, "a") as f:
+                    rep, tr = call_judge(J, prompt, a.max_usd); arr = parse(rep[0])
+                    if arr: break
+                except LimitHit as e: print("STOP:", e, flush=True); stop.set(); return
+                except Exception as e: print(J, "retry", attempt, repr(e)[:120], flush=True); time.sleep(15 * (attempt + 1))
+            if not arr: print(J, "UNPARSED batch", [r["conv_id"] for r in b], flush=True); return
+            with lock, open(out, "a") as f:
                 for k, r in enumerate(b):
                     lab = next((x for x in arr if str(x.get("id")) == str(k)), None)
                     if lab: f.write(json.dumps(dict(conv_id=r["conv_id"], judge=J, **{x: lab.get(x) for x in FIELDS})) + "\n")
-            print(J, min(i + 4, len(todo)), "/", len(todo), flush=True)
-            if PANEL[J][0].endswith(":free"): time.sleep(3.5)  # free tier: stay under 20 requests/minute
+            print(J, "done batch", i // 4 + 1, "of", (len(todo) + 3) // 4, flush=True)
+            if PANEL[J][0].endswith(":free"): time.sleep(3.5)
+        with cf.ThreadPoolExecutor(a.workers) as ex: list(ex.map(work, range(0, len(todo), 4)))
+        if stop.is_set(): sys.exit(3)
