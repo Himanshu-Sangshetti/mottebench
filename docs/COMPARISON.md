@@ -13,7 +13,7 @@ Facts below are taken from each paper or repository (arXiv ids given). Where Mot
 | HealthBench (2505.08775) | 5,000 conversations, 48,562 rubric criteria by 262 physicians | multi-turn (fixed history) | none (realistic conversations) | physician rubrics per conversation | model grader vs rubric; only the final reply is graded |
 | MedEvidence (2505.22787) | 100 systematic reviews | 1 | none (studies given) | review conclusions | finds models overconfident, no skepticism toward low-quality evidence |
 | AA-Omniscience (2511.13029) | 6,000 questions, 42 topics | 1 | none | facts | penalises confident wrong answers |
-| **MotteBench** | 285 now, 300 planned (+ conditions x models) | 3 (live, model writes every turn) | **nothing: a neutral evidence question** | **official evidence-strength ratings (USPSTF, Cochrane GRADE, DGAC, WWC)** | 2 cross-lab LLM judges + tiebreak, validated on 300 human gold labels |
+| **MotteBench** | 300 (x up to 9 conditions x models) | 3 live turns (model writes every turn); 6-turn natural variant | **nothing: a neutral evidence question** | **official evidence-strength ratings (USPSTF grades, Cochrane GRADE certainty, WWC ratings)** | 2 cross-lab LLM judges + tiebreak, validated on 300 human gold labels |
 
 ## What is new here
 1. **No pressure.** Every multi-turn benchmark above makes the model change position by pushing it. Here nobody pushes. The model is asked a neutral information question and later a decision question. The inconsistency, if present, is the model's own.
@@ -26,10 +26,10 @@ Facts below are taken from each paper or repository (arXiv ids given). Where Mot
 | Gap | Them | Us | Mitigation |
 |---|---|---|---|
 | Scale | 1,000-6,000 items | 300 items | Items x up to 9 conditions per model, 5 phrasings of each follow-up; CIs by cluster bootstrap; power checked in plan |
-| Item authorship | human-written (MASK), physician-written (HealthBench) | questions drafted by a local model from official texts | every question read by hand; answer key never model-set; Cochrane/nutrition keys need two independent labelers to agree |
+| Item authorship | human-written (MASK), physician-written (HealthBench) | questions written by the authors from each official record's own fields (WWC by fixed template) | answer key always copied from the official record; every key re-verified by an independent script against raw official data (300/300) |
 | Expert annotation | 262 physicians (HealthBench) | 1 author gold (300) + 1 second annotator (50) | report human-human and judge-human agreement; rubric has worked examples |
 | Release | Hugging Face dataset, private hold-out (MASK) | GitHub only | dataset card + HF release planned after the sprint; hold-out not possible at this size |
-| Domain breadth | many | 4 domains, consumer decisions | stated as scope |
+| Domain breadth | many | 3 sources: preventive health, treatments, education | stated as scope |
 
 ## What a complete benchmark release usually includes, and our status
 | Part | Typical (MASK / SYCON / simple-evals) | MotteBench |
