@@ -11,3 +11,5 @@ traces/verify_*
 results/supervise_*.log
 data/sources/cochrane/raw.json
 plan/HARNESS_NOTES.md
+results/trial__*
+traces/trial__*

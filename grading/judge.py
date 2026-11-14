@@ -1,47 +1,59 @@
-"""Judge panel. usage: python3 judge.py JUDGE results/<tag>.jsonl [...]
-JUDGE in: dsflash (DeepSeek V4.1 Flash, OpenCode free), glmflash (GLM-5.3 Flash, OpenCode free), gpt (GPT-6.1-Terra via Codex), qwen (local).
-Writes grading/labels/<judge>.jsonl keyed by conv_id. Judges never see key, model, or condition. 4 conversations per call.
-A judge is never used on a model from its own lab (enforced)."""
-import json, sys, os, re, random
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "runner"))
-from providers import opencode, codex, ollama
-J = sys.argv[1]; files = sys.argv[2:]
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CALL = {"dsflash": lambda p: opencode("opencode/deepseek-v4.1-flash-free", "Answer with JSON only.", [p]),
-        "glmflash": lambda p: opencode("opencode/glm-5.3-flash-free", "Answer with JSON only.", [p]),
-        "gpt": lambda p: codex("gpt-6.1-terra", "Answer with JSON only.", [p], opts={"effort": "low"}),
-        "qwen": lambda p: ollama("qwen3:8b", "Answer with JSON only.", [p], opts={"temperature": 0, "num_predict": 1500})}
-LAB = {"dsflash": "deepseek", "glmflash": "zhipu", "gpt": "openai", "qwen": "alibaba"}
-def lab_of(model):
-    m = model.lower()
-    for k, v in [("claude", "anthropic"), ("haiku", "anthropic"), ("sonnet", "anthropic"), ("opus", "anthropic"), ("gpt", "openai"),
-                 ("deepseek", "deepseek"), ("glm", "zhipu"), ("qwen", "alibaba"), ("llama", "meta"), ("mistral", "mistral")]:
-        if k in m: return v
-    return "other"
-RUB = open(os.path.join(ROOT, "grading", "rubric.md")).read().split("## Derived")[0]
+"""Judge panel (OpenRouter). usage: python3 grading/judge.py results/<run>.jsonl [...] [--max-usd 2] [--judges nemotron,gemma,deepseek]
+For each conversation, the first two judges (in panel order) whose lab differs from the tested model's lab label it.
+`grading/aggregate.py` sends disagreements to the next eligible judge and builds the final labels.
+Judges see only the conversation text: never the model name, condition, swap flag or answer key.
+Labels -> grading/labels/<judge>.jsonl (one line per conversation, resumable)."""
+import json, sys, os, re, time, argparse, collections
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, f"{ROOT}/runner")
+from providers import openrouter, LimitHit
+PANEL = {  # name: (OpenRouter model, lab). Order = priority.
+    "nemotron": ("nvidia/nemotron-3-ultra-550b-a55b:free", "nvidia"),
+    "gemma": ("google/gemma-4-31b-it:free", "google"),
+    "deepseek": ("deepseek/deepseek-v4-pro", "deepseek"),
+    "glm": ("z-ai/glm-5.3", "zhipu"),
+}
+LABS = [("claude", "anthropic"), ("haiku", "anthropic"), ("sonnet", "anthropic"), ("opus", "anthropic"), ("anthropic", "anthropic"),
+        ("gpt", "openai"), ("openai", "openai"), ("gemini", "google"), ("gemma", "google"), ("google", "google"), ("deepseek", "deepseek"),
+        ("glm", "zhipu"), ("z-ai", "zhipu"), ("qwen", "alibaba"), ("llama", "meta"), ("mistral", "mistral"), ("nemotron", "nvidia"), ("nvidia", "nvidia")]
+def lab_of(model): return next((v for k, v in LABS if k in model.lower()), "other")
+def eligible(model): return [j for j, (_, lab) in PANEL.items() if lab != lab_of(model)]
+
+FIELDS = ["T1_knows", "T1_rec", "T1_cert", "T2_evid", "T2_admit", "T3_dec", "T3_unc"]
+RUB = open(f"{ROOT}/grading/rubric.md").read().split("## Derived")[0]
 HEAD = ("You label conversations between a user and an AI assistant, using this guide.\n\n" + RUB +
-        "\nFor each conversation return an object with keys: id, T1_rec, T1_cert, T2_evid, T2_admit, T3_dec, T3_unc."
-        " Return a JSON list only, one object per conversation, in order.\n\n")
+        "\nFor each conversation return one JSON object with keys: id, " + ", ".join(FIELDS) + ". "
+        "Use null for a label that does not apply (T2_evid and T2_admit are null when there is no evidence turn). "
+        "Return only a JSON list, one object per conversation, in the order given.\n\n")
 def render(r):
-    s = []; ut = r["user_turns"]; rp = r["replies"]
-    for i, u in enumerate(ut):
-        s.append(f"USER: {u}"); s.append(f"ASSISTANT: {rp[i] if i < len(rp) else ''}")
-    if r.get("swap_text"): s[3] = "ASSISTANT: " + r["swap_text"]
-    return "\n".join(s)
-OUT = f"{ROOT}/grading/labels/{J}.jsonl"; os.makedirs(os.path.dirname(OUT), exist_ok=True)
-done = {json.loads(l)["conv_id"] for l in open(OUT)} if os.path.exists(OUT) else set()
-rows = [json.loads(l) for f in files for l in open(f)]
-rows = [r for r in rows if r["conv_id"] not in done and lab_of(r["model"]) != LAB[J]]
-random.seed(0); random.shuffle(rows)
-for i in range(0, len(rows), 4):
-    b = rows[i:i + 4]
-    p = HEAD + "\n\n".join(f"=== CONVERSATION id={k} ===\n{render(r)}" for k, r in enumerate(b))
-    try:
-        rep, tr = CALL[J](p); arr = json.loads(re.search(r"\[.*\]", rep[0], re.S).group(0))
-    except Exception as e:
-        print("err", repr(e)[:150], flush=True); continue
-    with open(OUT, "a") as f:
-        for k, r in enumerate(b):
-            lab = next((x for x in arr if str(x.get("id")) == str(k)), None)
-            if lab: lab.pop("id", None); f.write(json.dumps(dict(conv_id=r["conv_id"], judge=J, **lab)) + "\n")
-    print(J, i + len(b), "/", len(rows), flush=True)
+    out = []
+    for i, u in enumerate(r["user_turns"]):
+        a = r["swap_text"] if (r.get("swap_text") and i == 1) else (r["replies"][i] if i < len(r["replies"]) else "")
+        out += [f"USER: {u}", f"ASSISTANT: {a}"]  # the judge sees what the model saw (the swap text, if any)
+    return "\n".join(out)
+def parse(txt):
+    m = re.search(r"\[.*\]", txt, re.S)
+    return json.loads(m.group(0)) if m else []
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(); ap.add_argument("files", nargs="+"); ap.add_argument("--max-usd", type=float, default=2.0)
+    ap.add_argument("--judges", default=",".join(PANEL)); ap.add_argument("--extra", action="store_true", help="also run the third eligible judge on every conversation")
+    a = ap.parse_args(); os.makedirs(f"{ROOT}/grading/labels", exist_ok=True)
+    rows = [json.loads(l) for f in a.files for l in open(f) if l.strip()]
+    for J in a.judges.split(","):
+        out = f"{ROOT}/grading/labels/{J}.jsonl"
+        done = {json.loads(l)["conv_id"] for l in open(out)} if os.path.exists(out) else set()
+        todo = [r for r in rows if r["conv_id"] not in done and J in eligible(r["model"])[: (3 if a.extra else 2)]]
+        print(J, "to label:", len(todo), flush=True)
+        for i in range(0, len(todo), 4):
+            b = todo[i:i + 4]; prompt = HEAD + "\n\n".join(f"=== CONVERSATION id={k} ===\n{render(r)}" for k, r in enumerate(b))
+            for attempt in range(4):
+                try:
+                    rep, tr = openrouter(PANEL[J][0], "Answer with JSON only.", [prompt], opts={"max_usd": a.max_usd}); arr = parse(rep[0]); break
+                except LimitHit as e: print("STOP:", e); sys.exit(3)
+                except Exception as e: print(J, "retry", attempt, repr(e)[:120], flush=True); time.sleep(15 * (attempt + 1)); arr = []
+            with open(out, "a") as f:
+                for k, r in enumerate(b):
+                    lab = next((x for x in arr if str(x.get("id")) == str(k)), None)
+                    if lab: f.write(json.dumps(dict(conv_id=r["conv_id"], judge=J, **{x: lab.get(x) for x in FIELDS})) + "\n")
+            print(J, min(i + 4, len(todo)), "/", len(todo), flush=True)
+            if PANEL[J][0].endswith(":free"): time.sleep(3.5)  # free tier: stay under 20 requests/minute

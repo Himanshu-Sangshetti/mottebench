@@ -115,14 +115,29 @@ def _spend(model, usd, cap):
         json.dump(d, open(SPEND, "w"))
     if cap and d["_total"] >= float(cap): raise LimitHit(f"spend cap {cap} reached")
 
+# Fixed serving host per model (pre-registered, Amendment 2.0): the model's own lab where OpenRouter offers it;
+# otherwise a fixed fp8 host. Compressed (fp4) hosts are never used. No fallbacks to other hosts.
+OR_HOSTS = {
+    "openai/": ["OpenAI"], "anthropic/": ["Anthropic"], "google/": ["Google", "Google AI Studio"],
+    "z-ai/glm-5.3": ["Z.AI"], "deepseek/deepseek-v4-pro": ["DeepInfra", "SiliconFlow"],
+    "nvidia/": ["Nvidia"],
+}
+def _or_key():
+    k = os.environ.get("OPENROUTER_API_KEY")
+    if not k and os.path.exists(os.path.expanduser("~/.openrouter_env")):
+        for line in open(os.path.expanduser("~/.openrouter_env")):
+            if line.strip().startswith("OPENROUTER_API_KEY="): k = line.split("=", 1)[1].strip().strip("'\"")
+    return k
+
 def openrouter(model, system, user_turns, swap=None, opts=None):
-    key = os.environ.get("OPENROUTER_API_KEY")
+    key = _or_key()
     if not key: raise RuntimeError("no OPENROUTER_API_KEY")
     msgs = [{"role": "system", "content": system}]; replies = []; calls = []
     for i, u in enumerate(user_turns):
         msgs.append({"role": "user", "content": u})
         body = {"model": model, "messages": msgs, "max_tokens": 32000, "usage": {"include": True}}  # temperature: provider default
-        if (opts or {}).get("provider_order"): body["provider"] = {"order": opts["provider_order"], "allow_fallbacks": False}
+        hosts = (opts or {}).get("provider_order") or next((v for k, v in OR_HOSTS.items() if model.startswith(k)), None)
+        body["provider"] = {"quantizations": ["fp8", "bf16", "fp16", "fp32", "unknown"], "allow_fallbacks": False, **({"order": hosts} if hosts else {})}
         req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=json.dumps(body).encode(),
               headers={"Content-Type": "application/json", "Authorization": "Bearer " + key})
         t0 = time.time(); r = json.loads(urllib.request.urlopen(req, timeout=900).read())
