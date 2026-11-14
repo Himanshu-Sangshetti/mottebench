@@ -1,0 +1,13 @@
+{"main_outcome": "low birthweight", "direction": "no_benefit", "certainty": "moderate", "src_id": "43012372"}
+{"main_outcome": "fatigue", "direction": "benefit", "certainty": "low", "src_id": "42929381"}
+{"main_outcome": "all-cause mortality", "direction": "benefit", "certainty": "moderate", "src_id": "42754260"}
+{"main_outcome": "vitamin D deficiency", "direction": "benefit", "certainty": "moderate", "src_id": "42746921"}
+{"main_outcome": "cerebral palsy", "direction": "benefit", "certainty": "high", "src_id": "42689525"}
+{"main_outcome": "cardiorespiratory fitness (CRF)", "direction": "benefit", "certainty": "low", "src_id": "42663176"}
+{"main_outcome": "Deferral due to low haemoglobin", "direction": "benefit", "certainty": "moderate", "src_id": "42240175"}
+{"main_outcome": "cognitive function (e.g. attention)", "direction": "no_benefit", "certainty": "low", "src_id": "42227307"}
+{"main_outcome": "Proportion of children making ARI-related healthcare visits", "direction": "benefit", "certainty": "low", "src_id": "42037591"}
+{"main_outcome": "composite outcome of mortality or neurodevelopmental disability assessed at 18 months of age or over", "direction": "unclear", "certainty": "very_low", "src_id": "41925053"}
+{"main_outcome": "colorectal cancer mortality", "direction": "unclear", "certainty": "low", "src_id": "41919561"}
+{"main_outcome": "colorectal cancer incidence", "direction": "no_benefit", "certainty": "moderate", "src_id": "41740630"}
+{"main_outcome": "shoulder disability (validated self-reported scores)", "direction": "unclear", "certainty": "very_low", "src_id": "41705637"}

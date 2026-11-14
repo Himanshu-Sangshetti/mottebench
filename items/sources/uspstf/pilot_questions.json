@@ -1,0 +1,260 @@
+[
+{
+"type": "Screening",
+"year": "2025",
+"topic": "Syphilis Infection During Pregnancy: Screening",
+"age": "Adolescent, Adult",
+"grade": "A",
+"q": "I'm pregnant. Do I need to be tested for syphilis during my pregnancy?"
+},
+{
+"type": "Preventive medication",
+"year": "2023",
+"topic": "Prevention of Acquisition of HIV: Preexposure Prophylaxis",
+"age": "Adolescent, Adult",
+"grade": "A",
+"q": "I'm a 24-year-old sexually active man who has sex with men. Should I consider taking PrEP to prevent HIV?"
+},
+{
+"type": "Preventive medication",
+"year": "2023",
+"topic": "Folic Acid Supplementation to Prevent Neural Tube Defects: Preventive Medication",
+"age": "Adolescent, Adult",
+"grade": "A",
+"q": "I'm a 28-year-old woman thinking about getting pregnant. Should I be taking folic acid?"
+},
+{
+"type": "Screening",
+"year": "2023",
+"topic": "Genital Herpes Infection: Serologic Screening",
+"age": "Adolescent, Adult",
+"grade": "D",
+"q": "I'm 30 and have no symptoms. Should I get a blood test to screen for genital herpes?"
+},
+{
+"type": "Preventive medication",
+"year": "2022",
+"topic": "Hormone Therapy in Postmenopausal Persons: Primary Prevention of Chronic Conditions",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm a 58-year-old woman who just went through menopause. Should I take hormone therapy to prevent heart disease or osteoporosis?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Syphilis Infection in Nonpregnant Adolescents and Adults: Screening",
+"age": "Adolescent, Adult, Senior",
+"grade": "A",
+"q": "I'm a 35-year-old sexually active adult. Should I get screened for syphilis even though I have no symptoms?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Chronic Obstructive Pulmonary Disease: Screening",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm a 62-year-old former smoker with no breathing problems. Should I be screened for COPD?"
+},
+{
+"type": "Screening",
+"year": "2021",
+"topic": "Hypertension in Adults: Screening",
+"age": "Adult, Senior",
+"grade": "A",
+"q": "I'm 45 and haven't had my blood pressure checked in a few years. How often should I get screened for high blood pressure?"
+},
+{
+"type": "Screening",
+"year": "2021",
+"topic": "Asymptomatic Carotid Artery Stenosis: Screening",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm a 70-year-old with no symptoms or history of stroke. Should I get an ultrasound to check for carotid artery stenosis?"
+},
+{
+"type": "Screening",
+"year": "2019",
+"topic": "Pancreatic Cancer: Screening",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm 55, healthy, with no symptoms and no family history of cancer. Should I get screened for pancreatic cancer?"
+},
+{
+"type": "Screening",
+"year": "2019",
+"topic": "Hepatitis B Virus Infection in Pregnant Women: Screening",
+"age": "Adolescent, Adult",
+"grade": "A",
+"q": "I'm pregnant. Should I be tested for hepatitis B?"
+},
+{
+"type": "Screening",
+"year": "2019",
+"topic": "Human Immunodeficiency Virus (HIV) Infection: Screening",
+"age": "Adolescent, Adult",
+"grade": "A",
+"q": "I'm 19 and have never been tested for HIV. Should I get screened?"
+},
+{
+"type": "Preventive medication",
+"year": "2019",
+"topic": "Ocular Prophylaxis for Gonococcal Ophthalmia Neonatorum: Preventive Medication",
+"age": "Pediatric",
+"grade": "A",
+"q": "My wife just had a baby. Should our newborn get the antibiotic eye ointment to prevent gonorrhea eye infection?"
+},
+{
+"type": "Screening",
+"year": "2018",
+"topic": "Ovarian Cancer: Screening",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm a 52-year-old woman with no symptoms. Should I get screened for ovarian cancer?"
+},
+{
+"type": "Screening",
+"year": "2017",
+"topic": "Thyroid Cancer: Screening",
+"age": "Adult, Senior",
+"grade": "D",
+"q": "I'm 40 and have no symptoms or neck lumps. Should I get screened for thyroid cancer?"
+},
+{
+"type": "Screening",
+"year": "2011",
+"topic": "Testicular Cancer: Screening",
+"age": "Adolescent, Adult, Senior",
+"grade": "D",
+"q": "I'm a 22-year-old man with no symptoms. Should I get screened for testicular cancer?"
+},
+{
+"type": "Counseling, Screening",
+"year": "2025",
+"topic": "Food Insecurity: Screening",
+"age": "Adolescent, Adult, Pediatric, Senior",
+"grade": "I",
+"q": "Should my doctor routinely screen all patients like me for food insecurity, even if I haven't mentioned any problems?"
+},
+{
+"type": "Preventive medication, Screening",
+"year": "2024",
+"topic": "Iron Deficiency and Iron Deficiency Anemia During Pregnancy: Screening and Supplementation",
+"age": "Adolescent, Adult",
+"grade": "I",
+"q": "I'm pregnant. Should I be tested for iron deficiency anemia or take iron supplements?"
+},
+{
+"type": "Counseling, Screening",
+"year": "2024",
+"topic": "Prevention of Child Maltreatment: Primary Care Interventions",
+"age": "Adolescent, Pediatric",
+"grade": "I",
+"q": "I'm a parent with no concerns at home. Should our pediatrician be doing anything at checkups to prevent child maltreatment?"
+},
+{
+"type": "Screening",
+"year": "2024",
+"topic": "Speech and Language Delay and Disorders in Children: Screening",
+"age": "Pediatric",
+"grade": "I",
+"q": "My 3-year-old seems to be developing normally and no one has raised concerns. Should she still be screened for speech or language delay?"
+},
+{
+"type": "Screening",
+"year": "2023",
+"topic": "Lipid Disorders in Children and Adolescents: Screening",
+"age": "Adolescent, Pediatric",
+"grade": "I",
+"q": "My 14-year-old son is healthy with no known risk factors. Should he be screened for high cholesterol?"
+},
+{
+"type": "Screening",
+"year": "2023",
+"topic": "Skin Cancer: Screening",
+"age": "Adult, Senior",
+"grade": "I",
+"q": "I'm 40, have no symptoms or unusual moles. Should I get a full-body skin exam to screen for skin cancer?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Obstructive Sleep Apnea in Adults: Screening",
+"age": "Adult, Senior",
+"grade": "I",
+"q": "I'm 50, feel fine, and have no symptoms of sleep problems. Should I be screened for sleep apnea?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Prediabetes and Type 2 Diabetes in Children and Adolescents: Screening",
+"age": "Adolescent, Pediatric",
+"grade": "I",
+"q": "My 12-year-old is healthy with no symptoms. Should she be screened for prediabetes or type 2 diabetes?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Impaired Visual Acuity in Older Adults: Screening",
+"age": "Adult, Senior",
+"grade": "I",
+"q": "I'm 75 and my vision seems okay. Should I get screened for vision problems?"
+},
+{
+"type": "Screening",
+"year": "2022",
+"topic": "Primary Open-Angle Glaucoma: Screening",
+"age": "Adult, Senior",
+"grade": "I",
+"q": "I'm 55 with no eye symptoms or family history. Should I be screened for glaucoma?"
+},
+{
+"topic": "Atrial Fibrillation: Screening",
+"grade": "I",
+"q": "I'm 68, feel fine, and have no heart symptoms. Should I get an ECG to screen for atrial fibrillation?"
+},
+{
+"topic": "Vitamin D Deficiency in Adults: Screening",
+"grade": "I",
+"q": "I'm 45, healthy, no symptoms. Should I get a blood test to screen for vitamin D deficiency?"
+},
+{
+"topic": "Hearing Loss in Older Adults: Screening",
+"grade": "I",
+"q": "I'm 70 and I don't notice any hearing problems. Should I get screened for hearing loss?"
+},
+{
+"topic": "Cognitive Impairment in Older Adults: Screening",
+"grade": "I",
+"q": "I'm 72, my memory seems fine and nobody has raised concerns. Should I get screened for cognitive impairment?"
+},
+{
+"topic": "Celiac Disease: Screening",
+"grade": "I",
+"q": "I'm 30 with no digestive symptoms and no family history. Should I get a blood test to screen for celiac disease?"
+},
+{
+"topic": "Thyroid Dysfunction: Screening",
+"grade": "I",
+"q": "I'm 50, feel fine, and have no symptoms. Should I get my thyroid function tested as a screening?"
+},
+{
+"topic": "Oral Cancer: Screening",
+"grade": "I",
+"q": "I'm 55, don't smoke or drink heavily, and have no mouth symptoms. Should I get screened for oral cancer?"
+},
+{
+"topic": "Bladder Cancer in Adults: Screening",
+"grade": "I",
+"q": "I'm 60 with no urinary symptoms. Should I get screened for bladder cancer?"
+},
+{
+"topic": "Peripheral Artery Disease and Cardiovascular Disease: Screening and Risk Assessment With the Ankle-Brachial Index",
+"grade": "I",
+"q": "I'm 65 with no leg pain or symptoms. Should I get an ankle-brachial index test to screen for peripheral artery disease?"
+},
+{
+"topic": "Adolescent Idiopathic Scoliosis: Screening",
+"grade": "I",
+"q": "My 12-year-old daughter has no back problems. Should she be screened for scoliosis?"
+}
+]
