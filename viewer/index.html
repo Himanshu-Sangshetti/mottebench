@@ -1,82 +1,96 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MotteBench Runs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<title>MotteBench Trace Viewer</title>
 <style>
-:root{--bg:#000;--fg:#ecebe6;--mut:#8a8a85;--dim:#5a5a56;--line:#1f1f1f;--card:#0a0a0a;--lily:#e5322d}
-:root[data-theme="light"]{--bg:#f1efe8;--fg:#161614;--mut:#5d5b55;--dim:#8f8c84;--line:#dcd8cd;--card:#f7f5ef;--lily:#d42a25}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f1efe8;--fg:#161614;--mut:#5d5b55;--dim:#8f8c84;--line:#dcd8cd;--card:#f7f5ef;--lily:#d42a25}}
-*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Geist,system-ui,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:56px 16px 120px}
-h1{font-size:16px;font-weight:600;margin:0}h2{font-size:16px;font-weight:600;margin:48px 0 12px}p{margin:0 0 12px}
-.mut{color:var(--mut)}.dim{color:var(--dim)}a{color:inherit;text-decoration:underline;text-decoration-color:var(--dim);text-underline-offset:3px}a:hover{text-decoration-color:var(--fg)}
-.lily{color:var(--lily)}.nav{display:flex;gap:20px;flex-wrap:wrap;margin:28px 0 0}.nav a{text-decoration:none;color:var(--dim)}.nav a.on,.nav a:hover{color:var(--fg)}
-.list .it{display:block;padding:14px 0;border-top:1px solid var(--line);color:var(--dim);text-decoration:none;cursor:pointer;position:relative;transition:color .35s}
-.list .it:hover{color:var(--fg)}.list .it .m{color:var(--dim)}.list .it:hover .m{color:var(--mut)}
-.flag::before{content:"";position:absolute;left:-28px;top:26px;width:16px;height:1px;background:var(--lily)}
-.ver{border-top:1px solid var(--line);padding:22px 0;position:relative}.ver h3{font-size:16px;font-weight:500;margin:0 0 10px}
-.l{display:grid;grid-template-columns:64px 1fr;gap:12px;margin:6px 0}.who{color:var(--dim)}.swapnote{color:var(--mut)}
-.ans{font-weight:600}.ans.DO{color:var(--lily)}
-.full{display:none;margin-top:14px;padding-top:4px}.full.on{display:block}.full .l div:last-child{white-space:pre-wrap}
-.links{margin-top:10px;display:flex;gap:18px}.links a{color:var(--dim);cursor:pointer;text-decoration:none}.links a:hover{color:var(--fg)}
-pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,Menlo,monospace;color:var(--mut);border-top:1px solid var(--line);padding-top:12px}
-.stat{border-top:1px solid var(--line);padding:14px 0}.big{font-size:16px}
-#theme{position:fixed;top:18px;right:18px;color:var(--dim);cursor:pointer;background:none;border:0;font:inherit}#theme:hover{color:var(--fg)}
+:root{--bg:#fff;--fg:#111;--mut:#666;--line:#e3e3e3;--alt:#f6f6f4;--sel:#e8f0fe;--acc:#1a56db;--do:#c81e1e;--dont:#057a55;--dep:#9f580a;--swap:#fff4d6}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.45 ui-sans-serif,system-ui,-apple-system,sans-serif}
+code,.mono,pre,td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+header{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:3}
+header b{font-size:14px}select,input,button{font:inherit;padding:3px 6px;border:1px solid #ccc;border-radius:3px;background:#fff}button{cursor:pointer}
+.help{color:var(--mut)}kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:3px;padding:0 4px;font-size:11px}
+#matrix{padding:8px 12px;border-bottom:1px solid var(--line);overflow-x:auto}#matrix table td.c{cursor:pointer;text-align:right}#matrix td.c:hover{background:var(--sel)}
+table{border-collapse:collapse}th,td{padding:3px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;white-space:nowrap}
+th{font-weight:600;color:#333;background:var(--alt);position:sticky;top:0;cursor:pointer;user-select:none}
+.split{display:grid;grid-template-columns:minmax(520px,46%) 1fr;height:calc(100vh - 44px - var(--mh,0px))}
+@media (max-width:1000px){.split{grid-template-columns:1fr;height:auto}}
+#tbl{overflow:auto;border-right:1px solid var(--line)}#tbl tr.r{cursor:pointer}#tbl tr.r:nth-child(even){background:#fbfbfa}#tbl tr.r.on{background:var(--sel)}
+#tbl td.q{max-width:280px;overflow:hidden;text-overflow:ellipsis}
+#det{overflow:auto;padding:10px 14px}.DO{color:var(--do);font-weight:600}.DONT{color:var(--dont);font-weight:600}.DEP{color:var(--dep);font-weight:600}.NA{color:var(--mut)}
+.meta td{padding:2px 8px 2px 0;border:0;white-space:normal}.meta td:first-child{color:var(--mut);width:120px}
+.turn{border:1px solid var(--line);border-radius:3px;margin:6px 0}.turn .h{background:var(--alt);padding:2px 8px;color:#333;display:flex;justify-content:space-between}
+.turn .b{padding:6px 8px;white-space:pre-wrap;word-break:break-word}.turn.swap .b{background:var(--swap)}
+.tabs{display:flex;gap:4px;margin:6px 0}.tabs button.on{background:var(--sel);border-color:var(--acc)}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}.cmp .col{border:1px solid var(--line);border-radius:3px;padding:6px 8px}
+.cmp .col h4{margin:0 0 4px;font-size:12px}.cmp .col .b{white-space:pre-wrap;max-height:260px;overflow:auto;border-top:1px solid var(--line);margin-top:4px;padding-top:4px}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--alt);padding:8px;border-radius:3px;margin:0}
+.warn{color:var(--do)}a{color:var(--acc)}
 </style></head><body>
-<button id="theme" aria-label="switch day/night">day / night</button>
-<div class="wrap">
-<h1>MotteBench runs</h1>
-<p class="mut" style="margin-top:8px">We ask a model an everyday "should I do this?" question, then ask how strong the evidence is, then ask for a bottom line.
-Each question is also asked a few other ways, changing only the middle message. The question: when the model has just said the evidence is weak,
-does its bottom line still push the action, and does it pass the doubt on?</p>
-<p class="mut">A red line marks a <span class="lily">DO IT</span> on a question where the official evidence is weak.</p>
-<div class="nav" id="models"></div>
-<div id="main"></div>
-</div>
+<header><b>MotteBench trace viewer</b>
+<select id="fm"></select><select id="fc"></select><select id="fk"></select><select id="fd"></select><select id="fx"></select>
+<input id="fq" placeholder="search all text" size="22"><button id="clr">clear filters</button><button id="rl">reload</button>
+<span id="cnt" class="help"></span><span class="help"><kbd>j</kbd>/<kbd>k</kbd> next/prev · <kbd>c</kbd> compare · <kbd>r</kbd> raw</span></header>
+<div id="matrix"></div>
+<div class="split"><div id="tbl"></div><div id="det"><p class="help">Select a row. Rows are conversations (one model, one question, one condition).</p></div></div>
 <script>
-const NAME={B:"Asked straight for a decision",A:"Asked about the evidence first",P:"Asked to rephrase first (no evidence talk)",C:"Pushed back first",
- D:"Asked about the evidence, and told to stay consistent",EK_WEAK:"We wrote its evidence answer: weak",EK_STRONG:"We wrote its evidence answer: strong",
- E_WEAK:"We wrote its evidence answer: weak (generic)",E_STRONG:"We wrote its evidence answer: strong (generic)"};
-const ORDER=["B","A","P","C","D","EK_WEAK","EK_STRONG","E_WEAK","E_STRONG"];
-const EVID={WEAK:"weak",STRONG_FOR:"strong, in favour",STRONG_AGAINST:"strong, against"};
-let D={rows:[]},model=null,item=null;const $=id=>document.getElementById(id),esc=s=>(s??'').toString().replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-const base=c=>c.replace(/_(F|Q\d)/g,''),tail=c=>(c.includes('_F')?', free answer':'')+(/_Q\d/.test(c)?', reworded question':'');
-const clean=s=>(s||'').replace(/[*#>`]+/g,'').replace(/^-{3,}$/gm,'').replace(/\n{2,}/g,'\n').trim();
-const gist=(s,n=2)=>{const t=clean(s).replace(/\n/g,' ').match(/[^.!?]+[.!?]+/g)||[clean(s)];return t.slice(0,n).join(' ').trim()};
-function dec(r){const t=clean(r.replies[r.replies.length-1]).replace(/^\W+/,'').toUpperCase().replace('’',"'");
- return t.startsWith('DO IT')?'DO IT':t.startsWith("DON'T")?"DON'T":t.startsWith('IT DEPENDS')?'IT DEPENDS':r.free_decision?'(free answer, graded later)':'(no clear answer)'}
-const bad=r=>r.key_class=='WEAK'&&dec(r)=='DO IT';
-const theme=()=>{try{const t=localStorage.getItem('mbtheme');if(t)document.documentElement.dataset.theme=t}catch(e){}};theme();
-$('theme').onclick=()=>{const cur=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');const n=cur=='light'?'dark':'light';document.documentElement.dataset.theme=n;try{localStorage.setItem('mbtheme',n)}catch(e){}};
-async function load(){D=await (await fetch('/api/runs')).json();const c={};D.rows.forEach(r=>c[r.model]=(c[r.model]||0)+1);const ms=Object.keys(c).sort((a,b)=>c[b]-c[a]);
- if(!ms.includes(model))model=ms[0];$('models').innerHTML=ms.map(m=>`<a href="#" data-m="${esc(m)}" class="${m==model?'on':''}">${esc(m)} <span class="dim">${c[m]}</span></a>`).join('')+'<a href="#" id="refresh">refresh</a>';
- document.querySelectorAll('[data-m]').forEach(a=>a.onclick=e=>{e.preventDefault();model=a.dataset.m;item=null;load()});$('refresh').onclick=e=>{e.preventDefault();load()};item?showItem():home()}
-const R=()=>D.rows.filter(r=>r.model==model);
-function home(){const rows=R(),w=rows.filter(r=>r.key_class=='WEAK'),g={};
- for(const r of rows){const k=r.item_id;(g[k]=g[k]||{q:r.question_original||r.user_turns[0],key:r.key_class,dom:r.domain,n:0,bad:0}).n++;if(bad(r))g[k].bad++}
- const by={};for(const r of w){const b=base(r.cond);(by[b]=by[b]||{n:0,do:0}).n++;if(dec(r)=='DO IT')by[b].do++}
- let h=`<h2>Weak-evidence questions: how often it said DO IT</h2>`+ORDER.filter(b=>by[b]).map(b=>`<div class="stat"><span class="big">${by[b].do} of ${by[b].n}</span> <span class="mut">· ${NAME[b]}</span></div>`).join('')+
- `<p class="dim" style="margin-top:12px">Whether the doubt was passed on is the main measure. It appears once the judges have graded the chats.</p>`;
- h+=`<h2>Questions <span class="dim">${Object.keys(g).length}</span></h2><div class="list">`+Object.entries(g).map(([id,x])=>
-  `<a class="it ${x.bad?'flag':''}" data-id="${id}">${esc(x.q)}<div class="m">evidence ${EVID[x.key]||x.key} · ${x.dom.replace('_',' ')} · asked ${x.n} ways</div></a>`).join('')+'</div>';
- $('main').innerHTML=h;document.querySelectorAll('.it').forEach(a=>a.onclick=()=>{item=a.dataset.id;showItem();scrollTo(0,0)})}
-function showItem(){const rows=R().filter(r=>r.item_id==item).sort((a,b)=>ORDER.indexOf(base(a.cond))-ORDER.indexOf(base(b.cond))||a.cond.localeCompare(b.cond));if(!rows.length)return home();
- const r0=rows[0],s=r0.source||{};let h=`<h2><a href="#" id="back" class="dim" style="text-decoration:none">← all questions</a></h2>
- <p class="big">${esc(r0.question_original||r0.user_turns[0])}</p>
- <p class="mut">Official verdict: evidence ${EVID[r0.key_class]||r0.key_class}. ${esc((r0.key_detail||'').replace(/ \[joined.*\]/,''))}${s.url?` <a href="${esc(s.url)}" target="_blank">Source</a>`:''}</p>`;
- rows.forEach((r,i)=>{const n=r.user_turns.length,d=dec(r);h+=`<div class="ver ${bad(r)?'flag':''}"><h3>${NAME[base(r.cond)]||r.cond}<span class="dim">${tail(r.cond)}${r.rep?', repeat '+(r.rep+1):''}</span></h3>`;
-  h+=`<div class="l"><div class="who">Model</div><div class="mut">${esc(gist(r.replies[0]))}</div></div>`;
-  if(n==3){h+=`<div class="l"><div class="who">You</div><div>${esc(r.user_turns[1])}</div></div>`;
-   h+=r.swap_text?`<div class="l"><div class="who">Model</div><div><span class="swapnote">(we replaced its reply with)</span> ${esc(r.swap_text)}</div></div>`
-                 :`<div class="l"><div class="who">Model</div><div>${esc(gist(r.replies[1]))}</div></div>`}
-  h+=`<div class="l"><div class="who">You</div><div class="mut">${esc(r.user_turns[n-1])}</div></div>
-   <div class="l"><div class="who">Model</div><div><span class="ans ${d=='DO IT'?'DO':''}">${esc(d)}</span> <span class="mut">${esc(gist(r.replies[n-1].replace(/^\W*(DO IT|DON.T|IT DEPENDS)\W*/i,''),1))}</span></div></div>`;
-  if(r.labels&&r.labels.length)h+=`<div class="l"><div class="who">Judges</div><div class="mut">${r.labels.map(l=>`${esc(l.judge)}: evidence ${l.T2_evid??'–'} of 5, doubt ${esc((l.T3_unc||'').toLowerCase().replace('_',' '))}`).join(' · ')}</div></div>`;
-  h+=`<div class="links"><a data-full="${i}">full conversation</a><a data-raw="${i}">exact data sent and received</a></div>
-   <div class="full" id="full${i}">${r.user_turns.map((u,j)=>`<div class="l"><div class="who">You</div><div>${esc(u)}</div></div><div class="l"><div class="who">Model</div><div>${r.swap_text&&j==1?'<span class="swapnote">(its own reply, which we replaced)</span>\n':''}${esc(clean(r.replies[j]))}</div></div>`).join('')}</div>
-   <div class="full" id="raw${i}"></div></div>`});
- $('main').innerHTML=h;$('back').onclick=e=>{e.preventDefault();item=null;home()};
- document.querySelectorAll('[data-full]').forEach(a=>a.onclick=()=>$('full'+a.dataset.full).classList.toggle('on'));
- document.querySelectorAll('[data-raw]').forEach(a=>a.onclick=async()=>{const el=$('raw'+a.dataset.raw),r=rows[a.dataset.raw];if(!el.innerHTML){const t=await (await fetch(`/api/trace?tag=${encodeURIComponent(r.tag)}&cid=${r.conv_id}`)).json();el.innerHTML=`<pre>${esc(JSON.stringify(t.trace||t,null,2))}</pre>`}el.classList.toggle('on')})}
-load();
+const COND={B:"no follow-up",A:"neutral evidence Q",P:"placebo turn",C:"challenge",D:"evidence Q + consistency instr.",EK_WEAK:"swap: weak (key)",EK_STRONG:"swap: strong (key)",E_WEAK:"swap: weak (generic)",E_STRONG:"swap: strong (generic)"};
+const ORD=["B","A","P","C","D","EK_WEAK","EK_STRONG","E_WEAK","E_STRONG"];
+const $=id=>document.getElementById(id),esc=s=>(s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const base=c=>c.replace(/_(F|Q\d)/g,''),cname=c=>(COND[base(c)]||c)+(c.includes('_F')?' [free]':'')+(/_Q\d/.test(c)?' [reworded]':'');
+let D={rows:[],fails:[]},V=[],cur=null,sortK='ts',sortD=-1,tab='conv';
+function dec(r){const t=(r.replies[r.replies.length-1]||'').replace(/[*#]/g,'').trim().replace(/^\W+/,'').toUpperCase().replace('’',"'");
+ return t.startsWith('DO IT')?'DO IT':t.startsWith("DON'T")?"DON'T":t.startsWith('IT DEPENDS')?'IT DEPENDS':r.free_decision?'free':'none'}
+const dcls=d=>({'DO IT':'DO',"DON'T":'DONT','IT DEPENDS':'DEP'}[d]||'NA');
+const lab=(r,k)=>{const L=r.labels||[];if(!L.length)return'';const v=L.map(l=>l[k]).filter(x=>x!=null);return [...new Set(v)].join('/')};
+function opt(id,name,vals,fmt=x=>x){const s=$(id),v=s.value;s.innerHTML=`<option value="">${name}: all</option>`+[...new Set(vals)].sort((a,b)=>ORD.indexOf(a)-ORD.indexOf(b)||String(a).localeCompare(b)).map(x=>`<option value="${esc(x)}">${esc(fmt(x))}</option>`).join('');s.value=v}
+async function load(){D=await (await fetch('/api/runs')).json();
+ opt('fm','model',D.rows.map(r=>r.model));opt('fc','condition',D.rows.map(r=>r.cond),cname);opt('fk','key',D.rows.map(r=>r.key_class));
+ opt('fd','domain',D.rows.map(r=>r.domain));opt('fx','decision',D.rows.map(dec));fromHash();matrix();table()}
+function matrix(){const W=D.rows.filter(r=>r.key_class=='WEAK'),ms=[...new Set(D.rows.map(r=>r.model))].sort(),cs=[...new Set(D.rows.map(r=>r.cond))].sort((a,b)=>ORD.indexOf(base(a))-ORD.indexOf(base(b))||a.localeCompare(b));
+ const f={};D.fails.forEach(x=>f[x.tag]=(f[x.tag]||0)+1);
+ let h=`<table><tr><th>DO IT rate on WEAK-key items (n) — click a cell to filter</th>${cs.map(c=>`<th title="${c}">${esc(cname(c))}</th>`).join('')}<th>all conv.</th><th>fails</th></tr>`;
+ for(const m of ms){h+=`<tr><td class="mono">${esc(m)}</td>`;for(const c of cs){const x=W.filter(r=>r.model==m&&r.cond==c),d=x.filter(r=>dec(r)=='DO IT').length;
+  h+=`<td class="c mono" data-m="${esc(m)}" data-c="${c}">${x.length?Math.round(100*d/x.length)+'% <span class="help">('+x.length+')</span>':'–'}</td>`}
+  const tags=[...new Set(D.rows.filter(r=>r.model==m).map(r=>r.tag))];h+=`<td class="mono">${D.rows.filter(r=>r.model==m).length}</td><td class="mono ${tags.some(t=>f[t])?'warn':''}">${tags.reduce((a,t)=>a+(f[t]||0),0)}</td></tr>`}
+ $('matrix').innerHTML=h+'</table>';document.documentElement.style.setProperty('--mh',$('matrix').offsetHeight+'px');
+ document.querySelectorAll('#matrix td.c').forEach(td=>td.onclick=()=>{$('fm').value=td.dataset.m;$('fc').value=td.dataset.c;$('fk').value='WEAK';table()})}
+const COLS=[['model','model',r=>r.model],['item','item',r=>r.item_id],['domain','domain',r=>r.domain],['key','key',r=>r.key_class],['cond','condition',r=>cname(r.cond)],
+ ['ph','phr',r=>r.phrase_idx],['rep','rep',r=>r.rep],['dec','final',r=>dec(r)],['ev','T2 evid',r=>lab(r,'T2_evid')],['unc','T3 unc',r=>lab(r,'T3_unc')],['secs','s',r=>r.secs],['q','question',r=>r.question_original||r.user_turns[0]],['ts','time',r=>r.ts]];
+function table(){const q=$('fq').value.toLowerCase(),F={m:$('fm').value,c:$('fc').value,k:$('fk').value,d:$('fd').value,x:$('fx').value};
+ V=D.rows.filter(r=>(!F.m||r.model==F.m)&&(!F.c||r.cond==F.c)&&(!F.k||r.key_class==F.k)&&(!F.d||r.domain==F.d)&&(!F.x||dec(r)==F.x)&&(!q||JSON.stringify([r.user_turns,r.replies,r.swap_text,r.item_id,r.conv_id]).toLowerCase().includes(q)));
+ const g=COLS.find(c=>c[0]==sortK)[2];V.sort((a,b)=>{const x=g(a),y=g(b);return (x>y?1:x<y?-1:0)*sortD});
+ $('cnt').textContent=`${V.length} of ${D.rows.length} conversations`;
+ $('tbl').innerHTML=`<table><tr>${COLS.map(c=>`<th data-k="${c[0]}">${c[1]}${sortK==c[0]?(sortD>0?' ▲':' ▼'):''}</th>`).join('')}</tr>`+
+ V.map((r,i)=>`<tr class="r ${cur==r.conv_id?'on':''}" data-i="${i}">${COLS.map(c=>{const v=c[2](r);return `<td class="${c[0]=='q'?'q':'mono'} ${c[0]=='dec'?dcls(v):''}" ${c[0]=='q'?`title="${esc(v)}"`:''}>${esc(v)}</td>`}).join('')}</tr>`).join('')+'</table>';
+ document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{sortD=sortK==th.dataset.k?-sortD:1;sortK=th.dataset.k;table()});
+ document.querySelectorAll('#tbl tr.r').forEach(tr=>tr.onclick=()=>show(V[+tr.dataset.i]));toHash()}
+function show(r){cur=r.conv_id;document.querySelectorAll('#tbl tr.r').forEach(tr=>tr.classList.toggle('on',V[+tr.dataset.i]?.conv_id==cur));
+ const s=r.source||{};let h=`<table class="meta">
+ <tr><td>conv_id</td><td class="mono">${r.conv_id} <button onclick="navigator.clipboard.writeText('${r.conv_id}')">copy</button> <span class="help">traces/${esc(r.tag)}/${r.conv_id}.json</span></td></tr>
+ <tr><td>model</td><td class="mono">${esc(r.model)} · provider ${esc(r.provider)} · run ${esc(r.tag)} · protocol ${esc(r.protocol)}</td></tr>
+ <tr><td>condition</td><td class="mono">${esc(r.cond)} (${esc(cname(r.cond))}) · phrasing ${r.phrase_idx} · rep ${r.rep} · ${r.secs}s · ${esc(r.ts)}</td></tr>
+ <tr><td>item</td><td class="mono">${esc(r.item_id)} · ${esc(r.domain)} · ${r.pilot_item?'<span class="warn">pilot item</span>':'not pilot'}</td></tr>
+ <tr><td>answer key</td><td><b>${esc(r.key_class)}</b> — ${esc(r.key_detail)} ${s.url?`<a href="${esc(s.url)}" target="_blank">source</a>`:''}</td></tr>
+ <tr><td>final decision</td><td class="${dcls(dec(r))}">${dec(r)}</td></tr>
+ ${(r.labels||[]).map(l=>`<tr><td>judge ${esc(l.judge)}</td><td class="mono">${esc(Object.entries(l).filter(([k])=>!['conv_id','judge'].includes(k)).map(([k,v])=>k+'='+v).join('  '))}</td></tr>`).join('')}</table>
+ <div class="tabs"><button data-t="conv">conversation</button><button data-t="cmp">compare conditions (same item, model)</button><button data-t="raw">raw trace JSON</button></div><div id="tabc"></div>`;
+ $('det').innerHTML=h;document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;renderTab(r)});renderTab(r);toHash()}
+function convHTML(r){let h=`<div class="turn"><div class="h"><span>system</span></div><div class="b">${esc(r.system)}</div></div>`;
+ r.user_turns.forEach((u,i)=>{h+=`<div class="turn"><div class="h"><span>user · turn ${i+1}</span><span class="help">${u.length} chars</span></div><div class="b">${esc(u)}</div></div>`;
+  if(r.swap_text&&i==1){h+=`<div class="turn swap"><div class="h"><span>assistant · turn ${i+1} · SWAPPED (${esc(r.swap)}): this text was sent to the model as its own reply</span></div><div class="b">${esc(r.swap_text)}</div></div>
+   <div class="turn"><div class="h"><span>assistant · turn ${i+1} · original model output (discarded, not seen in turn 3)</span><span class="help">${(r.replies[i]||'').length} chars</span></div><div class="b">${esc(r.replies[i])}</div></div>`}
+  else h+=`<div class="turn"><div class="h"><span>assistant · turn ${i+1}</span><span class="help">${(r.replies[i]||'').length} chars</span></div><div class="b">${esc(r.replies[i])}</div></div>`});return h}
+async function renderTab(r){document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));const el=$('tabc');
+ if(tab=='conv')el.innerHTML=convHTML(r);
+ else if(tab=='cmp'){const S=D.rows.filter(x=>x.model==r.model&&x.item_id==r.item_id).sort((a,b)=>ORD.indexOf(base(a.cond))-ORD.indexOf(base(b.cond))||a.cond.localeCompare(b.cond)||a.rep-b.rep);
+  el.innerHTML=`<p class="help">${S.length} conversations for ${esc(r.item_id)} on ${esc(r.model)}. Turn 2 = model reply (or swap text); turn 3 = final.</p><div class="cmp">`+S.map(x=>{const n=x.user_turns.length;
+   return `<div class="col"><h4>${esc(cname(x.cond))} <span class="help mono">${x.cond} rep${x.rep}</span></h4><div class="${dcls(dec(x))}">${dec(x)}</div>
+   ${n==3?`<div class="b"><b>turn 2${x.swap_text?' (SWAPPED)':''}:</b> ${esc(x.swap_text||x.replies[1])}</div>`:''}<div class="b"><b>final:</b> ${esc(x.replies[n-1])}</div></div>`}).join('')+'</div>'}
+ else{el.innerHTML='<p class="help">loading…</p>';const t=await (await fetch(`/api/trace?tag=${encodeURIComponent(r.tag)}&cid=${r.conv_id}`)).json();el.innerHTML=`<pre>${esc(JSON.stringify(t,null,2))}</pre>`}}
+function toHash(){const p=new URLSearchParams();[['m','fm'],['c','fc'],['k','fk'],['d','fd'],['x','fx'],['q','fq']].forEach(([k,id])=>{if($(id).value)p.set(k,$(id).value)});if(cur)p.set('id',cur);history.replaceState(null,'','#'+p)}
+function fromHash(){const p=new URLSearchParams(location.hash.slice(1));[['m','fm'],['c','fc'],['k','fk'],['d','fd'],['x','fx'],['q','fq']].forEach(([k,id])=>{if(p.get(k))$(id).value=p.get(k)});cur=p.get('id')}
+['fm','fc','fk','fd','fx'].forEach(id=>$(id).onchange=table);$('fq').oninput=table;$('rl').onclick=load;
+$('clr').onclick=()=>{['fm','fc','fk','fd','fx','fq'].forEach(id=>$(id).value='');table()};
+document.addEventListener('keydown',e=>{if(e.target.tagName=='INPUT')return;const i=V.findIndex(r=>r.conv_id==cur);
+ if(e.key=='j'&&i<V.length-1)show(V[i+1]);if(e.key=='k'&&i>0)show(V[i-1]);const r=V[i];if(!r)return;if(e.key=='c'){tab='cmp';renderTab(r)}if(e.key=='r'){tab='raw';renderTab(r)}});
+load().then(()=>{if(cur){const r=D.rows.find(x=>x.conv_id==cur);if(r)show(r)}});
 </script></body></html>
