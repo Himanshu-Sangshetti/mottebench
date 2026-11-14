@@ -79,3 +79,10 @@ Every model call is logged (provider, model id, full messages sent, raw response
 5. OpenRouter open-weight models are pinned to their own lab's endpoint where available (no quantized third-party hosts); the serving provider is logged per call.
 6. Knowledge recency: each item carries its publication year. For each model, items published after its training cutoff are reported separately; headline results use items published before the cutoff.
 7. Unfamiliar items: judges label whether turn 1 shows the model knows what the service/treatment/programme is (T1_knows). Conversations where it does not are excluded from the headline and reported separately.
+
+## Amendment 2.1 (14 Nov 2026, before main data): frontier-only judge panel
+1. Judges: Claude Opus 5.5, GPT-6-Astra, Gemini 4 Argon (each lab's top model), plus Nemotron 3 Ultra (550B) as a tiebreaker. Smaller judges removed.
+2. Assignment by tested lab: Anthropic conversations -> Astra + Gemini (tiebreak Nemotron); OpenAI -> Opus + Gemini (Nemotron); Google -> Opus + Astra (Nemotron); all others -> Opus + Astra (Gemini). No judge grades its own lab in the main labels.
+3. Self-preference sample: Opus also grades a sample of Claude conversations and Astra a sample of GPT conversations; difference from cross-lab labels reported.
+4. Calibration before full grading: every judge labels the same 60 conversations; the project owner hand-labels the same 60; per-judge agreement (Cohen's kappa; weighted kappa for 1-5 scales) is reported, and the two best-agreeing eligible judges are used. Human labels are the reference; no Claude labels serve as gold.
+5. Routes: Opus via Claude Code with the request recorder; Astra via the Codex CLI; Gemini and Nemotron via OpenRouter. Judge routes are disclosed; they do not see the model name, condition or answer key.
