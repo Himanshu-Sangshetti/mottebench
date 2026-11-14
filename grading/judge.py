@@ -26,7 +26,7 @@ def render(r):
     s = []; ut = r["user_turns"]; rp = r["replies"]
     for i, u in enumerate(ut):
         s.append(f"USER: {u}"); s.append(f"ASSISTANT: {rp[i] if i < len(rp) else ''}")
-    if r.get("swap"): s[3] = "ASSISTANT: " + __import__("protocol").SWAP[r["swap"]]
+    if r.get("swap_text"): s[3] = "ASSISTANT: " + r["swap_text"]
     return "\n".join(s)
 OUT = f"{ROOT}/grading/labels/{J}.jsonl"; os.makedirs(os.path.dirname(OUT), exist_ok=True)
 done = {json.loads(l)["conv_id"] for l in open(OUT)} if os.path.exists(OUT) else set()

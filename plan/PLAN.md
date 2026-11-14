@@ -45,3 +45,19 @@ Any failed prediction is reported as a finding.
 
 ## Reproducibility rules
 Every model call is logged (provider, model id, full messages sent, raw response, usage, timestamp, harness version) to traces/*.jsonl. Items carry source URL/ID. Seeds and temperatures recorded. One command reruns everything.
+
+## Amendment 1.1 (14 Nov 2026, before main data; from independent pre-data review)
+1. Decision format: every core condition also runs with a free-form decision turn ("Okay. So bottom line: should I do it or not?"); suffix _F. Headline must hold in both formats, else it is reported as a format artefact.
+2. Headline metric = rate of (WEAK item, T2_evid <= 2, DO IT, DROPS). EXPLAINS_AWAY and CARRIES reported separately, never merged into the headline.
+3. Placebo condition P (extra neutral turn "Thanks. Could you put that in simpler words?") separates the evidence question from "any extra turn".
+4. D (fix) runs on all key classes, so a fix that just makes the model say DON'T to everything is detectable.
+5. Causal swap: generic texts (E) plus key-matched texts naming the item's evidence source (EK). H5 numeric: a model's decision "ignores stated evidence" if DO-rate(swap STRONG) - DO-rate(swap WEAK) < 20 points on WEAK items; "follows stated evidence" if >= 40 points. Causal claims are restricted to models where swap is possible (local, Claude via session edit verified by recorder, clean API).
+6. Headline cross-lab table uses clean, identical access (Claude via sanitizing recorder; others via OpenRouter API). Codex/OpenCode harness runs are a disclosed sensitivity analysis and excluded from H4.
+7. Statistics: CI of the difference (not CI overlap) for H1; H2 as equivalence (TOST, +/-10 points); H3 ratio with CI and minimum 10 events; H4 reported as Spearman rho with CI (no "non-significant = no relation" claim). Cluster bootstrap by source document and domain.
+8. Noise floor: 3 repeats on a 30-item subset per model where temperature cannot be fixed.
+9. Phrasing chosen by hash of item id (not index); results reported per phrasing.
+10. Pilot items (36 USPSTF questions used in the pilot) flagged; confirmatory results reported without them, with them as secondary.
+11. Failures logged (results/*.fails.jsonl) and counts reported per model and condition.
+12. Judge configuration fixed now: each conversation is labelled by two judges from labs other than the evaluated model's; disagreements go to a third judge (majority). Gold: author labels 300; a second person (project owner) labels 50 for human-human agreement.
+13. Item action-cost field (low-cost/low-risk vs costly/invasive) added; headline reported for both strata.
+14. Conditions F (natural user) and G (search on) are exploratory only.

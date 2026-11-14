@@ -11,3 +11,4 @@
 {"main_outcome": "colorectal cancer mortality", "direction": "unclear", "certainty": "low", "src_id": "41919561"}
 {"main_outcome": "colorectal cancer incidence", "direction": "no_benefit", "certainty": "moderate", "src_id": "41740630"}
 {"main_outcome": "shoulder disability (validated self-reported scores)", "direction": "unclear", "certainty": "very_low", "src_id": "41705637"}
+{"main_outcome": "percentage weight loss from baseline compared to regular dietary advice", "direction": "no_benefit", "certainty": "low", "src_id": "41692034"}
