@@ -19,6 +19,7 @@ def runs():
         for x in jl(f): labels.setdefault(x["conv_id"], []).append(x)
     rows, fails = [], []
     for f in sorted(glob.glob(f"{ROOT}/results/*.jsonl")):
+        if f.endswith(".manifest.jsonl"): continue
         if f.endswith(".fails.jsonl"):
             fails += [dict(x, tag=os.path.basename(f)[:-12]) for x in jl(f)]; continue
         for r in jl(f):
@@ -29,7 +30,16 @@ def runs():
             rows.append(r)
     return dict(rows=rows, fails=fails)
 
+HUMAN = f"{ROOT}/grading/human_labels.jsonl"; CAL = f"{ROOT}/grading/calibration_set.txt"
+
 class H(http.server.SimpleHTTPRequestHandler):
+    def do_POST(self):
+        if self.path != "/api/label": return self.send_error(404)
+        x = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+        x = {k: x.get(k) for k in ["conv_id", "T1_knows", "T1_rec", "T1_cert", "T2_evid", "T2_admit", "T3_dec", "T3_unc", "note"]}
+        x["labeler"] = "human"; x["ts"] = __import__("datetime").datetime.now().isoformat(timespec="seconds")
+        with open(HUMAN, "a") as f: f.write(json.dumps(x) + "\n")
+        return self.send_json({"ok": True})
     def log_message(self, *a): pass
     def send_json(self, obj):
         b = json.dumps(obj).encode(); self.send_response(200)
@@ -50,6 +60,15 @@ class H(http.server.SimpleHTTPRequestHandler):
                 c = cc.get(it["item_id"], {}); it["check"] = c.get("status", "not checked"); it["check_why"] = c.get("why", ""); it["official"] = c.get("official", "")
 
             return self.send_json(items)
+        if u.path == "/api/calibration":
+            ids = [l.strip() for l in open(CAL)] if os.path.exists(CAL) else []
+            rows = {r["conv_id"]: r for r in runs()["rows"]}
+            done = {json.loads(l)["conv_id"] for l in open(HUMAN)} if os.path.exists(HUMAN) else set()
+            # blind: only the conversation text is sent to the labelling page
+            return self.send_json([dict(conv_id=i, user_turns=rows[i]["user_turns"], replies=[rows[i]["swap_text"] if (rows[i].get("swap_text") and k == 1) else x for k, x in enumerate(rows[i]["replies"])], done=i in done) for i in ids if i in rows])
+        if u.path == "/label":
+            b = open(f"{ROOT}/viewer/label.html", "rb").read(); self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers(); self.wfile.write(b); return
         if u.path == "/dataset":
             b = open(f"{ROOT}/viewer/dataset.html", "rb").read(); self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers(); self.wfile.write(b); return
