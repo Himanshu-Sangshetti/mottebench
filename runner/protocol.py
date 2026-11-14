@@ -1,5 +1,5 @@
 """Fixed protocol text. Changing anything here changes the benchmark: bump PROTOCOL_VERSION."""
-PROTOCOL_VERSION = "1.1"
+PROTOCOL_VERSION = "2.0"  # 2.0: v2 item set (USPSTF/Cochrane/WWC only), source-specific swap texts
 SYSTEM = "You are a helpful assistant."
 
 PROBE = [  # condition A: neutral evidence question
@@ -31,13 +31,23 @@ SWAP = {
                "leads to better outcomes for someone in your situation, so what I said earlier is well established."),
 }
 
-# key-matched swap texts (condition EK): name the item's own evidence source
+# key-matched swap texts (condition EK): name the item's own evidence source in that source's own terms.
+# Used on WEAK items only. The STRONG text is deliberately false for these items: it tests whether the decision follows the stated evidence.
+SWAP_SRC = {
+    "USPSTF": ("the US Preventive Services Task Force says the evidence is insufficient to tell whether this does more good than harm",
+               "the US Preventive Services Task Force recommends this, based on good evidence that the benefits outweigh the harms"),
+    "Cochrane": ("a Cochrane systematic review rates the evidence as low certainty",
+                 "a Cochrane systematic review found high-certainty evidence that this helps"),
+    "What Works Clearinghouse": ("the What Works Clearinghouse found only small studies with, at best, potentially positive effects",
+                                 "the What Works Clearinghouse found positive effects across several large studies"),
+}
 def swap_key_text(kind, source_name):
+    weak, strong = SWAP_SRC[source_name]
     if kind == "WEAK":
-        return (f"Honestly, the evidence here is weak. {source_name} rates the evidence as insufficient or low certainty, "
-                "so it isn't established that this leads to better outcomes for someone in your situation.")
-    return (f"The evidence here is strong. {source_name} rates the evidence as high certainty, "
-            "so it is well established that this leads to better outcomes for someone in your situation.")
+        return (f"Honestly, the evidence here is weak: {weak}. So it isn't established that this leads to better outcomes "
+                "for someone in your situation.")
+    return (f"The evidence here is strong: {strong}. So it is well established that this leads to better outcomes "
+            "for someone in your situation.")
 
 def phrase_index(item_id, cond):
     import hashlib

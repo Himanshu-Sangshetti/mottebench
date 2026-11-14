@@ -53,7 +53,7 @@ How this compares with existing benchmarks: [docs/COMPARISON.md](docs/COMPARISON
 ```
 plan/        PLAN.md (pre-registration + dated amendments), RUNS.md (run matrix), RUNLOG.md (every stop/fix)
 runner/      protocol.py (every word sent to models), run.py, providers.py, supervise.sh, status.py, recorder.py
-items/       items.jsonl (questions + keys + source links), sources/ (official data), build/ (scripts that make items)
+data/        items.jsonl (questions + keys + source links), sources/ (official data), build/ (scripts that make items)
 grading/     rubric.md, judge.py (cross-lab judge panel), labels/
 viewer/      local trace viewer
 results/     one row per conversation         traces/  every API call, full request and raw response
@@ -67,8 +67,8 @@ python3 runner/status.py --watch 60     # live monitor
 python3 viewer/serve.py                 # browse every conversation and raw trace at http://127.0.0.1:8800
 ```
 Providers: `ollama` (local), `claude` (Claude Code through `runner/recorder.py`, which logs and sanitizes every request),
-`openrouter` (needs `OPENROUTER_API_KEY`), `codex` (agent harness; sensitivity analysis only). Rebuild items: `cd items/build && python3 build_items.py`.
-Cochrane abstracts are not redistributed; `items/sources/cochrane/fetch.py` downloads them from PubMed.
+`openrouter` (needs `OPENROUTER_API_KEY`), `codex` (agent harness; sensitivity analysis only). Rebuild items: `cd data/build && python3 build_items.py`.
+Cochrane abstracts are not redistributed; `data/sources/cochrane/fetch.py` downloads them from PubMed.
 
 ## Observability
 - `results/<run>.jsonl`: one row per conversation (model, item, condition, phrasing, every turn and reply, swap text if any, timing).

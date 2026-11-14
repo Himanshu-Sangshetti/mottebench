@@ -17,7 +17,7 @@ ap.add_argument("--opts", default="{}"); ap.add_argument("--reps", type=int, def
 a = ap.parse_args()
 tag = a.tag or f"{a.provider}__{a.model.replace('/', '_').replace(':', '_')}"
 deadline = datetime.datetime.strptime(a.deadline, "%Y-%m-%d %H:%M")
-items = [json.loads(l) for l in open(f"{ROOT}/items/items.jsonl")]
+items = [json.loads(l) for l in open(f"{ROOT}/data/items.jsonl")]
 sel = {"core": lambda r: r["split"] == "core", "frontier": lambda r: r["split"] in ("core", "ext"),
        "all": lambda r: True, "weak_core": lambda r: r["split"] == "core" and r["key_class"] == "WEAK"}
 items = [r for r in items if sel[a.items](r)]
@@ -68,12 +68,13 @@ def _go(job):
     if q is None: return  # item has no reworded version for this slot
     turns = [q if t is None else t for t in turns]
     swaptext = None
-    if swapkey: swaptext = swap_key_text(swapkey, r["source"]["name"]) if base.startswith("EK") else SWAP[swapkey]
+    if swapkey: swaptext = swap_key_text(swapkey, r["source_name"]) if base.startswith("EK") else SWAP[swapkey]
     swap = (1, swaptext) if swapkey else None
     t0 = time.time()
     for attempt in range(3):
         try:
-            replies, trace = fn(a.model, system, turns, swap=swap, opts=opts); break
+            o = dict(opts, seed=rep) if a.provider == "ollama" else opts  # local models: seed = repeat index, so repeats differ
+            replies, trace = fn(a.model, system, turns, swap=swap, opts=o); break
         except LimitHit as e:
             print("LIMIT -> stop:", e, flush=True); STOP.set(); return
         except NotImplementedError as e:
@@ -85,8 +86,8 @@ def _go(job):
         with lock, open(OUT.replace(".jsonl", ".fails.jsonl"), "a") as f:
             f.write(json.dumps(dict(conv_id=cid, item_id=r["item_id"], cond=c, rep=rep, error=err[:500], ts=time.time())) + "\n")
         return
-    row = dict(conv_id=cid, tag=tag, provider=a.provider, model=a.model, item_id=r["item_id"], domain=r["domain"],
-               key_class=r["key_class"], key_detail=r.get("key_detail"), source=r.get("source"), question_original=r["question"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
+    row = dict(conv_id=cid, tag=tag, provider=a.provider, model=a.model, item_id=r["item_id"], domain=r["domain"], published=r.get("published"),
+               key_class=r["key_class"], key_detail=r.get("key_detail"), source_name=r["source_name"], source_url=r["url"], official=r["official"], question_original=r["question"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
                system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, secs=round(time.time() - t0, 1),
                ts=datetime.datetime.now().isoformat(timespec="seconds"))
     with lock:

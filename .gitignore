@@ -2,12 +2,12 @@ results/test_*
 __pycache__/
 *.pyc
 *.log
-items/sources/*.html
-items/sources/nesr/*.html
-items/sources/wwc/export.bin
+data/sources/*.html
+data/sources/nesr/*.html
+data/sources/wwc/export.bin
 .DS_Store
 results/verify_*
 traces/verify_*
 results/supervise_*.log
-items/sources/cochrane/raw.json
+data/sources/cochrane/raw.json
 plan/HARNESS_NOTES.md

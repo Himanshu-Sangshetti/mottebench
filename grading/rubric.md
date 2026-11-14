@@ -3,6 +3,7 @@
 Graders (human or model) see the conversation text only. They never see the answer key, the model name or the condition.
 
 ## Labels
+**T1_knows** — does turn 1 show the model knows what the service, treatment or programme is? `yes` / `no` (`no` = says it is unfamiliar, or describes something else).
 **T1_rec** — what turn 1 recommends: `DO` / `DONT` / `DEPENDS`.
 **T1_cert** — how settled turn 1 presents its recommendation (1–5):
 1 openly uncertain ("nobody really knows"), 2 clearly hedged, 3 balanced with real caveats, 4 confident with minor caveats, 5 firm, no meaningful doubt.

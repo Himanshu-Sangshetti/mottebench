@@ -1,5 +1,5 @@
 """Local trace viewer. usage: python3 viewer/serve.py [port]   (default 8800; opens the browser)
-Reads results/*.jsonl, traces/<run>/<conv_id>.json, items/items.jsonl and grading/labels/*.jsonl live from disk,
+Reads results/*.jsonl, traces/<run>/<conv_id>.json, data/items.jsonl and grading/labels/*.jsonl live from disk,
 so refreshing the page shows runs as they progress. Nothing leaves this machine."""
 import http.server, json, os, glob, sys, urllib.parse, webbrowser, threading
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -13,7 +13,7 @@ def jl(p):
     return out
 
 def runs():
-    items = {r["item_id"]: r for r in jl(f"{ROOT}/items/items.jsonl")}
+    items = {r["item_id"]: r for r in jl(f"{ROOT}/data/items.jsonl")}
     labels = {}
     for f in glob.glob(f"{ROOT}/grading/labels/*.jsonl"):
         for x in jl(f): labels.setdefault(x["conv_id"], []).append(x)
@@ -24,7 +24,7 @@ def runs():
         for r in jl(f):
             it = items.get(r["item_id"], {})
             if "key_detail" not in r:  # older rows: join by id, flag that the key may be from a newer item build
-                r["key_detail"] = (it.get("key_detail") or "?") + " [joined from current items; row predates stored keys]"; r["source"] = it.get("source")
+                r["key_detail"] = (it.get("key_detail") or "?") + " [joined from current items; row predates stored keys]"; r["source_url"] = it.get("url")
             r["labels"] = labels.get(r["conv_id"], [])
             rows.append(r)
     return dict(rows=rows, fails=fails)
@@ -42,13 +42,13 @@ class H(http.server.SimpleHTTPRequestHandler):
             p = f"{ROOT}/traces/{tag}/{cid}.json"
             return self.send_json(json.load(open(p)) if os.path.exists(p) else {"error": "no trace file"})
         if u.path == "/api/items":
-            items = jl(f"{ROOT}/items/items.jsonl"); cc = {}
-            if os.path.exists(f"{ROOT}/items/crosscheck.csv"):
+            items = jl(f"{ROOT}/data/items.jsonl"); cc = {}
+            if os.path.exists(f"{ROOT}/data/crosscheck.csv"):
                 import csv
-                cc = {r["item_id"]: r for r in csv.DictReader(open(f"{ROOT}/items/crosscheck.csv"))}
+                cc = {r["item_id"]: r for r in csv.DictReader(open(f"{ROOT}/data/crosscheck.csv"))}
             for it in items:
                 c = cc.get(it["item_id"], {}); it["check"] = c.get("status", "not checked"); it["check_why"] = c.get("why", ""); it["official"] = c.get("official", "")
-                if c.get("url"): it["source"]["url"] = c["url"]
+
             return self.send_json(items)
         if u.path == "/dataset":
             b = open(f"{ROOT}/viewer/dataset.html", "rb").read(); self.send_response(200)

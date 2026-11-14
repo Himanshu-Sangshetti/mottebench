@@ -15,15 +15,16 @@ def _check(text):
 # ---------------- Ollama (local, full visibility) ----------------
 def ollama(model, system, user_turns, swap=None, opts=None):
     msgs = [{"role": "system", "content": system}]; replies = []; calls = []
-    o = {"temperature": 0.7, "num_ctx": 8192, "num_predict": 900, "seed": 0}; o.update(opts or {})
+    o = {"num_ctx": 16384, "num_predict": -1, "seed": 0}; o.update({k: v for k, v in (opts or {}).items() if k not in ("max_usd",)})
+    # temperature and thinking: left at the model's defaults (pre-registered: default settings); seed = repeat index (set by run.py)
     for i, u in enumerate(user_turns):
         msgs.append({"role": "user", "content": u})
         body = {"model": model, "stream": False, "options": o, "messages": msgs}
-        if model.startswith("qwen3"): body["think"] = False
         t0 = time.time()
         r = json.loads(urllib.request.urlopen(urllib.request.Request("http://localhost:11434/api/chat",
               data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}), timeout=900).read())
         text = r["message"]["content"]; _check(text)
+        if r.get("done_reason") == "length": raise RuntimeError("reply cut off by length limit")
         calls.append({"request": body, "response": r, "secs": time.time() - t0})
         if swap and swap[0] == i: text_used = swap[1]
         else: text_used = text
@@ -120,12 +121,14 @@ def openrouter(model, system, user_turns, swap=None, opts=None):
     msgs = [{"role": "system", "content": system}]; replies = []; calls = []
     for i, u in enumerate(user_turns):
         msgs.append({"role": "user", "content": u})
-        body = {"model": model, "messages": msgs, "temperature": 0.7, "max_tokens": 4000, "usage": {"include": True}}
+        body = {"model": model, "messages": msgs, "max_tokens": 32000, "usage": {"include": True}}  # temperature: provider default
+        if (opts or {}).get("provider_order"): body["provider"] = {"order": opts["provider_order"], "allow_fallbacks": False}
         req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=json.dumps(body).encode(),
               headers={"Content-Type": "application/json", "Authorization": "Bearer " + key})
         t0 = time.time(); r = json.loads(urllib.request.urlopen(req, timeout=900).read())
         text = r["choices"][0]["message"]["content"]; _check(text)
-        calls.append({"request": body, "response": r, "secs": time.time() - t0})
+        if r["choices"][0].get("finish_reason") == "length": raise RuntimeError("reply cut off by length limit")
+        calls.append({"request": body, "response": r, "served_by": r.get("provider"), "secs": time.time() - t0})
         _spend(model, (r.get("usage") or {}).get("cost") or 0.0, (opts or {}).get("max_usd"))
         replies.append(text); msgs.append({"role": "assistant", "content": swap[1] if swap and swap[0] == i else text})
     return replies, {"provider": "openrouter", "calls": calls}

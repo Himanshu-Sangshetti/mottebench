@@ -1,0 +1,920 @@
+[
+ {
+  "slug": "abdominal-aortic-aneurysm-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Abdominal Aortic Aneurysm: Screening",
+  "age": "Adult, Senior",
+  "grade": "B, C, D, I"
+ },
+ {
+  "slug": "adolescent-idiopathic-scoliosis-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Adolescent Idiopathic Scoliosis: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "anxiety-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Anxiety Disorders in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2022",
+  "topic": "Aspirin Use to Prevent Cardiovascular Disease: Preventive Medication",
+  "age": "Adult, Senior",
+  "grade": "C, D"
+ },
+ {
+  "slug": "asymptomatic-bacteriuria-in-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Asymptomatic Bacteriuria in Adults: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B, D"
+ },
+ {
+  "slug": "atrial-fibrillation-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Atrial Fibrillation: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "autism-spectrum-disorder-in-young-children-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2016",
+  "topic": "Autism Spectrum Disorder in Young Children: Screening",
+  "age": "Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "bacterial-vaginosis-in-pregnancy-to-prevent-preterm-delivery-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "Bacterial Vaginosis in Pregnant Persons to Prevent Preterm Delivery: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "D, I"
+ },
+ {
+  "slug": "bladder-cancer-in-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2011",
+  "topic": "Bladder Cancer in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "blood-pressure-in-children-and-adolescents-hypertension-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "High Blood Pressure in Children and Adolescents: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing",
+  "status": "Published",
+  "type": "Counseling, Screening",
+  "year": "2019",
+  "topic": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+  "age": "Adult, Senior",
+  "grade": "B, D"
+ },
+ {
+  "slug": "breast-cancer-medications-for-risk-reduction",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2019",
+  "topic": "Breast Cancer: Medication Use to Reduce Risk",
+  "age": "Adult, Senior",
+  "grade": "B, D"
+ },
+ {
+  "slug": "breast-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2024",
+  "topic": "Breast Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "breastfeeding-primary-care-interventions",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2025",
+  "topic": "Breastfeeding: Primary Care Behavioral Counseling Interventions",
+  "age": "Adult",
+  "grade": "B"
+ },
+ {
+  "slug": "cardiovascular-disease-risk-screening-with-electrocardiography",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Cardiovascular Disease Risk: Screening With Electrocardiography",
+  "age": "Adult, Senior",
+  "grade": "D, I"
+ },
+ {
+  "slug": "cardiovascular-disease-screening-using-nontraditional-risk-assessment",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Cardiovascular Disease: Risk Assessment With Nontraditional Risk Factors",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "carotid-artery-stenosis-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Asymptomatic Carotid Artery Stenosis: Screening",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "celiac-disease-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2017",
+  "topic": "Celiac Disease: Screening",
+  "age": "Adolescent, Adult, Pediatric, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "cervical-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Cervical Cancer: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "A, D"
+ },
+ {
+  "slug": "child-maltreatment-primary-care-interventions",
+  "status": "Published",
+  "type": "Counseling, Screening",
+  "year": "2024",
+  "topic": "Prevention of Child Maltreatment: Primary Care Interventions",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "chlamydia-and-gonorrhea-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Chlamydia and Gonorrhea: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "chronic-kidney-disease-ckd-screening",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "2016",
+  "topic": "Chronic Kidney Disease: Screening",
+  "age": "Adult",
+  "grade": ""
+ },
+ {
+  "slug": "chronic-obstructive-pulmonary-disease-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Chronic Obstructive Pulmonary Disease: Screening",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "cognitive-impairment-in-older-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "Cognitive Impairment in Older Adults: Screening",
+  "age": "Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "colorectal-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Colorectal Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "A, B, C"
+ },
+ {
+  "slug": "congenital-hypothyroidism-screening",
+  "status": "Referred",
+  "type": "Screening",
+  "year": "2008",
+  "topic": "Congenital Hypothyroidism: Screening",
+  "age": "Pediatric",
+  "grade": ""
+ },
+ {
+  "slug": "dental-and-periodontal-disease-counseling",
+  "status": "Inactive",
+  "type": "Counseling",
+  "year": "1996",
+  "topic": "Dental and Periodontal Disease: Counseling",
+  "age": "Adolescent, Adult, Pediatric, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "drug-use-illicit-primary-care-interventions-for-children-and-adolescents",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2020",
+  "topic": "Illicit Drug Use in Children, Adolescents, and Young Adults: Primary Care-Based Interventions",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "drug-use-illicit-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "Unhealthy Drug Use: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "elevated-blood-lead-levels-in-childhood-and-pregnancy-screening",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Elevated Blood Lead Levels in Children and Pregnant Women: Screening",
+  "age": "Adolescent, Adult, Pediatric",
+  "grade": ""
+ },
+ {
+  "slug": "falls-prevention-community-dwelling-older-adults-interventions",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2024",
+  "topic": "Falls Prevention in Community-Dwelling Older Adults: Interventions",
+  "age": "Senior",
+  "grade": "B, C"
+ },
+ {
+  "slug": "folic-acid-for-the-prevention-of-neural-tube-defects-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2023",
+  "topic": "Folic Acid Supplementation to Prevent Neural Tube Defects: Preventive Medication",
+  "age": "Adolescent, Adult",
+  "grade": "A"
+ },
+ {
+  "slug": "food-insecurity-screening",
+  "status": "Published",
+  "type": "Counseling, Screening",
+  "year": "2025",
+  "topic": "Food Insecurity: Screening",
+  "age": "Adolescent, Adult, Pediatric, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "genital-herpes-serologic-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Genital Herpes Infection: Serologic Screening",
+  "age": "Adolescent, Adult",
+  "grade": "D"
+ },
+ {
+  "slug": "gestational-diabetes-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Gestational Diabetes: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "B, I"
+ },
+ {
+  "slug": "gynecological-conditions-screening-with-the-pelvic-examination",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "2017",
+  "topic": "Gynecological Conditions: Periodic Screening With the Pelvic Examination",
+  "age": "Adult, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "healthy-diet-and-physical-activity-counseling-adults-with-high-risk-of-cvd",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2020",
+  "topic": "Healthy Diet and Physical Activity for Cardiovascular Disease Prevention in Adults With Cardiovascular Risk Factors: Behavioral Counseling Interventions",
+  "age": "Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "healthy-lifestyle-and-physical-activity-for-cvd-prevention-adults-without-known-risk-factors-behavioral-counseling",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2022",
+  "topic": "Healthy Diet and Physical Activity for Cardiovascular Disease Prevention in Adults Without Cardiovascular Disease Risk Factors: Behavioral Counseling Interventions",
+  "age": "Adult, Senior",
+  "grade": "C"
+ },
+ {
+  "slug": "healthy-weight-and-weight-gain-during-pregnancy-behavioral-counseling-interventions",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2021",
+  "topic": "Healthy Weight and Weight Gain In Pregnancy: Behavioral Counseling Interventions",
+  "age": "Adolescent, Adult",
+  "grade": "B"
+ },
+ {
+  "slug": "hearing-loss-in-newborns-screening",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "2008",
+  "topic": "Hearing Loss in Newborns: Screening",
+  "age": "Pediatric",
+  "grade": ""
+ },
+ {
+  "slug": "hearing-loss-in-older-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Hearing Loss in Older Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "heliobacter-pylori-infection-screening",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "",
+  "topic": "Helicobacter Pylori Infection: Screening",
+  "age": "Adult, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "hepatitis-b-virus-infection-in-pregnant-women-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Hepatitis B Virus Infection in Pregnant Women: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "A"
+ },
+ {
+  "slug": "hepatitis-b-virus-infection-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "Hepatitis B Virus Infection in Adolescents and Adults: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "hepatitis-c-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2020",
+  "topic": "Hepatitis C Virus Infection in Adolescents and Adults: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "human-immunodeficiency-virus-hiv-infection-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Human Immunodeficiency Virus (HIV) Infection: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "A"
+ },
+ {
+  "slug": "hyperbilirubinemia-screening-infants",
+  "status": "Inactive",
+  "type": "Screening",
+  "year": "2009",
+  "topic": "Hyperbilirubinemia: Screening Infants",
+  "age": "Pediatric",
+  "grade": ""
+ },
+ {
+  "slug": "hypertension-in-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Hypertension in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "A"
+ },
+ {
+  "slug": "hypertensive-disorders-pregnancy-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Hypertensive Disorders of Pregnancy: Screening",
+  "age": "Adult",
+  "grade": "B"
+ },
+ {
+  "slug": "impaired-visual-acuity-screening-older-adults",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Impaired Visual Acuity in Older Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "interventions-to-prevent-opioid-use-disorder",
+  "status": "Inactive",
+  "type": "Counseling",
+  "year": "",
+  "topic": "Prevention of Opioid Use Disorder: Interventions",
+  "age": "Adolescent, Adult, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "intimate-partner-violence-and-abuse-of-elderly-and-vulnerable-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2025",
+  "topic": "Intimate Partner Violence and Caregiver Abuse of Older or Vulnerable Adults: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "iron-deficiency-anemia-in-pregnant-women-screening-and-supplementation",
+  "status": "Published",
+  "type": "Preventive medication, Screening",
+  "year": "2024",
+  "topic": "Iron Deficiency and Iron Deficiency Anemia During Pregnancy: Screening and Supplementation",
+  "age": "Adolescent, Adult",
+  "grade": "I"
+ },
+ {
+  "slug": "iron-deficiency-anemia-in-young-children-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2015",
+  "topic": "Iron Deficiency Anemia in Young Children: Screening",
+  "age": "Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "latent-tuberculosis-infection-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Latent Tuberculosis Infection in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "lipid-disorders-in-children-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Lipid Disorders in Children and Adolescents: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2021",
+  "topic": "Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication",
+  "age": "Adult",
+  "grade": "B"
+ },
+ {
+  "slug": "lung-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Lung Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "lynch-syndrome-related-cancer-adults-risk-assessment-genetic-counseling-testing",
+  "status": "Inactive",
+  "type": "Counseling, Screening",
+  "year": "",
+  "topic": "Lynch Syndrome-Related Cancer in Adults: Risk Assessment, Genetic Counseling, and Genetic Testing",
+  "age": "Adult, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "menopausal-hormone-therapy-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2022",
+  "topic": "Hormone Therapy in Postmenopausal Persons: Primary Prevention of Chronic Conditions",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "motor-vehicle-occupant-restraints-counseling",
+  "status": "Referred",
+  "type": "Counseling",
+  "year": "2007",
+  "topic": "Motor Vehicle Occupant Restraints: Counseling",
+  "age": "Adolescent, Adult, Pediatric, Senior",
+  "grade": ""
+ },
+ {
+  "slug": "obesity-in-adults-interventions",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2018",
+  "topic": "Weight Loss to Prevent Obesity-Related Morbidity and Mortality in Adults: Behavioral Interventions",
+  "age": "Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "obesity-in-children-and-adolescents-screening",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2024",
+  "topic": "High Body Mass Index in Children and Adolescents: Interventions",
+  "age": "Adolescent, Pediatric",
+  "grade": "B"
+ },
+ {
+  "slug": "obstructive-sleep-apnea-in-adults-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Obstructive Sleep Apnea in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "ocular-prophylaxis-for-gonococcal-ophthalmia-neonatorum-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2019",
+  "topic": "Ocular Prophylaxis for Gonococcal Ophthalmia Neonatorum: Preventive Medication",
+  "age": "Pediatric",
+  "grade": "A"
+ },
+ {
+  "slug": "oral-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2013",
+  "topic": "Oral Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "oral-health-adults-screening-preventive-interventions",
+  "status": "Published",
+  "type": "Counseling, Preventive medication, Screening",
+  "year": "2023",
+  "topic": "Oral Health in Adults: Screening and Preventive Interventions",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "oral-health-children-adolescents-screening-preventive-interventions",
+  "status": "Published",
+  "type": "Counseling, Preventive medication, Screening",
+  "year": "2023",
+  "topic": "Oral Health in Children and Adolescents Aged 5 to 17 Years: Screening and Preventive Interventions",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "osteoporosis-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2025",
+  "topic": "Osteoporosis to Prevent Fractures: Screening",
+  "age": "Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "ovarian-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Ovarian Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "pancreatic-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2019",
+  "topic": "Pancreatic Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "perinatal-depression-preventive-interventions",
+  "status": "Published",
+  "type": "Counseling, Preventive medication",
+  "year": "2019",
+  "topic": "Perinatal Depression: Preventive Interventions",
+  "age": "Adult",
+  "grade": "B"
+ },
+ {
+  "slug": "peripheral-artery-disease-in-adults-screening-with-the-ankle-brachial-index",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Peripheral Artery Disease and Cardiovascular Disease: Screening and Risk Assessment With the Ankle-Brachial Index",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "phenylketonuria-in-newborns-screening",
+  "status": "Referred",
+  "type": "Screening",
+  "year": "2008",
+  "topic": "Phenylketonuria in Newborns: Screening",
+  "age": "Pediatric",
+  "grade": ""
+ },
+ {
+  "slug": "prediabetes-type2-diabetes-children-adolescents-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Prediabetes and Type 2 Diabetes in Children and Adolescents: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "prevention-of-dental-caries-in-children-younger-than-age-5-years-screening-and-interventions1",
+  "status": "Published",
+  "type": "Counseling, Screening",
+  "year": "2021",
+  "topic": "Prevention of Dental Caries in Children Younger Than 5 Years: Screening and Interventions",
+  "age": "Pediatric",
+  "grade": "B, I"
+ },
+ {
+  "slug": "prevention-of-human-immunodeficiency-virus-hiv-infection-pre-exposure-prophylaxis",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2023",
+  "topic": "Prevention of Acquisition of HIV: Preexposure Prophylaxis",
+  "age": "Adolescent, Adult",
+  "grade": "A"
+ },
+ {
+  "slug": "primary-open-angle-glaucoma-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Primary Open-Angle Glaucoma: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "prostate-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2018",
+  "topic": "Prostate Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "C, D"
+ },
+ {
+  "slug": "screening-anxiety-children-adolescents",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Anxiety in Children and Adolescents: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "B, I"
+ },
+ {
+  "slug": "screening-depression-suicide-risk-adults",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Depression and Suicide Risk in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "screening-depression-suicide-risk-children-adolescents",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Depression and Suicide Risk in Children and Adolescents: Screening",
+  "age": "Adolescent, Pediatric",
+  "grade": "B, I"
+ },
+ {
+  "slug": "screening-eating-disorders-adolescents-adults",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Eating Disorders in Adolescents and Adults: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "I"
+ },
+ {
+  "slug": "screening-for-prediabetes-and-type-2-diabetes",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Prediabetes and Type 2 Diabetes: Screening",
+  "age": "Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "sexually-transmitted-infections-behavioral-counseling",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2020",
+  "topic": "Sexually Transmitted Infections: Behavioral Counseling",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B"
+ },
+ {
+  "slug": "skin-cancer-counseling",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2018",
+  "topic": "Skin Cancer Prevention: Behavioral Counseling",
+  "age": "Adolescent, Adult, Pediatric, Senior",
+  "grade": "B, C, I"
+ },
+ {
+  "slug": "skin-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2023",
+  "topic": "Skin Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "speech-and-language-delay-and-disorders-in-children-age-5-and-younger-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2024",
+  "topic": "Speech and Language Delay and Disorders in Children: Screening",
+  "age": "Pediatric",
+  "grade": "I"
+ },
+ {
+  "slug": "statin-use-in-adults-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2022",
+  "topic": "Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Preventive Medication",
+  "age": "Adult, Senior",
+  "grade": "B, C, I"
+ },
+ {
+  "slug": "syphilis-infection-in-pregnancy-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2025",
+  "topic": "Syphilis Infection During Pregnancy: Screening",
+  "age": "Adolescent, Adult",
+  "grade": "A"
+ },
+ {
+  "slug": "syphilis-infection-nonpregnant-adults-adolescents-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2022",
+  "topic": "Syphilis Infection in Nonpregnant Adolescents and Adults: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "A"
+ },
+ {
+  "slug": "testicular-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2011",
+  "topic": "Testicular Cancer: Screening",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "thyroid-cancer-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2017",
+  "topic": "Thyroid Cancer: Screening",
+  "age": "Adult, Senior",
+  "grade": "D"
+ },
+ {
+  "slug": "thyroid-dysfunction-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2015",
+  "topic": "Thyroid Dysfunction: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "tobacco-and-nicotine-use-prevention-in-children-and-adolescents-primary-care-interventions",
+  "status": "Published",
+  "type": "Counseling",
+  "year": "2020",
+  "topic": "Tobacco Use in Children and Adolescents: Primary Care Interventions",
+  "age": "Adolescent, Pediatric",
+  "grade": "B, I"
+ },
+ {
+  "slug": "tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+  "status": "Published",
+  "type": "Counseling, Preventive medication",
+  "year": "2021",
+  "topic": "Tobacco Smoking Cessation in Adults, Including Pregnant Persons: Interventions",
+  "age": "Adult, Senior",
+  "grade": "A, I"
+ },
+ {
+  "slug": "unhealthy-alcohol-use-in-adolescents-and-adults-screening-and-behavioral-counseling-interventions",
+  "status": "Published",
+  "type": "Counseling, Screening",
+  "year": "2018",
+  "topic": "Unhealthy Alcohol Use in Adolescents and Adults: Screening and Behavioral Counseling Interventions",
+  "age": "Adolescent, Adult, Senior",
+  "grade": "B, I"
+ },
+ {
+  "slug": "vision-in-children-ages-6-months-to-5-years-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2017",
+  "topic": "Vision in Children Ages 6 Months to 5 Years: Screening",
+  "age": "Pediatric",
+  "grade": "B, I"
+ },
+ {
+  "slug": "vitamin-d-calcium-or-combined-supplementation-for-the-primary-prevention-of-fractures-in-adults-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2018",
+  "topic": "Vitamin D, Calcium, or Combined Supplementation for the Primary Prevention of Fractures in Community-Dwelling Adults: Preventive Medication",
+  "age": "Adult, Senior",
+  "grade": "D, I"
+ },
+ {
+  "slug": "vitamin-d-deficiency-screening",
+  "status": "Published",
+  "type": "Screening",
+  "year": "2021",
+  "topic": "Vitamin D Deficiency in Adults: Screening",
+  "age": "Adult, Senior",
+  "grade": "I"
+ },
+ {
+  "slug": "vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication",
+  "status": "Published",
+  "type": "Preventive medication",
+  "year": "2022",
+  "topic": "Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer: Preventive Medication",
+  "age": "Adult, Senior",
+  "grade": "D, I"
+ },
+ {
+  "slug": "youth-violence-counseling",
+  "status": "Referred",
+  "type": "Counseling",
+  "year": "1996",
+  "topic": "Youth Violence: Counseling",
+  "age": "Adolescent",
+  "grade": ""
+ }
+]

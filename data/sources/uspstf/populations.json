@@ -1,0 +1,842 @@
+[
+ {
+  "page": "abdominal-aortic-aneurysm-screening",
+  "population": "Men aged 65 to 75 years who have ever smoked",
+  "recommendation": "The USPSTF recommends 1-time screening for abdominal aortic aneurysm (AAA) with ultrasonography in men aged 65 to 75 years who have ever smoked.",
+  "grade": "B"
+ },
+ {
+  "page": "abdominal-aortic-aneurysm-screening",
+  "population": "Men aged 65 to 75 years who have never smoked",
+  "recommendation": "The USPSTF recommends that clinicians selectively offer screening for AAA with ultrasonography in men aged 65 to 75 years who have never smoked rather than routinely screening all men in this group. Evidence indicates that the net benefit of screening all men in this group is small. In determining whether this service is appropriate in individual cases, patients and clinicians should consider the balance of benefits and harms on the basis of evidence relevant to the patient's medical history, family history, other risk factors, and personal values.",
+  "grade": "C"
+ },
+ {
+  "page": "abdominal-aortic-aneurysm-screening",
+  "population": "Women who have never smoked",
+  "recommendation": "The USPSTF recommends against routine screening for AAA with ultrasonography in women who have never smoked and have no family history of AAA.",
+  "grade": "D"
+ },
+ {
+  "page": "abdominal-aortic-aneurysm-screening",
+  "population": "Women aged 65 to 75 years who have ever smoked",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for AAA with ultrasonography in women aged 65 to 75 years who have ever smoked or have a family history of AAA.",
+  "grade": "I"
+ },
+ {
+  "page": "adolescent-idiopathic-scoliosis-screening",
+  "population": "Children and adolescents aged 10 to 18 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for adolescent idiopathic scoliosis in children and adolescents aged 10 to 18 years.",
+  "grade": "I"
+ },
+ {
+  "page": "anxiety-adults-screening",
+  "population": "Adults 64 years or younger, including pregnant and postpartum persons",
+  "recommendation": "The USPSTF recommends screening for anxiety disorders in adults, including pregnant and postpartum persons.",
+  "grade": "B"
+ },
+ {
+  "page": "anxiety-adults-screening",
+  "population": "Older adults 65 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for anxiety disorders in older adults.",
+  "grade": "I"
+ },
+ {
+  "page": "aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+  "population": "Adults aged 40 to 59 years with a 10% or greater 10-year cardiovascular disease (CVD) risk",
+  "recommendation": "The decision to initiate low-dose aspirin use for the primary prevention of CVD in adults aged 40 to 59 years who have a 10% or greater 10-year CVD risk should be an individual one. Evidence indicates that the net benefit of aspirin use in this group is small. Persons who are not at increased risk for bleeding and are willing to take low-dose aspirin daily are more likely to benefit.",
+  "grade": "C"
+ },
+ {
+  "page": "aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+  "population": "Adults 60 years or older",
+  "recommendation": "The USPSTF recommends against initiating low-dose aspirin use for the primary prevention of CVD in adults 60 years or older.",
+  "grade": "D"
+ },
+ {
+  "page": "asymptomatic-bacteriuria-in-adults-screening",
+  "population": "Pregnant persons",
+  "recommendation": "The USPSTF recommends screening for asymptomatic bacteriuria using urine culture in pregnant persons.",
+  "grade": "B"
+ },
+ {
+  "page": "asymptomatic-bacteriuria-in-adults-screening",
+  "population": "Nonpregnant adults",
+  "recommendation": "The USPSTF recommends against screening for asymptomatic bacteriuria in nonpregnant adults.",
+  "grade": "D"
+ },
+ {
+  "page": "atrial-fibrillation-screening",
+  "population": "Asymptomatic adults 50 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for atrial fibrillation. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "autism-spectrum-disorder-in-young-children-screening",
+  "population": "Children aged 18 to 30 months",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for autism spectrum disorder (ASD) in young children for whom no concerns of ASD have been raised by their parents or a clinician.",
+  "grade": "I"
+ },
+ {
+  "page": "bacterial-vaginosis-in-pregnancy-to-prevent-preterm-delivery-screening",
+  "population": "Pregnant persons not at increased risk for preterm delivery",
+  "recommendation": "The USPSTF recommends against screening for bacterial vaginosis (BV) in pregnant persons who are not at increased risk for preterm delivery.",
+  "grade": "D"
+ },
+ {
+  "page": "bacterial-vaginosis-in-pregnancy-to-prevent-preterm-delivery-screening",
+  "population": "Pregnant persons at increased risk for preterm delivery",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for BV in pregnant persons who are at increased risk for preterm delivery.",
+  "grade": "I"
+ },
+ {
+  "page": "bladder-cancer-in-adults-screening",
+  "population": "Asymptomatic Adults",
+  "recommendation": "The USPSTF concludes the current evidence is insufficient to assess the balance of benefits and harms of screening for bladder cancer in asymptomatic adults.",
+  "grade": "I"
+ },
+ {
+  "page": "blood-pressure-in-children-and-adolescents-hypertension-screening",
+  "population": "Children and adolescents",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for high blood pressure in children and adolescents.",
+  "grade": "I"
+ },
+ {
+  "page": "brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing",
+  "population": "Women with a personal or family history of breast, ovarian, tubal, or peritoneal cancer or an ancestry associated with BRCA1/2 gene mutation",
+  "recommendation": "The USPSTF recommends that primary care clinicians assess women with a personal or family history of breast, ovarian, tubal, or peritoneal cancer or who have an ancestry associated with breast cancer susceptibility 1 and 2 (BRCA1/2) gene mutations with an appropriate brief familial risk assessment tool. Women with a positive result on the risk assessment tool should receive genetic counseling and, if indicated after counseling, genetic testing.",
+  "grade": "B"
+ },
+ {
+  "page": "brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing",
+  "population": "Women whose personal or family history or ancestry is not associated with potential harmful BRCA1/2 gene mutations",
+  "recommendation": "The USPSTF recommends against routine risk assessment, genetic counseling, or genetic testing for women whose personal or family history or ancestry is not associated with potentially harmful BRCA1/2 gene mutations.",
+  "grade": "D"
+ },
+ {
+  "page": "breast-cancer-medications-for-risk-reduction",
+  "population": "Women at increased risk for breast cancer aged 35 years or older",
+  "recommendation": "The USPSTF recommends that clinicians offer to prescribe risk-reducing medications, such as tamoxifen, raloxifene, or aromatase inhibitors, to women who are at increased risk for breast cancer and at low risk for adverse medication effects.",
+  "grade": "B"
+ },
+ {
+  "page": "breast-cancer-medications-for-risk-reduction",
+  "population": "Women not at increased risk for breast cancer aged 35 years or older",
+  "recommendation": "The USPSTF recommends against the routine use of risk-reducing medications, such as tamoxifen, raloxifene, or aromatase inhibitors, in women who are not at increased risk for breast cancer.",
+  "grade": "D"
+ },
+ {
+  "page": "breast-cancer-screening",
+  "population": "Women aged 40 to 74 years",
+  "recommendation": "The USPSTF recommends biennial screening mammography for women aged 40 to 74 years.",
+  "grade": "B"
+ },
+ {
+  "page": "breast-cancer-screening",
+  "population": "Women 75 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening mammography in women 75 years or older.",
+  "grade": "I"
+ },
+ {
+  "page": "breast-cancer-screening",
+  "population": "Women with dense breasts",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of supplemental screening for breast cancer using breast ultrasonography or magnetic resonance imaging (MRI) in women identified to have dense breasts on an otherwise negative screening mammogram. See the \"Practice Considerations\" section for more information on the patient population to whom this recommendation applies and on screening mammography modalities.",
+  "grade": "I"
+ },
+ {
+  "page": "breastfeeding-primary-care-interventions",
+  "population": "Pregnant and postpartum women",
+  "recommendation": "The USPSTF recommends providing interventions or referrals, during pregnancy and after birth, to support breastfeeding.",
+  "grade": "B"
+ },
+ {
+  "page": "cardiovascular-disease-risk-screening-with-electrocardiography",
+  "population": "Adults at low risk of CVD events",
+  "recommendation": "The USPSTF recommends against screening with resting or exercise electrocardiography (ECG) to prevent cardiovascular disease (CVD) events in asymptomatic adults at low risk of CVD events.",
+  "grade": "D"
+ },
+ {
+  "page": "cardiovascular-disease-risk-screening-with-electrocardiography",
+  "population": "Adults at intermediate or high risk of CVD events",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening with resting or exercise ECG to prevent CVD events in asymptomatic adults at intermediate or high risk of CVD events. See the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "cardiovascular-disease-screening-using-nontraditional-risk-assessment",
+  "population": "Adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of adding the ankle-brachial index (ABI), high-sensitivity C-reactive protein (hsCRP) level, or coronary artery calcium (CAC) score to traditional risk assessment for cardiovascular disease (CVD) in asymptomatic adults to prevent CVD events. See the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "carotid-artery-stenosis-screening",
+  "population": "Asymptomatic adults",
+  "recommendation": "The USPSTF recommends against screening for asymptomatic carotid artery stenosis in the general adult population. See the Practice Considerations section for a description of adults at increased risk.",
+  "grade": "D"
+ },
+ {
+  "page": "celiac-disease-screening",
+  "population": "Asymptomatic adults, adolescents, and children",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for celiac disease in asymptomatic persons.",
+  "grade": "I"
+ },
+ {
+  "page": "cervical-cancer-screening",
+  "population": "Women aged 21 to 65 years",
+  "recommendation": "The USPSTF recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). See the Clinical Considerations section for the relative benefits and harms of alternative screening strategies for women 21 years or older.",
+  "grade": "A"
+ },
+ {
+  "page": "cervical-cancer-screening",
+  "population": "Women younger than 21 years",
+  "recommendation": "The USPSTF recommends against screening for cervical cancer in women younger than 21 years.",
+  "grade": "D"
+ },
+ {
+  "page": "cervical-cancer-screening",
+  "population": "Women who have had a hysterectomy",
+  "recommendation": "The USPSTF recommends against screening for cervical cancer in women who have had a hysterectomy with removal of the cervix and do not have a history of a high-grade precancerous lesion (ie, cervical intraepithelial neoplasia [CIN] grade 2 or 3) or cervical cancer.",
+  "grade": "D"
+ },
+ {
+  "page": "cervical-cancer-screening",
+  "population": "Women older than 65 years",
+  "recommendation": "The USPSTF recommends against screening for cervical cancer in women older than 65 years who have had adequate prior screening and are not otherwise at high risk for cervical cancer. See the Clinical Considerations section for discussion of adequate prior screening and risk factors that support screening after age 65 years.",
+  "grade": "D"
+ },
+ {
+  "page": "child-maltreatment-primary-care-interventions",
+  "population": "Children and adolescents younger than 18 years without signs and symptoms of or known exposure to maltreatment",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of primary care interventions to prevent child maltreatment.",
+  "grade": "I"
+ },
+ {
+  "page": "chlamydia-and-gonorrhea-screening",
+  "population": "Sexually active women, including pregnant persons",
+  "recommendation": "The USPSTF recommends screening for chlamydia in all sexually active women 24 years or younger and in women 25 years or older who are at increased risk for infection.",
+  "grade": "B"
+ },
+ {
+  "page": "chlamydia-and-gonorrhea-screening",
+  "population": "Sexually active women, including pregnant persons",
+  "recommendation": "The USPSTF recommends screening for gonorrhea in all sexually active women 24 years or younger and in women 25 years or older who are at increased risk for infection.",
+  "grade": "B"
+ },
+ {
+  "page": "chlamydia-and-gonorrhea-screening",
+  "population": "Sexually active men",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for chlamydia and gonorrhea in men.",
+  "grade": "I"
+ },
+ {
+  "page": "chronic-obstructive-pulmonary-disease-screening",
+  "population": "Asymptomatic adults",
+  "recommendation": "The USPSTF recommends against screening for chronic obstructive pulmonary disease in asymptomatic adults.",
+  "grade": "D"
+ },
+ {
+  "page": "cognitive-impairment-in-older-adults-screening",
+  "population": "Older adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for cognitive impairment in older adults.",
+  "grade": "I"
+ },
+ {
+  "page": "colorectal-cancer-screening",
+  "population": "Adults aged 50 to 75 years",
+  "recommendation": "The USPSTF recommends screening for colorectal cancer in all adults aged 50 to 75 years. See the \"Practice Considerations\" section and Table 1 for details about screening strategies.",
+  "grade": "A"
+ },
+ {
+  "page": "colorectal-cancer-screening",
+  "population": "Adults aged 45 to 49 years",
+  "recommendation": "The USPSTF recommends screening for colorectal cancer in adults aged 45 to 49 years. See the \"Practice Considerations\" section and Table 1 for details about screening strategies.",
+  "grade": "B"
+ },
+ {
+  "page": "colorectal-cancer-screening",
+  "population": "Adults aged 76 to 85 years",
+  "recommendation": "The USPSTF recommends that clinicians selectively offer screening for colorectal cancer in adults aged 76 to 85 years. Evidence indicates that the net benefit of screening all persons in this age group is small. In determining whether this service is appropriate in individual cases, patients and clinicians should consider the patient's overall health, prior screening history, and preferences.",
+  "grade": "C"
+ },
+ {
+  "page": "drug-use-illicit-primary-care-interventions-for-children-and-adolescents",
+  "population": "Children, adolescents, and young adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of primary care--based behavioral counseling interventions to prevent illicit drug use, including nonmedical use of prescription drugs, in children, adolescents, and young adults. See the Practice Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "drug-use-illicit-screening",
+  "population": "Adults age 18 years or older",
+  "recommendation": "The USPSTF recommends screening by asking questions about unhealthy drug use in adults age 18 years or older. Screening should be implemented when services for accurate diagnosis, effective treatment, and appropriate care can be offered or referred. (Screening refers to asking questions about unhealthy drug use, not testing biological specimens.)",
+  "grade": "B"
+ },
+ {
+  "page": "drug-use-illicit-screening",
+  "population": "Adolescents",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for unhealthy drug use in adolescents. See the \"Practice Considerations\" section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "falls-prevention-community-dwelling-older-adults-interventions",
+  "population": "Community-dwelling adults 65 years or older",
+  "recommendation": "The USPSTF recommends exercise interventions to prevent falls in community-dwelling adults 65 years or older who are at increased risk for falls.",
+  "grade": "B"
+ },
+ {
+  "page": "falls-prevention-community-dwelling-older-adults-interventions",
+  "population": "Community-dwelling adults 65 years or older",
+  "recommendation": "The USPSTF recommends that clinicians individualize the decision to offer multifactorial interventions to prevent falls to community-dwelling adults 65 years or older who are at increased risk for falls. Existing evidence indicates that the overall net benefit of routinely offering multifactorial interventions to prevent falls is small. When determining whether this service is appropriate for an individual, patients and clinicians should consider the balance of benefits and harms based on the circumstances of prior falls, presence of comorbid medical conditions, and the patient's values and pr",
+  "grade": "C"
+ },
+ {
+  "page": "folic-acid-for-the-prevention-of-neural-tube-defects-preventive-medication",
+  "population": "Persons who plan to or could become pregnant",
+  "recommendation": "The USPSTF recommends that all persons planning to or who could become pregnant take a daily supplement containing 0.4 to 0.8 mg (400 to 800 mcg) of folic acid.",
+  "grade": "A"
+ },
+ {
+  "page": "food-insecurity-screening",
+  "population": "Children, adolescents, and adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for food insecurity on health outcomes in the primary care setting.",
+  "grade": "I"
+ },
+ {
+  "page": "genital-herpes-serologic-screening",
+  "population": "Asymptomatic adolescents and adults, including pregnant persons",
+  "recommendation": "The USPSTF recommends against routine serologic screening for genital herpes simplex virus infection in asymptomatic adolescents and adults, including pregnant persons.",
+  "grade": "D"
+ },
+ {
+  "page": "gestational-diabetes-screening",
+  "population": "Asymptomatic pregnant persons at 24 weeks of gestation or after",
+  "recommendation": "The USPSTF recommends screening for gestational diabetes in asymptomatic pregnant persons at 24 weeks of gestation or after.",
+  "grade": "B"
+ },
+ {
+  "page": "gestational-diabetes-screening",
+  "population": "Asymptomatic pregnant persons before 24 weeks of gestation",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for gestational diabetes in asymptomatic pregnant persons before 24 weeks of gestation.",
+  "grade": "I"
+ },
+ {
+  "page": "healthy-diet-and-physical-activity-counseling-adults-with-high-risk-of-cvd",
+  "population": "Adults with cardiovascular disease risk factors",
+  "recommendation": "The USPSTF recommends offering or referring adults with cardiovascular disease risk factors to behavioral counseling interventions to promote a healthy diet and physical activity.",
+  "grade": "B"
+ },
+ {
+  "page": "healthy-lifestyle-and-physical-activity-for-cvd-prevention-adults-without-known-risk-factors-behavioral-counseling",
+  "population": "Adults 18 years or older without known cardiovascular disease risk factors",
+  "recommendation": "The USPSTF recommends that clinicians individualize the decision to offer or refer adults without cardiovascular disease risk factors to behavioral counseling interventions to promote a healthy diet and physical activity. See the \"Practice Considerations\" section for information on determining which patients may benefit most from this service.",
+  "grade": "C"
+ },
+ {
+  "page": "healthy-weight-and-weight-gain-during-pregnancy-behavioral-counseling-interventions",
+  "population": "Pregnant persons",
+  "recommendation": "The USPSTF recommends that clinicians offer pregnant persons effective behavioral counseling interventions aimed at promoting healthy weight gain and preventing excess gestational weight gain in pregnancy.",
+  "grade": "B"
+ },
+ {
+  "page": "hearing-loss-in-older-adults-screening",
+  "population": "Asymptomatic adults 50 years or older",
+  "recommendation": "The US Preventive Services Task Force (USPSTF) concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for hearing loss in older adults. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "hepatitis-b-virus-infection-in-pregnant-women-screening",
+  "population": "Pregnant women",
+  "recommendation": "The USPSTF recommends screening for hepatitis B virus (HBV) infection in pregnant women at their first prenatal visit",
+  "grade": "A"
+ },
+ {
+  "page": "hepatitis-b-virus-infection-screening",
+  "population": "Adolescents and adults at increased risk for infection",
+  "recommendation": "The USPSTF recommends screening for hepatitis B virus (HBV) infection in adolescents and adults at increased risk for infection. See the Practice Considerations section for a description of adolescents and adults at increased risk for infection.",
+  "grade": "B"
+ },
+ {
+  "page": "hepatitis-c-screening",
+  "population": "Adults aged 18 to 79 years",
+  "recommendation": "The USPSTF recommends screening for hepatitis C virus (HCV) infection in adults aged 18 to 79 years.",
+  "grade": "B"
+ },
+ {
+  "page": "human-immunodeficiency-virus-hiv-infection-screening",
+  "population": "Pregnant persons",
+  "recommendation": "The USPSTF recommends that clinicians screen for HIV infection in all pregnant persons, including those who present in labor or at delivery whose HIV status is unknown.",
+  "grade": "A"
+ },
+ {
+  "page": "human-immunodeficiency-virus-hiv-infection-screening",
+  "population": "Adolescents and adults aged 15 to 65 years",
+  "recommendation": "The USPSTF recommends that clinicians screen for HIV infection in adolescents and adults aged 15 to 65 years. Younger adolescents and older adults who are at increased risk of infection should also be screened. See the Clinical Considerations section for more information about assessment of risk, screening intervals, and rescreening in pregnancy.",
+  "grade": "A"
+ },
+ {
+  "page": "hypertension-in-adults-screening",
+  "population": "Adults 18 years or older without known hypertension",
+  "recommendation": "The USPSTF recommends screening for hypertension in adults 18 years or older with office blood pressure measurement (OBPM). The USPSTF recommends obtaining blood pressure measurements outside of the clinical setting for diagnostic confirmation before starting treatment.",
+  "grade": "A"
+ },
+ {
+  "page": "hypertensive-disorders-pregnancy-screening",
+  "population": "Asymptomatic pregnant persons",
+  "recommendation": "The USPSTF recommends screening for hypertensive disorders in pregnant persons with blood pressure measurements throughout pregnancy.",
+  "grade": "B"
+ },
+ {
+  "page": "impaired-visual-acuity-screening-older-adults",
+  "population": "Asymptomatic adults 65 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for impaired visual acuity in older adults.",
+  "grade": "I"
+ },
+ {
+  "page": "intimate-partner-violence-and-abuse-of-elderly-and-vulnerable-adults-screening",
+  "population": "Women of reproductive age, including pregnant and postpartum women",
+  "recommendation": "The USPSTF recommends that clinicians screen for intimate partner violence (IPV) in women of reproductive age, including those who are pregnant and postpartum. See the \"Practice Considerations\" section for information on evidence-based multicomponent interventions and for information on IPV in men.",
+  "grade": "B"
+ },
+ {
+  "page": "intimate-partner-violence-and-abuse-of-elderly-and-vulnerable-adults-screening",
+  "population": "Older or vulnerable adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for caregiver abuse and neglect in older or vulnerable adults. See the \"Practice Considerations\" section for additional information.",
+  "grade": "I"
+ },
+ {
+  "page": "iron-deficiency-anemia-in-pregnant-women-screening-and-supplementation",
+  "population": "Asymptomatic pregnant adolescents and adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for iron deficiency and iron deficiency anemia in pregnant persons to prevent adverse maternal and infant health outcomes.",
+  "grade": "I"
+ },
+ {
+  "page": "iron-deficiency-anemia-in-pregnant-women-screening-and-supplementation",
+  "population": "Asymptomatic pregnant adolescents and adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of routine iron supplementation in pregnant persons to prevent adverse maternal and infant health outcomes.",
+  "grade": "I"
+ },
+ {
+  "page": "iron-deficiency-anemia-in-young-children-screening",
+  "population": "Children ages 6 to 24 months",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for iron deficiency anemia in children ages 6 to 24 months. Go to the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "latent-tuberculosis-infection-screening",
+  "population": "Asymptomatic adults at increased risk of latent tuberculosis infection (LTBI)",
+  "recommendation": "The USPSTF recommends screening for LTBI in populations at increased risk. See the \"Assessment of Risk\" section for additional information on adults at increased risk.",
+  "grade": "B"
+ },
+ {
+  "page": "lipid-disorders-in-children-screening",
+  "population": "Asymptomatic children and adolescents 20 years or younger",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for lipid disorders in children and adolescents 20 years or younger. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication",
+  "population": "Pregnant persons at high risk for preeclampsia",
+  "recommendation": "The USPSTF recommends the use of low-dose aspirin (81 mg/day) as preventive medication after 12 weeks of gestation in persons who are at high risk for preeclampsia. See the Practice Considerations section for information on high risk and aspirin dose.",
+  "grade": "B"
+ },
+ {
+  "page": "lung-cancer-screening",
+  "population": "Adults aged 50 to 80 years who have a 20 pack-year smoking history and currently smoke or have quit within the past 15 years",
+  "recommendation": "The USPSTF recommends annual screening for lung cancer with low-dose computed tomography (LDCT) in adults aged 50 to 80 years who have a 20 pack-year smoking history and currently smoke or have quit within the past 15 years. Screening should be discontinued once a person has not smoked for 15 years or develops a health problem that substantially limits life expectancy or the ability or willingness to have curative lung surgery.",
+  "grade": "B"
+ },
+ {
+  "page": "menopausal-hormone-therapy-preventive-medication",
+  "population": "Postmenopausal persons",
+  "recommendation": "The USPSTF recommends against the use of combined estrogen and progestin for the primary prevention of chronic conditions in postmenopausal persons.",
+  "grade": "D"
+ },
+ {
+  "page": "menopausal-hormone-therapy-preventive-medication",
+  "population": "Postmenopausal persons who have had a hysterectomy",
+  "recommendation": "The USPSTF recommends against the use of estrogen alone for the primary prevention of chronic conditions in postmenopausal persons who have had a hysterectomy.",
+  "grade": "D"
+ },
+ {
+  "page": "obesity-in-adults-interventions",
+  "population": "Adults",
+  "recommendation": "The USPSTF recommends that clinicians offer or refer adults with a body mass index (BMI) of 30 or higher (calculated as weight in kilograms divided by height in meters squared) to intensive, multicomponent behavioral interventions.",
+  "grade": "B"
+ },
+ {
+  "page": "obesity-in-children-and-adolescents-screening",
+  "population": "Children and adolescents 6 years or older",
+  "recommendation": "The USPSTF recommends that clinicians provide or refer children and adolescents 6 years or older with a high body mass index (BMI) (\u226595th percentile for age and sex) to comprehensive, intensive behavioral interventions. See the Practice Considerations section for more information about behavioral interventions.",
+  "grade": "B"
+ },
+ {
+  "page": "obstructive-sleep-apnea-in-adults-screening",
+  "population": "General adult population",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for obstructive sleep apnea in the general adult population. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "ocular-prophylaxis-for-gonococcal-ophthalmia-neonatorum-preventive-medication",
+  "population": "Newborns",
+  "recommendation": "The USPSTF recommends prophylactic ocular topical medication for all newborns to prevent gonococcal ophthalmia neonatorum.",
+  "grade": "A"
+ },
+ {
+  "page": "oral-cancer-screening",
+  "population": "Asymptomatic Adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for oral cancer in asymptomatic adults. Go to the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "oral-health-adults-screening-preventive-interventions",
+  "population": "Asymptomatic adults 18 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of routine screening performed by primary care clinicians for oral health conditions, including dental caries or periodontal-related disease, in adults.",
+  "grade": "I"
+ },
+ {
+  "page": "oral-health-adults-screening-preventive-interventions",
+  "population": "Asymptomatic adults 18 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of preventive interventions performed by primary care clinicians for oral health conditions, including dental caries or periodontal-related disease, in adults.",
+  "grade": "I"
+ },
+ {
+  "page": "oral-health-children-adolescents-screening-preventive-interventions",
+  "population": "Asymptomatic children and adolescents aged 5 to 17 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of routine screening performed by primary care clinicians for oral health conditions, including dental caries, in children and adolescents aged 5 to 17 years.",
+  "grade": "I"
+ },
+ {
+  "page": "oral-health-children-adolescents-screening-preventive-interventions",
+  "population": "Asymptomatic children and adolescents aged 5 to 17 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of preventive interventions performed by primary care clinicians for oral health conditions, including dental caries, in children and adolescents aged 5 to 17 years.",
+  "grade": "I"
+ },
+ {
+  "page": "osteoporosis-screening",
+  "population": "Women 65 years or older",
+  "recommendation": "The USPSTF recommends screening for osteoporosis to prevent osteoporotic fractures in women 65 years or older. See the \"Practice Considerations\" section for more information on screening tests.",
+  "grade": "B"
+ },
+ {
+  "page": "osteoporosis-screening",
+  "population": "Postmenopausal women younger than 65 years with 1 or more risk factors for osteoporosis",
+  "recommendation": "The USPSTF recommends screening for osteoporosis to prevent osteoporotic fractures in postmenopausal women younger than 65 years who are at increased risk for an osteoporotic fracture as estimated by clinical risk assessment. See the \"Practice Considerations\" section for more information on risk assessment and screening tests.",
+  "grade": "B"
+ },
+ {
+  "page": "osteoporosis-screening",
+  "population": "Men",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for osteoporosis to prevent osteoporotic fractures in men. See the \"Practice Considerations\" section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "ovarian-cancer-screening",
+  "population": "Asymptomatic women",
+  "recommendation": "The USPSTF recommends against screening for ovarian cancer in asymptomatic women. This recommendation applies to asymptomatic women who are not known to have a high-risk hereditary cancer syndrome.",
+  "grade": "D"
+ },
+ {
+  "page": "pancreatic-cancer-screening",
+  "population": "Adults",
+  "recommendation": "The USPSTF recommends against screening for pancreatic cancer in asymptomatic adults.",
+  "grade": "D"
+ },
+ {
+  "page": "perinatal-depression-preventive-interventions",
+  "population": "Pregnant and postpartum persons",
+  "recommendation": "The USPSTF recommends that clinicians provide or refer pregnant and postpartum persons who are at increased risk of perinatal depression to counseling interventions.",
+  "grade": "B"
+ },
+ {
+  "page": "peripheral-artery-disease-in-adults-screening-with-the-ankle-brachial-index",
+  "population": "Adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for peripheral artery disease (PAD) and cardiovascular disease (CVD) risk with the ankle-brachial index (ABI) in asymptomatic adults.",
+  "grade": "I"
+ },
+ {
+  "page": "prediabetes-type2-diabetes-children-adolescents-screening",
+  "population": "Asymptomatic children and adolescents younger than 18 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for type 2 diabetes in children and adolescents. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "prevention-of-dental-caries-in-children-younger-than-age-5-years-screening-and-interventions1",
+  "population": "Children younger than 5 years",
+  "recommendation": "The USPSTF recommends that primary care clinicians prescribe oral fluoride supplementation starting at age 6 months for children whose water supply is deficient in fluoride.",
+  "grade": "B"
+ },
+ {
+  "page": "prevention-of-dental-caries-in-children-younger-than-age-5-years-screening-and-interventions1",
+  "population": "Children younger than 5 years",
+  "recommendation": "The USPSTF recommends that primary care clinicians apply fluoride varnish to the primary teeth of all infants and children starting at the age of primary tooth eruption.",
+  "grade": "B"
+ },
+ {
+  "page": "prevention-of-dental-caries-in-children-younger-than-age-5-years-screening-and-interventions1",
+  "population": "Children younger than 5 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of routine screening examinations for dental caries performed by primary care clinicians in children younger than 5 years.",
+  "grade": "I"
+ },
+ {
+  "page": "prevention-of-human-immunodeficiency-virus-hiv-infection-pre-exposure-prophylaxis",
+  "population": "Adolescents and adults at increased risk of HIV",
+  "recommendation": "The USPSTF recommends that clinicians prescribe preexposure prophylaxis using effective antiretroviral therapy to persons who are at increased risk of HIV acquisition to decrease the risk of acquiring HIV. See the Practice Considerations section for more information about identification of persons at increased risk and about effective antiretroviral therapy.",
+  "grade": "A"
+ },
+ {
+  "page": "primary-open-angle-glaucoma-screening",
+  "population": "Asymptomatic adults 40 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for primary open-angle glaucoma in adults.",
+  "grade": "I"
+ },
+ {
+  "page": "prostate-cancer-screening",
+  "population": "Men aged 55 to 69 years",
+  "recommendation": "For men aged 55 to 69 years, the decision to undergo periodic prostate-specific antigen (PSA)-based screening for prostate cancer should be an individual one. Before deciding whether to be screened, men should have an opportunity to discuss the potential benefits and harms of screening with their clinician and to incorporate their values and preferences in the decision. Screening offers a small potential benefit of reducing the chance of death from prostate cancer in some men. However, many men will experience potential harms of screening, including false-positive results that require addition",
+  "grade": "C"
+ },
+ {
+  "page": "prostate-cancer-screening",
+  "population": "Men 70 years and older",
+  "recommendation": "The USPSTF recommends against PSA-based screening for prostate cancer in men 70 years and older.",
+  "grade": "D"
+ },
+ {
+  "page": "screening-anxiety-children-adolescents",
+  "population": "Children and adolescents aged 8 to 18 years",
+  "recommendation": "The USPSTF recommends screening for anxiety in children and adolescents aged 8 to 18 years.",
+  "grade": "B"
+ },
+ {
+  "page": "screening-anxiety-children-adolescents",
+  "population": "Children 7 years or younger",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for anxiety in children 7 years or younger. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "screening-depression-suicide-risk-adults",
+  "population": "Adults, including pregnant and postpartum persons, and older adults (65 years or older)",
+  "recommendation": "The USPSTF recommends screening for depression in the adult population, including pregnant and postpartum persons, as well as older adults.",
+  "grade": "B"
+ },
+ {
+  "page": "screening-depression-suicide-risk-adults",
+  "population": "Adults, including pregnant and postpartum persons, and older adults (65 years or older)",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for suicide risk in the adult population, including pregnant and postpartum persons, as well as older adults.",
+  "grade": "I"
+ },
+ {
+  "page": "screening-depression-suicide-risk-children-adolescents",
+  "population": "Adolescents aged 12 to 18 years",
+  "recommendation": "The USPSTF recommends screening for major depressive disorder (MDD) in adolescents aged 12 to 18 years.",
+  "grade": "B"
+ },
+ {
+  "page": "screening-depression-suicide-risk-children-adolescents",
+  "population": "Children 11 years or younger",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for MDD in children 11 years or younger. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "screening-depression-suicide-risk-children-adolescents",
+  "population": "Children and adolescents",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for suicide risk in children and adolescents. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "screening-eating-disorders-adolescents-adults",
+  "population": "Asymptomatic adolescents and adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for eating disorders in adolescents and adults. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "screening-for-prediabetes-and-type-2-diabetes",
+  "population": "Asymptomatic adults aged 35 to 70 years who have overweight or obesity",
+  "recommendation": "The USPSTF recommends screening for prediabetes and type 2 diabetes in adults aged 35 to 70 years who have overweight or obesity. Clinicians should offer or refer patients with prediabetes to effective preventive interventions.",
+  "grade": "B"
+ },
+ {
+  "page": "sexually-transmitted-infections-behavioral-counseling",
+  "population": "Sexually active adolescents and adults at increased risk",
+  "recommendation": "The USPSTF recommends behavioral counseling for all sexually active adolescents and for adults who are at increased risk for sexually transmitted infections (STIs). See the Practice Considerations section for more information on populations at increased risk for acquiring STIs.",
+  "grade": "B"
+ },
+ {
+  "page": "skin-cancer-counseling",
+  "population": "Young adults, adolescents, children, and parents of young children",
+  "recommendation": "The USPSTF recommends counseling young adults, adolescents, children, and parents of young children about minimizing exposure to ultraviolet (UV) radiation for persons aged 6 months to 24 years with fair skin types to reduce their risk of skin cancer.",
+  "grade": "B"
+ },
+ {
+  "page": "skin-cancer-counseling",
+  "population": "Adults older than 24 years with fair skin types",
+  "recommendation": "The USPSTF recommends that clinicians selectively offer counseling to adults older than 24 years with fair skin types about minimizing their exposure to UV radiation to reduce risk of skin cancer. Existing evidence indicates that the net benefit of counseling all adults older than 24 years is small. In determining whether counseling is appropriate in individual cases, patients and clinicians should consider the presence of risk factors for skin cancer. See the Clinical Considerations section for information on risk assessment.",
+  "grade": "C"
+ },
+ {
+  "page": "skin-cancer-counseling",
+  "population": "Adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of counseling adults about skin self-examination to prevent skin cancer. See the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "skin-cancer-screening",
+  "population": "Asymptomatic adolescents and adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of visual skin examination by a clinician to screen for skin cancer in adolescents and adults. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "speech-and-language-delay-and-disorders-in-children-age-5-and-younger-screening",
+  "population": "Children 5 years or younger without signs or symptoms of speech and language delay and disorders",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for speech and language delay and disorders in children 5 years or younger.",
+  "grade": "I"
+ },
+ {
+  "page": "statin-use-in-adults-preventive-medication",
+  "population": "Adults aged 40 to 75 years who have 1 or more cardiovascular risk factors and an estimated 10-year cardiovascular disease (CVD) risk of 10% or greater",
+  "recommendation": "The USPSTF recommends that clinicians prescribe a statin for the primary prevention of CVD for adults aged 40 to 75 years who have 1 or more CVD risk factors (i.e. dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year risk of a cardiovascular event of 10% or greater.",
+  "grade": "B"
+ },
+ {
+  "page": "statin-use-in-adults-preventive-medication",
+  "population": "Adults aged 40 to 75 years who have 1 or more cardiovascular risk factors and an estimated 10-year CVD risk of 7.5% to less than 10%",
+  "recommendation": "The USPSTF recommends that clinicians selectively offer a statin for the primary prevention of CVD for adults aged 40 to 75 years who have 1 or more CVD risk factors (i.e dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year risk of a cardiovascular event of 7.5% to less than 10%. The likelihood of benefit is smaller in this group than in persons with a 10-year risk of 10% or greater.",
+  "grade": "C"
+ },
+ {
+  "page": "statin-use-in-adults-preventive-medication",
+  "population": "Adults 76 years or older",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of initiating a statin for the primary prevention of CVD events and mortality in adults 76 years or older.",
+  "grade": "I"
+ },
+ {
+  "page": "syphilis-infection-in-pregnancy-screening",
+  "population": "Asymptomatic pregnant women",
+  "recommendation": "The USPSTF recommends early, universal screening for syphilis infection during pregnancy; if an individual is not screened early in pregnancy, the USPSTF recommends screening at the first available opportunity.",
+  "grade": "A"
+ },
+ {
+  "page": "syphilis-infection-nonpregnant-adults-adolescents-screening",
+  "population": "Asymptomatic, nonpregnant adolescents and adults who are at increased risk for syphilis infection",
+  "recommendation": "The USPSTF recommends screening for syphilis infection in persons who are at increased risk for infection.",
+  "grade": "A"
+ },
+ {
+  "page": "testicular-cancer-screening",
+  "population": "Adolescent and Adult Men",
+  "recommendation": "The USPSTF recommends against screening for testicular cancer in adolescent or adult men.",
+  "grade": "D"
+ },
+ {
+  "page": "thyroid-cancer-screening",
+  "population": "Adults",
+  "recommendation": "The USPSTF recommends against screening for thyroid cancer in asymptomatic adults.",
+  "grade": "D"
+ },
+ {
+  "page": "thyroid-dysfunction-screening",
+  "population": "Nonpregnant, asymptomatic adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for thyroid dysfunction in nonpregnant, asymptomatic adults. See the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "tobacco-and-nicotine-use-prevention-in-children-and-adolescents-primary-care-interventions",
+  "population": "School-aged children and adolescents who have not started to use tobacco",
+  "recommendation": "The USPSTF recommends that primary care clinicians provide interventions, including education or brief counseling, to prevent initiation of tobacco use among school-aged children and adolescents.",
+  "grade": "B"
+ },
+ {
+  "page": "tobacco-and-nicotine-use-prevention-in-children-and-adolescents-primary-care-interventions",
+  "population": "School-aged children and adolescents who use tobacco",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of primary care--feasible interventions for the cessation of tobacco use among school-aged children and adolescents. See the Practice Considerations section for more information on effective interventions to prevent initiation of tobacco use and for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+  "population": "Nonpregnant adults",
+  "recommendation": "The USPSTF recommends that clinicians ask all adults about tobacco use, advise them to stop using tobacco, and provide behavioral interventions and US Food and Drug Administration (FDA)--approved pharmacotherapy for cessation to nonpregnant adults who use tobacco.",
+  "grade": "A"
+ },
+ {
+  "page": "tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+  "population": "Pregnant persons",
+  "recommendation": "The USPSTF recommends that clinicians ask all pregnant persons about tobacco use, advise them to stop using tobacco, and provide behavioral interventions for cessation to pregnant persons who use tobacco.",
+  "grade": "A"
+ },
+ {
+  "page": "tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+  "population": "Pregnant persons",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of pharmacotherapy interventions for tobacco cessation in pregnant persons.",
+  "grade": "I"
+ },
+ {
+  "page": "tobacco-use-in-adults-and-pregnant-women-counseling-and-interventions",
+  "population": "All adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of electronic cigarettes (e-cigarettes) for tobacco cessation in adults, including pregnant persons. The USPSTF recommends that clinicians direct patients who use tobacco to other tobacco cessation interventions with proven effectiveness and established safety. See the Practice Considerations section for more information on recommended behavioral interventions and pharmacotherapy and for suggestions for practice regarding the I statements.",
+  "grade": "I"
+ },
+ {
+  "page": "unhealthy-alcohol-use-in-adolescents-and-adults-screening-and-behavioral-counseling-interventions",
+  "population": "Adults 18 years or older, including pregnant women",
+  "recommendation": "The USPSTF recommends screening for unhealthy alcohol use in primary care settings in adults 18 years or older, including pregnant women, and providing persons engaged in risky or hazardous drinking with brief behavioral counseling interventions to reduce unhealthy alcohol use.",
+  "grade": "B"
+ },
+ {
+  "page": "unhealthy-alcohol-use-in-adolescents-and-adults-screening-and-behavioral-counseling-interventions",
+  "population": "Adolescents aged 12 to 17 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening and brief behavioral counseling interventions for alcohol use in primary care settings in adolescents aged 12 to 17 years. See the Clinical Considerations section for suggestions for practice regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "vision-in-children-ages-6-months-to-5-years-screening",
+  "population": "Children aged 3 to 5 years",
+  "recommendation": "The USPSTF recommends vision screening at least once in all children aged 3 to 5 years to detect amblyopia or its risk factors.",
+  "grade": "B"
+ },
+ {
+  "page": "vision-in-children-ages-6-months-to-5-years-screening",
+  "population": "Children younger than 3 years",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of vision screening in children younger than 3 years.",
+  "grade": "I"
+ },
+ {
+  "page": "vitamin-d-calcium-or-combined-supplementation-for-the-primary-prevention-of-fractures-in-adults-preventive-medication",
+  "population": "Postmenopausal women",
+  "recommendation": "The USPSTF recommends against daily supplementation with 400 IU or less of vitamin D and 1000 mg or less of calcium for the primary prevention of fractures in community-dwelling, postmenopausal women.",
+  "grade": "D"
+ },
+ {
+  "page": "vitamin-d-calcium-or-combined-supplementation-for-the-primary-prevention-of-fractures-in-adults-preventive-medication",
+  "population": "Men and premenopausal women",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of the benefits and harms of vitamin D and calcium supplementation, alone or combined, for the primary prevention of fractures in men and premenopausal women.",
+  "grade": "I"
+ },
+ {
+  "page": "vitamin-d-calcium-or-combined-supplementation-for-the-primary-prevention-of-fractures-in-adults-preventive-medication",
+  "population": "Postmenopausal women",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of the benefits and harms of daily supplementation with doses greater than 400 IU of vitamin D and greater than 1000 mg of calcium for the primary prevention of fractures in community-dwelling, postmenopausal women.",
+  "grade": "I"
+ },
+ {
+  "page": "vitamin-d-deficiency-screening",
+  "population": "Asymptomatic, community-dwelling, nonpregnant adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of screening for vitamin D deficiency in asymptomatic adults. See the Practice Considerations section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication",
+  "population": "Community-dwelling, nonpregnant adults",
+  "recommendation": "The USPSTF recommends against the use of beta carotene or vitamin E supplements for the prevention of cardiovascular disease or cancer.",
+  "grade": "D"
+ },
+ {
+  "page": "vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication",
+  "population": "Community-dwelling, nonpregnant adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of the use of multivitamin supplements for the prevention of cardiovascular disease or cancer. See the \"Practice Considerations\" section for additional information regarding the I statement.",
+  "grade": "I"
+ },
+ {
+  "page": "vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication",
+  "population": "Community-dwelling, nonpregnant adults",
+  "recommendation": "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of the use of single or paired nutrient supplements (other than beta carotene and vitamin E) for the prevention of cardiovascular disease or cancer. See the \"Practice Considerations\" section for additional information regarding the I statement.",
+  "grade": "I"
+ }
+]

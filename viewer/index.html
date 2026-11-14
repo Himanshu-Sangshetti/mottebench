@@ -64,7 +64,7 @@ function table(){const q=$('fq').value.toLowerCase(),F={m:$('fm').value,c:$('fc'
  document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{sortD=sortK==th.dataset.k?-sortD:1;sortK=th.dataset.k;table()});
  document.querySelectorAll('#tbl tr.r').forEach(tr=>tr.onclick=()=>show(V[+tr.dataset.i]));toHash()}
 function show(r){cur=r.conv_id;document.querySelectorAll('#tbl tr.r').forEach(tr=>tr.classList.toggle('on',V[+tr.dataset.i]?.conv_id==cur));
- const s=r.source||{};let h=`<table class="meta">
+ const s={url:r.source_url||(r.source||{}).url};let h=`<table class="meta">
  <tr><td>conv_id</td><td class="mono">${r.conv_id} <button onclick="navigator.clipboard.writeText('${r.conv_id}')">copy</button> <span class="help">traces/${esc(r.tag)}/${r.conv_id}.json</span></td></tr>
  <tr><td>model</td><td class="mono">${esc(r.model)} · provider ${esc(r.provider)} · run ${esc(r.tag)} · protocol ${esc(r.protocol)}</td></tr>
  <tr><td>condition</td><td class="mono">${esc(r.cond)} (${esc(cname(r.cond))}) · phrasing ${r.phrase_idx} · rep ${r.rep} · ${r.secs}s · ${esc(r.ts)}</td></tr>
