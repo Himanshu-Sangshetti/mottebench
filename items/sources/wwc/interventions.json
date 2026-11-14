@@ -1,0 +1,3971 @@
+[
+{
+"id": "665",
+"name": "Lindamood Phoneme Sequencing (LiPS)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/665",
+"n": "50"
+},
+{
+"id": "665",
+"name": "Lindamood Phoneme Sequencing (LiPS)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/665",
+"n": "50"
+},
+{
+"id": "665",
+"name": "Lindamood Phoneme Sequencing (LiPS)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/665",
+"n": "50"
+},
+{
+"id": "665",
+"name": "Lindamood Phoneme Sequencing (LiPS)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/665",
+"n": "50"
+},
+{
+"id": "665",
+"name": "Lindamood Phoneme Sequencing (LiPS)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Writing achievement",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/665",
+"n": "50"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "20"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Writing achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/325",
+"n": "20"
+},
+{
+"id": "235",
+"name": "Project Read",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/235",
+"n": "66"
+},
+{
+"id": "235",
+"name": "Project Read",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/235",
+"n": "14"
+},
+{
+"id": "235",
+"name": "Project Read",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/235",
+"n": "14"
+},
+{
+"id": "86",
+"name": "PLATO",
+"protocol": "Middle School Math",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/86",
+"n": "1037"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "39"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "99"
+},
+{
+"id": "256",
+"name": "Enhanced Proactive Reading",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "No Discernible Effects",
+"url": "/intervention/256",
+"n": "127"
+},
+{
+"id": "256",
+"name": "Enhanced Proactive Reading",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/256",
+"n": "131"
+},
+{
+"id": "259",
+"name": "Arthur",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/259",
+"n": "102"
+},
+{
+"id": "324",
+"name": "Read Well\u00ae",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/324",
+"n": "34"
+},
+{
+"id": "324",
+"name": "Read Well\u00ae",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/324",
+"n": "34"
+},
+{
+"id": "271",
+"name": "Dialogic Reading",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Communication/ Language",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/271",
+"n": "52"
+},
+{
+"id": "686",
+"name": "Tools of the Mind",
+"protocol": "Early Childhood Education",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/686",
+"n": "200"
+},
+{
+"id": "686",
+"name": "Tools of the Mind",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/686",
+"n": "202"
+},
+{
+"id": "686",
+"name": "Tools of the Mind",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/686",
+"n": "198"
+},
+{
+"id": "686",
+"name": "Tools of the Mind",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/686",
+"n": "220"
+},
+{
+"id": "416",
+"name": "Ready, Set, Leap!\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/416",
+"n": "274"
+},
+{
+"id": "416",
+"name": "Ready, Set, Leap!\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/416",
+"n": "514"
+},
+{
+"id": "416",
+"name": "Ready, Set, Leap!\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/416",
+"n": "516"
+},
+{
+"id": "416",
+"name": "Ready, Set, Leap!\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/416",
+"n": "511"
+},
+{
+"id": "480",
+"name": "Bright Beginnings",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/480",
+"n": "198"
+},
+{
+"id": "480",
+"name": "Bright Beginnings",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/480",
+"n": "197"
+},
+{
+"id": "480",
+"name": "Bright Beginnings",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/480",
+"n": "198"
+},
+{
+"id": "480",
+"name": "Bright Beginnings",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/480",
+"n": "198"
+},
+{
+"id": "397",
+"name": "Curiosity Corner",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/397",
+"n": "204"
+},
+{
+"id": "397",
+"name": "Curiosity Corner",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/397",
+"n": "369"
+},
+{
+"id": "397",
+"name": "Curiosity Corner",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/397",
+"n": "204"
+},
+{
+"id": "397",
+"name": "Curiosity Corner",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/397",
+"n": "200"
+},
+{
+"id": "418",
+"name": "Literacy Express",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/418",
+"n": "185"
+},
+{
+"id": "418",
+"name": "Literacy Express",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Positive Effects",
+"url": "/intervention/418",
+"n": "1002"
+},
+{
+"id": "418",
+"name": "Literacy Express",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "Positive Effects",
+"url": "/intervention/418",
+"n": "1004"
+},
+{
+"id": "418",
+"name": "Literacy Express",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Positive Effects",
+"url": "/intervention/418",
+"n": "999"
+},
+{
+"id": "536",
+"name": "Building Blocks for Math/SRA Real Math Building Blocks",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "Positive Effects",
+"url": "/intervention/536",
+"n": "263"
+},
+{
+"id": "624",
+"name": "Job Corps",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/624",
+"n": "8596"
+},
+{
+"id": "624",
+"name": "Job Corps",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/624",
+"n": "11313"
+},
+{
+"id": "646",
+"name": "Accelerated Middle Schools",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "Positive Effects",
+"url": "/intervention/646",
+"n": "848"
+},
+{
+"id": "646",
+"name": "Accelerated Middle Schools",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Positive Effects",
+"url": "/intervention/646",
+"n": "848"
+},
+{
+"id": "621",
+"name": "New Chance",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/621",
+"n": "2079"
+},
+{
+"id": "434",
+"name": "Summer Training and Education Program (STEP)",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/434",
+"n": "1326"
+},
+{
+"id": "434",
+"name": "Summer Training and Education Program (STEP)",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/434",
+"n": "1334"
+},
+{
+"id": "623",
+"name": "JOBSTART",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/623",
+"n": "1941"
+},
+{
+"id": "316",
+"name": "High School Redirection",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/316",
+"n": "1510"
+},
+{
+"id": "316",
+"name": "High School Redirection",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/316",
+"n": "732"
+},
+{
+"id": "316",
+"name": "High School Redirection",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Mixed Effects",
+"url": "/intervention/316",
+"n": "1634"
+},
+{
+"id": "620",
+"name": "First Things First",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "No Discernible Effects",
+"url": "/intervention/620",
+"n": "14"
+},
+{
+"id": "460",
+"name": "Project GRAD",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/460",
+"n": "13"
+},
+{
+"id": "460",
+"name": "Project GRAD",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/460",
+"n": "13"
+},
+{
+"id": "320",
+"name": "Talent Search",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/320",
+"n": "9854"
+},
+{
+"id": "718",
+"name": "Service and Conservation Corps",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/718",
+"n": "626"
+},
+{
+"id": "323",
+"name": "Quantum Opportunity Program",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/323",
+"n": "914"
+},
+{
+"id": "323",
+"name": "Quantum Opportunity Program",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/323",
+"n": "766"
+},
+{
+"id": "393",
+"name": "National Guard Youth ChalleNGe Program",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/393",
+"n": "1196"
+},
+{
+"id": "461",
+"name": "Talent Development High Schools",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/461",
+"n": "11"
+},
+{
+"id": "552",
+"name": "Earobics\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/552",
+"n": "165"
+},
+{
+"id": "552",
+"name": "Earobics\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/552",
+"n": "99"
+},
+{
+"id": "229",
+"name": "Failure Free Reading",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/229",
+"n": "93"
+},
+{
+"id": "229",
+"name": "Failure Free Reading",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/229",
+"n": "93"
+},
+{
+"id": "229",
+"name": "Failure Free Reading",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/229",
+"n": "93"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Mixed Effects",
+"url": "/intervention/464",
+"n": "784"
+},
+{
+"id": "230",
+"name": "Lexia Reading",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/230",
+"n": "97"
+},
+{
+"id": "230",
+"name": "Lexia Reading",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/230",
+"n": "71"
+},
+{
+"id": "440",
+"name": "Sound Partners",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/440",
+"n": "442"
+},
+{
+"id": "440",
+"name": "Sound Partners",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/440",
+"n": "309"
+},
+{
+"id": "440",
+"name": "Sound Partners",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Positive Effects",
+"url": "/intervention/440",
+"n": "442"
+},
+{
+"id": "440",
+"name": "Sound Partners",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/440",
+"n": "47"
+},
+{
+"id": "210",
+"name": "Accelerated Reader",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/210",
+"n": "1037"
+},
+{
+"id": "383",
+"name": "Corrective Reading",
+"protocol": "Adolescent Literacy",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/383",
+"n": "86"
+},
+{
+"id": "383",
+"name": "Corrective Reading",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/383",
+"n": "86"
+},
+{
+"id": "383",
+"name": "Corrective Reading",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/383",
+"n": "86"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/464",
+"n": "1376"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/464",
+"n": "873"
+},
+{
+"id": "210",
+"name": "Accelerated Reader",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/210",
+"n": "45"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/464",
+"n": "24"
+},
+{
+"id": "727",
+"name": "Reciprocal Teaching",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Mixed Effects",
+"url": "/intervention/727",
+"n": "280"
+},
+{
+"id": "745",
+"name": "Advancement via Individual Determination (AVID) program",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/745",
+"n": "96"
+},
+{
+"id": "726",
+"name": "Project CRISS\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/726",
+"n": "2450"
+},
+{
+"id": "1",
+"name": "Cooperative Integrated Reading and Composition (CIRC)",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1",
+"n": "903"
+},
+{
+"id": "728",
+"name": "Reading Apprenticeship\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/728",
+"n": "1140"
+},
+{
+"id": "729",
+"name": "Reading Mastery",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/729",
+"n": "57"
+},
+{
+"id": "1",
+"name": "Cooperative Integrated Reading and Composition (CIRC)",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1",
+"n": "873"
+},
+{
+"id": "35",
+"name": "The Expert Mathematician",
+"protocol": "Middle School Math",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/35",
+"n": "70"
+},
+{
+"id": "247",
+"name": "Peer Tutoring and Response Groups",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Positive Effects",
+"url": "/intervention/247",
+"n": "106"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/216",
+"n": "760"
+},
+{
+"id": "541",
+"name": "ClassWide Peer Tutoring",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/541",
+"n": "218"
+},
+{
+"id": "102",
+"name": "Building Decision Skills",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/102",
+"n": "282"
+},
+{
+"id": "117",
+"name": "Heartwood Ethics Curriculum/An Ethics Curriculum for Children",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/117",
+"n": "485"
+},
+{
+"id": "117",
+"name": "Heartwood Ethics Curriculum/An Ethics Curriculum for Children",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "No Discernible Effects",
+"url": "/intervention/117",
+"n": "482"
+},
+{
+"id": "103",
+"name": "Caring School Community (CSC)",
+"protocol": "Character Education",
+"domain": "Academic achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/103",
+"n": "3014"
+},
+{
+"id": "103",
+"name": "Caring School Community (CSC)",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/103",
+"n": "2336"
+},
+{
+"id": "103",
+"name": "Caring School Community (CSC)",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "No Discernible Effects",
+"url": "/intervention/103",
+"n": "2304"
+},
+{
+"id": "289",
+"name": "Houghton Mifflin Mathematics",
+"protocol": "Elementary School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/289",
+"n": "425"
+},
+{
+"id": "271",
+"name": "Dialogic Reading",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Positive Effects",
+"url": "/intervention/271",
+"n": "351"
+},
+{
+"id": "272",
+"name": "Sound Foundations",
+"protocol": "Early Childhood Education",
+"domain": "Early reading/writing",
+"rating": "No Discernible Effects",
+"url": "/intervention/272",
+"n": "126"
+},
+{
+"id": "272",
+"name": "Sound Foundations",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/272",
+"n": "126"
+},
+{
+"id": "274",
+"name": "Phonological Awareness Training",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "Positive Effects",
+"url": "/intervention/274",
+"n": "120"
+},
+{
+"id": "416",
+"name": "Ready, Set, Leap!\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Early reading/writing",
+"rating": "No Discernible Effects",
+"url": "/intervention/416",
+"n": "254"
+},
+{
+"id": "186",
+"name": "Facing History and Ourselves",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/186",
+"n": "346"
+},
+{
+"id": "186",
+"name": "Facing History and Ourselves",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/186",
+"n": "346"
+},
+{
+"id": "187",
+"name": "Lessons in Character",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/187",
+"n": "433"
+},
+{
+"id": "187",
+"name": "Lessons in Character",
+"protocol": "Character Education",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/187",
+"n": "140"
+},
+{
+"id": "187",
+"name": "Lessons in Character",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/187",
+"n": "140"
+},
+{
+"id": "275",
+"name": "Phonological Awareness Training plus Letter Knowledge Training",
+"protocol": "Early Childhood Education",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/275",
+"n": "129"
+},
+{
+"id": "275",
+"name": "Phonological Awareness Training plus Letter Knowledge Training",
+"protocol": "Early Childhood Education",
+"domain": "Early reading/writing",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/275",
+"n": "234"
+},
+{
+"id": "275",
+"name": "Phonological Awareness Training plus Letter Knowledge Training",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/275",
+"n": "162"
+},
+{
+"id": "275",
+"name": "Phonological Awareness Training plus Letter Knowledge Training",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "Positive Effects",
+"url": "/intervention/275",
+"n": "234"
+},
+{
+"id": "275",
+"name": "Phonological Awareness Training plus Letter Knowledge Training",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Positive Effects",
+"url": "/intervention/275",
+"n": "234"
+},
+{
+"id": "204",
+"name": "Connect with Kids",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/204",
+"n": "24"
+},
+{
+"id": "212",
+"name": "Direct Instruction",
+"protocol": "Early Childhood Education",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/212",
+"n": "164"
+},
+{
+"id": "212",
+"name": "Direct Instruction",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/212",
+"n": "164"
+},
+{
+"id": "212",
+"name": "Direct Instruction",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/212",
+"n": "164"
+},
+{
+"id": "212",
+"name": "Direct Instruction",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/212",
+"n": "164"
+},
+{
+"id": "211",
+"name": "DaisyQuest",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/211",
+"n": "213"
+},
+{
+"id": "729",
+"name": "Reading Mastery",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/729",
+"n": "16"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Mixed Effects",
+"url": "/intervention/216",
+"n": "489"
+},
+{
+"id": "380",
+"name": "Transition Mathematics",
+"protocol": "Middle School Math",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/380",
+"n": "972"
+},
+{
+"id": "370",
+"name": "Read, Write & Type!",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/370",
+"n": "104"
+},
+{
+"id": "370",
+"name": "Read, Write & Type!",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/370",
+"n": "104"
+},
+{
+"id": "271",
+"name": "Dialogic Reading",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/271",
+"n": "61"
+},
+{
+"id": "245",
+"name": "Instructional Conversations and Literature Logs",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/245",
+"n": "116"
+},
+{
+"id": "245",
+"name": "Instructional Conversations and Literature Logs",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/245",
+"n": "84"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/464",
+"n": "168"
+},
+{
+"id": "326",
+"name": "Vocabulary Improvement Program for English Language Learners and Their Classmates (VIP)",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/326",
+"n": "16"
+},
+{
+"id": "326",
+"name": "Vocabulary Improvement Program for English Language Learners and Their Classmates (VIP)",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/326",
+"n": "16"
+},
+{
+"id": "252",
+"name": "Too Good for Drugs and Violence (TGFD & V)",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Positive Effects",
+"url": "/intervention/252",
+"n": "502"
+},
+{
+"id": "250",
+"name": "Too Good For Violence (TGFV)",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/250",
+"n": "998"
+},
+{
+"id": "250",
+"name": "Too Good For Violence (TGFV)",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/250",
+"n": "998"
+},
+{
+"id": "251",
+"name": "Too Good for Drugs (TGFD)",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/251",
+"n": "1050"
+},
+{
+"id": "251",
+"name": "Too Good for Drugs (TGFD)",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/251",
+"n": "940"
+},
+{
+"id": "377",
+"name": "Words and Concepts",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/377",
+"n": "78"
+},
+{
+"id": "208",
+"name": "Positive Action (PA)",
+"protocol": "Character Education",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/208",
+"n": "2696"
+},
+{
+"id": "208",
+"name": "Positive Action (PA)",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "Positive Effects",
+"url": "/intervention/208",
+"n": "2696"
+},
+{
+"id": "261",
+"name": "Lions Quest -- Skills for Adolescence",
+"protocol": "Character Education",
+"domain": "Behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/261",
+"n": "5462"
+},
+{
+"id": "269",
+"name": "Lions Quest -- Skills for Action",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "No Discernible Effects",
+"url": "/intervention/269",
+"n": "730"
+},
+{
+"id": "464",
+"name": "Fast ForWord\u00ae",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/464",
+"n": "81"
+},
+{
+"id": "21",
+"name": "Bilingual Cooperative Integrated Reading and Composition (BCIRC)",
+"protocol": "English Language Learners",
+"domain": "English language development",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/21",
+"n": "85"
+},
+{
+"id": "21",
+"name": "Bilingual Cooperative Integrated Reading and Composition (BCIRC)",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/21",
+"n": "85"
+},
+{
+"id": "190",
+"name": "Voices Literature and Character Education (Voices LACE)",
+"protocol": "Character Education",
+"domain": "Knowledge, attitudes, & values",
+"rating": "No Discernible Effects",
+"url": "/intervention/190",
+"n": "98"
+},
+{
+"id": "397",
+"name": "Curiosity Corner",
+"protocol": "Early Childhood Education",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/397",
+"n": "165"
+},
+{
+"id": "305",
+"name": "Progress in Mathematics",
+"protocol": "Elementary School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/305",
+"n": "186"
+},
+{
+"id": "241",
+"name": "Early Intervention in Reading (EIR)\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/241",
+"n": "56"
+},
+{
+"id": "241",
+"name": "Early Intervention in Reading (EIR)\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/241",
+"n": "57"
+},
+{
+"id": "215",
+"name": "Little Books",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/215",
+"n": "165"
+},
+{
+"id": "616",
+"name": "Waterford Early Reading Program",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/616",
+"n": "76"
+},
+{
+"id": "616",
+"name": "Waterford Early Reading Program",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/616",
+"n": "76"
+},
+{
+"id": "361",
+"name": "Voyager Universal Literacy System\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/361",
+"n": "611"
+},
+{
+"id": "361",
+"name": "Voyager Universal Literacy System\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/361",
+"n": "213"
+},
+{
+"id": "375",
+"name": "Stepping Stones to Literacy",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/375",
+"n": "99"
+},
+{
+"id": "465",
+"name": "Waterford Early Reading Level One",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/465",
+"n": "270"
+},
+{
+"id": "465",
+"name": "Waterford Early Reading Level One",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/465",
+"n": "270"
+},
+{
+"id": "7",
+"name": "Peer-Assisted Learning Strategies",
+"protocol": "English Language Learners",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/7",
+"n": "99"
+},
+{
+"id": "230",
+"name": "Lexia Reading",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/230",
+"n": "167"
+},
+{
+"id": "374",
+"name": "Start Making a Reader Today (SMART)",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/374",
+"n": "84"
+},
+{
+"id": "374",
+"name": "Start Making a Reader Today (SMART)",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/374",
+"n": "84"
+},
+{
+"id": "374",
+"name": "Start Making a Reader Today (SMART)",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/374",
+"n": "84"
+},
+{
+"id": "418",
+"name": "Literacy Express",
+"protocol": "Early Childhood Education",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/418",
+"n": "722"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/216",
+"n": "66"
+},
+{
+"id": "750",
+"name": "Core-Plus Mathematics",
+"protocol": "High School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/750",
+"n": "1050"
+},
+{
+"id": "743",
+"name": "Lovaas Model of Applied Behavior Analysis",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Communication/ Language",
+"rating": "No Discernible Effects",
+"url": "/intervention/743",
+"n": "23"
+},
+{
+"id": "743",
+"name": "Lovaas Model of Applied Behavior Analysis",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Functional abilities",
+"rating": "No Discernible Effects",
+"url": "/intervention/743",
+"n": "23"
+},
+{
+"id": "743",
+"name": "Lovaas Model of Applied Behavior Analysis",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Social-emotional development",
+"rating": "No Discernible Effects",
+"url": "/intervention/743",
+"n": "23"
+},
+{
+"id": "743",
+"name": "Lovaas Model of Applied Behavior Analysis",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Cognition",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/743",
+"n": "28"
+},
+{
+"id": "240",
+"name": "Headsprout Early Reading",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/240",
+"n": "62"
+},
+{
+"id": "240",
+"name": "Headsprout Early Reading",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/240",
+"n": "62"
+},
+{
+"id": "233",
+"name": "Fluency Formula",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/233",
+"n": "128"
+},
+{
+"id": "233",
+"name": "Fluency Formula",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/233",
+"n": "128"
+},
+{
+"id": "322",
+"name": "Achievement for Latinos through Academic Success (ALAS)",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/322",
+"n": "81"
+},
+{
+"id": "322",
+"name": "Achievement for Latinos through Academic Success (ALAS)",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/322",
+"n": "94"
+},
+{
+"id": "365",
+"name": "Financial Incentives for Teen Parents to Stay in School",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/365",
+"n": "1819"
+},
+{
+"id": "365",
+"name": "Financial Incentives for Teen Parents to Stay in School",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/365",
+"n": "913"
+},
+{
+"id": "365",
+"name": "Financial Incentives for Teen Parents to Stay in School",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/365",
+"n": "1819"
+},
+{
+"id": "729",
+"name": "Reading Mastery",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/729",
+"n": "162"
+},
+{
+"id": "733",
+"name": "Reading Plus\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/733",
+"n": "13128"
+},
+{
+"id": "570",
+"name": "SpellRead",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/570",
+"n": "139"
+},
+{
+"id": "570",
+"name": "SpellRead",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/570",
+"n": "139"
+},
+{
+"id": "570",
+"name": "SpellRead",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/570",
+"n": "112"
+},
+{
+"id": "767",
+"name": "Coping Power",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "External behavior",
+"rating": "Positive Effects",
+"url": "/intervention/767",
+"n": "650"
+},
+{
+"id": "767",
+"name": "Coping Power",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social outcomes",
+"rating": "No Discernible Effects",
+"url": "/intervention/767",
+"n": "332"
+},
+{
+"id": "766",
+"name": "The Incredible Years",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "External behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/766",
+"n": "51"
+},
+{
+"id": "766",
+"name": "The Incredible Years",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social outcomes",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/766",
+"n": "51"
+},
+{
+"id": "773",
+"name": "Student Team Reading and Writing (STRW)",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/773",
+"n": "5209"
+},
+{
+"id": "773",
+"name": "Student Team Reading and Writing (STRW)",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/773",
+"n": "3986"
+},
+{
+"id": "7",
+"name": "Peer-Assisted Learning Strategies",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/7",
+"n": "120"
+},
+{
+"id": "776",
+"name": "Chemistry That Applies",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/776",
+"n": "2280"
+},
+{
+"id": "752",
+"name": "First Step to Success",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Emotional/internal behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/752",
+"n": "46"
+},
+{
+"id": "752",
+"name": "First Step to Success",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "External behavior",
+"rating": "Positive Effects",
+"url": "/intervention/752",
+"n": "243"
+},
+{
+"id": "752",
+"name": "First Step to Success",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Other academic performance",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/752",
+"n": "194"
+},
+{
+"id": "752",
+"name": "First Step to Success",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/752",
+"n": "193"
+},
+{
+"id": "752",
+"name": "First Step to Success",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social outcomes",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/752",
+"n": "197"
+},
+{
+"id": "764",
+"name": "Milieu Teaching",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Communication/ Language",
+"rating": "No Discernible Effects",
+"url": "/intervention/764",
+"n": "40"
+},
+{
+"id": "7",
+"name": "Peer-Assisted Learning Strategies",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/7",
+"n": "1677"
+},
+{
+"id": "7",
+"name": "Peer-Assisted Learning Strategies",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/7",
+"n": "41"
+},
+{
+"id": "780",
+"name": "Astronomy Resources for Intercurricular Elementary Science (ARIES): Exploring Motion and Forces",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/780",
+"n": "2381"
+},
+{
+"id": "781",
+"name": "Technology Enhanced Elementary and Middle School Science (TEEMSS)",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/781",
+"n": "181"
+},
+{
+"id": "783",
+"name": "Early Risers",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/783",
+"n": "389"
+},
+{
+"id": "783",
+"name": "Early Risers",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "External behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/783",
+"n": "380"
+},
+{
+"id": "783",
+"name": "Early Risers",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social outcomes",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/783",
+"n": "380"
+},
+{
+"id": "783",
+"name": "Early Risers",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Emotional/internal behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/783",
+"n": "181"
+},
+{
+"id": "784",
+"name": "Great Explorations in Math and Science (GEMS) Space Science Sequence",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/784",
+"n": "2594"
+},
+{
+"id": "274",
+"name": "Phonological Awareness Training",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Communication/ Language",
+"rating": "Positive Effects",
+"url": "/intervention/274",
+"n": "78"
+},
+{
+"id": "7",
+"name": "Peer-Assisted Learning Strategies",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/7",
+"n": "40"
+},
+{
+"id": "232",
+"name": "Open Court Reading\u00a9",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/232",
+"n": "917"
+},
+{
+"id": "1",
+"name": "Cooperative Integrated Reading and Composition (CIRC)",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1",
+"n": "320"
+},
+{
+"id": "763",
+"name": "Social Skills Training",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Cognition",
+"rating": "No Discernible Effects",
+"url": "/intervention/763",
+"n": "65"
+},
+{
+"id": "763",
+"name": "Social Skills Training",
+"protocol": "Early Childhood Education for Children with Disabilities",
+"domain": "Social-emotional development",
+"rating": "Positive Effects",
+"url": "/intervention/763",
+"n": "135"
+},
+{
+"id": "611",
+"name": "Talent Development Middle Grades Program",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/611",
+"n": "24"
+},
+{
+"id": "789",
+"name": "Great Explorations in Math and Science (GEMS) The Real Reasons for Seasons",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/789",
+"n": "2408"
+},
+{
+"id": "790",
+"name": "LANGUAGE!\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/790",
+"n": "632"
+},
+{
+"id": "790",
+"name": "LANGUAGE!\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/790",
+"n": "640"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "156"
+},
+{
+"id": "483",
+"name": "Creative Curriculum for Preschool",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/483",
+"n": "363"
+},
+{
+"id": "483",
+"name": "Creative Curriculum for Preschool",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/483",
+"n": "362"
+},
+{
+"id": "483",
+"name": "Creative Curriculum for Preschool",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/483",
+"n": "364"
+},
+{
+"id": "483",
+"name": "Creative Curriculum for Preschool",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/483",
+"n": "363"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/216",
+"n": "139"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/216",
+"n": "105"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/216",
+"n": "105"
+},
+{
+"id": "216",
+"name": "Ladders to Literacy",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/216",
+"n": "105"
+},
+{
+"id": "311",
+"name": "Scott Foresman-Addison Wesley Elementary Mathematics",
+"protocol": "Elementary School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/311",
+"n": "3967"
+},
+{
+"id": "550",
+"name": "Doors to Discovery",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/550",
+"n": "183"
+},
+{
+"id": "550",
+"name": "Doors to Discovery",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/550",
+"n": "182"
+},
+{
+"id": "550",
+"name": "Doors to Discovery",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/550",
+"n": "402"
+},
+{
+"id": "550",
+"name": "Doors to Discovery",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/550",
+"n": "37"
+},
+{
+"id": "430",
+"name": "Let's Begin with the Letter People\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/430",
+"n": "879"
+},
+{
+"id": "430",
+"name": "Let's Begin with the Letter People\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/430",
+"n": "184"
+},
+{
+"id": "430",
+"name": "Let's Begin with the Letter People\u00ae",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "Mixed Effects",
+"url": "/intervention/430",
+"n": "881"
+},
+{
+"id": "729",
+"name": "Reading Mastery",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/729",
+"n": "30"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "264"
+},
+{
+"id": "325",
+"name": "Read Naturally",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/325",
+"n": "439"
+},
+{
+"id": "209",
+"name": "Reading Recovery\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/209",
+"n": "148"
+},
+{
+"id": "209",
+"name": "Reading Recovery\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/209",
+"n": "145"
+},
+{
+"id": "209",
+"name": "Reading Recovery\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Positive Effects",
+"url": "/intervention/209",
+"n": "227"
+},
+{
+"id": "209",
+"name": "Reading Recovery\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/209",
+"n": "74"
+},
+{
+"id": "794",
+"name": "DreamBox Learning",
+"protocol": "Elementary School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/794",
+"n": "557"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "Positive Effects",
+"url": "/intervention/425",
+"n": "575"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Early Childhood Education",
+"domain": "Oral language",
+"rating": "No Discernible Effects",
+"url": "/intervention/425",
+"n": "296"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Early Childhood Education",
+"domain": "Phonological processing",
+"rating": "No Discernible Effects",
+"url": "/intervention/425",
+"n": "270"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Early Childhood Education",
+"domain": "Print knowledge",
+"rating": "No Discernible Effects",
+"url": "/intervention/425",
+"n": "297"
+},
+{
+"id": "762",
+"name": "Spelling Mastery",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Writing achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/762",
+"n": "70"
+},
+{
+"id": "759",
+"name": "Repeated Reading",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/759",
+"n": "78"
+},
+{
+"id": "759",
+"name": "Repeated Reading",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/759",
+"n": "62"
+},
+{
+"id": "759",
+"name": "Repeated Reading",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/759",
+"n": "62"
+},
+{
+"id": "759",
+"name": "Repeated Reading",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/759",
+"n": "62"
+},
+{
+"id": "795",
+"name": "Fast Track: Elementary School",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social outcomes",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/795",
+"n": "844"
+},
+{
+"id": "795",
+"name": "Fast Track: Elementary School",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Emotional/internal behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/795",
+"n": "855"
+},
+{
+"id": "795",
+"name": "Fast Track: Elementary School",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "External behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/795",
+"n": "860"
+},
+{
+"id": "795",
+"name": "Fast Track: Elementary School",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/795",
+"n": "551"
+},
+{
+"id": "232",
+"name": "Open Court Reading\u00a9",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/232",
+"n": "434"
+},
+{
+"id": "797",
+"name": "Linked Learning Communities",
+"protocol": "Developmental Education",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/797",
+"n": "2241"
+},
+{
+"id": "797",
+"name": "Linked Learning Communities",
+"protocol": "Developmental Education",
+"domain": "Access and enrollment",
+"rating": "No Discernible Effects",
+"url": "/intervention/797",
+"n": "5302"
+},
+{
+"id": "797",
+"name": "Linked Learning Communities",
+"protocol": "Developmental Education",
+"domain": "Attainment",
+"rating": "No Discernible Effects",
+"url": "/intervention/797",
+"n": "1534"
+},
+{
+"id": "797",
+"name": "Linked Learning Communities",
+"protocol": "Developmental Education",
+"domain": "Credit accumulation and persistence",
+"rating": "No Discernible Effects",
+"url": "/intervention/797",
+"n": "5302"
+},
+{
+"id": "797",
+"name": "Linked Learning Communities",
+"protocol": "Developmental Education",
+"domain": "Progress in developmental education",
+"rating": "No Discernible Effects",
+"url": "/intervention/797",
+"n": "5302"
+},
+{
+"id": "798",
+"name": "Developmental Summer Bridge Programs",
+"protocol": "Developmental Education",
+"domain": "Academic achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/798",
+"n": "1318"
+},
+{
+"id": "798",
+"name": "Developmental Summer Bridge Programs",
+"protocol": "Developmental Education",
+"domain": "Access and enrollment",
+"rating": "No Discernible Effects",
+"url": "/intervention/798",
+"n": "1318"
+},
+{
+"id": "798",
+"name": "Developmental Summer Bridge Programs",
+"protocol": "Developmental Education",
+"domain": "Credit accumulation and persistence",
+"rating": "No Discernible Effects",
+"url": "/intervention/798",
+"n": "1318"
+},
+{
+"id": "277",
+"name": "Shared Book Reading",
+"protocol": "Early Childhood Education",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/277",
+"n": "356"
+},
+{
+"id": "277",
+"name": "Shared Book Reading",
+"protocol": "Early Childhood Education",
+"domain": "Language development",
+"rating": "Mixed Effects",
+"url": "/intervention/277",
+"n": "567"
+},
+{
+"id": "277",
+"name": "Shared Book Reading",
+"protocol": "Early Childhood Education",
+"domain": "Comprehension",
+"rating": "Mixed Effects",
+"url": "/intervention/277",
+"n": "259"
+},
+{
+"id": "277",
+"name": "Shared Book Reading",
+"protocol": "Early Childhood Education",
+"domain": "Reading achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/277",
+"n": "38"
+},
+{
+"id": "312",
+"name": "Check & Connect",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/312",
+"n": "144"
+},
+{
+"id": "312",
+"name": "Check & Connect",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Positive Effects",
+"url": "/intervention/312",
+"n": "238"
+},
+{
+"id": "312",
+"name": "Check & Connect",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/312",
+"n": "92"
+},
+{
+"id": "801",
+"name": "My Teaching Partner-Secondary (MPT-S)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/801",
+"n": "1267"
+},
+{
+"id": "237",
+"name": "Head Start",
+"protocol": "Early Childhood Education",
+"domain": "Social-emotional development",
+"rating": "No Discernible Effects",
+"url": "/intervention/237",
+"n": "2062"
+},
+{
+"id": "237",
+"name": "Head Start",
+"protocol": "Early Childhood Education",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/237",
+"n": "1617"
+},
+{
+"id": "237",
+"name": "Head Start",
+"protocol": "Early Childhood Education",
+"domain": "Reading achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/237",
+"n": "2062"
+},
+{
+"id": "803",
+"name": "TAP: The System for Teacher and Student Advancement",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Academic achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/803",
+"n": "28"
+},
+{
+"id": "804",
+"name": "New Teacher Center Induction Model",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Teacher retention at the school",
+"rating": "No Discernible Effects",
+"url": "/intervention/804",
+"n": "413"
+},
+{
+"id": "804",
+"name": "New Teacher Center Induction Model",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Teacher retention in the profession",
+"rating": "No Discernible Effects",
+"url": "/intervention/804",
+"n": "413"
+},
+{
+"id": "804",
+"name": "New Teacher Center Induction Model",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Teacher retention in the school district",
+"rating": "No Discernible Effects",
+"url": "/intervention/804",
+"n": "413"
+},
+{
+"id": "321",
+"name": "Career Academies",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/321",
+"n": "1428"
+},
+{
+"id": "321",
+"name": "Career Academies",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/321",
+"n": "1379"
+},
+{
+"id": "321",
+"name": "Career Academies",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/321",
+"n": "1454"
+},
+{
+"id": "207",
+"name": "Everyday Mathematics\u00ae",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/207",
+"n": "3436"
+},
+{
+"id": "529",
+"name": "Successmaker",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/529",
+"n": "641"
+},
+{
+"id": "529",
+"name": "Successmaker",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/529",
+"n": "639"
+},
+{
+"id": "815",
+"name": "First Year Experience Courses for Students in Developmental Education",
+"protocol": "Developmental Education",
+"domain": "Academic achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/815",
+"n": "911"
+},
+{
+"id": "815",
+"name": "First Year Experience Courses for Students in Developmental Education",
+"protocol": "Developmental Education",
+"domain": "Credit accumulation and persistence",
+"rating": "No Discernible Effects",
+"url": "/intervention/815",
+"n": "911"
+},
+{
+"id": "815",
+"name": "First Year Experience Courses for Students in Developmental Education",
+"protocol": "Developmental Education",
+"domain": "Progress in developmental education",
+"rating": "No Discernible Effects",
+"url": "/intervention/815",
+"n": "911"
+},
+{
+"id": "290",
+"name": "Investigations in Number, Data, and Space\u00ae",
+"protocol": "Elementary School Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/290",
+"n": "2574"
+},
+{
+"id": "738",
+"name": "Wilson Reading System\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/738",
+"n": "71"
+},
+{
+"id": "738",
+"name": "Wilson Reading System\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/738",
+"n": "71"
+},
+{
+"id": "738",
+"name": "Wilson Reading System\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/738",
+"n": "71"
+},
+{
+"id": "230",
+"name": "Lexia Reading",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/230",
+"n": "25"
+},
+{
+"id": "318",
+"name": "Middle College High School",
+"protocol": "Dropout Prevention",
+"domain": "Completing school",
+"rating": "No Discernible Effects",
+"url": "/intervention/318",
+"n": "394"
+},
+{
+"id": "318",
+"name": "Middle College High School",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "No Discernible Effects",
+"url": "/intervention/318",
+"n": "394"
+},
+{
+"id": "319",
+"name": "Twelve Together",
+"protocol": "Dropout Prevention",
+"domain": "Progressing in school",
+"rating": "No Discernible Effects",
+"url": "/intervention/319",
+"n": "219"
+},
+{
+"id": "319",
+"name": "Twelve Together",
+"protocol": "Dropout Prevention",
+"domain": "Staying in School",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/319",
+"n": "219"
+},
+{
+"id": "818",
+"name": "Cognitive Tutor Algebra I",
+"protocol": "Secondary Mathematics",
+"domain": "Algebra",
+"rating": "Positive Effects",
+"url": "/intervention/818",
+"n": "6854"
+},
+{
+"id": "99",
+"name": "ACT/SAT Test Preparation and Coaching Programs",
+"protocol": "Transition to College",
+"domain": "General academic achievement (high school)",
+"rating": "Positive Effects",
+"url": "/intervention/99",
+"n": "65603"
+},
+{
+"id": "816",
+"name": "Saxon Algebra I",
+"protocol": "Secondary Mathematics",
+"domain": "Algebra",
+"rating": "No Discernible Effects",
+"url": "/intervention/816",
+"n": "198"
+},
+{
+"id": "378",
+"name": "University of Chicago School Mathematics Project (UCSMP) Algebra",
+"protocol": "Secondary Mathematics",
+"domain": "Algebra",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/378",
+"n": "225"
+},
+{
+"id": "378",
+"name": "University of Chicago School Mathematics Project (UCSMP) Algebra",
+"protocol": "Secondary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/378",
+"n": "189"
+},
+{
+"id": "806",
+"name": "University of Chicago School Mathematics Project (UCSMP) Multiple Courses",
+"protocol": "Secondary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/806",
+"n": "62"
+},
+{
+"id": "818",
+"name": "Cognitive Tutor Algebra I",
+"protocol": "Secondary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/818",
+"n": "658"
+},
+{
+"id": "819",
+"name": "Cognitive Tutor&reg; Geometry",
+"protocol": "Secondary Mathematics",
+"domain": "Geometry",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/819",
+"n": "669"
+},
+{
+"id": "824",
+"name": "Summer bridge programs",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Attainment",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/824",
+"n": "2222"
+},
+{
+"id": "825",
+"name": "First year experience courses",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Attainment",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/825",
+"n": "8290"
+},
+{
+"id": "825",
+"name": "First year experience courses",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Credit accumulation and persistence",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/825",
+"n": "11455"
+},
+{
+"id": "825",
+"name": "First year experience courses",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/825",
+"n": "2505"
+},
+{
+"id": "214",
+"name": "Success for All\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "Positive Effects",
+"url": "/intervention/214",
+"n": "7957"
+},
+{
+"id": "214",
+"name": "Success for All\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Comprehension",
+"rating": "Mixed Effects",
+"url": "/intervention/214",
+"n": "9733"
+},
+{
+"id": "214",
+"name": "Success for All\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/214",
+"n": "1186"
+},
+{
+"id": "6",
+"name": "Teach for America (TFA)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "English language arts achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/6",
+"n": "53595"
+},
+{
+"id": "6",
+"name": "Teach for America (TFA)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "General Mathematics Achievement",
+"rating": "Positive Effects",
+"url": "/intervention/6",
+"n": "65324"
+},
+{
+"id": "6",
+"name": "Teach for America (TFA)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Social Studies Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/6",
+"n": "7289"
+},
+{
+"id": "6",
+"name": "Teach for America (TFA)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/6",
+"n": "36104"
+},
+{
+"id": "742",
+"name": "READ 180\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Positive Effects",
+"url": "/intervention/742",
+"n": "3882"
+},
+{
+"id": "742",
+"name": "READ 180\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "Positive Effects",
+"url": "/intervention/742",
+"n": "6235"
+},
+{
+"id": "742",
+"name": "READ 180\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/742",
+"n": "746"
+},
+{
+"id": "742",
+"name": "READ 180\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/742",
+"n": "561"
+},
+{
+"id": "652",
+"name": "Odyssey\u00ae Math",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/652",
+"n": "2768"
+},
+{
+"id": "1241",
+"name": "Functional Behavioral Assessment-based Interventions",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "School engagement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1241",
+"n": "32"
+},
+{
+"id": "1241",
+"name": "Functional Behavioral Assessment-based Interventions",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Social-emotional development",
+"rating": "N/A",
+"url": "/intervention/1241",
+"n": "4"
+},
+{
+"id": "1241",
+"name": "Functional Behavioral Assessment-based Interventions",
+"protocol": "Children Identified With Or At Risk For An Emotional Disturbance",
+"domain": "Problem behavior",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1241",
+"n": "21"
+},
+{
+"id": "1242",
+"name": "Pivotal Response Training",
+"protocol": "Children and Students with an Autism Spectrum Disorder",
+"domain": "Communication/ Language",
+"rating": "No Discernible Effects",
+"url": "/intervention/1242",
+"n": "85"
+},
+{
+"id": "1279",
+"name": "Prentice Hall/Pearson Literature\u00a9 (2007-15)",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/1279",
+"n": "4149"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Attainment",
+"rating": "Positive Effects",
+"url": "/intervention/1043",
+"n": "77249"
+},
+{
+"id": "20",
+"name": "Connected Mathematics Project (CMP)",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/20",
+"n": "3062"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Access and enrollment",
+"rating": "Positive Effects",
+"url": "/intervention/1043",
+"n": "67474"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Attendance (high school)",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1043",
+"n": "1554"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Completing school",
+"rating": "Positive Effects",
+"url": "/intervention/1043",
+"n": "4052"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "General academic achievement (high school)",
+"rating": "Positive Effects",
+"url": "/intervention/1043",
+"n": "2817"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Staying in School",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1043",
+"n": "676"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "College Readiness",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1043",
+"n": "1355"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "Credit accumulation",
+"rating": "Positive Effects",
+"url": "/intervention/1043",
+"n": "56370"
+},
+{
+"id": "1043",
+"name": "Dual Enrollment Programs",
+"protocol": "Transition to College",
+"domain": "General academic achievement (college)",
+"rating": "No Discernible Effects",
+"url": "/intervention/1043",
+"n": "455"
+},
+{
+"id": "214",
+"name": "Success for All\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/214",
+"n": "2574"
+},
+{
+"id": "1279",
+"name": "Prentice Hall/Pearson Literature\u00a9 (2007-15)",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1279",
+"n": "2558"
+},
+{
+"id": "309",
+"name": "Accelerated Math\u00ae ",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/309",
+"n": "3200"
+},
+{
+"id": "19",
+"name": "Knowledge is Power Program (KIPP)",
+"protocol": "Charter Schools",
+"domain": "English language arts achievement",
+"rating": "Positive Effects",
+"url": "/intervention/19",
+"n": "20804"
+},
+{
+"id": "19",
+"name": "Knowledge is Power Program (KIPP)",
+"protocol": "Charter Schools",
+"domain": "General Mathematics Achievement",
+"rating": "Positive Effects",
+"url": "/intervention/19",
+"n": "19542"
+},
+{
+"id": "1092",
+"name": "TNTP Teaching Fellows",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1092",
+"n": "4116"
+},
+{
+"id": "1166",
+"name": "National Board for Professional Teaching Standards (NBPTS) Certification",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "English language arts achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1166",
+"n": "1242454"
+},
+{
+"id": "1166",
+"name": "National Board for Professional Teaching Standards (NBPTS) Certification",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/1166",
+"n": "1316146"
+},
+{
+"id": "17",
+"name": "Saxon Math",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/17",
+"n": "7946"
+},
+{
+"id": "1291",
+"name": "Green Dot Public Schools",
+"protocol": "Charter Schools",
+"domain": "English language arts achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1291",
+"n": "1865"
+},
+{
+"id": "1291",
+"name": "Green Dot Public Schools",
+"protocol": "Charter Schools",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1291",
+"n": "2645"
+},
+{
+"id": "1291",
+"name": "Green Dot Public Schools",
+"protocol": "Charter Schools",
+"domain": "School Attendance",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1291",
+"n": "1578"
+},
+{
+"id": "1291",
+"name": "Green Dot Public Schools",
+"protocol": "Charter Schools",
+"domain": "Student progression",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1291",
+"n": "1024"
+},
+{
+"id": "1284",
+"name": "Achieve3000\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1284",
+"n": "32110"
+},
+{
+"id": "1284",
+"name": "Achieve3000\u00ae",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1284",
+"n": "12698"
+},
+{
+"id": "1326",
+"name": "I CAN Learn\u00ae Algebra",
+"protocol": "Secondary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1326",
+"n": "32"
+},
+{
+"id": "753",
+"name": "I CAN Learn\u00ae",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/753",
+"n": "9886"
+},
+{
+"id": "1287",
+"name": "Leveled Literacy Intervention",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1287",
+"n": "281"
+},
+{
+"id": "1287",
+"name": "Leveled Literacy Intervention",
+"protocol": "Beginning Reading",
+"domain": "Alphabetics",
+"rating": "No Discernible Effects",
+"url": "/intervention/1287",
+"n": "422"
+},
+{
+"id": "1287",
+"name": "Leveled Literacy Intervention",
+"protocol": "Beginning Reading",
+"domain": "Reading achievement",
+"rating": "Positive Effects",
+"url": "/intervention/1287",
+"n": "797"
+},
+{
+"id": "19",
+"name": "Knowledge is Power Program (KIPP)",
+"protocol": "Charter Schools",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/19",
+"n": "18712"
+},
+{
+"id": "19",
+"name": "Knowledge is Power Program (KIPP)",
+"protocol": "Charter Schools",
+"domain": "Social Studies Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/19",
+"n": "10363"
+},
+{
+"id": "19",
+"name": "Knowledge is Power Program (KIPP)",
+"protocol": "Charter Schools",
+"domain": "Student progression",
+"rating": "No Discernible Effects",
+"url": "/intervention/19",
+"n": "852"
+},
+{
+"id": "1284",
+"name": "Achieve3000\u00ae",
+"protocol": "Beginning Reading",
+"domain": "Reading Fluency",
+"rating": "No Discernible Effects",
+"url": "/intervention/1284",
+"n": "14493"
+},
+{
+"id": "1292",
+"name": "Self-Regulated Strategy Development (SRSD)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "Writing achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1292",
+"n": "40"
+},
+{
+"id": "1292",
+"name": "Self-Regulated Strategy Development (SRSD)",
+"protocol": "Students with a Specific Learning Disability",
+"domain": "General Mathematics Achievement",
+"rating": "N/A",
+"url": "/intervention/1292",
+"n": "3"
+},
+{
+"id": "814",
+"name": "Summer Counseling",
+"protocol": "Transition to College",
+"domain": "Access and enrollment",
+"rating": "Mixed Effects",
+"url": "/intervention/814",
+"n": "13614"
+},
+{
+"id": "814",
+"name": "Summer Counseling",
+"protocol": "Transition to College",
+"domain": "Credit accumulation",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/814",
+"n": "1397"
+},
+{
+"id": "62",
+"name": "Facilitating Long-term Improvements in Graduation and Higher Education for Tomorrow (FLIGHT)",
+"protocol": "Transition to College",
+"domain": "Access and enrollment",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/62",
+"n": "180"
+},
+{
+"id": "62",
+"name": "Facilitating Long-term Improvements in Graduation and Higher Education for Tomorrow (FLIGHT)",
+"protocol": "Transition to College",
+"domain": "Attendance (high school)",
+"rating": "No Discernible Effects",
+"url": "/intervention/62",
+"n": "241"
+},
+{
+"id": "62",
+"name": "Facilitating Long-term Improvements in Graduation and Higher Education for Tomorrow (FLIGHT)",
+"protocol": "Transition to College",
+"domain": "General academic achievement (high school)",
+"rating": "No Discernible Effects",
+"url": "/intervention/62",
+"n": "240"
+},
+{
+"id": "1193",
+"name": "Intelligent Tutoring for Structure Strategy (ITSS)",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Positive Effects",
+"url": "/intervention/1193",
+"n": "6724"
+},
+{
+"id": "1448",
+"name": "Passport Reading Journeys",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "Mixed Effects",
+"url": "/intervention/1448",
+"n": "2001"
+},
+{
+"id": "1448",
+"name": "Passport Reading Journeys",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1448",
+"n": "2316"
+},
+{
+"id": "1209",
+"name": "Fraction Face-Off!",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1209",
+"n": "1152"
+},
+{
+"id": "1209",
+"name": "Fraction Face-Off!",
+"protocol": "Primary Mathematics",
+"domain": "Number and Operations",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1209",
+"n": "1152"
+},
+{
+"id": "1209",
+"name": "Fraction Face-Off!",
+"protocol": "Primary Mathematics",
+"domain": "Geometry and Measurement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1209",
+"n": "212"
+},
+{
+"id": "83",
+"name": "Open Learning Initiative (OLI)",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/83",
+"n": "795"
+},
+{
+"id": "83",
+"name": "Open Learning Initiative (OLI)",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Credit accumulation and persistence",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/83",
+"n": "605"
+},
+{
+"id": "1072",
+"name": "Accelerated Study in Associate Programs (ASAP)",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Access and enrollment",
+"rating": "Positive Effects",
+"url": "/intervention/1072",
+"n": "2397"
+},
+{
+"id": "1072",
+"name": "Accelerated Study in Associate Programs (ASAP)",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Attainment",
+"rating": "Positive Effects",
+"url": "/intervention/1072",
+"n": "2397"
+},
+{
+"id": "1072",
+"name": "Accelerated Study in Associate Programs (ASAP)",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Credit accumulation and persistence",
+"rating": "Positive Effects",
+"url": "/intervention/1072",
+"n": "2397"
+},
+{
+"id": "1022",
+"name": "Word Generation",
+"protocol": "English Language Learners",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/1022",
+"n": "241"
+},
+{
+"id": "1022",
+"name": "Word Generation",
+"protocol": "English Language Learners",
+"domain": "English language proficiency",
+"rating": "No Discernible Effects",
+"url": "/intervention/1022",
+"n": "241"
+},
+{
+"id": "1195",
+"name": "InsideTrack\u00a9 Coaching",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Attainment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1195",
+"n": "1346"
+},
+{
+"id": "1195",
+"name": "InsideTrack\u00a9 Coaching",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Credit accumulation and persistence",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1195",
+"n": "3527"
+},
+{
+"id": "1489",
+"name": "McREL Balanced Leadership",
+"protocol": "School Leadership",
+"domain": "School leader retention at the school",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1489",
+"n": "124"
+},
+{
+"id": "58",
+"name": "eMINTS Comprehensive Program",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "General Mathematics Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/58",
+"n": "3096"
+},
+{
+"id": "58",
+"name": "eMINTS Comprehensive Program",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/58",
+"n": "3245"
+},
+{
+"id": "1487",
+"name": "Promoting Alternative THinking Strategies (PATHS) ",
+"protocol": "Supportive Learning Environment Interventions Review Protocol ",
+"domain": "Observed individual behavior",
+"rating": "No Discernible Effects",
+"url": "/intervention/1487",
+"n": "113"
+},
+{
+"id": "1487",
+"name": "Promoting Alternative THinking Strategies (PATHS) ",
+"protocol": "Supportive Learning Environment Interventions Review Protocol ",
+"domain": "Student emotional status",
+"rating": "No Discernible Effects",
+"url": "/intervention/1487",
+"n": "133"
+},
+{
+"id": "1487",
+"name": "Promoting Alternative THinking Strategies (PATHS) ",
+"protocol": "Supportive Learning Environment Interventions Review Protocol ",
+"domain": "Student social interaction",
+"rating": "No Discernible Effects",
+"url": "/intervention/1487",
+"n": "133"
+},
+{
+"id": "1487",
+"name": "Promoting Alternative THinking Strategies (PATHS) ",
+"protocol": "Supportive Learning Environment Interventions Review Protocol ",
+"domain": "Academic achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1487",
+"n": "1582"
+},
+{
+"id": "1571",
+"name": "University of Chicago School Mathematics Project (UCSMP) Transitions/Pre-transitions Math",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1571",
+"n": "637"
+},
+{
+"id": "1175",
+"name": "Math Expressions",
+"protocol": "Primary Mathematics",
+"domain": "General Mathematics Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1175",
+"n": "4202"
+},
+{
+"id": "1077",
+"name": "Xtreme Reading",
+"protocol": "Adolescent Literacy",
+"domain": "Comprehension",
+"rating": "No Discernible Effects",
+"url": "/intervention/1077",
+"n": "2329"
+},
+{
+"id": "1077",
+"name": "Xtreme Reading",
+"protocol": "Adolescent Literacy",
+"domain": "Literacy Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1077",
+"n": "1870"
+},
+{
+"id": "1571",
+"name": "University of Chicago School Mathematics Project (UCSMP) Transitions/Pre-transitions Math",
+"protocol": "Primary Mathematics",
+"domain": "Algebra",
+"rating": "No Discernible Effects",
+"url": "/intervention/1571",
+"n": "282"
+},
+{
+"id": "1181",
+"name": "Literacy Design Collaborative (LDC)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Literacy Achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/1181",
+"n": "31003"
+},
+{
+"id": "1846",
+"name": "Pathway to Academic Success (Pathway Project)",
+"protocol": "English Language Learners",
+"domain": "General Literacy Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1846",
+"n": "2726"
+},
+{
+"id": "1846",
+"name": "Pathway to Academic Success (Pathway Project)",
+"protocol": "English Language Learners",
+"domain": "Writing Conventions",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1846",
+"n": "2721"
+},
+{
+"id": "1618",
+"name": "Success Boston Coaching",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1618",
+"n": "5543"
+},
+{
+"id": "1618",
+"name": "Success Boston Coaching",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Progressing in College",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1618",
+"n": "8375"
+},
+{
+"id": "1602",
+"name": "Dana Center Mathematics Pathways",
+"protocol": "Developmental Education",
+"domain": "Progressing in College",
+"rating": "Positive Effects",
+"url": "/intervention/1602",
+"n": "11163"
+},
+{
+"id": "1602",
+"name": "Dana Center Mathematics Pathways",
+"protocol": "Developmental Education",
+"domain": "Progressing in Developmental Education",
+"rating": "Positive Effects",
+"url": "/intervention/1602",
+"n": "46012"
+},
+{
+"id": "1373",
+"name": "Science Teachers Learning through Lesson Analysis (STeLLA)",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1373",
+"n": "2823"
+},
+{
+"id": "1181",
+"name": "Literacy Design Collaborative (LDC)",
+"protocol": "Teacher Training, Evaluation, and Compensation",
+"domain": "Social Studies Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1181",
+"n": "19962"
+},
+{
+"id": "1194",
+"name": "Integrated Basic Education and Skills Training (I-BEST)",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Industry-recognized credential, certificate, or license completion",
+"rating": "Positive Effects",
+"url": "/intervention/1194",
+"n": "44367"
+},
+{
+"id": "1194",
+"name": "Integrated Basic Education and Skills Training (I-BEST)",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Earnings",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1194",
+"n": "2519"
+},
+{
+"id": "1572",
+"name": "Leadership and Assistance for Science Education Reform (LASER)",
+"protocol": "Science",
+"domain": "Science Achievement",
+"rating": "No Discernible Effects",
+"url": "/intervention/1572",
+"n": "6291"
+},
+{
+"id": "1194",
+"name": "Integrated Basic Education and Skills Training (I-BEST)",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Employment",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1194",
+"n": "2064"
+},
+{
+"id": "1194",
+"name": "Integrated Basic Education and Skills Training (I-BEST)",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Credit accumulation",
+"rating": "No Discernible Effects",
+"url": "/intervention/1194",
+"n": "42894"
+},
+{
+"id": "1623",
+"name": "Single Stop",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1623",
+"n": "10213"
+},
+{
+"id": "1623",
+"name": "Single Stop",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Progressing in College",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1623",
+"n": "10231"
+},
+{
+"id": "1846",
+"name": "Pathway to Academic Success (Pathway Project)",
+"protocol": "English Language Learners",
+"domain": "Writing Quality",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1846",
+"n": "444"
+},
+{
+"id": "1517",
+"name": "Bottom Line",
+"protocol": "Transition to College",
+"domain": "College Enrollment",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1517",
+"n": "2422"
+},
+{
+"id": "1517",
+"name": "Bottom Line",
+"protocol": "Transition to College",
+"domain": "Progressing in College",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1517",
+"n": "1429"
+},
+{
+"id": "1629",
+"name": "Growth Mindset",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1629",
+"n": "5301"
+},
+{
+"id": "1629",
+"name": "Growth Mindset",
+"protocol": "Supporting Postsecondary Success",
+"domain": "College Enrollment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1629",
+"n": "8194"
+},
+{
+"id": "1629",
+"name": "Growth Mindset",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Progressing in College",
+"rating": "No Discernible Effects",
+"url": "/intervention/1629",
+"n": "8351"
+},
+{
+"id": "1117",
+"name": "Social Belonging",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Academic achievement",
+"rating": "Mixed Effects",
+"url": "/intervention/1117",
+"n": "3640"
+},
+{
+"id": "1117",
+"name": "Social Belonging",
+"protocol": "Supporting Postsecondary Success",
+"domain": "College Enrollment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1117",
+"n": "1893"
+},
+{
+"id": "1117",
+"name": "Social Belonging",
+"protocol": "Supporting Postsecondary Success",
+"domain": "Progressing in College",
+"rating": "Mixed Effects",
+"url": "/intervention/1117",
+"n": "2484"
+},
+{
+"id": "1882",
+"name": "World of Words (WOW)",
+"protocol": "Preparing Young Children for School",
+"domain": "Language",
+"rating": "Positive Effects",
+"url": "/intervention/1882",
+"n": "992"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Preparing Young Children for School",
+"domain": "Mathematics",
+"rating": "Positive Effects",
+"url": "/intervention/425",
+"n": "2913"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Preparing Young Children for School",
+"domain": "Self-regulation",
+"rating": "Not Measured",
+"url": "/intervention/425",
+"n": "234"
+},
+{
+"id": "2151",
+"name": "Building Blocks&trade;",
+"protocol": "Preparing Young Children for School",
+"domain": "Mathematics",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/2151",
+"n": "3221"
+},
+{
+"id": "1581",
+"name": "Year Up",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Employment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1581",
+"n": "143"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Credit accumulation",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1946",
+"n": "958"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Industry-recognized credential, certificate, or license completion",
+"rating": "Positive Effects",
+"url": "/intervention/1946",
+"n": "1301"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Postsecondary degree attainment",
+"rating": "Potentially Negative Effects",
+"url": "/intervention/1946",
+"n": "1301"
+},
+{
+"id": "1860",
+"name": "Red Light, Purple Light (RLPL)",
+"protocol": "Preparing Young Children for School",
+"domain": "Mathematics",
+"rating": "Not Measured",
+"url": "/intervention/1860",
+"n": "433"
+},
+{
+"id": "1860",
+"name": "Red Light, Purple Light (RLPL)",
+"protocol": "Preparing Young Children for School",
+"domain": "Reading & Literacy Related",
+"rating": "Not Measured",
+"url": "/intervention/1860",
+"n": "433"
+},
+{
+"id": "1860",
+"name": "Red Light, Purple Light (RLPL)",
+"protocol": "Preparing Young Children for School",
+"domain": "Self-regulation",
+"rating": "Potentially Positive Effects",
+"url": "/intervention/1860",
+"n": "433"
+},
+{
+"id": "1860",
+"name": "Red Light, Purple Light (RLPL)",
+"protocol": "Preparing Young Children for School",
+"domain": "Language",
+"rating": "Not Measured",
+"url": "/intervention/1860",
+"n": "276"
+},
+{
+"id": "1581",
+"name": "Year Up",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Industry-recognized credential, certificate, or license completion",
+"rating": "No Discernible Effects",
+"url": "/intervention/1581",
+"n": "143"
+},
+{
+"id": "1581",
+"name": "Year Up",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Medium-Term Earnings",
+"rating": "No Discernible Effects",
+"url": "/intervention/1581",
+"n": "135"
+},
+{
+"id": "1581",
+"name": "Year Up",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Medium-Term Employment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1581",
+"n": "143"
+},
+{
+"id": "1581",
+"name": "Year Up",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Earnings",
+"rating": "Positive Effects",
+"url": "/intervention/1581",
+"n": "1988"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Employment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1946",
+"n": "1555"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Preparing Young Children for School",
+"domain": "Language",
+"rating": "Not Measured",
+"url": "/intervention/425",
+"n": "296"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Preparing Young Children for School",
+"domain": "Reading & Literacy Related",
+"rating": "Not Measured",
+"url": "/intervention/425",
+"n": "966"
+},
+{
+"id": "425",
+"name": "Pre-K Mathematics",
+"protocol": "Preparing Young Children for School",
+"domain": "Social-Emotional Learning",
+"rating": "Not Measured",
+"url": "/intervention/425",
+"n": "297"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Long-Term Earnings",
+"rating": "No Discernible Effects",
+"url": "/intervention/1946",
+"n": "410"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Medium-Term Earnings",
+"rating": "No Discernible Effects",
+"url": "/intervention/1946",
+"n": "410"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Medium-Term Employment",
+"rating": "No Discernible Effects",
+"url": "/intervention/1946",
+"n": "343"
+},
+{
+"id": "1946",
+"name": "Project QUEST",
+"protocol": "Postsecondary Career and Technical Education (CTE) Interventions",
+"domain": "Short-Term Earnings",
+"rating": "No Discernible Effects",
+"url": "/intervention/1946",
+"n": "410"
+}
+]
