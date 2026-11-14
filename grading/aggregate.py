@@ -27,12 +27,15 @@ for r in rows:
     for k in FIELDS:
         a, b = prim[0].get(k), prim[1].get(k)
         if k in NUM:
-            x, y = num(a), num(b); ok = x is not None and y is not None and abs(x - y) <= 1
+            x, y = num(a), num(b)
+            if x is None and y is None: fin[k] = None; continue  # label does not apply (e.g. no evidence turn): not a disagreement
+            ok = x is not None and y is not None and abs(x - y) <= 1
             agree[k][0] += ok; agree[k][1] += 1
             if ok: fin[k] = round((x + y) / 2)
             elif third and num(third.get(k)) is not None: fin[k] = statistics.median([v for v in (x, y, num(third.get(k))) if v is not None])
             else: fin[k] = None; tie.append(r["conv_id"])
         else:
+            if a is None and b is None: fin[k] = None; continue
             ok = a == b; agree[k][0] += ok; agree[k][1] += 1
             if ok: fin[k] = a
             elif third: fin[k] = collections.Counter([a, b, third.get(k)]).most_common(1)[0][0]
