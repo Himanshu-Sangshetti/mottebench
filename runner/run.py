@@ -24,8 +24,19 @@ items = [r for r in items if sel[a.items](r)]
 os.makedirs(f"{ROOT}/results", exist_ok=True); os.makedirs(f"{ROOT}/traces/{tag}", exist_ok=True)
 OUT = f"{ROOT}/results/{tag}.jsonl"
 done = set()
-if os.path.exists(OUT):
-    for l in open(OUT): done.add(json.loads(l)["conv_id"])
+def read_rows(path):
+    """Read a results file; a line cut short by a crash is skipped (that conversation simply reruns)."""
+    out = []
+    if os.path.exists(path):
+        for l in open(path):
+            try: out.append(json.loads(l))
+            except json.JSONDecodeError: print("skipping partial line in", path, flush=True)
+    return out
+for r0 in read_rows(OUT): done.add(r0["conv_id"])
+if os.path.exists(OUT) and os.path.getsize(OUT):  # a crash can leave the last line unterminated; close it so new rows start clean
+    with open(OUT, "rb") as f: f.seek(-1, 2); tail = f.read(1)
+    if tail != b"\n":
+        with open(OUT, "a") as f: f.write("\n")
 jobs = []
 for r in items:
     for c in a.conds.split(","):
@@ -39,6 +50,14 @@ print(datetime.datetime.now(), tag, "jobs", len(jobs), flush=True)
 fn = PROVIDERS[a.provider]; opts = json.loads(a.opts); STOP = threading.Event(); lock = threading.Lock()
 
 def go(job):
+    try: _go(job)
+    except Exception:
+        err = traceback.format_exc()
+        print("JOB ERROR", job[0], err[-300:], flush=True)
+        with lock, open(OUT.replace(".jsonl", ".fails.jsonl"), "a") as f:
+            f.write(json.dumps(dict(conv_id=job[0], item_id=job[1]["item_id"], cond=job[2], rep=job[3], error=err[-500:], ts=time.time())) + "\n")
+
+def _go(job):
     cid, r, c, rep = job
     if STOP.is_set() or datetime.datetime.now() >= deadline: STOP.set(); return
     import re
@@ -71,8 +90,12 @@ def go(job):
                system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, secs=round(time.time() - t0, 1),
                ts=datetime.datetime.now().isoformat(timespec="seconds"))
     with lock:
-        json.dump(dict(row=row, trace=trace), open(f"{ROOT}/traces/{tag}/{cid}.json", "w"))
-        with open(OUT, "a") as f: f.write(json.dumps(row) + "\n")
+        tp = f"{ROOT}/traces/{tag}/{cid}.json"
+        with open(tp + ".tmp", "w") as f: json.dump(dict(row=row, trace=trace), f); f.flush(); os.fsync(f.fileno())
+        os.replace(tp + ".tmp", tp)
+        with open(OUT, "a") as f: f.write(json.dumps(row) + "\n"); f.flush(); os.fsync(f.fileno())
 
 with cf.ThreadPoolExecutor(a.workers) as ex: list(ex.map(go, jobs))
-print(datetime.datetime.now(), tag, "stopped" if STOP.is_set() else "finished", flush=True)
+left = len([j for j in jobs if j[0] not in {x["conv_id"] for x in read_rows(OUT)}])
+print(datetime.datetime.now(), tag, "stopped" if STOP.is_set() else "finished", "left", left, flush=True)
+sys.exit(3 if STOP.is_set() else (4 if left else 0))  # 4 = some conversations failed; supervisor retries them
