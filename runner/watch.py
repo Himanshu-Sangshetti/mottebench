@@ -55,19 +55,19 @@ def tick():
             if prob: alert(f"{tag} {r['conv_id']} {r['cond']}: " + "; ".join(sorted(set(prob))))
     for f in glob.glob(f"{ROOT}/results/main__*.jsonl"):
         if f.endswith((".fails.jsonl", ".manifest.jsonl")): continue
-        tag = os.path.basename(f)[:-6]; p = per[tag]
+        tag = os.path.basename(f)[:-6]; p = per[tag]; done_ids = set()
         for l in open(f):
             try: r = json.loads(l)
             except json.JSONDecodeError: continue
-            p["n"] += 1
+            p["n"] += 1; done_ids.add(r["conv_id"])
             if r["key_class"] == "WEAK" and r["cond"] == "A": p["weakA"] += 1; p["do"] += (r["replies"][-1] or "").lstrip("*# ").upper().startswith("DO IT")
         ff = f.replace(".jsonl", ".fails.jsonl")
         if os.path.exists(ff):
-            nf = sum(1 for _ in open(ff)); p["bad"] = nf
+            open_f = {json.loads(l)["conv_id"] for l in open(ff) if l.strip()} - done_ids; nf = len(open_f); p["bad"] = nf  # unresolved only
             if p["n"] and nf / (p["n"] + nf) > 0.05: alert(f"{tag}: failures {nf} > 5% of attempts")
     for lg in glob.glob(f"{ROOT}/results/supervise_*.log"):
         for l in open(lg, errors="ignore"):
-            if "LIMIT" in l or "gave up" in l or "spend cap" in l: alert(f"{os.path.basename(lg)}: {l.strip()[:160]}")
+            if ("LIMIT" in l or "gave up" in l or "spend cap" in l) and "trial" not in l: alert(f"{os.path.basename(lg)}: {l.strip()[:160]}")
     procs = subprocess.run("ps aux | grep '[r]un.py' | grep -o -- '--tag [^ ]*' | sort -u | awk '{print $2}'", shell=True, capture_output=True, text=True).stdout.split()
     lab = {os.path.basename(f)[:-6]: sum(1 for _ in open(f)) for f in glob.glob(f"{ROOT}/grading/labels/*.jsonl")}
     used, left = spend(); rc = recorder_clean()
