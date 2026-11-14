@@ -71,11 +71,17 @@ def tick():
     procs = subprocess.run("ps aux | grep '[r]un.py' | grep -o -- '--tag [^ ]*' | sort -u | awk '{print $2}'", shell=True, capture_output=True, text=True).stdout.split()
     lab = {os.path.basename(f)[:-6]: sum(1 for _ in open(f)) for f in glob.glob(f"{ROOT}/grading/labels/*.jsonl")}
     used, left = spend(); rc = recorder_clean()
+    plan = "-"
+    try:
+        rl = json.load(open(f"{ROOT}/traces/recorder/ratelimit_latest.json")); u5 = float(rl.get("anthropic-ratelimit-unified-5h-utilization", 0))
+        plan = f"{u5:.0%} of 5h (resets {datetime.datetime.fromtimestamp(int(rl['anthropic-ratelimit-unified-5h-reset'])):%H:%M}), 7d {float(rl.get('anthropic-ratelimit-unified-7d-utilization', 0)):.0%}"
+        if u5 >= 0.6: alert(f"Claude plan at {u5:.0%} of the 5-hour window")
+    except Exception: pass
     if rc != "clean" and rc != "no log": alert("recorder: " + rc)
     if left is not None and left < 1.0: alert(f"OpenRouter credit low: ${left:.2f} left")
     runs = " ".join(f"{t.replace('main__', '')}={v['n']}(fail {v['bad']}, DO on weak A {v['do']}/{v['weakA']})" for t, v in sorted(per.items()))
     print(f"{datetime.datetime.now():%H:%M} spend ${used if used is None else round(used, 3)} left ${left if left is None else round(left, 2)} | {runs} | "
-          f"running {len(procs)} | judges {lab or '-'} | recorder {rc} | checked {len(seen)} traces", flush=True)
+          f"running {len(procs)} | Claude plan {plan} | judges {lab or '-'} | recorder {rc} | checked {len(seen)} traces", flush=True)
 if __name__ == "__main__":
     every = int(sys.argv[1]) if len(sys.argv) > 1 else 180
     while True:

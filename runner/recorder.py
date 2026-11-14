@@ -34,7 +34,11 @@ class H(http.server.BaseHTTPRequestHandler):
         self.send_header('content-length',str(len(data))); self.end_headers(); self.wfile.write(data)
         try: req=json.loads(body) if body else None
         except Exception: req=body.decode(errors='replace')[:2000]
-        rec=dict(sanitized=SANITIZE,ts=time.time(),method=self.command,path=self.path,status=r.status,req_headers={k:v for k,v in hdr.items() if k.lower() not in SECRET},request=req,response=data.decode(errors='replace'))
+        rl={k:v for k,v in r.getheaders() if 'ratelimit' in k.lower() or 'retry-after' in k.lower()}
+        if rl:
+            try: open(os.path.join(os.path.dirname(LOG),'ratelimit_latest.json'),'w').write(json.dumps(dict(ts=time.time(),**rl)))
+            except Exception: pass
+        rec=dict(sanitized=SANITIZE,ts=time.time(),method=self.command,path=self.path,status=r.status,resp_ratelimit=rl,req_headers={k:v for k,v in hdr.items() if k.lower() not in SECRET},request=req,response=data.decode(errors='replace'))
         line=EMAIL.sub('<EMAIL>',json.dumps(rec))
         with lock, open(LOG,'a') as f: f.write(line+"\n")
     do_POST=_go; do_GET=_go
