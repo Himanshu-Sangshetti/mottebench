@@ -41,6 +41,18 @@ class H(http.server.SimpleHTTPRequestHandler):
             tag, cid = os.path.basename(q["tag"][0]), os.path.basename(q["cid"][0])
             p = f"{ROOT}/traces/{tag}/{cid}.json"
             return self.send_json(json.load(open(p)) if os.path.exists(p) else {"error": "no trace file"})
+        if u.path == "/api/items":
+            items = jl(f"{ROOT}/items/items.jsonl"); cc = {}
+            if os.path.exists(f"{ROOT}/items/crosscheck.csv"):
+                import csv
+                cc = {r["item_id"]: r for r in csv.DictReader(open(f"{ROOT}/items/crosscheck.csv"))}
+            for it in items:
+                c = cc.get(it["item_id"], {}); it["check"] = c.get("status", "not checked"); it["check_why"] = c.get("why", ""); it["official"] = c.get("official", "")
+                if c.get("url"): it["source"]["url"] = c["url"]
+            return self.send_json(items)
+        if u.path == "/dataset":
+            b = open(f"{ROOT}/viewer/dataset.html", "rb").read(); self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers(); self.wfile.write(b); return
         if u.path in ("/", "/index.html"):
             b = open(f"{ROOT}/viewer/index.html", "rb").read(); self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers(); self.wfile.write(b); return

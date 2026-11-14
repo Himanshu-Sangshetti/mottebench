@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MotteBench Dataset</title>
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#666;--line:#e3e3e3;--alt:#f6f6f4;--sel:#e8f0fe;--acc:#1a56db;--ok:#057a55;--chk:#9f580a;--bad:#c81e1e}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.45 ui-sans-serif,system-ui,-apple-system,sans-serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+header{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:3}
+header b{font-size:14px}select,input,button{font:inherit;padding:3px 6px;border:1px solid #ccc;border-radius:3px;background:#fff}a{color:var(--acc)}
+.intro{padding:10px 12px;border-bottom:1px solid var(--line);color:#333;max-width:1100px}.intro p{margin:4px 0}
+#sum{padding:8px 12px}table{border-collapse:collapse;width:100%}th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--alt);font-weight:600;position:sticky;top:41px;cursor:pointer;user-select:none;white-space:nowrap}
+#sum table{width:auto}#sum td,#sum th{position:static}
+td.q{min-width:280px;max-width:420px}td.rec{min-width:300px;max-width:520px;color:#333}
+.ok{color:var(--ok);font-weight:600}.CHECK{color:var(--chk);font-weight:600}.FAIL{color:var(--bad);font-weight:600}
+.k{white-space:nowrap;font-weight:600}.help{color:var(--mut)}
+</style></head><body>
+<header><b>MotteBench dataset</b><a href="/">← trace viewer</a>
+<select id="fs"></select><select id="fk"></select><select id="fc"></select><select id="fp"></select><input id="fq" placeholder="search" size="24"><span id="cnt" class="help"></span></header>
+<div class="intro">
+<p><b>What this is.</b> Every question in the benchmark. The <b>question</b> is written by us. The <b>evidence verdict</b> is the official body's own grade, copied from its published record, and the link opens that record so you can check it.</p>
+<p><b>Check status</b> comes from <span class="mono">items/build/crosscheck.py</span>, which re-reads the raw official data: <span class="ok">ok</span> = verified automatically, <span class="CHECK">CHECK</span> = needs a human look (reason shown), <span class="FAIL">FAIL</span> = wrong, to be removed or fixed.</p>
+</div>
+<div id="sum"></div>
+<div id="tbl"></div>
+<script>
+const EV={WEAK:"weak",STRONG_FOR:"strong — helps",STRONG_AGAINST:"strong — does not help"};
+const $=id=>document.getElementById(id),esc=s=>(s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let I=[],sk='source',sd=1;
+const srcname=it=>it.source.name.startsWith('DGAC')?'Dietary Guidelines report':it.source.name;
+function record(it){const s=it.source;
+ if(s.name=='USPSTF')return `<b>${esc(s.topic)}</b><br>Official grade: ${esc(it.official||it.key_detail)}`;
+ if(s.name=='What Works Clearinghouse')return `<b>${esc(s.intervention)}</b><br>Students: ${esc(s.protocol)} · Outcome: ${esc(s.outcome_domain)}<br>Official rating: ${esc(it.official||it.key_detail)}`;
+ if(s.name=='Cochrane')return `<b>${esc(s.title)}</b><br>${esc(it.key_detail)}<br><span class="help">${esc(it.official)}</span>`;
+ return `${esc((s.text||'').slice(0,320))}…<br>${esc(it.key_detail)}`}
+function opt(id,n,v){const s=$(id),x=s.value;s.innerHTML=`<option value="">${n}: all</option>`+[...new Set(v)].sort().map(a=>`<option>${esc(a)}</option>`).join('');s.value=x}
+async function load(){I=await (await fetch('/api/items')).json();opt('fs','source',I.map(srcname));opt('fk','verdict',I.map(i=>EV[i.key_class]));opt('fc','check',I.map(i=>i.check));opt('fp','set',I.map(i=>i.split));summary();table()}
+function summary(){const S=[...new Set(I.map(srcname))].sort(),C=["ok","CHECK","FAIL","not checked"];
+ $('sum').innerHTML=`<table><tr><th>Source</th><th>questions</th><th>weak</th><th>strong — helps</th><th>strong — does not help</th>${C.map(c=>`<th class="${c}">${c}</th>`).join('')}</tr>`+
+ S.map(s=>{const x=I.filter(i=>srcname(i)==s);return `<tr><td>${esc(s)}</td><td>${x.length}</td>${Object.keys(EV).map(k=>`<td>${x.filter(i=>i.key_class==k).length}</td>`).join('')}${C.map(c=>`<td>${x.filter(i=>i.check==c).length}</td>`).join('')}</tr>`}).join('')+
+ `<tr><td><b>all</b></td><td><b>${I.length}</b></td>${Object.keys(EV).map(k=>`<td>${I.filter(i=>i.key_class==k).length}</td>`).join('')}${C.map(c=>`<td>${I.filter(i=>i.check==c).length}</td>`).join('')}</tr></table>`}
+const COLS=[['id','id',i=>i.item_id],['source','source',srcname],['q','question (written by us)',i=>i.question],['rec','official record',i=>i.source.topic||i.source.intervention||i.source.title||''],
+ ['k','official verdict',i=>EV[i.key_class]],['chk','check',i=>i.check],['split','set',i=>i.split],['link','link',i=>i.source.url]];
+function table(){const q=$('fq').value.toLowerCase(),F=[$('fs').value,$('fk').value,$('fc').value,$('fp').value];
+ const V=I.filter(i=>(!F[0]||srcname(i)==F[0])&&(!F[1]||EV[i.key_class]==F[1])&&(!F[2]||i.check==F[2])&&(!F[3]||i.split==F[3])&&(!q||JSON.stringify(i).toLowerCase().includes(q)));
+ const g=COLS.find(c=>c[0]==sk)[2];V.sort((a,b)=>(g(a)>g(b)?1:g(a)<g(b)?-1:0)*sd);$('cnt').textContent=`${V.length} of ${I.length} questions`;
+ $('tbl').innerHTML=`<table><tr>${COLS.map(c=>`<th data-k="${c[0]}">${c[1]}${sk==c[0]?(sd>0?' ▲':' ▼'):''}</th>`).join('')}</tr>`+V.map(i=>`<tr>
+  <td class="mono">${i.item_id}${i.pilot?'<br><span class="help">pilot</span>':''}</td><td>${esc(srcname(i))}</td><td class="q">${esc(i.question)}</td><td class="rec">${record(i)}</td>
+  <td class="k">${EV[i.key_class]}</td><td><span class="${i.check}">${esc(i.check)}</span>${i.check!='ok'?`<br><span class="help">${esc(i.check_why)}</span>`:''}</td>
+  <td class="mono">${i.split}</td><td>${i.source.url?`<a href="${esc(i.source.url)}" target="_blank">official page</a>`:''}</td></tr>`).join('')+'</table>';
+ document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{sd=sk==th.dataset.k?-sd:1;sk=th.dataset.k;table()})}
+['fs','fk','fc','fp'].forEach(id=>$(id).onchange=table);$('fq').oninput=table;load();
+</script></body></html>
