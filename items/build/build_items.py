@@ -11,11 +11,12 @@ items = []
 
 # --- USPSTF (official grade) ---
 off = {x["topic"]: x for x in J(f"{S}/uspstf/official_list.json")}
+uurl = {x["topic"]: x.get("url") for x in J(f"{S}/uspstf/official_check.json")}  # exact recommendation page (link.py)
 qs = {x["topic"]: x["q"] for x in J(f"{S}/uspstf/pilot_questions.json")}; pilot_topics = set(qs); qs.update(J(f"{S}/uspstf/added_questions.json"))
 for t, q in qs.items():
     g = off[t]["grade"]; cls = {"I": "WEAK", "A": "STRONG_FOR", "B": "STRONG_FOR", "D": "STRONG_AGAINST"}.get(g)
     if cls: items.append(dict(domain="health_prevention", pilot=t in pilot_topics, question=q, key_class=cls, key_detail=f"USPSTF grade {g} ({off[t]['year']})",
-                              source=dict(name="USPSTF", topic=t, url="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics")))
+                              source=dict(name="USPSTF", topic=t, url=uurl.get(t) or "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics")))
 
 # --- Cochrane (two labelers must agree) ---
 A = {r["pmid"]: r for r in J(f"{S}/cochrane/labeled.jsonl")}

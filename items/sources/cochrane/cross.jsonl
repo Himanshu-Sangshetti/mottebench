@@ -1,0 +1,203 @@
+{"main_outcome": "risk of pre-eclampsia", "direction": "no_benefit", "certainty": "low", "src_id": "43012372"}
+{"main_outcome": "Fatigue", "direction": "benefit", "certainty": "low", "src_id": "42929381"}
+{"main_outcome": "significantly reduced risk of MI", "direction": "benefit", "certainty": "high", "src_id": "42754260"}
+{"main_outcome": "reduces vitamin D deficiency", "direction": "benefit", "certainty": "moderate", "src_id": "42746921"}
+{"main_outcome": "cerebral palsy", "direction": "benefit", "certainty": "high", "src_id": "42689525"}
+{"main_outcome": "cardiorespiratory fitness", "direction": "benefit", "certainty": "low", "src_id": "42663176"}
+{"main_outcome": "deferral rate due to low Hb (critical outcome)", "direction": "benefit", "certainty": "moderate", "src_id": "42240175"}
+{"main_outcome": "vitamin B12 deficiency", "direction": "benefit", "certainty": "high", "src_id": "42227307"}
+{"main_outcome": "proportion of children who make ARI-related healthcare visits", "direction": "benefit", "certainty": "low", "src_id": "42037591"}
+{"main_outcome": "death of newborns with neonatal encephalopathy or neurodevelopmental disability in the newborns who survive", "direction": "unclear", "certainty": "very_low", "src_id": "41925053"}
+{"main_outcome": "CRC incidence", "direction": "benefit", "certainty": "very_low", "src_id": "41919561"}
+{"main_outcome": "CRC incidence", "direction": "benefit", "certainty": "very_low", "src_id": "41740630"}
+{"main_outcome": "benefits and harms of exercise therapy", "direction": "unclear", "certainty": "very_low", "src_id": "41705637"}
+{"main_outcome": "percentage from baseline weight loss", "direction": "no_benefit", "certainty": "low", "src_id": "41692034"}
+{"main_outcome": "all-cause mortality", "direction": "no_benefit", "certainty": "low", "src_id": "41510785"}
+{"main_outcome": "depressive symptoms", "direction": "benefit", "certainty": "moderate", "src_id": "41500513"}
+{"main_outcome": "large reduction in pain", "direction": "benefit", "certainty": "low", "src_id": "41363159"}
+{"main_outcome": "insomnia severity", "direction": "no_benefit", "certainty": "very_low", "src_id": "41347621"}
+{"main_outcome": "preterm delivery before 37 weeks", "direction": "no_benefit", "certainty": "high", "src_id": "41330480"}
+{"main_outcome": "vaping cessation", "direction": "unclear", "certainty": "very_low", "src_id": "41288132"}
+{"main_outcome": "rates of live birth", "direction": "no_benefit", "certainty": "low", "src_id": "41147529"}
+{"main_outcome": "quit smoking", "direction": "no_benefit", "certainty": "low", "src_id": "41130602"}
+{"main_outcome": "peripheral neuropathy impairment", "direction": "no_benefit", "certainty": "low", "src_id": "40990181"}
+{"main_outcome": "pre-eclampsia", "direction": "no_benefit", "certainty": "low", "src_id": "40965861"}
+{"main_outcome": "duration of delirium", "direction": "benefit", "certainty": "low", "src_id": "40792601"}
+{"main_outcome": "preventing asthma", "direction": "benefit", "certainty": "low", "src_id": "40792481"}
+{"main_outcome": "diagnosing vitamin A deficiency", "direction": "no_benefit", "certainty": "very_low", "src_id": "40433851"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "very_low", "src_id": "40421669"}
+{"main_outcome": "pain", "direction": "no_benefit", "certainty": "low", "src_id": "40421598"}
+{"main_outcome": "independent walking", "direction": "benefit", "certainty": "moderate", "src_id": "40365867"}
+{"main_outcome": "sleepiness", "direction": "no_benefit", "certainty": "high", "src_id": "40326548"}
+{"main_outcome": "quality of life", "direction": "unclear", "certainty": "very_low", "src_id": "40304216"}
+{"main_outcome": "pain scores", "direction": "benefit", "certainty": "low", "src_id": "40260830"}
+{"main_outcome": "depressive symptoms", "direction": "benefit", "certainty": "moderate", "src_id": "40049590"}
+{"main_outcome": "Duration of any pharmacological treatment for NAS", "direction": "no_benefit", "certainty": "very_low", "src_id": "39981752"}
+{"main_outcome": "preventing the incidence of postpartum depression", "direction": "benefit", "certainty": "low", "src_id": "39963955"}
+{"main_outcome": "symptomatic venous thromboembolism (VTE)", "direction": "benefit", "certainty": "low", "src_id": "39868562"}
+{"main_outcome": "walking energy cost", "direction": "benefit", "certainty": "low", "src_id": "39817620"}
+{"main_outcome": "vaping cessation", "direction": "benefit", "certainty": "very_low", "src_id": "39777614"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "low", "src_id": "39775459"}
+{"main_outcome": "reduces fatigue at end of treatment", "direction": "benefit", "certainty": "moderate", "src_id": "39697147"}
+{"main_outcome": "improvement in fatigue", "direction": "benefit", "certainty": "very_low", "src_id": "39670550"}
+{"main_outcome": "implementation of interventions targeting healthy eating, physical activity, tobacco and/or alcohol use", "direction": "benefit", "certainty": "moderate", "src_id": "39665378"}
+{"main_outcome": "Hb level postpartum", "direction": "benefit", "certainty": "low", "src_id": "39651609"}
+{"main_outcome": "improvement in pain immediately post-intervention", "direction": "benefit", "certainty": "low", "src_id": "39625083"}
+{"main_outcome": "self-reported depression symptoms", "direction": "benefit", "certainty": "very_low", "src_id": "39564892"}
+{"main_outcome": "preterm birth less than 37 weeks", "direction": "benefit", "certainty": "moderate", "src_id": "39560075"}
+{"main_outcome": "preventing new caries in the primary dentition", "direction": "benefit", "certainty": "very_low", "src_id": "39508296"}
+{"main_outcome": "quality of life", "direction": "unclear", "certainty": "very_low", "src_id": "39470212"}
+{"main_outcome": "quality of life", "direction": "no_benefit", "certainty": "very_low", "src_id": "39412049"}
+{"main_outcome": "fractures", "direction": "no_benefit", "certainty": "very_low", "src_id": "39351881"}
+{"main_outcome": "rate of moderate or severe exacerbations requiring systemic corticosteroids, antibiotics or both", "direction": "no_benefit", "certainty": "high", "src_id": "39329240"}
+{"main_outcome": "AF symptom severity", "direction": "benefit", "certainty": "low", "src_id": "39287086"}
+{"main_outcome": "maternal anaemia at term", "direction": "benefit", "certainty": "moderate", "src_id": "39145520"}
+{"main_outcome": "severe postpartum haemorrhage", "direction": "benefit", "certainty": "low", "src_id": "39077939"}
+{"main_outcome": "all-cause mortality prior to hospital discharge", "direction": "no_benefit", "certainty": "low", "src_id": "39045901"}
+{"main_outcome": "development of fluorosis", "direction": "benefit", "certainty": "moderate", "src_id": "38899538"}
+{"main_outcome": "pain", "direction": "benefit", "certainty": "low", "src_id": "38802121"}
+{"main_outcome": "prevention of acute upper respiratory tract infections", "direction": "no_benefit", "certainty": "low", "src_id": "38738639"}
+{"main_outcome": "cerebral palsy", "direction": "benefit", "certainty": "high", "src_id": "38726883"}
+{"main_outcome": "body weight", "direction": "no_benefit", "certainty": "low", "src_id": "38721870"}
+{"main_outcome": "duration of ongoing colds", "direction": "benefit", "certainty": "low", "src_id": "38719213"}
+{"main_outcome": "absolute maximum walking distance at the end of follow-up compared to standard care", "direction": "benefit", "certainty": "very_low", "src_id": "38695785"}
+{"main_outcome": "all-cause hospital admissions", "direction": "benefit", "certainty": "moderate", "src_id": "38451843"}
+{"main_outcome": "reulceration", "direction": "benefit", "certainty": "low", "src_id": "38451842"}
+{"main_outcome": "improvement in neck pain", "direction": "benefit", "certainty": "low", "src_id": "38415786"}
+{"main_outcome": "BMI change", "direction": "benefit", "certainty": "very_low", "src_id": "38375882"}
+{"main_outcome": "anxiety", "direction": "benefit", "certainty": "low", "src_id": "38358047"}
+{"main_outcome": "absolute walking distance", "direction": "no_benefit", "certainty": "low", "src_id": "38353263"}
+{"main_outcome": "all-cause mortality", "direction": "benefit", "certainty": "high", "src_id": "38264795"}
+{"main_outcome": "parental depression or anxiety", "direction": "benefit", "certainty": "very_low", "src_id": "38197473"}
+{"main_outcome": "maternal vitamin B12 status", "direction": "benefit", "certainty": "very_low", "src_id": "38189492"}
+{"main_outcome": "child-reported pain intensity", "direction": "benefit", "certainty": "moderate", "src_id": "38180091"}
+{"main_outcome": "fear of falling", "direction": "benefit", "certainty": "moderate", "src_id": "37965937"}
+{"main_outcome": "fewer clinical relapses for IBD when using vitamin D compared to placebo or no treatment", "direction": "benefit", "certainty": "low", "src_id": "37781953"}
+{"main_outcome": "progression to late AMD", "direction": "no_benefit", "certainty": "low", "src_id": "37702300"}
+{"main_outcome": "sleep duration off-shift", "direction": "benefit", "certainty": "low", "src_id": "37694838"}
+{"main_outcome": "reduce the prevalence of anaemia", "direction": "benefit", "certainty": "very_low", "src_id": "37665781"}
+{"main_outcome": "pain scores", "direction": "no_benefit", "certainty": "very_low", "src_id": "37646368"}
+{"main_outcome": "Neonatal Infant Pain Scale (NIPS) score", "direction": "benefit", "certainty": "moderate", "src_id": "37643989"}
+{"main_outcome": "child diet quality", "direction": "benefit", "certainty": "very_low", "src_id": "37606067"}
+{"main_outcome": "relieving pain at 48 hours", "direction": "benefit", "certainty": "low", "src_id": "37594020"}
+{"main_outcome": "visual performance (BCVA)", "direction": "no_benefit", "certainty": "moderate", "src_id": "37593770"}
+{"main_outcome": "hypoglycemia", "direction": "benefit", "certainty": "low", "src_id": "37435938"}
+{"main_outcome": "long-term quit rates", "direction": "benefit", "certainty": "high", "src_id": "37335995"}
+{"main_outcome": "symptoms of dyspepsia", "direction": "benefit", "certainty": "moderate", "src_id": "37323050"}
+{"main_outcome": "health-related quality of life", "direction": "unclear", "certainty": "very_low", "src_id": "37314059"}
+{"main_outcome": "child diet quality", "direction": "benefit", "certainty": "very_low", "src_id": "37306513"}
+{"main_outcome": "physical activity measured by step count at six-month follow-up", "direction": "unclear", "certainty": "very_low", "src_id": "37294546"}
+{"main_outcome": "health-related quality of life", "direction": "unclear", "certainty": "very_low", "src_id": "37204002"}
+{"main_outcome": "quit smoking", "direction": "benefit", "certainty": "high", "src_id": "37142273"}
+{"main_outcome": "fatigue", "direction": "no_benefit", "certainty": "low", "src_id": "37073886"}
+{"main_outcome": "mortality due to LRTI", "direction": "benefit", "certainty": "moderate", "src_id": "36994923"}
+{"main_outcome": "health-related quality of life (HRQoL)", "direction": "benefit", "certainty": "moderate", "src_id": "36947725"}
+{"main_outcome": "quality_of_life", "direction": "no_benefit", "certainty": "very_low", "src_id": "36912791"}
+{"main_outcome": "bone mineral density", "direction": "no_benefit", "certainty": "moderate", "src_id": "36705288"}
+{"main_outcome": "time to resolution of acute illness", "direction": "no_benefit", "certainty": "moderate", "src_id": "36633175"}
+{"main_outcome": "sleep-related outcomes", "direction": "unclear", "certainty": "very_low", "src_id": "36594432"}
+{"main_outcome": "small and clinically unimportant improvements in back-related function and pain", "direction": "benefit", "certainty": "low", "src_id": "36398843"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "low", "src_id": "36355032"}
+{"main_outcome": "malaria susceptibility and severity", "direction": "unclear", "certainty": "very_low", "src_id": "36321557"}
+{"main_outcome": "duration and exclusivity of breastfeeding", "direction": "benefit", "certainty": "moderate", "src_id": "36282618"}
+{"main_outcome": "quality_of_life", "direction": "unclear", "certainty": "very_low", "src_id": "36278514"}
+{"main_outcome": "Quality of Life (QOL)", "direction": "no_benefit", "certainty": "low", "src_id": "36250418"}
+{"main_outcome": "clinical maturation", "direction": "benefit", "certainty": "low", "src_id": "36184076"}
+{"main_outcome": "risk of developing a postoperative pulmonary complication", "direction": "benefit", "certainty": "high", "src_id": "36170564"}
+{"main_outcome": "improvement in overactive bladder symptoms", "direction": "benefit", "certainty": "very_low", "src_id": "36148895"}
+{"main_outcome": "use of implementation strategies", "direction": "benefit", "certainty": "low", "src_id": "36036664"}
+{"main_outcome": "improved sleep quality", "direction": "benefit", "certainty": "moderate", "src_id": "36000763"}
+{"main_outcome": "exercise capacity", "direction": "benefit", "certainty": "moderate", "src_id": "35943025"}
+{"main_outcome": "FEV1", "direction": "no_benefit", "certainty": "very_low", "src_id": "35731672"}
+{"main_outcome": "total sleep time (TST)", "direction": "benefit", "certainty": "moderate", "src_id": "35703367"}
+{"main_outcome": "reduced length of hospital stay", "direction": "benefit", "certainty": "low", "src_id": "35616126"}
+{"main_outcome": "motivation for treatment/change", "direction": "benefit", "certainty": "moderate", "src_id": "35532044"}
+{"main_outcome": "global improvement", "direction": "benefit", "certainty": "moderate", "src_id": "35532041"}
+{"main_outcome": "prevalence of anaemia", "direction": "benefit", "certainty": "moderate", "src_id": "35446435"}
+{"main_outcome": "smoking quit rates", "direction": "no_benefit", "certainty": "low", "src_id": "35420700"}
+{"main_outcome": "all-cause mortality", "direction": "benefit", "certainty": "high", "src_id": "35294044"}
+{"main_outcome": "cardiovascular mortality", "direction": "no_benefit", "certainty": "low", "src_id": "35199850"}
+{"main_outcome": "incidence of DVT", "direction": "benefit", "certainty": "high", "src_id": "35089599"}
+{"main_outcome": "depressive symptoms", "direction": "benefit", "certainty": "moderate", "src_id": "35018639"}
+{"main_outcome": "systolic and diastolic blood pressure", "direction": "benefit", "certainty": "high", "src_id": "35014026"}
+{"main_outcome": "systolic blood pressure", "direction": "benefit", "certainty": "high", "src_id": "35000192"}
+{"main_outcome": "anxiety", "direction": "no_benefit", "certainty": "very_low", "src_id": "34890044"}
+{"main_outcome": "depressive symptomology", "direction": "benefit", "certainty": "very_low", "src_id": "34817851"}
+{"main_outcome": "pneumonia incidence", "direction": "unclear", "certainty": "very_low", "src_id": "34791642"}
+{"main_outcome": "all-cause mortality", "direction": "benefit", "certainty": "moderate", "src_id": "34741536"}
+{"main_outcome": "systolic and diastolic blood pressure", "direction": "benefit", "certainty": "high", "src_id": "34693985"}
+{"main_outcome": "anxiety", "direction": "benefit", "certainty": "very_low", "src_id": "34637527"}
+{"main_outcome": "pain", "direction": "benefit", "certainty": "moderate", "src_id": "34580864"}
+{"main_outcome": "alivio del dolor", "direction": "benefit", "certainty": "low", "src_id": "34559424"}
+{"main_outcome": "improving erectile dysfunction", "direction": "benefit", "certainty": "very_low", "src_id": "34555186"}
+{"main_outcome": "at least 50% pain relief", "direction": "benefit", "certainty": "very_low", "src_id": "34499349"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "low", "src_id": "34365646"}
+{"main_outcome": "time to complete healing of venous leg ulcers", "direction": "benefit", "certainty": "moderate", "src_id": "34308565"}
+{"main_outcome": "maximal and functional exercise capacity, HRQoL and safety", "direction": "unclear", "certainty": "very_low", "src_id": "34282853"}
+{"main_outcome": "subjective improvement in symptoms", "direction": "benefit", "certainty": "very_low", "src_id": "34271595"}
+{"main_outcome": "30-day (or longer if reported) mortality post-AAA repair", "direction": "no_benefit", "certainty": "very_low", "src_id": "34236703"}
+{"main_outcome": "pregnancy rates", "direction": "benefit", "certainty": "very_low", "src_id": "34085287"}
+{"main_outcome": "all-cause mortality at hospital discharge", "direction": "unclear", "certainty": "very_low", "src_id": "34029377"}
+{"main_outcome": "sensitivity", "direction": "benefit", "certainty": "low", "src_id": "34028001"}
+{"main_outcome": "symptomless DVT", "direction": "benefit", "certainty": "high", "src_id": "33878207"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "low", "src_id": "33822364"}
+{"main_outcome": "weight loss or reduction in body weight post intervention", "direction": "benefit", "certainty": "very_low", "src_id": "33782940"}
+{"main_outcome": "health-related quality of life", "direction": "no_benefit", "certainty": "very_low", "src_id": "33735441"}
+{"main_outcome": "maternal or neonatal outcomes", "direction": "no_benefit", "certainty": "low", "src_id": "33724446"}
+{"main_outcome": "all-cause mortality", "direction": "benefit", "certainty": "low", "src_id": "33710626"}
+{"main_outcome": "systolic blood pressure (SBP)", "direction": "benefit", "certainty": "moderate", "src_id": "33630309"}
+{"main_outcome": "body weight", "direction": "benefit", "certainty": "low", "src_id": "33512717"}
+{"main_outcome": "resolution of IDA (iron deficiency anaemia)", "direction": "benefit", "certainty": "moderate", "src_id": "33471939"}
+{"main_outcome": "risk of anaemia in populations", "direction": "benefit", "certainty": "low", "src_id": "33461239"}
+{"main_outcome": "reducci\u00f3n de la ansiedad preoperatoria", "direction": "benefit", "certainty": "moderate", "src_id": "33319916"}
+{"main_outcome": "hospital re-admission rate within 30 days of discharge", "direction": "harm", "certainty": "low", "src_id": "33316083"}
+{"main_outcome": "improvement in pain", "direction": "benefit", "certainty": "moderate", "src_id": "33306198"}
+{"main_outcome": "linear growth", "direction": "no_benefit", "certainty": "uncertain", "src_id": "33305842"}
+{"main_outcome": "total nocturnal sleep time (TNST)", "direction": "benefit", "certainty": "low", "src_id": "33189083"}
+{"main_outcome": "preventing caries in first permanent molars at two to three years' follow-up", "direction": "benefit", "certainty": "very_low", "src_id": "33142363"}
+{"main_outcome": "sleep quality", "direction": "benefit", "certainty": "moderate", "src_id": "33141943"}
+{"main_outcome": "percentage change from baseline in the number of cramps per week at four weeks", "direction": "no_benefit", "certainty": "moderate", "src_id": "32956536"}
+{"main_outcome": "quality of life (QoL)", "direction": "benefit", "certainty": "high", "src_id": "32829481"}
+{"main_outcome": "adequate pain relief", "direction": "benefit", "certainty": "low", "src_id": "32702783"}
+{"main_outcome": "improving iron status", "direction": "benefit", "certainty": "low", "src_id": "32677706"}
+{"main_outcome": "mean reduction in number of Demodex mites per eight eyelashes", "direction": "benefit", "certainty": "very_low", "src_id": "32589270"}
+{"main_outcome": "maternal blood glucose levels", "direction": "unclear", "certainty": "low", "src_id": "32575163"}
+{"main_outcome": "visual acuity", "direction": "no_benefit", "certainty": "very_low", "src_id": "32573764"}
+{"main_outcome": "incidence of AD", "direction": "no_benefit", "certainty": "moderate", "src_id": "32352165"}
+{"main_outcome": "disease-specific quality of life", "direction": "unclear", "certainty": "very_low", "src_id": "32347984"}
+{"main_outcome": "healing of rickets", "direction": "benefit", "certainty": "low", "src_id": "32303107"}
+{"main_outcome": "device usage", "direction": "benefit", "certainty": "moderate", "src_id": "32255210"}
+{"main_outcome": "severity of ARI symptoms", "direction": "benefit", "certainty": "moderate", "src_id": "32246780"}
+{"main_outcome": "prevention of cancer", "direction": "no_benefit", "certainty": "low", "src_id": "32118296"}
+{"main_outcome": "coronary heart disease mortality", "direction": "benefit", "certainty": "low", "src_id": "32114706"}
+{"main_outcome": "satisfaction with pain relief", "direction": "no_benefit", "certainty": "low", "src_id": "32032444"}
+{"main_outcome": "overall change in worst pain scores", "direction": "no_benefit", "certainty": "very_low", "src_id": "31994181"}
+{"main_outcome": "number of apnoeas, hypopnoeas, and respiratory arousals during sleep", "direction": "benefit", "certainty": "moderate", "src_id": "31978261"}
+{"main_outcome": "dry eye symptoms", "direction": "no_benefit", "certainty": "low", "src_id": "31847055"}
+{"main_outcome": "improvement in knee extensor strength", "direction": "benefit", "certainty": "low", "src_id": "31808555"}
+{"main_outcome": "machine usage", "direction": "benefit", "certainty": "moderate", "src_id": "31792939"}
+{"main_outcome": "adverse events considered 'not to be serious'", "direction": "unclear", "certainty": "very_low", "src_id": "31697415"}
+{"main_outcome": "smoking cessation", "direction": "no_benefit", "certainty": "low", "src_id": "31684691"}
+{"main_outcome": "quit rates", "direction": "benefit", "certainty": "moderate", "src_id": "31638271"}
+{"main_outcome": "improvement in toe walking", "direction": "benefit", "certainty": "very_low", "src_id": "31587271"}
+{"main_outcome": "gestational diabetes", "direction": "benefit", "certainty": "moderate", "src_id": "31581312"}
+{"main_outcome": "reduction in fatigue at end of treatment", "direction": "benefit", "certainty": "moderate", "src_id": "31577366"}
+{"main_outcome": "improvement in severity of post-thrombotic syndrome (PTS)", "direction": "benefit", "certainty": "low", "src_id": "31531971"}
+{"main_outcome": "breastfeeding initiation", "direction": "unclear", "certainty": "very_low", "src_id": "31529625"}
+{"main_outcome": "HRQoL, pain intensity, fatigue, stiffness, physical function", "direction": "no_benefit", "certainty": "very_low", "src_id": "31476271"}
+{"main_outcome": "adverse events considered not to be serious", "direction": "no_benefit", "certainty": "very_low", "src_id": "31436846"}
+{"main_outcome": "pre-eclampsia", "direction": "benefit", "certainty": "moderate", "src_id": "31348529"}
+{"main_outcome": "neural tube defects", "direction": "benefit", "certainty": "low", "src_id": "31257574"}
+{"main_outcome": "incidence of seasonal affective disorder (SAD)", "direction": "no_benefit", "certainty": "very_low", "src_id": "31206585"}
+{"main_outcome": "exercise capacity", "direction": "benefit", "certainty": "moderate", "src_id": "31204439"}
+{"main_outcome": "sleep quality", "direction": "benefit", "certainty": "very_low", "src_id": "31129916"}
+{"main_outcome": "risk of subclinical vitamin A deficiency", "direction": "benefit", "certainty": "very_low", "src_id": "31074495"}
+{"main_outcome": "Epworth Sleepiness Scale (ESS) scores", "direction": "benefit", "certainty": "moderate", "src_id": "31041813"}
+{"main_outcome": "quit rates", "direction": "benefit", "certainty": "moderate", "src_id": "30997928"}
+{"main_outcome": "quality_of_life", "direction": "benefit", "certainty": "low", "src_id": "30916356"}
+{"main_outcome": "caries increment reduction", "direction": "benefit", "certainty": "moderate", "src_id": "30829399"}
+{"main_outcome": "function", "direction": "no_benefit", "certainty": "very_low", "src_id": "30821348"}
+{"main_outcome": "satisfaction with cure or improvement of incontinence", "direction": "unclear", "certainty": "very_low", "src_id": "30816997"}
+{"main_outcome": "quality_of_life", "direction": "no_benefit", "certainty": "low", "src_id": "30790278"}
+{"main_outcome": "one or more fall-related fractures", "direction": "benefit", "certainty": "low", "src_id": "30703272"}
+{"main_outcome": "mortality", "direction": "no_benefit", "certainty": "low", "src_id": "30702150"}

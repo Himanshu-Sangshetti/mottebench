@@ -1,0 +1,592 @@
+[
+ {
+  "topic": "Syphilis Infection During Pregnancy: Screening",
+  "grade_ours": "A",
+  "year_ours": "2025",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/syphilis-infection-in-pregnancy-screening",
+  "status": "Published",
+  "year_site": "2025",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Breastfeeding: Primary Care Behavioral Counseling Interventions",
+  "grade_ours": "B",
+  "year_ours": "2025",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breastfeeding-primary-care-interventions",
+  "status": "Published",
+  "year_site": "2025",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Food Insecurity: Screening",
+  "grade_ours": "I",
+  "year_ours": "2025",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/food-insecurity-screening",
+  "status": "Published",
+  "year_site": "2025",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Iron Deficiency and Iron Deficiency Anemia During Pregnancy: Screening and Supplementation",
+  "grade_ours": "I",
+  "year_ours": "2024",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/iron-deficiency-anemia-in-pregnant-women-screening-and-supplementation",
+  "status": "Published",
+  "year_site": "2024",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "High Body Mass Index in Children and Adolescents: Interventions",
+  "grade_ours": "B",
+  "year_ours": "2024",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/obesity-in-children-and-adolescents-screening",
+  "status": "Published",
+  "year_site": "2024",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Prevention of Child Maltreatment: Primary Care Interventions",
+  "grade_ours": "I",
+  "year_ours": "2024",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/child-maltreatment-primary-care-interventions",
+  "status": "Published",
+  "year_site": "2024",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Speech and Language Delay and Disorders in Children: Screening",
+  "grade_ours": "I",
+  "year_ours": "2024",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/speech-and-language-delay-and-disorders-in-children-age-5-and-younger-screening",
+  "status": "Published",
+  "year_site": "2024",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Oral Health in Adults: Screening and Preventive Interventions",
+  "grade_ours": "I",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/oral-health-adults-screening-preventive-interventions",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Oral Health in Children and Adolescents Aged 5 to 17 Years: Screening and Preventive Interventions",
+  "grade_ours": "I",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/oral-health-children-adolescents-screening-preventive-interventions",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Hypertensive Disorders of Pregnancy: Screening",
+  "grade_ours": "B",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertensive-disorders-pregnancy-screening",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Prevention of Acquisition of HIV: Preexposure Prophylaxis",
+  "grade_ours": "A",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/prevention-of-human-immunodeficiency-virus-hiv-infection-pre-exposure-prophylaxis",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Folic Acid Supplementation to Prevent Neural Tube Defects: Preventive Medication",
+  "grade_ours": "A",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/folic-acid-for-the-prevention-of-neural-tube-defects-preventive-medication",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Lipid Disorders in Children and Adolescents: Screening",
+  "grade_ours": "I",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lipid-disorders-in-children-screening",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Latent Tuberculosis Infection in Adults: Screening",
+  "grade_ours": "B",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/latent-tuberculosis-infection-screening",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Skin Cancer: Screening",
+  "grade_ours": "I",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-screening",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Genital Herpes Infection: Serologic Screening",
+  "grade_ours": "D",
+  "year_ours": "2023",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/genital-herpes-serologic-screening",
+  "status": "Published",
+  "year_site": "2023",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Obstructive Sleep Apnea in Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/obstructive-sleep-apnea-in-adults-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Hormone Therapy in Postmenopausal Persons: Primary Prevention of Chronic Conditions",
+  "grade_ours": "D",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/menopausal-hormone-therapy-preventive-medication",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Syphilis Infection in Nonpregnant Adolescents and Adults: Screening",
+  "grade_ours": "A",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/syphilis-infection-nonpregnant-adults-adolescents-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Prediabetes and Type 2 Diabetes in Children and Adolescents: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/prediabetes-type2-diabetes-children-adolescents-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Healthy Diet and Physical Activity for Cardiovascular Disease Prevention in Adults Without Cardiovascular Disease Risk Factors: Behavioral Counseling Interventions",
+  "grade_ours": "C",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/healthy-lifestyle-and-physical-activity-for-cvd-prevention-adults-without-known-risk-factors-behavioral-counseling",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "C",
+  "check": "ok"
+ },
+ {
+  "topic": "Impaired Visual Acuity in Older Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/impaired-visual-acuity-screening-older-adults",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Primary Open-Angle Glaucoma: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/primary-open-angle-glaucoma-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Chronic Obstructive Pulmonary Disease: Screening",
+  "grade_ours": "D",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/chronic-obstructive-pulmonary-disease-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Eating Disorders in Adolescents and Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-eating-disorders-adolescents-adults",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Atrial Fibrillation: Screening",
+  "grade_ours": "I",
+  "year_ours": "2022",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/atrial-fibrillation-screening",
+  "status": "Published",
+  "year_site": "2022",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication",
+  "grade_ours": "B",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Prediabetes and Type 2 Diabetes: Screening",
+  "grade_ours": "B",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Healthy Weight and Weight Gain In Pregnancy: Behavioral Counseling Interventions",
+  "grade_ours": "B",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/healthy-weight-and-weight-gain-during-pregnancy-behavioral-counseling-interventions",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Hypertension in Adults: Screening",
+  "grade_ours": "A",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Vitamin D Deficiency in Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-d-deficiency-screening",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Hearing Loss in Older Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hearing-loss-in-older-adults-screening",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Lung Cancer: Screening",
+  "grade_ours": "B",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Asymptomatic Carotid Artery Stenosis: Screening",
+  "grade_ours": "D",
+  "year_ours": "2021",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/carotid-artery-stenosis-screening",
+  "status": "Published",
+  "year_site": "2021",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Hepatitis B Virus Infection in Adolescents and Adults: Screening",
+  "grade_ours": "B",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hepatitis-b-virus-infection-screening",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Healthy Diet and Physical Activity for Cardiovascular Disease Prevention in Adults With Cardiovascular Risk Factors: Behavioral Counseling Interventions",
+  "grade_ours": "B",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/healthy-diet-and-physical-activity-counseling-adults-with-high-risk-of-cvd",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "High Blood Pressure in Children and Adolescents: Screening",
+  "grade_ours": "I",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/blood-pressure-in-children-and-adolescents-hypertension-screening",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Sexually Transmitted Infections: Behavioral Counseling",
+  "grade_ours": "B",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/sexually-transmitted-infections-behavioral-counseling",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Illicit Drug Use in Children, Adolescents, and Young Adults: Primary Care-Based Interventions",
+  "grade_ours": "I",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/drug-use-illicit-primary-care-interventions-for-children-and-adolescents",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Hepatitis C Virus Infection in Adolescents and Adults: Screening",
+  "grade_ours": "B",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hepatitis-c-screening",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Cognitive Impairment in Older Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2020",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cognitive-impairment-in-older-adults-screening",
+  "status": "Published",
+  "year_site": "2020",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Pancreatic Cancer: Screening",
+  "grade_ours": "D",
+  "year_ours": "2019",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/pancreatic-cancer-screening",
+  "status": "Published",
+  "year_site": "2019",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Hepatitis B Virus Infection in Pregnant Women: Screening",
+  "grade_ours": "A",
+  "year_ours": "2019",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hepatitis-b-virus-infection-in-pregnant-women-screening",
+  "status": "Published",
+  "year_site": "2019",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Human Immunodeficiency Virus (HIV) Infection: Screening",
+  "grade_ours": "A",
+  "year_ours": "2019",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/human-immunodeficiency-virus-hiv-infection-screening",
+  "status": "Published",
+  "year_site": "2019",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Perinatal Depression: Preventive Interventions",
+  "grade_ours": "B",
+  "year_ours": "2019",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/perinatal-depression-preventive-interventions",
+  "status": "Published",
+  "year_site": "2019",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Ocular Prophylaxis for Gonococcal Ophthalmia Neonatorum: Preventive Medication",
+  "grade_ours": "A",
+  "year_ours": "2019",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/ocular-prophylaxis-for-gonococcal-ophthalmia-neonatorum-preventive-medication",
+  "status": "Published",
+  "year_site": "2019",
+  "grade_site": "A",
+  "check": "ok"
+ },
+ {
+  "topic": "Weight Loss to Prevent Obesity-Related Morbidity and Mortality in Adults: Behavioral Interventions",
+  "grade_ours": "B",
+  "year_ours": "2018",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/obesity-in-adults-interventions",
+  "status": "Published",
+  "year_site": "2018",
+  "grade_site": "B",
+  "check": "ok"
+ },
+ {
+  "topic": "Peripheral Artery Disease and Cardiovascular Disease: Screening and Risk Assessment With the Ankle-Brachial Index",
+  "grade_ours": "I",
+  "year_ours": "2018",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/peripheral-artery-disease-in-adults-screening-with-the-ankle-brachial-index",
+  "status": "Published",
+  "year_site": "2018",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Cardiovascular Disease: Risk Assessment With Nontraditional Risk Factors",
+  "grade_ours": "I",
+  "year_ours": "2018",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cardiovascular-disease-screening-using-nontraditional-risk-assessment",
+  "status": "Published",
+  "year_site": "2018",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Ovarian Cancer: Screening",
+  "grade_ours": "D",
+  "year_ours": "2018",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/ovarian-cancer-screening",
+  "status": "Published",
+  "year_site": "2018",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Adolescent Idiopathic Scoliosis: Screening",
+  "grade_ours": "I",
+  "year_ours": "2018",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/adolescent-idiopathic-scoliosis-screening",
+  "status": "Published",
+  "year_site": "2018",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Thyroid Cancer: Screening",
+  "grade_ours": "D",
+  "year_ours": "2017",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/thyroid-cancer-screening",
+  "status": "Published",
+  "year_site": "2017",
+  "grade_site": "D",
+  "check": "ok"
+ },
+ {
+  "topic": "Celiac Disease: Screening",
+  "grade_ours": "I",
+  "year_ours": "2017",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/celiac-disease-screening",
+  "status": "Published",
+  "year_site": "2017",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Autism Spectrum Disorder in Young Children: Screening",
+  "grade_ours": "I",
+  "year_ours": "2016",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/autism-spectrum-disorder-in-young-children-screening",
+  "status": "Published",
+  "year_site": "2016",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Iron Deficiency Anemia in Young Children: Screening",
+  "grade_ours": "I",
+  "year_ours": "2015",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/iron-deficiency-anemia-in-young-children-screening",
+  "status": "Published",
+  "year_site": "2015",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Thyroid Dysfunction: Screening",
+  "grade_ours": "I",
+  "year_ours": "2015",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/thyroid-dysfunction-screening",
+  "status": "Published",
+  "year_site": "2015",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Oral Cancer: Screening",
+  "grade_ours": "I",
+  "year_ours": "2013",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/oral-cancer-screening",
+  "status": "Published",
+  "year_site": "2013",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Bladder Cancer in Adults: Screening",
+  "grade_ours": "I",
+  "year_ours": "2011",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/bladder-cancer-in-adults-screening",
+  "status": "Published",
+  "year_site": "2011",
+  "grade_site": "I",
+  "check": "ok"
+ },
+ {
+  "topic": "Testicular Cancer: Screening",
+  "grade_ours": "D",
+  "year_ours": "2011",
+  "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/testicular-cancer-screening",
+  "status": "Published",
+  "year_site": "2011",
+  "grade_site": "D",
+  "check": "ok"
+ }
+]
