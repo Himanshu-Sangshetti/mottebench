@@ -19,13 +19,15 @@ tag = a.tag or f"{a.provider}__{a.model.replace('/', '_').replace(':', '_')}"
 deadline = datetime.datetime.strptime(a.deadline, "%Y-%m-%d %H:%M")
 items = [json.loads(l) for l in open(f"{ROOT}/data/items.jsonl")]
 sel = {"core": lambda r: r["split"] == "core", "frontier": lambda r: r["split"] in ("core", "ext"),
-       "all": lambda r: True, "weak_core": lambda r: r["split"] == "core" and r["key_class"] == "WEAK"}
+       "all": lambda r: True, "weak_core": lambda r: r["split"] == "core" and r["key_class"] == "WEAK",
+       "q30": lambda r: True}  # q30: filtered below to the 30 items with rewordings
 items = [r for r in items if sel[a.items](r)]
 _rw = f"{ROOT}/data/sources/rewordings.json"  # condition _Q (Amendment 1.2)
 if os.path.exists(_rw):
     _q = {k: v for k, v in json.load(open(_rw)).items() if not k.startswith("_")}
     for r in items:
         if r["item_id"] in _q: r["q_alt"] = _q[r["item_id"]]
+if a.items == "q30": items = [r for r in items if r.get("q_alt")]
 os.makedirs(f"{ROOT}/results", exist_ok=True); os.makedirs(f"{ROOT}/traces/{tag}", exist_ok=True)
 OUT = f"{ROOT}/results/{tag}.jsonl"
 done = set()

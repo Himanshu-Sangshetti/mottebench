@@ -48,15 +48,17 @@ def parse(txt):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("files", nargs="+"); ap.add_argument("--max-usd", type=float, default=2.0)
-    ap.add_argument("--judges", default=",".join(PANEL)); ap.add_argument("--self", action="store_true", help="self-preference sample: judge only conversations from the judge's own lab"); ap.add_argument("--workers", type=int, default=1); ap.add_argument("--limit", type=int, default=0); ap.add_argument("--extra", action="store_true", help="also run the third eligible judge on every conversation")
+    ap.add_argument("--judges", default=",".join(PANEL)); ap.add_argument("--self", action="store_true", help="self-preference sample: judge only conversations from the judge's own lab"); ap.add_argument("--workers", type=int, default=1); ap.add_argument("--only", default=None, help="file of conv_ids: tiebreak mode, judge only these with their third eligible judge"); ap.add_argument("--limit", type=int, default=0); ap.add_argument("--extra", action="store_true", help="also run the third eligible judge on every conversation")
     a = ap.parse_args(); os.makedirs(f"{ROOT}/grading/labels", exist_ok=True)
-    rows = [json.loads(l) for f in a.files for l in open(f) if l.strip()]
+    rows = [json.loads(l) for f in a.files if os.path.exists(f) for l in open(f) if l.strip()]
     for J in a.judges.split(","):
         out = f"{ROOT}/grading/labels/{J}.jsonl"
         done = {json.loads(l)["conv_id"] for l in open(out)} if os.path.exists(out) else set()
         if a.self:
             out = f"{ROOT}/grading/labels/self_{J}.jsonl"; done = {json.loads(l)["conv_id"] for l in open(out)} if os.path.exists(out) else set()
             todo = [r for r in rows if r["conv_id"] not in done and lab_of(r["model"]) == PANEL[J][1]]
+        elif a.only:
+            ids = set(open(a.only).read().split()); todo = [r for r in rows if r["conv_id"] in ids and r["conv_id"] not in done and len(eligible(r["model"])) > 2 and eligible(r["model"])[2] == J]
         else:
             todo = [r for r in rows if r["conv_id"] not in done and J in eligible(r["model"])[: (3 if a.extra else 2)]]
         if a.limit: todo = todo[:a.limit]
