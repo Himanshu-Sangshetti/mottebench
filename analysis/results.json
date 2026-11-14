@@ -1,0 +1,239 @@
+{
+ "anthropic/claude-haiku-5.5": {
+  "n_conversations": 36,
+  "headline_admit_then_push_A": {
+   "est": 12.5,
+   "lo": 0.0,
+   "hi": 37.5,
+   "n": 8,
+   "items": 8
+  },
+  "headline_admit_then_push_A_free": null,
+  "explains_away_A": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 8,
+   "items": 8
+  },
+  "H1_gap_weak_minus_strong": {
+   "est": 1.25,
+   "lo": 0.09090909090909083,
+   "hi": 2.2222222222222223,
+   "nA": 8,
+   "nB": 4
+  },
+  "H2_doit_A_minus_B_weak": {
+   "est": -9.722222222222221,
+   "lo": -33.333333333333336,
+   "hi": 6.3492063492063515,
+   "nA": 8,
+   "nB": 9
+  },
+  "H2_tost_within_10": false,
+  "H3_retreat_strong_C": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 3,
+   "items": 3
+  },
+  "H3_retreat_strong_A": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 3,
+   "items": 3
+  },
+  "H5_swap_strong_minus_weak_doit": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 0
+  },
+  "placebo_doit_P_minus_B_weak": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 9
+  },
+  "fix_D_admit_then_push": null,
+  "fix_D_doit_strong_for": null,
+  "per_source_admit_then_push_A": {
+   "USPSTF": null,
+   "Cochrane": {
+    "est": 12.5,
+    "lo": 0.0,
+    "hi": 37.5,
+    "n": 8,
+    "items": 8
+   },
+   "What Works Clearinghouse": null
+  },
+  "excluded_unfamiliar": 0
+ },
+ "deepseek/deepseek-v4-pro": {
+  "n_conversations": 71,
+  "headline_admit_then_push_A": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 19,
+   "items": 19
+  },
+  "headline_admit_then_push_A_free": null,
+  "explains_away_A": {
+   "est": 5.2631578947368425,
+   "lo": 0.0,
+   "hi": 15.789473684210526,
+   "n": 19,
+   "items": 19
+  },
+  "H1_gap_weak_minus_strong": {
+   "est": 1.026315789473684,
+   "lo": -0.31372549019607837,
+   "hi": 1.9,
+   "nA": 19,
+   "nB": 4
+  },
+  "H2_doit_A_minus_B_weak": {
+   "est": 12.531328320802004,
+   "lo": -3.80952380952381,
+   "hi": 30.476190476190474,
+   "nA": 19,
+   "nB": 21
+  },
+  "H2_tost_within_10": false,
+  "H3_retreat_strong_C": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 3,
+   "items": 3
+  },
+  "H3_retreat_strong_A": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 3,
+   "items": 3
+  },
+  "H5_swap_strong_minus_weak_doit": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 0
+  },
+  "placebo_doit_P_minus_B_weak": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 21
+  },
+  "fix_D_admit_then_push": null,
+  "fix_D_doit_strong_for": null,
+  "per_source_admit_then_push_A": {
+   "USPSTF": null,
+   "Cochrane": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 19,
+    "items": 19
+   },
+   "What Works Clearinghouse": null
+  },
+  "excluded_unfamiliar": 0
+ },
+ "sonnet": {
+  "n_conversations": 250,
+  "headline_admit_then_push_A": {
+   "est": 4.0,
+   "lo": 0.0,
+   "hi": 10.0,
+   "n": 50,
+   "items": 50
+  },
+  "headline_admit_then_push_A_free": null,
+  "explains_away_A": {
+   "est": 4.0,
+   "lo": 0.0,
+   "hi": 10.0,
+   "n": 50,
+   "items": 50
+  },
+  "H1_gap_weak_minus_strong": {
+   "est": 0.4961734693877551,
+   "lo": 0.09029649595687328,
+   "hi": 0.9037433155080214,
+   "nA": 50,
+   "nB": 32
+  },
+  "H2_doit_A_minus_B_weak": {
+   "est": -4.30188679245283,
+   "lo": -13.20754716981132,
+   "hi": 3.8113207547169807,
+   "nA": 50,
+   "nB": 53
+  },
+  "H2_tost_within_10": false,
+  "H3_retreat_strong_C": {
+   "est": 17.391304347826086,
+   "lo": 4.3478260869565215,
+   "hi": 34.78260869565217,
+   "n": 23,
+   "items": 23
+  },
+  "H3_retreat_strong_A": {
+   "est": 17.391304347826086,
+   "lo": 4.3478260869565215,
+   "hi": 34.78260869565217,
+   "n": 23,
+   "items": 23
+  },
+  "H5_swap_strong_minus_weak_doit": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 0
+  },
+  "placebo_doit_P_minus_B_weak": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 53
+  },
+  "fix_D_admit_then_push": null,
+  "fix_D_doit_strong_for": null,
+  "per_source_admit_then_push_A": {
+   "USPSTF": {
+    "est": 6.666666666666667,
+    "lo": 0.0,
+    "hi": 20.0,
+    "n": 15,
+    "items": 15
+   },
+   "Cochrane": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 21,
+    "items": 21
+   },
+   "What Works Clearinghouse": {
+    "est": 7.142857142857143,
+    "lo": 0.0,
+    "hi": 21.428571428571427,
+    "n": 14,
+    "items": 14
+   }
+  },
+  "excluded_unfamiliar": 5
+ }
+}
