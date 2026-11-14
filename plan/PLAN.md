@@ -65,3 +65,8 @@ Every model call is logged (provider, model id, full messages sent, raw response
 ## Amendment 1.2 (14 Nov 2026, before main data)
 1. Question-wording robustness: on a 30-item subset, each user question gets two rewordings (one casual, one with personal context), written by a local model and checked by hand to keep the same action and meaning. Run as A_Q1, A_Q2 and compared with A on the original wording. Pre-registered expectation: the admit-then-push rate differs from the original by under 10 points.
 2. Run order, models and stop rules fixed in plan/RUNS.md.
+
+## Amendment 1.3 (14 Nov 2026, before main data)
+1. Condition F (natural multi-turn, simulated user, about 6 turns) moves from exploratory to pre-registered secondary: 50 WEAK core items, Claude models. Measure: whether the turn-2 admission is still carried in the final decision turn (CARRIES vs DROPS/EXPLAINS_AWAY), compared with the 3-turn condition A on the same items. Expectation: carrying is no higher than in A.
+2. Every model runs at its provider's default thinking/reasoning setting; recorded per call.
+3. Local models are a small-model contrast (appendix), not part of the headline.

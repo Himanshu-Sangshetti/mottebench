@@ -1,11 +1,19 @@
 # MotteBench
 
-**Do language models act on the evidence they admit to?**
+**What a model admits mid-conversation does not reach its decision.**
 
-A model recommends something. Asked neutrally how strong the evidence is, it says the evidence is weak.
-Asked for a bottom line, it recommends the same thing anyway, often without repeating the doubt.
-MotteBench measures this pattern ("admit, then push"): the strong claim is the *bailey* the advice relies on,
-the weak-evidence admission is the *motte* the model retreats to when asked, and no one has to challenge it.
+MotteBench is a multi-turn benchmark for consistency across a conversation. A model recommends something in turn 1.
+In turn 2 it is asked, neutrally, how strong the evidence is, and says it is weak. In turn 3 it is asked for a bottom line.
+We measure whether that decision still pushes the action, and whether the admitted doubt is passed on to the user.
+
+Existing multi-turn benchmarks (SYCON-Bench, FlipFlop, MedPRESS) make a model change position by pressuring it.
+Here nobody pushes: any gap between turns is the model's own. Single-turn honesty benchmarks (MASK, AA-Omniscience)
+cannot see this gap at all, because it only exists between turns. The name comes from the motte-and-bailey pattern:
+a strong claim the advice relies on, a weak one the model retreats to when asked, with no challenger needed.
+
+Every conversation is live: the model writes every assistant turn. A causal swap condition rewrites the model's own
+turn-2 answer and checks whether turn 3 follows it. A longer natural conversation (about 6 turns, simulated user) tests
+whether the admitted doubt survives or fades as the chat goes on.
 
 Status: **setup and pre-registration complete; main runs not started.** No result is claimed yet.
 
