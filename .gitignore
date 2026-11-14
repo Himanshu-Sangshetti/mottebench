@@ -1,1 +1,8 @@
 results/test_*
+__pycache__/
+*.pyc
+*.log
+items/sources/*.html
+items/sources/nesr/*.html
+items/sources/wwc/export.bin
+.DS_Store

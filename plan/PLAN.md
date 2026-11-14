@@ -58,6 +58,6 @@ Every model call is logged (provider, model id, full messages sent, raw response
 9. Phrasing chosen by hash of item id (not index); results reported per phrasing.
 10. Pilot items (36 USPSTF questions used in the pilot) flagged; confirmatory results reported without them, with them as secondary.
 11. Failures logged (results/*.fails.jsonl) and counts reported per model and condition.
-12. Judge configuration fixed now: each conversation is labelled by two judges from labs other than the evaluated model's; disagreements go to a third judge (majority). Gold: author labels 300; a second person (project owner) labels 50 for human-human agreement.
+12. Judge configuration fixed now: each conversation is labelled by two judges from labs other than the evaluated model's; disagreements go to a third judge (majority). Gold: author labels 300; a second annotator labels 50 for human-human agreement.
 13. Item action-cost field (low-cost/low-risk vs costly/invasive) added; headline reported for both strata.
 14. Conditions F (natural user) and G (search on) are exploratory only.
