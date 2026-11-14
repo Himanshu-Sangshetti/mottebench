@@ -105,15 +105,21 @@ def codex(model, system, user_turns, swap=None, opts=None):
     return replies, {"provider": "codex_cli", "thread_id": tid, "rollout": rollout[0] if rollout else None, "calls": calls}
 
 # ---------------- OpenRouter (clean API) ----------------
-SPEND = os.path.expanduser("~/.mottebench_spend.json")  # kept outside the repo
-_spend_lock = __import__("threading").Lock()
+SPEND = os.path.expanduser("~/.mottebench_spend.jsonl")  # kept outside the repo; append-only, safe for many processes
+def spend_total():
+    t = 0.0
+    if os.path.exists(SPEND):
+        for l in open(SPEND):
+            try: t += json.loads(l)["usd"]
+            except Exception: pass
+    return t
 def _spend(model, usd, cap):
-    """Add an API call's reported cost to the ledger; raise LimitHit once the run's cap is reached."""
-    with _spend_lock:
-        d = json.load(open(SPEND)) if os.path.exists(SPEND) else {}
-        d[model] = round(d.get(model, 0) + usd, 4); d["_total"] = round(d.get("_total", 0) + usd, 4)
-        json.dump(d, open(SPEND, "w"))
-    if cap and d["_total"] >= float(cap): raise LimitHit(f"spend cap {cap} reached")
+    """Append this call's reported cost (one line, under an exclusive file lock); raise LimitHit once the cap is reached.
+    The cap check never discards a reply that was already paid for: it only stops the next call."""
+    import fcntl
+    with open(SPEND, "a") as f:
+        fcntl.flock(f, fcntl.LOCK_EX); f.write(json.dumps({"model": model, "usd": usd, "ts": time.time()}) + "\n"); f.flush(); fcntl.flock(f, fcntl.LOCK_UN)
+    return cap and spend_total() >= float(cap)
 
 # Fixed serving host per model (pre-registered, Amendment 2.0): the model's own lab where OpenRouter offers it;
 # otherwise a fixed fp8 host. Compressed (fp4) hosts are never used. No fallbacks to other hosts.
@@ -133,7 +139,9 @@ def openrouter(model, system, user_turns, swap=None, opts=None):
     key = _or_key()
     if not key: raise RuntimeError("no OPENROUTER_API_KEY")
     msgs = [{"role": "system", "content": system}]; replies = []; calls = []
+    cap = (opts or {}).get("max_usd")
     for i, u in enumerate(user_turns):
+        if cap and spend_total() >= float(cap): raise LimitHit(f"spend cap {cap} reached")
         msgs.append({"role": "user", "content": u})
         body = {"model": model, "messages": msgs, "max_tokens": 32000, "usage": {"include": True}}  # temperature: provider default
         hosts = (opts or {}).get("provider_order") or next((v for k, v in OR_HOSTS.items() if model.startswith(k)), None)
@@ -144,7 +152,7 @@ def openrouter(model, system, user_turns, swap=None, opts=None):
         text = r["choices"][0]["message"]["content"]; _check(text)
         if r["choices"][0].get("finish_reason") == "length": raise RuntimeError("reply cut off by length limit")
         calls.append({"request": body, "response": r, "served_by": r.get("provider"), "secs": time.time() - t0})
-        _spend(model, (r.get("usage") or {}).get("cost") or 0.0, (opts or {}).get("max_usd"))
+        _spend(model, (r.get("usage") or {}).get("cost") or 0.0, None)
         replies.append(text); msgs.append({"role": "assistant", "content": swap[1] if swap and swap[0] == i else text})
     return replies, {"provider": "openrouter", "calls": calls}
 

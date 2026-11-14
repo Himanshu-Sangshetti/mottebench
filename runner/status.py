@@ -44,8 +44,8 @@ def show():
         print(f"{r['tag']:42s} done {r['n']:5d}  fails {r['fails']:3d}  {r['per_hour']:4d}/h  idle {r['idle_min']}m{flag}")
         print(f"   {r['conds']}  label ok {r['label_ok']}  DO on WEAK(A,B) {r['weak_do']}")
     print("recorder:", recorder_check())
-    sp = os.path.expanduser("~/.mottebench_spend.json")
-    if os.path.exists(sp): print("api spend ledger:", json.load(open(sp)))
+    sys.path.insert(0, os.path.join(ROOT, "runner")); from providers import spend_total
+    print("api spend ledger total: $%.3f" % spend_total())
 
 if __name__ == "__main__":
     if "--watch" in sys.argv:
