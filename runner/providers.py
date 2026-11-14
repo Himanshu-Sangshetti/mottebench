@@ -119,7 +119,7 @@ def _spend(model, usd, cap):
 # otherwise a fixed fp8 host. Compressed (fp4) hosts are never used. No fallbacks to other hosts.
 OR_HOSTS = {
     "openai/": ["OpenAI"], "anthropic/": ["Anthropic"], "google/": ["Google", "Google AI Studio"],
-    "z-ai/glm-5.3": ["Z.AI"], "deepseek/deepseek-v4-pro": ["DeepInfra", "SiliconFlow"],
+    "z-ai/glm-5.3": ["Z.AI"], "deepseek/deepseek-v4-pro": ["StreamLake", "Baidu"],
     "nvidia/": ["Nvidia"],
 }
 def _or_key():
