@@ -23,7 +23,9 @@ def runs():
             fails += [dict(x, tag=os.path.basename(f)[:-12]) for x in jl(f)]; continue
         for r in jl(f):
             it = items.get(r["item_id"], {})
-            r["key_detail"] = it.get("key_detail"); r["source"] = it.get("source"); r["labels"] = labels.get(r["conv_id"], [])
+            if "key_detail" not in r:  # older rows: join by id, flag that the key may be from a newer item build
+                r["key_detail"] = (it.get("key_detail") or "?") + " [joined from current items; row predates stored keys]"; r["source"] = it.get("source")
+            r["labels"] = labels.get(r["conv_id"], [])
             rows.append(r)
     return dict(rows=rows, fails=fails)
 

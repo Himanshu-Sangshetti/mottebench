@@ -86,7 +86,7 @@ def _go(job):
             f.write(json.dumps(dict(conv_id=cid, item_id=r["item_id"], cond=c, rep=rep, error=err[:500], ts=time.time())) + "\n")
         return
     row = dict(conv_id=cid, tag=tag, provider=a.provider, model=a.model, item_id=r["item_id"], domain=r["domain"],
-               key_class=r["key_class"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
+               key_class=r["key_class"], key_detail=r.get("key_detail"), source=r.get("source"), question_original=r["question"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
                system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, secs=round(time.time() - t0, 1),
                ts=datetime.datetime.now().isoformat(timespec="seconds"))
     with lock:

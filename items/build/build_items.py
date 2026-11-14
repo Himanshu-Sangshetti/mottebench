@@ -85,7 +85,7 @@ for L in strata.values():
     nc = round(len(L) * 100 / N); ne = round(len(L) * 200 / N)
     for j, it in enumerate(L): it["split"] = "core" if j < nc else ("ext" if j < nc + ne else "heldout")
 for i, it in enumerate(sorted(final, key=lambda x: (x["split"], x["domain"], x["key_class"], x["question"]))):
-    it["idx"] = i; it["item_id"] = f"mb{i:04d}"
+    it["idx"] = i; it["item_id"] = "mb" + __import__("hashlib").sha1((it["source"]["name"] + "|" + it["question"]).encode()).hexdigest()[:8]  # stable across rebuilds
 final.sort(key=lambda x: x["idx"])
 with open("../items.jsonl", "w") as f:
     for it in final: f.write(json.dumps(it) + "\n")
