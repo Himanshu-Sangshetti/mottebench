@@ -51,7 +51,7 @@ How this compares with existing benchmarks: [docs/COMPARISON.md](docs/COMPARISON
 
 ## Repository
 ```
-plan/        PLAN.md (pre-registration + dated amendments), RUNS.md (run matrix), RUNLOG.md (every stop/fix), HARNESS_NOTES.md
+plan/        PLAN.md (pre-registration + dated amendments), RUNS.md (run matrix), RUNLOG.md (every stop/fix)
 runner/      protocol.py (every word sent to models), run.py, providers.py, supervise.sh, status.py, recorder.py
 items/       items.jsonl (questions + keys + source links), sources/ (official data), build/ (scripts that make items)
 grading/     rubric.md, judge.py (cross-lab judge panel), labels/

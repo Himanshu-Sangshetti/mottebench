@@ -10,3 +10,4 @@ results/verify_*
 traces/verify_*
 results/supervise_*.log
 items/sources/cochrane/raw.json
+plan/HARNESS_NOTES.md

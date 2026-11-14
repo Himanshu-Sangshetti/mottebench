@@ -20,7 +20,7 @@ Facts below are taken from each paper or repository (arXiv ids given). Where Mot
 2. **An evidence-strength key.** The other benchmarks key on facts (true/false, correct answer). Here the key is *how strong the evidence is*, set by official bodies, so we can tell a calibrated admission ("evidence is weak", on an item officially rated weak) from an over- or under-statement.
 3. **Decision vs stated evidence, measured causally.** The swap condition replaces the model's evidence statement with a fixed weak or strong one and checks whether the decision moves. None of the papers above tests whether the decision depends on the model's own evidence statement.
 4. **Link to reported honesty scores.** The pre-registered H4 asks whether the honesty benchmarks labs publish in system cards (MASK, AA-Omniscience) predict this behaviour.
-5. **Harness audit.** Requests to each model are recorded at the network boundary; we found and removed hidden context added by agent CLIs (see plan/HARNESS_NOTES.md). Most benchmarks do not report what extra context their access path adds.
+5. **Harness audit.** Requests to each model are recorded at the network boundary; we found and removed hidden context added by agent CLIs. Most benchmarks do not report what extra context their access path adds.
 
 ## Where existing benchmarks are stronger (and what we do about it)
 | Gap | Them | Us | Mitigation |
