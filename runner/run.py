@@ -46,6 +46,18 @@ for r in items:
             cid = hashlib.sha1(f"{tag}|{r['item_id']}|{c}|{rep}|{PROTOCOL_VERSION}".encode()).hexdigest()[:16]
             if cid not in done: jobs.append((cid, r, c, rep))
 if a.limit: jobs = jobs[:a.limit]
+def _sh(cmd):
+    try: return __import__("subprocess").run(cmd, capture_output=True, text=True, timeout=30, cwd=ROOT).stdout.strip()[:200]
+    except Exception as e: return f"unavailable ({type(e).__name__})"
+GIT = _sh(["git", "rev-parse", "HEAD"]); DIRTY = bool(_sh(["git", "status", "--porcelain", "runner", "data/items.jsonl"]))
+ACCESS = {"claude": "Claude Code CLI through the sanitizing recorder", "openrouter": "OpenRouter chat API (no tools, no plugins)",
+          "ollama": "local Ollama API", "codex": "Codex CLI agent harness (sensitivity only)", "opencode": "OpenCode CLI harness"}[a.provider]
+manifest = dict(tag=tag, provider=a.provider, access=ACCESS, model=a.model, args=vars(a), protocol=PROTOCOL_VERSION, git_commit=GIT,
+                git_dirty=DIRTY, python=sys.version.split()[0], started=datetime.datetime.now().isoformat(timespec="seconds"),
+                items_sha1=hashlib.sha1(open(f"{ROOT}/data/items.jsonl", "rb").read()).hexdigest(),
+                tool_version={"claude": _sh(["claude", "--version"]), "codex": _sh(["codex", "--version"]), "ollama": _sh(["ollama", "--version"])}.get(a.provider, "n/a"))
+with open(f"{ROOT}/results/{tag}.manifest.jsonl", "a") as f: f.write(json.dumps(manifest) + "\n")  # one line per (re)start
+if DIRTY: print("WARNING: runner or data has uncommitted changes; results will be marked git_dirty", flush=True)
 print(datetime.datetime.now(), tag, "jobs", len(jobs), flush=True)
 fn = PROVIDERS[a.provider]; opts = json.loads(a.opts); STOP = threading.Event(); lock = threading.Lock()
 
@@ -88,7 +100,7 @@ def _go(job):
         return
     row = dict(conv_id=cid, tag=tag, provider=a.provider, model=a.model, item_id=r["item_id"], domain=r["domain"], published=r.get("published"),
                key_class=r["key_class"], key_detail=r.get("key_detail"), source_name=r["source_name"], source_url=r["url"], official=r["official"], question_original=r["question"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
-               system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, secs=round(time.time() - t0, 1),
+               system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, access=ACCESS, git_commit=GIT, git_dirty=DIRTY, secs=round(time.time() - t0, 1),
                ts=datetime.datetime.now().isoformat(timespec="seconds"))
     with lock:
         tp = f"{ROOT}/traces/{tag}/{cid}.json"
