@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MotteBench traces</title>
+<style>
+:root{--bg:#fafaf9;--fg:#1c1917;--mut:#78716c;--line:#e7e5e4;--card:#fff;--acc:#2563eb;--warn:#b45309;--bad:#b91c1c;--ok:#15803d;--swap:#fef3c7}
+@media (prefers-color-scheme:dark){:root{--bg:#0c0a09;--fg:#e7e5e4;--mut:#a8a29e;--line:#292524;--card:#1c1917;--acc:#60a5fa;--warn:#f59e0b;--bad:#f87171;--ok:#4ade80;--swap:#422006}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,sans-serif}
+header{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+header b{margin-right:8px}select,input{font:inherit;padding:4px 6px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:4px}
+#sum{padding:8px 16px;overflow-x:auto}table{border-collapse:collapse;font-size:13px}td,th{padding:3px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--mut);font-weight:500}
+main{display:grid;grid-template-columns:minmax(260px,380px) 1fr;height:calc(100vh - 160px);border-top:1px solid var(--line)}
+@media (max-width:800px){main{grid-template-columns:1fr;height:auto}}
+#list{overflow:auto;border-right:1px solid var(--line)}.row{padding:8px 12px;border-bottom:1px solid var(--line);cursor:pointer}.row:hover,.row.on{background:var(--card)}
+.row .q{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{color:var(--mut);font-size:12px}
+#view{overflow:auto;padding:16px 20px}.turn{margin:10px 0;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--card);white-space:pre-wrap}
+.turn.user{border-left:3px solid var(--acc)}.turn.swap{background:var(--swap)}.who{font-size:12px;color:var(--mut);margin-bottom:4px}
+.DO{color:var(--bad)}.DONT{color:var(--ok)}.DEP{color:var(--warn)}pre{white-space:pre-wrap;word-break:break-word;font-size:12px;background:var(--card);border:1px solid var(--line);padding:10px;border-radius:6px}
+button{font:inherit;padding:4px 10px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:4px;cursor:pointer}a{color:var(--acc)}
+</style></head><body>
+<header><b>MotteBench traces</b>
+<select id="f_tag"></select><select id="f_cond"></select><select id="f_key"></select><select id="f_dom"></select><select id="f_dec"></select>
+<input id="f_q" placeholder="search text"><button id="reload">Refresh</button><span id="count" class="meta"></span></header>
+<div id="sum"></div>
+<main><div id="list"></div><div id="view"><p class="meta">Pick a conversation on the left.</p></div></main>
+<script>
+let D={rows:[],fails:[]},cur=null;
+const $=id=>document.getElementById(id), esc=s=>(s??'').toString().replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const dec=r=>{const t=(r.replies[r.replies.length-1]||'').trim().toUpperCase().replace('’',"'");return t.startsWith('DO IT')?'DO':t.startsWith("DON'T")?'DONT':t.startsWith('IT DEPENDS')?'DEP':(r.free_decision?'free':'?')};
+function opts(id,label,vals){const s=$(id),v=s.value;s.innerHTML=`<option value="">${label}: all</option>`+[...new Set(vals)].sort().map(x=>`<option>${esc(x)}</option>`).join('');s.value=v}
+async function load(){D=await (await fetch('/api/runs')).json();
+ opts('f_tag','run',D.rows.map(r=>r.tag));opts('f_cond','condition',D.rows.map(r=>r.cond));opts('f_key','key',D.rows.map(r=>r.key_class));
+ opts('f_dom','domain',D.rows.map(r=>r.domain));opts('f_dec','decision',D.rows.map(dec));summary();list()}
+function filt(){const q=$('f_q').value.toLowerCase();return D.rows.filter(r=>(!$('f_tag').value||r.tag==$('f_tag').value)&&(!$('f_cond').value||r.cond==$('f_cond').value)
+ &&(!$('f_key').value||r.key_class==$('f_key').value)&&(!$('f_dom').value||r.domain==$('f_dom').value)&&(!$('f_dec').value||dec(r)==$('f_dec').value)
+ &&(!q||JSON.stringify([r.user_turns,r.replies]).toLowerCase().includes(q)))}
+function summary(){const g={};for(const r of D.rows){const k=r.tag+'|'+r.cond;(g[k]=g[k]||{tag:r.tag,cond:r.cond,n:0,w:0,wdo:0,lab:0,forced:0});const x=g[k];x.n++;
+ if(!r.free_decision){x.forced++;if(dec(r)!='?')x.lab++} if(r.key_class=='WEAK'){x.w++;if(dec(r)=='DO')x.wdo++}}
+ const f={};for(const x of D.fails)f[x.tag]=(f[x.tag]||0)+1;
+ $('sum').innerHTML='<table><tr><th>run</th><th>condition</th><th>conversations</th><th>WEAK items: DO IT</th><th>answer format followed</th><th>failures (run)</th></tr>'+
+ Object.values(g).map(x=>`<tr><td>${esc(x.tag)}</td><td>${x.cond}</td><td>${x.n}</td><td>${x.w?x.wdo+' / '+x.w:'–'}</td><td>${x.forced?x.lab+' / '+x.forced:'free-form'}</td><td>${f[x.tag]||0}</td></tr>`).join('')+'</table>'}
+function list(){const R=filt();$('count').textContent=R.length+' conversations';
+ $('list').innerHTML=R.map((r,i)=>`<div class="row ${cur==r.conv_id?'on':''}" data-i="${r.conv_id}"><div class="q">${esc(r.user_turns[0])}</div>
+ <div class="meta">${esc(r.model)} · ${r.cond} · ${r.key_class} · <span class="${dec(r)}">${dec(r)}</span></div></div>`).join('');
+ for(const el of document.querySelectorAll('.row'))el.onclick=()=>show(el.dataset.i)}
+async function show(cid){cur=cid;list();const r=D.rows.find(x=>x.conv_id==cid);let h=`<div class="meta">${esc(r.model)} (${esc(r.provider)}) · condition ${r.cond} · phrasing ${r.phrase_idx} · ${r.secs}s · ${esc(r.ts)} · id ${cid}</div>
+ <p><b>Answer key:</b> ${r.key_class} — ${esc(r.key_detail)} ${r.source&&r.source.url?`· <a href="${esc(r.source.url)}" target="_blank">source</a>`:''}</p>
+ <div class="turn"><div class="who">SYSTEM</div>${esc(r.system)}</div>`;
+ r.user_turns.forEach((u,i)=>{h+=`<div class="turn user"><div class="who">USER · turn ${i+1}</div>${esc(u)}</div>`;
+  const sw=r.swap_text&&i==1;
+  if(sw)h+=`<div class="turn swap"><div class="who">ASSISTANT · turn 2 · REPLACED BY US (swap ${r.swap}) — the model saw this as its own answer</div>${esc(r.swap_text)}</div>
+   <details><summary class="meta">what the model actually wrote at turn 2 (discarded)</summary><div class="turn">${esc(r.replies[i])}</div></details>`;
+  else h+=`<div class="turn"><div class="who">ASSISTANT · turn ${i+1}</div>${esc(r.replies[i])}</div>`});
+ if(r.labels.length)h+='<p><b>Judge labels</b></p><table><tr>'+Object.keys(r.labels[0]).filter(k=>k!='conv_id').map(k=>`<th>${k}</th>`).join('')+'</tr>'+
+  r.labels.map(l=>'<tr>'+Object.entries(l).filter(([k])=>k!='conv_id').map(([k,v])=>`<td>${esc(v)}</td>`).join('')+'</tr>').join('')+'</table>';
+ h+=`<p><button id="raw">Show raw trace (exact requests sent and raw responses)</button></p><div id="rawbox"></div>`;$('view').innerHTML=h;
+ $('raw').onclick=async()=>{const t=await (await fetch(`/api/trace?tag=${encodeURIComponent(r.tag)}&cid=${cid}`)).json();$('rawbox').innerHTML=`<pre>${esc(JSON.stringify(t.trace||t,null,2))}</pre>`}}
+for(const id of ['f_tag','f_cond','f_key','f_dom','f_dec'])$(id).onchange=list;$('f_q').oninput=list;$('reload').onclick=load;load();
+</script></body></html>
