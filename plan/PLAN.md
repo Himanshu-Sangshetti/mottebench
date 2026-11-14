@@ -61,3 +61,7 @@ Every model call is logged (provider, model id, full messages sent, raw response
 12. Judge configuration fixed now: each conversation is labelled by two judges from labs other than the evaluated model's; disagreements go to a third judge (majority). Gold: author labels 300; a second annotator labels 50 for human-human agreement.
 13. Item action-cost field (low-cost/low-risk vs costly/invasive) added; headline reported for both strata.
 14. Conditions F (natural user) and G (search on) are exploratory only.
+
+## Amendment 1.2 (14 Nov 2026, before main data)
+1. Question-wording robustness: on a 30-item subset, each user question gets two rewordings (one casual, one with personal context), written by a local model and checked by hand to keep the same action and meaning. Run as A_Q1, A_Q2 and compared with A on the original wording. Pre-registered expectation: the admit-then-push rate differs from the original by under 10 points.
+2. Run order, models and stop rules fixed in plan/RUNS.md.

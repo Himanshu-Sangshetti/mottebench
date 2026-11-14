@@ -104,6 +104,16 @@ def codex(model, system, user_turns, swap=None, opts=None):
     return replies, {"provider": "codex_cli", "thread_id": tid, "rollout": rollout[0] if rollout else None, "calls": calls}
 
 # ---------------- OpenRouter (clean API) ----------------
+SPEND = os.path.expanduser("~/.mottebench_spend.json")  # kept outside the repo
+_spend_lock = __import__("threading").Lock()
+def _spend(model, usd, cap):
+    """Add an API call's reported cost to the ledger; raise LimitHit once the run's cap is reached."""
+    with _spend_lock:
+        d = json.load(open(SPEND)) if os.path.exists(SPEND) else {}
+        d[model] = round(d.get(model, 0) + usd, 4); d["_total"] = round(d.get("_total", 0) + usd, 4)
+        json.dump(d, open(SPEND, "w"))
+    if cap and d["_total"] >= float(cap): raise LimitHit(f"spend cap {cap} reached")
+
 def openrouter(model, system, user_turns, swap=None, opts=None):
     key = os.environ.get("OPENROUTER_API_KEY")
     if not key: raise RuntimeError("no OPENROUTER_API_KEY")
@@ -116,6 +126,7 @@ def openrouter(model, system, user_turns, swap=None, opts=None):
         t0 = time.time(); r = json.loads(urllib.request.urlopen(req, timeout=900).read())
         text = r["choices"][0]["message"]["content"]; _check(text)
         calls.append({"request": body, "response": r, "secs": time.time() - t0})
+        _spend(model, (r.get("usage") or {}).get("cost") or 0.0, (opts or {}).get("max_usd"))
         replies.append(text); msgs.append({"role": "assistant", "content": swap[1] if swap and swap[0] == i else text})
     return replies, {"provider": "openrouter", "calls": calls}
 

@@ -30,6 +30,7 @@ jobs = []
 for r in items:
     for c in a.conds.split(","):
         if c.startswith("E") and r["key_class"] != "WEAK": continue
+        if "_Q" in c and not r.get("q_alt"): continue
         for rep in range(a.reps):
             cid = hashlib.sha1(f"{tag}|{r['item_id']}|{c}|{rep}|{PROTOCOL_VERSION}".encode()).hexdigest()[:16]
             if cid not in done: jobs.append((cid, r, c, rep))
@@ -40,10 +41,13 @@ fn = PROVIDERS[a.provider]; opts = json.loads(a.opts); STOP = threading.Event();
 def go(job):
     cid, r, c, rep = job
     if STOP.is_set() or datetime.datetime.now() >= deadline: STOP.set(); return
-    base, free = c.split("_F")[0], c.endswith("_F")
+    import re
+    free = "_F" in c; qv = re.search(r"_Q(\d)", c); base = re.sub(r"_(F|Q\d)", "", c)
     k = phrase_index(r["item_id"], base)
     system, turns, swapkey = plan(base, k, free=free)
-    turns = [r["question"] if t is None else t for t in turns]
+    q = r["question"] if not qv else r.get("q_alt", [])[int(qv.group(1)) - 1] if len(r.get("q_alt", [])) >= int(qv.group(1)) else None
+    if q is None: return  # item has no reworded version for this slot
+    turns = [q if t is None else t for t in turns]
     swaptext = None
     if swapkey: swaptext = swap_key_text(swapkey, r["source"]["name"]) if base.startswith("EK") else SWAP[swapkey]
     swap = (1, swaptext) if swapkey else None
@@ -63,7 +67,7 @@ def go(job):
             f.write(json.dumps(dict(conv_id=cid, item_id=r["item_id"], cond=c, rep=rep, error=err[:500], ts=time.time())) + "\n")
         return
     row = dict(conv_id=cid, tag=tag, provider=a.provider, model=a.model, item_id=r["item_id"], domain=r["domain"],
-               key_class=r["key_class"], cond=c, rep=rep, phrase_idx=k, free_decision=free, pilot_item=r.get("pilot", False),
+               key_class=r["key_class"], cond=c, rep=rep, phrase_idx=k, free_decision=free, question_variant=int(qv.group(1)) if qv else 0, pilot_item=r.get("pilot", False),
                system=system, user_turns=turns, replies=replies, swap=swapkey, swap_text=swaptext, protocol=PROTOCOL_VERSION, secs=round(time.time() - t0, 1),
                ts=datetime.datetime.now().isoformat(timespec="seconds"))
     with lock:
