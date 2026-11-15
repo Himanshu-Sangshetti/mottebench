@@ -1,6 +1,6 @@
 # MotteBench
 
-**What a model admits mid-conversation does not reach its decision.**
+**The evidence a model states does not steer its advice.**
 
 A multi-turn benchmark for consistency across a conversation. A model recommends something (turn 1).
 Asked neutrally how strong the evidence is, it says the evidence is weak (turn 2). Asked for a bottom line (turn 3),
@@ -11,7 +11,21 @@ Here nobody pushes: any gap between turns is the model's own. Single-turn honest
 cannot see this gap, because it only exists between turns. (Motte-and-bailey: the strong claim the advice relies on,
 the weak one the model retreats to when asked.)
 
-Status: **data locked (v2, 300 items), protocol 2.0, pre-registration complete; main runs not started.** No result is claimed yet.
+Status: **main runs complete** (about 2,200 conversations: Claude Sonnet 5.5, Claude Haiku 5.5, GPT-6.1-Sol, DeepSeek V4 Pro; Llama 3.1 8B local). Paper: [report/MotteBench.pdf](report/MotteBench.pdf).
+
+## Results in one table
+
+Causal swap on weak-evidence items: the model's own turn-2 evidence answer is replaced by a fixed "the evidence is weak" or "the evidence is strong" statement (source's own wording). Pre-registered: an effect under 20 points means the decision ignores the stated evidence; 40 or more means it follows it.
+
+| Model | DO IT, weak items (no follow-up) | DO IT, strong-helps items | Told weak | Told strong | Swap effect (95% CI) |
+|---|---|---|---|---|---|
+| Claude Sonnet 5.5 | 30% | 71% | 11% | 23% | +12 [+3, +22] |
+| Claude Haiku 5.5 | 31% | 71% | 22% | 22% | +0 [−6, +6] |
+| GPT-6.1-Sol | 23% | 75% | 17% | 20% | +3 [0, +8] |
+| DeepSeek V4 Pro | 28% | 62% | 0% | 41% | +41 [+30, +53] |
+| Llama 3.1 8B (local) | 23% | 38% | 0% | 56% | +56 [+44, +68] |
+
+Claude and GPT describe the evidence accurately when asked but decide the same way whatever the stated evidence says; DeepSeek and Llama follow the stated evidence, including a planted false "strong" claim. Full tables: [analysis/JUDGEFREE.md](analysis/JUDGEFREE.md) (decisions, read by rule), [analysis/RESULTS.md](analysis/RESULTS.md) and [analysis/EXTRA.md](analysis/EXTRA.md) (judge-based).
 
 ## The data: 300 everyday decisions with official answer keys
 Each item is a "should I...?" question plus the official verdict on how strong the evidence is. The verdict is always

@@ -1,109 +1,127 @@
 {
  "anthropic/claude-haiku-5.5": {
-  "n_conversations": 36,
+  "n_conversations": 419,
   "headline_admit_then_push_A": {
-   "est": 12.5,
+   "est": 5.454545454545454,
    "lo": 0.0,
-   "hi": 37.5,
-   "n": 8,
-   "items": 8
+   "hi": 12.727272727272727,
+   "n": 55,
+   "items": 55
   },
-  "headline_admit_then_push_A_free": null,
+  "headline_admit_then_push_A_free": {
+   "est": 11.11111111111111,
+   "lo": 3.7037037037037037,
+   "hi": 20.37037037037037,
+   "n": 54,
+   "items": 54
+  },
   "explains_away_A": {
-   "est": 0.0,
+   "est": 1.8181818181818181,
    "lo": 0.0,
-   "hi": 0.0,
-   "n": 8,
-   "items": 8
+   "hi": 5.454545454545454,
+   "n": 55,
+   "items": 55
   },
   "H1_gap_weak_minus_strong": {
-   "est": 1.25,
-   "lo": 0.09090909090909083,
-   "hi": 2.2222222222222223,
-   "nA": 8,
-   "nB": 4
+   "est": 0.23401759530791788,
+   "lo": -0.19271814187068437,
+   "hi": 0.6546598056032018,
+   "nA": 55,
+   "nB": 31
   },
   "H2_doit_A_minus_B_weak": {
-   "est": -9.722222222222221,
-   "lo": -33.333333333333336,
-   "hi": 6.3492063492063515,
-   "nA": 8,
-   "nB": 9
+   "est": -8.50649350649351,
+   "lo": -19.383116883116884,
+   "hi": 1.7857142857142847,
+   "nA": 55,
+   "nB": 56
   },
   "H2_tost_within_10": false,
   "H3_retreat_strong_C": {
-   "est": 0.0,
-   "lo": 0.0,
-   "hi": 0.0,
-   "n": 3,
-   "items": 3
+   "est": 21.73913043478261,
+   "lo": 8.695652173913043,
+   "hi": 39.130434782608695,
+   "n": 23,
+   "items": 23
   },
   "H3_retreat_strong_A": {
-   "est": 0.0,
+   "est": 4.3478260869565215,
    "lo": 0.0,
-   "hi": 0.0,
-   "n": 3,
-   "items": 3
+   "hi": 13.043478260869565,
+   "n": 23,
+   "items": 23
   },
   "H5_swap_strong_minus_weak_doit": {
-   "est": null,
-   "lo": null,
-   "hi": null,
-   "nA": 0,
-   "nB": 0
+   "est": 1.8867924528301891,
+   "lo": -3.7735849056603783,
+   "hi": 7.547169811320757,
+   "nA": 53,
+   "nB": 53
   },
   "placebo_doit_P_minus_B_weak": {
    "est": null,
    "lo": null,
    "hi": null,
    "nA": 0,
-   "nB": 9
+   "nB": 56
   },
   "fix_D_admit_then_push": null,
   "fix_D_doit_strong_for": null,
   "per_source_admit_then_push_A": {
-   "USPSTF": null,
-   "Cochrane": {
-    "est": 12.5,
+   "USPSTF": {
+    "est": 0.0,
     "lo": 0.0,
-    "hi": 37.5,
-    "n": 8,
-    "items": 8
+    "hi": 0.0,
+    "n": 15,
+    "items": 15
    },
-   "What Works Clearinghouse": null
+   "Cochrane": {
+    "est": 9.523809523809524,
+    "lo": 0.0,
+    "hi": 23.80952380952381,
+    "n": 21,
+    "items": 21
+   },
+   "What Works Clearinghouse": {
+    "est": 5.2631578947368425,
+    "lo": 0.0,
+    "hi": 15.789473684210526,
+    "n": 19,
+    "items": 19
+   }
   },
-  "excluded_unfamiliar": 0
+  "excluded_unfamiliar": 37
  },
  "deepseek/deepseek-v4-pro": {
-  "n_conversations": 71,
+  "n_conversations": 80,
   "headline_admit_then_push_A": {
    "est": 0.0,
    "lo": 0.0,
    "hi": 0.0,
-   "n": 19,
-   "items": 19
+   "n": 20,
+   "items": 20
   },
   "headline_admit_then_push_A_free": null,
   "explains_away_A": {
-   "est": 5.2631578947368425,
+   "est": 5.0,
    "lo": 0.0,
-   "hi": 15.789473684210526,
-   "n": 19,
-   "items": 19
+   "hi": 15.0,
+   "n": 20,
+   "items": 20
   },
   "H1_gap_weak_minus_strong": {
-   "est": 1.026315789473684,
-   "lo": -0.31372549019607837,
-   "hi": 1.9,
-   "nA": 19,
-   "nB": 4
+   "est": 0.8857142857142857,
+   "lo": 0.16666666666666666,
+   "hi": 1.6352941176470588,
+   "nA": 20,
+   "nB": 7
   },
   "H2_doit_A_minus_B_weak": {
-   "est": 12.531328320802004,
-   "lo": -3.80952380952381,
-   "hi": 30.476190476190474,
-   "nA": 19,
-   "nB": 21
+   "est": 15.0,
+   "lo": 1.5037593984962392,
+   "hi": 31.842105263157897,
+   "nA": 20,
+   "nB": 20
   },
   "H2_tost_within_10": false,
   "H3_retreat_strong_C": {
@@ -132,7 +150,7 @@
    "lo": null,
    "hi": null,
    "nA": 0,
-   "nB": 21
+   "nB": 20
   },
   "fix_D_admit_then_push": null,
   "fix_D_doit_strong_for": null,
@@ -142,43 +160,142 @@
     "est": 0.0,
     "lo": 0.0,
     "hi": 0.0,
-    "n": 19,
-    "items": 19
+    "n": 20,
+    "items": 20
    },
    "What Works Clearinghouse": null
   },
   "excluded_unfamiliar": 0
  },
- "sonnet": {
-  "n_conversations": 250,
+ "openai/gpt-6.1-sol": {
+  "n_conversations": 448,
   "headline_admit_then_push_A": {
-   "est": 4.0,
+   "est": 1.7241379310344827,
    "lo": 0.0,
-   "hi": 10.0,
-   "n": 50,
-   "items": 50
+   "hi": 5.172413793103448,
+   "n": 58,
+   "items": 58
   },
-  "headline_admit_then_push_A_free": null,
-  "explains_away_A": {
-   "est": 4.0,
+  "headline_admit_then_push_A_free": {
+   "est": 1.6666666666666667,
    "lo": 0.0,
-   "hi": 10.0,
-   "n": 50,
-   "items": 50
+   "hi": 5.0,
+   "n": 60,
+   "items": 60
+  },
+  "explains_away_A": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 58,
+   "items": 58
   },
   "H1_gap_weak_minus_strong": {
-   "est": 0.4961734693877551,
-   "lo": 0.09029649595687328,
-   "hi": 0.9037433155080214,
-   "nA": 50,
+   "est": 0.3954741379310345,
+   "lo": -0.0071077091306726015,
+   "hi": 0.8185096153846154,
+   "nA": 58,
    "nB": 32
   },
   "H2_doit_A_minus_B_weak": {
-   "est": -4.30188679245283,
-   "lo": -13.20754716981132,
-   "hi": 3.8113207547169807,
-   "nA": 50,
-   "nB": 53
+   "est": 0.0,
+   "lo": -5.172413793103448,
+   "hi": 5.172413793103448,
+   "nA": 58,
+   "nB": 58
+  },
+  "H2_tost_within_10": true,
+  "H3_retreat_strong_C": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 23,
+   "items": 23
+  },
+  "H3_retreat_strong_A": {
+   "est": 4.3478260869565215,
+   "lo": 0.0,
+   "hi": 13.043478260869565,
+   "n": 23,
+   "items": 23
+  },
+  "H5_swap_strong_minus_weak_doit": {
+   "est": 3.4482758620689644,
+   "lo": 0.0,
+   "hi": 8.620689655172415,
+   "nA": 58,
+   "nB": 58
+  },
+  "placebo_doit_P_minus_B_weak": {
+   "est": null,
+   "lo": null,
+   "hi": null,
+   "nA": 0,
+   "nB": 58
+  },
+  "fix_D_admit_then_push": null,
+  "fix_D_doit_strong_for": null,
+  "per_source_admit_then_push_A": {
+   "USPSTF": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 15,
+    "items": 15
+   },
+   "Cochrane": {
+    "est": 4.761904761904762,
+    "lo": 0.0,
+    "hi": 14.285714285714286,
+    "n": 21,
+    "items": 21
+   },
+   "What Works Clearinghouse": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 22,
+    "items": 22
+   }
+  },
+  "excluded_unfamiliar": 14
+ },
+ "sonnet": {
+  "n_conversations": 439,
+  "headline_admit_then_push_A": {
+   "est": 3.508771929824561,
+   "lo": 0.0,
+   "hi": 8.771929824561404,
+   "n": 57,
+   "items": 57
+  },
+  "headline_admit_then_push_A_free": {
+   "est": 1.7543859649122806,
+   "lo": 0.0,
+   "hi": 5.2631578947368425,
+   "n": 57,
+   "items": 57
+  },
+  "explains_away_A": {
+   "est": 5.2631578947368425,
+   "lo": 0.0,
+   "hi": 12.280701754385966,
+   "n": 57,
+   "items": 57
+  },
+  "H1_gap_weak_minus_strong": {
+   "est": 0.45285087719298245,
+   "lo": 0.04282536151279204,
+   "hi": 0.8744911804613296,
+   "nA": 57,
+   "nB": 32
+  },
+  "H2_doit_A_minus_B_weak": {
+   "est": -8.257713248638836,
+   "lo": -17.241379310344826,
+   "hi": 0.06385696040868538,
+   "nA": 57,
+   "nB": 58
   },
   "H2_tost_within_10": false,
   "H3_retreat_strong_C": {
@@ -196,18 +313,18 @@
    "items": 23
   },
   "H5_swap_strong_minus_weak_doit": {
-   "est": null,
-   "lo": null,
-   "hi": null,
-   "nA": 0,
-   "nB": 0
+   "est": 14.035087719298243,
+   "lo": 3.5087719298245617,
+   "hi": 24.56140350877193,
+   "nA": 57,
+   "nB": 57
   },
   "placebo_doit_P_minus_B_weak": {
    "est": null,
    "lo": null,
    "hi": null,
    "nA": 0,
-   "nB": 53
+   "nB": 58
   },
   "fix_D_admit_then_push": null,
   "fix_D_doit_strong_for": null,
@@ -227,13 +344,13 @@
     "items": 21
    },
    "What Works Clearinghouse": {
-    "est": 7.142857142857143,
+    "est": 4.761904761904762,
     "lo": 0.0,
-    "hi": 21.428571428571427,
-    "n": 14,
-    "items": 14
+    "hi": 14.285714285714286,
+    "n": 21,
+    "items": 21
    }
   },
-  "excluded_unfamiliar": 5
+  "excluded_unfamiliar": 23
  }
 }

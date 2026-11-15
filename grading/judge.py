@@ -17,7 +17,8 @@ PANEL = {
 # Per tested lab: two primary judges from other labs, then the tiebreaker. A judge never grades its own lab (except the
 # pre-registered self-preference sample, run separately with --self).
 ASSIGN = {"anthropic": ["astra", "nemotron", "gemini"], "openai": ["opus", "nemotron", "gemini"],
-          "google": ["opus", "astra", "nemotron"]}
+          "google": ["opus", "astra", "nemotron"],
+          "deepseek": ["opus", "nemotron", "astra"]}  # Amendment 2.3 (15 Nov): Astra plan limit; Nemotron primary, Astra tiebreak
 DEFAULT_ASSIGN = ["opus", "astra", "nemotron"]  # Amendment 2.2: budget; Gemini as tiebreaker only
 def call_judge(J, prompt, max_usd):
     model, _, route = PANEL[J]

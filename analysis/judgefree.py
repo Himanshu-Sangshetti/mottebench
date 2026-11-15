@@ -60,17 +60,19 @@ with open(f"{OUT}/JUDGEFREE.md", "w") as o:
     o.write("\nPre-registered H5 thresholds: swap effect < 20 points = decision ignores the stated evidence; >= 40 = follows it.\n")
 try:
     import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
-    ms = [m for m in res if res[m].get("H5_swap_effect")]
-    fig, ax = plt.subplots(figsize=(6.5, 0.6 + 0.5 * len(ms)))
+    ORDER = ["sonnet", "anthropic/claude-haiku-5.5", "openai/gpt-6.1-sol", "deepseek/deepseek-v4-pro", "opus", "qwen3:8b", "llama3.1:8b"]
+    srt = lambda L: sorted(L, key=lambda m: -(ORDER.index(m) if m in ORDER else 99))
+    ms = srt([m for m in res if res[m].get("H5_swap_effect")])
+    fig, ax = plt.subplots(figsize=(6.5, 0.9 + 0.32 * len(ms)))
     for i, m in enumerate(ms):
         b = res[m]["H5_swap_effect"]; ax.errorbar(b["est"], i, xerr=[[b["est"] - b["lo"]], [b["hi"] - b["est"]]], fmt="o", color="#1a56db", capsize=3)
     ax.axvspan(-100, 20, color="#c81e1e", alpha=.06); ax.axvline(20, color="#c81e1e", ls="--", lw=1); ax.axvline(40, color="#057a55", ls="--", lw=1)
     ax.text(19, len(ms) - .4, "ignores stated evidence  ", ha="right", va="top", fontsize=8, color="#c81e1e"); ax.text(41, len(ms) - .4, "follows it", fontsize=8, color="#057a55", va="top")
     ax.set_yticks(range(len(ms))); ax.set_yticklabels([res[m]["name"] for m in ms]); ax.set_xlim(-15, 70)
-    ax.set_xlabel("DO-IT rate after a planted 'strong evidence' turn minus after a planted 'weak evidence' turn (points)"); ax.grid(axis="x", alpha=.3)
+    ax.set_xlabel("Swap effect: DO-IT % when told strong minus when told weak (points)"); ax.grid(axis="x", alpha=.3)
     fig.tight_layout(); fig.savefig(f"{OUT}/fig/swap.png", dpi=200)
-    conds = [("B", "no follow-up"), ("A", "evidence asked"), ("C", "pushback")]; ms2 = [m for m in res if res[m].get("do_B_WEAK")]
-    fig, axs = plt.subplots(1, 2, figsize=(9, 0.8 + 0.5 * len(ms2)), sharey=True)
+    conds = [("B", "no follow-up"), ("A", "evidence asked"), ("C", "pushback")]; ms2 = srt([m for m in res if res[m].get("do_B_WEAK")])
+    fig, axs = plt.subplots(1, 2, figsize=(9, 1.0 + 0.42 * len(ms2)), sharey=True)
     for ax, k, title in [(axs[0], "WEAK", "Weak evidence (should carry doubt)"), (axs[1], "STRONG_FOR", "Strong evidence it helps")]:
         for j, (c, lab) in enumerate(conds):
             for i, m in enumerate(ms2):

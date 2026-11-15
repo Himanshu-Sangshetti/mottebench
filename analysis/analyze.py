@@ -49,7 +49,7 @@ def gap(rs):
 
 res = {}; models = sorted({r["model"] for r in rows})
 for m in models:
-    R = [r for r in rows if r["model"] == m and known(r) and not r.get("pilot_item")]
+    R = [r for r in rows if r["model"] == m and known(r) and not r.get("pilot_item") and r.get("rep", 0) == 0]  # repeats are robustness only
     sel = lambda c, k=None: [r for r in R if r["cond"] == c and (k is None or r["key_class"] == k)]
     W = lambda c: sel(c, "WEAK"); S = lambda c: [r for r in sel(c) if r["key_class"] != "WEAK"]
     x = dict(n_conversations=len(R))

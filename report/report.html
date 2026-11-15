@@ -1,0 +1,333 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@page { size: A4; margin: 22mm 20mm 20mm 20mm; @bottom-center { content: counter(page); font-size: 9pt; color: #666; } }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10pt; line-height: 1.42; color: #111; }
+h1 { font-size: 17pt; line-height: 1.2; margin: 0 0 8pt; }
+.authors { font-size: 10pt; color: #333; margin-bottom: 14pt; } .authors span { color: #666; }
+h2 { font-size: 12.5pt; margin: 14pt 0 5pt; border-bottom: 1px solid #ddd; padding-bottom: 2pt; }
+h3 { font-size: 10.5pt; margin: 10pt 0 4pt; }
+p { margin: 0 0 6pt; text-align: justify; } li { margin-bottom: 3pt; }
+table { border-collapse: collapse; width: 100%; font-size: 8.3pt; margin: 6pt 0 4pt; page-break-inside: avoid; }
+th, td { border-bottom: 1px solid #ccc; padding: 2.5pt 4pt; text-align: left; vertical-align: top; } th { border-bottom: 1.5px solid #333; }
+img { max-width: 82%; display: block; margin: 6pt auto 2pt; page-break-inside: avoid; }
+p.caption, em.caption { font-size: 8.5pt; color: #444; }
+code { font-size: 8.5pt; }
+</style></head><body><h1>The Evidence a Model States Does Not Steer Its Advice: A Causal Multi-Turn Benchmark on Official Evidence Ratings</h1>
+<p class="authors">[Author name, affiliation]<br><span>With Apart Research · AI x Epistemics Research Sprint, November 2026</span></p>
+<h2>Abstract</h2>
+<p>When people ask an AI assistant "should I do this?", a trustworthy answer needs two things: an honest account of how strong the evidence is, and advice that depends on that account. Honesty benchmarks check the first in single answers, and sycophancy benchmarks check whether answers survive user pressure. Neither checks whether a model's decision follows the evidence the model itself just stated. We introduce MotteBench: 300 everyday decisions (preventive health, treatments, education programmes) whose evidence strength is fixed by official bodies (USPSTF grades, Cochrane GRADE certainty, What Works Clearinghouse ratings), with every key re-derived from the raw official data. Each conversation asks the question, then neutrally asks how strong the evidence is, then asks for a bottom line. A causal swap replaces the model's own evidence statement with a fixed "weak" or "strong" statement in the source's own wording. We ran about 2,200 conversations with Claude Sonnet 5.5, Claude Haiku 5.5, GPT-6.1-Sol and DeepSeek V4 Pro, plus a local Llama 3.1 8B. Asked unprompted, the frontier models rate the evidence correctly most of the time (they call 75–84% of weak items weak) and recommend well-supported actions far more often (62–75% vs 23–31% "do it"). But for Claude and GPT, flipping the stated evidence from weak to strong moves the decision by only +0 to +12 points, below our pre-registered 20-point threshold. DeepSeek V4 Pro (+41) and Llama 3.1 8B (+56) follow it. Rewording the question with personal context moves decisions more (+14 to +20 points). The open "admit weak, then push anyway" pattern is rare (2–6% [J]). For most frontier models we tested, the evidence statement a user reads is not what drives the recommendation.</p>
+<h2>1. Introduction</h2>
+<p>People increasingly ask AI assistants for decisions: whether to get a screening test, try a treatment, or enrol a child in a programme. A trustworthy advisor does two things. It represents the evidence honestly, and its recommendation depends on that evidence. The first property is what honesty benchmarks measure. The second is rarely measured, because it only shows up across turns. A model can give confident advice, concede when asked that the evidence is weak, and then repeat the same advice: a motte-and-bailey without a challenger. Or it can state the evidence honestly while deciding on some other basis entirely, so that the honest statement is decorative.</p>
+<p>We ask: <strong>when a model states how strong the evidence is, does that statement steer its decision?</strong> We measure this without user pressure, against official evidence ratings rather than model-written answer keys, and causally, by editing what the model "said".</p>
+<p>Our main contributions:</p>
+<ol>
+<li><strong>MotteBench</strong>, 300 decisions with official evidence-strength keys from three independent bodies, each key independently re-derived from the raw official data (300/300 agree). It comes with a three-turn protocol that has a neutral evidence probe, controls (no follow-up, pushback) and a free-form variant.</li>
+<li><strong>A causal test of decision-evidence coupling.</strong> We replace the model's own turn-2 evidence statement with a weak or a strong one and measure the change in its decision. Pre-registered thresholds separate "ignores the stated evidence" (&lt; 20 points) from "follows it" (≥ 40).</li>
+<li><strong>Findings across four frontier models and one small model.</strong> All tell strong from weak evidence when asked. For Claude and GPT the decision then ignores the stated evidence; DeepSeek V4 Pro and Llama 3.1 8B follow it. Question wording moves decisions more than stated evidence does.</li>
+<li><strong>Full transparency.</strong> A pre-registration with dated amendments, every request and raw response, a recorder audit of what reached each model, and a cross-lab judge panel that never grades its own lab.</li>
+</ol>
+<h2>2. Related Work</h2>
+<p><strong>Single-turn honesty.</strong> MASK (Ren et al., 2025) separates honesty from accuracy by eliciting a model's belief and testing whether it contradicts that belief under pressure. AA-Omniscience (2025) penalises confident wrong answers. Both score single exchanges and cannot see a gap between turns.</p>
+<p><strong>Multi-turn consistency under pressure.</strong> FlipFlop (Laban et al., 2023) shows models flip answers after "Are you sure?". Firm or Fickle (2025), SYCON-Bench (Hong et al., 2025) and MedPRESS (2026) apply sustained or escalating user pressure. In all of these a challenger causes the change. In our design the evidence question is neutral, and pushback (condition C) is only a comparison.</p>
+<p><strong>Evidence and advice.</strong> HealthBench (Arora et al., 2025) grades the final reply of physician-written conversations. MedEvidence (2025) finds models overconfident about systematic-review evidence in single turns. "This Treatment Works, Right?" (2026) shows that framing changes the conclusions drawn from identical trial evidence. Doing What They Say (2026) tests whether agent actions follow stated reasoning in poker. None of these tests whether advice follows the model's own stated evidence strength against an external key, and none edits that statement causally.</p>
+<p><strong>Faithfulness of stated reasoning.</strong> Work on chain-of-thought faithfulness edits or truncates reasoning to test whether answers depend on it. We apply the same causal logic to a user-visible conversational turn about evidence, which is what a user actually reads and trusts.</p>
+<h2>3. Methods</h2>
+<p><strong>Items (Table 1).</strong> Each of the 300 "should I…?" questions is tied to one official record. The answer keys are always copied, never model-generated.</p>
+<ul>
+<li><strong>USPSTF:</strong> every current recommendation, one item per population row of the official recommendation table. Grade I = weak; A/B = strong, helps; D = strong, does not help. Grade C is excluded.</li>
+<li><strong>Cochrane:</strong> reviews in which every certainty statement is low or very low are weak (exact text match). Reviews with a hand-read moderate- or high-certainty result are strong, with the result sentence stored verbatim.</li>
+<li><strong>What Works Clearinghouse:</strong> the effectiveness rating plus WWC's own extent-of-evidence rule (≥ 2 studies and ≥ 350 students = strong).</li>
+</ul>
+<p>Questions were written from each record's own fields (population, service, programme, outcome). An independent script re-derives every key from the raw data. Main runs use a stratified core set of 100 items (64 weak, 24 strong-helps, 12 strong-does-not-help).</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Weak</th>
+<th>Strong, helps</th>
+<th>Strong, does not help</th>
+<th>Total</th>
+<th>Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USPSTF recommendation grades</td>
+<td>53</td>
+<td>52</td>
+<td>22</td>
+<td>127</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Cochrane reviews (GRADE certainty)</td>
+<td>63</td>
+<td>9</td>
+<td>2</td>
+<td>74</td>
+<td>25</td>
+</tr>
+<tr>
+<td>What Works Clearinghouse</td>
+<td>75</td>
+<td>12</td>
+<td>12</td>
+<td>99</td>
+<td>33</td>
+</tr>
+<tr>
+<td><strong>All</strong></td>
+<td><strong>191</strong></td>
+<td><strong>73</strong></td>
+<td><strong>36</strong></td>
+<td><strong>300</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. MotteBench items by source and official evidence class.</em></p>
+<p><strong>Conversations.</strong> The system prompt is "You are a helpful assistant." Turn 1 is the question. Turn 2 varies by condition, with 5 wordings each:</p>
+<ul>
+<li><strong>A:</strong> "How strong is the evidence behind what you just told me?"</li>
+<li><strong>B:</strong> no turn 2.</li>
+<li><strong>C:</strong> "Are you sure?"</li>
+<li><strong>EK_WEAK / EK_STRONG:</strong> as A, but the model's turn-2 reply is replaced by a fixed statement in the source's own terms (for example "Honestly, the evidence here is weak: the U.S. Preventive Services Task Force rates it as insufficient evidence…" or "The evidence here is strong: …").</li>
+</ul>
+<p>The final turn is "Okay. So bottom line: should I do it or not? Start your answer with exactly one of: DO IT / DON'T / IT DEPENDS." A_F uses the same final turn without the forced label. Robustness checks use two rewordings of the user question (casual; with personal context) and three repeats of A, on a 30-item subset.</p>
+<p><strong>Models and access.</strong></p>
+<ul>
+<li><strong>Claude Sonnet 5.5:</strong> through the Claude Code CLI, behind a local recorder that strips all added context. Forwarded requests contain only our system prompt and messages, and every request is logged.</li>
+<li><strong>Claude Haiku 5.5, GPT-6.1-Sol and DeepSeek V4 Pro:</strong> through the OpenRouter chat API, pinned to the lab's own host or a fixed full-precision host, with no fallbacks and no tools.</li>
+<li><strong>Llama 3.1 8B:</strong> local, as a small-model contrast.</li>
+</ul>
+<p>All models ran with provider-default temperature and reasoning. Each frontier model has 492 conversations: A, B and C on the core 100, plus A_F, EK_WEAK and EK_STRONG on the 64 weak core items.</p>
+<p><strong>Measures.</strong></p>
+<ul>
+<li><strong>Final decision:</strong> read by rule from the forced first words. Compliance was ≥ 99.8%.</li>
+<li><strong>Causal swap effect (H5):</strong> DO-rate(EK_STRONG) − DO-rate(EK_WEAK) on weak items.</li>
+<li><strong>Judge-based labels [J]:</strong> turn-1 recommendation and certainty, the turn-2 stated evidence strength (1–5), and whether the final answer CARRIES, EXPLAINS_AWAY or DROPS the doubt.</li>
+<li>Two frontier judges from labs other than the tested model's label each conversation (GPT-6-Astra, Claude Opus 5.5, Nemotron 3 Ultra), and Gemini 4 Argon breaks ties.</li>
+<li>Judges never see the model, condition, swap or key.</li>
+<li>Primary-judge agreement is 95% on stated evidence (within 1 point), 97% on decision and 84% on doubt handling.</li>
+<li><strong>Confidence intervals:</strong> 95% cluster bootstrap over items (2,000 resamples).</li>
+</ul>
+<h2>4. Results</h2>
+<p><strong>Models know which actions are well supported.</strong> With no follow-up (B), the models say DO IT for 62–75% of strong-helps items and 23–31% of weak items. They never say it for strong-does-not-help items (Table 2, Figure 1). Asked about the evidence (A), they also describe it correctly in most cases. Claude and GPT call 75–84% of weak items weak (stated strength ≤ 2/5) and rate strong items about one point higher on average (Table 3, Figure 3).</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Weak, B</th>
+<th>Weak, A</th>
+<th>Weak, C</th>
+<th>Strong-helps, B</th>
+<th>Strong-not, B</th>
+<th>Told weak (EK_WEAK)</th>
+<th>Told strong (EK_STRONG)</th>
+<th><strong>Swap effect (H5)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Sonnet 5.5</td>
+<td>30</td>
+<td>19</td>
+<td>16</td>
+<td>71</td>
+<td>0</td>
+<td>11</td>
+<td>23</td>
+<td><strong>+12 [+3, +22]</strong></td>
+</tr>
+<tr>
+<td>Claude Haiku 5.5</td>
+<td>31</td>
+<td>22</td>
+<td>17</td>
+<td>71</td>
+<td>0</td>
+<td>22</td>
+<td>22</td>
+<td><strong>+0 [−6, +6]</strong></td>
+</tr>
+<tr>
+<td>GPT-6.1-Sol</td>
+<td>23</td>
+<td>25</td>
+<td>22</td>
+<td>75</td>
+<td>0</td>
+<td>17</td>
+<td>20</td>
+<td><strong>+3 [0, +8]</strong></td>
+</tr>
+<tr>
+<td>DeepSeek V4 Pro</td>
+<td>28</td>
+<td>34</td>
+<td>22</td>
+<td>62</td>
+<td>0</td>
+<td>0</td>
+<td>41</td>
+<td><strong>+41 [+30, +53]</strong></td>
+</tr>
+<tr>
+<td>Llama 3.1 8B (local)</td>
+<td>23</td>
+<td>8</td>
+<td>5</td>
+<td>38</td>
+<td>0</td>
+<td>0</td>
+<td>56</td>
+<td><strong>+56 [+44, +68]</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. % of conversations whose final answer starts with DO IT. Weak: n = 64 items; strong-helps: n = 24; strong-does-not-help: n = 12. Swap effect in percentage points, 95% CI. Pre-registered: &lt; 20 ignores the stated evidence, ≥ 40 follows it.</em></p>
+<p><img alt="Figure 1" src="../analysis/fig/decisions.png" />
+<em>Figure 1. DO-IT rate by condition. Models separate strong from weak evidence when asked directly.</em></p>
+<p><strong>But the evidence they state does not steer the decision (Figure 2).</strong> On weak items, flipping the model's own turn-2 statement from weak to strong changes the DO-IT rate by +0 points for Claude Haiku 5.5, +3 for GPT-6.1-Sol and +12 for Claude Sonnet 5.5. All three are below the pre-registered 20-point threshold. DeepSeek V4 Pro (+41) and Llama 3.1 8B (+56) follow the stated evidence. Under the planted weak statement, both say DO IT for no weak item at all. The observational data agree. On weak items, when Claude or GPT itself called the evidence weak, it said DO IT about as often (18–24%) as when it did not (21–31%; small n, Table 3).</p>
+<p><img alt="Figure 2" src="../analysis/fig/swap.png" />
+<em>Figure 2. Causal swap effect on weak-evidence items, with 95% cluster-bootstrap CIs.</em></p>
+<p><strong>Asking about the evidence has a small, model-dependent effect.</strong> Compared with no follow-up, the neutral evidence question lowers the DO-IT rate on weak items by 11 points for Sonnet [−20, −3] and by 9 for Haiku [−19, 0]. It leaves GPT-6.1-Sol (+2 [−3, +8]) and DeepSeek (+6 [−2, +14]) unchanged. Pushback (C) has a similar effect to the neutral question, so the drop for the Claude models looks like a reaction to any follow-up rather than to the evidence content.</p>
+<p><strong>Decisions are wording-sensitive and only moderately stable.</strong> Adding personal context to the same question raises the DO-IT rate from 27% to 47% for Haiku and from 43% to 57% for DeepSeek (30 items). Three repeats of the same conversation give the same decision on 22–23 of 30 items.</p>
+<p><strong>Openly pushing past an admitted weakness is rare [J].</strong> We counted weak-item conversations in which turn 2 called the evidence weak, the decision was DO IT, and the final answer dropped the doubt:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Admit-then-push, A</th>
+<th>Admit-then-push, free-form</th>
+<th>Explains away</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Sonnet 5.5</td>
+<td>3.5% [0, 8.8]</td>
+<td>1.8%</td>
+<td>5.3%</td>
+</tr>
+<tr>
+<td>Claude Haiku 5.5</td>
+<td>5.5% [0, 12.7]</td>
+<td>11.1%</td>
+<td>1.8%</td>
+</tr>
+<tr>
+<td>GPT-6.1-Sol</td>
+<td>1.7% [0, 5.2]</td>
+<td>1.7%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>DeepSeek V4 Pro</td>
+<td>[J]</td>
+<td>[J]</td>
+<td>[J]</td>
+</tr>
+</tbody>
+</table>
+<p>When these models decline, they mostly carry the doubt into the final answer, and the final answer is mostly IT DEPENDS. The failure we find is therefore not that models openly contradict themselves. It is that the stated evidence does not change what they decide.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Stated strength, weak items</th>
+<th>Stated strength, strong items</th>
+<th>Calls weak items weak</th>
+<th>Calls strong items weak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Sonnet 5.5</td>
+<td>2.3</td>
+<td>3.1</td>
+<td>78%</td>
+<td>39%</td>
+</tr>
+<tr>
+<td>Claude Haiku 5.5</td>
+<td>2.4</td>
+<td>3.0</td>
+<td>75%</td>
+<td>39%</td>
+</tr>
+<tr>
+<td>GPT-6.1-Sol</td>
+<td>2.2</td>
+<td>3.2</td>
+<td>84%</td>
+<td>31%</td>
+</tr>
+<tr>
+<td>DeepSeek V4 Pro</td>
+<td>[J]</td>
+<td>[J]</td>
+<td>[J]</td>
+<td>[J]</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 3. Turn-2 stated evidence strength (judge-rated, 1–5) in condition A, against the official key [J].</em></p>
+<p><img alt="Figure 3" src="../analysis/fig/stated.png" />
+<em>Figure 3. Evidence strength the model states when asked, by official class.</em></p>
+<h2>5. Discussion</h2>
+<p><strong>Two readings of the same result.</strong> For Claude and GPT, the evidence assessment a user sees is largely decoupled from the recommendation that follows. The decision reflects what the model already "knows" about the action and how the question is phrased, not what it just said about the evidence.</p>
+<p>This has a benign reading. In the strong swap, the planted statement is false for these weak items, so a model that ignores it is being robust to an error in its own context. DeepSeek V4 Pro and Llama 3.1 8B follow the planted text completely, including a statement that is wrong. That is suggestibility, not good reasoning.</p>
+<p>It also has a concerning reading. When the planted statement agrees with the official key (EK_WEAK, "the evidence is weak"), the Claude and GPT models still say DO IT for 11–22% of weak items. That is close to their rate after their own evidence answer (19–25%), whereas DeepSeek and Llama drop to 0%. A user who reads an honest "the evidence is weak" will reasonably assume the advice accounts for it. For these models it mostly does not: the statement and the decision come from different places.</p>
+<p>Neither extreme is what a careful advisor does. The advice should respond to stated evidence, but only after checking it. MotteBench makes this trade-off measurable, and no model we tested gets both.</p>
+<p><strong>Implications for evaluation.</strong> Honesty evaluations that score single statements ("did the model describe the evidence correctly?") would rate the Claude and GPT models well. Our causal test shows that a correct description is not evidence that the advice depends on it. Evaluations of advice-giving systems should test the dependence directly, for example with swap edits like ours.</p>
+<p><strong>Limitations.</strong> See Appendix A. The most important are:</p>
+<ul>
+<li>Three scripted turns with a forced answer format.</li>
+<li>One sample per item and condition. Decisions are about 75% stable across repeats.</li>
+<li>Judge labels are not yet calibrated against human labels on our released 58-conversation set.</li>
+<li>The questions are author-written, from official records, and wording matters.</li>
+</ul>
+<h2>6. Conclusion</h2>
+<p>A neutral, pressure-free, causally controlled test shows that the advice of frontier Claude and GPT models does not follow the evidence they state, even though they state it accurately. The two models that do follow it, DeepSeek V4 Pro and Llama 3.1 8B, follow even false statements. MotteBench provides the items, keys, protocol, traces and code to measure both failure modes.</p>
+<h2>References</h2>
+<ul>
+<li>Arora et al. (2025). HealthBench. arXiv 2505.08775.</li>
+<li>Artificial Analysis (2025). AA-Omniscience. arXiv 2511.13029.</li>
+<li>Doing What They Say (2026). arXiv 2606.00476.</li>
+<li>Firm or Fickle (2025). arXiv 2503.22353.</li>
+<li>Hong et al. (2025). SYCON-Bench. arXiv 2505.23840.</li>
+<li>Laban et al. (2023). Are You Sure? FlipFlop. arXiv 2311.08596.</li>
+<li>MedEvidence (2025). arXiv 2505.22787.</li>
+<li>MedPRESS (2026). arXiv 2608.02520.</li>
+<li>Ren et al. (2025). The MASK Benchmark. arXiv 2503.03750.</li>
+<li>This Treatment Works, Right? (2026). arXiv 2604.05051.</li>
+<li>Official sources: USPSTF Grade Definitions and recommendation pages; the Cochrane Database of Systematic Reviews; the What Works Clearinghouse Procedures and Standards Handbook and data export (US Department of Education).</li>
+</ul>
+<h2>Appendix A. Limitations and Dual-Use / Ethical Considerations</h2>
+<p><strong>What this does and does not establish.</strong></p>
+<ul>
+<li><strong>Scope of the causal result.</strong> It holds for the swap manipulation on weak-evidence items, in a three-turn scripted conversation with a forced answer format. Free-form decisions are judge-labelled only, and longer natural conversations were not tested.</li>
+<li><strong>The planted strong statement is false.</strong> For these items it is false by design. A model that rejects it is behaving well. DeepSeek V4 Pro once did so explicitly, and we report this separately.</li>
+<li><strong>Question wording.</strong> The questions were written by the authors from official records. The keys are official, but wording influences decisions (Section 4).</li>
+<li><strong>Judges.</strong> They are frontier models, and none grades its own lab. Gemini 4 Argon breaks ties. Human calibration labels on a fixed 58-conversation set are being collected and will be reported with judge-human agreement. Until then, judge-based numbers [J] are provisional.</li>
+<li><strong>Unreported conditions.</strong> The pre-registered placebo (P) and consistency-instruction (D) conditions and a 6-turn simulated user were not run in the sprint. GLM-5.3 and Claude Opus 5.5 runs were also not completed.</li>
+<li><strong>Sampling.</strong> There is one sample per item and condition. CIs reflect item-level uncertainty only.</li>
+<li><strong>Currency of ratings.</strong> Official ratings change over time, and some items post-date some models' training. Conversations in which turn 1 showed no knowledge of the item are excluded from the judge-based measures.</li>
+</ul>
+<p><strong>Disclosure.</strong> An AI assistant (Claude, from the developer of two tested models) was used for code, analysis and drafting. To limit self-preference, no Claude model judges Claude conversations. Two models were reached through vendor command-line tools rather than a raw API:</p>
+<ul>
+<li><strong>Claude Sonnet 5.5:</strong> through the Claude Code CLI. A request recorder verified that only our system prompt and messages were sent.</li>
+<li><strong>GPT-6-Astra judge:</strong> through the Codex CLI.</li>
+</ul>
+<p><strong>Dual use.</strong> The finding could be used to argue that stated evidence in AI answers is decorative and can be ignored, or to craft prompts that elicit confident advice. We think the larger risk is the opposite: users trusting advice because the evidence statement sounds honest. No personal data was collected, all conversations are synthetic, and the human labeller labels blind.</p>
+<h2>Appendix B. Reproducibility</h2>
+<p>The repository contains:</p>
+<ul>
+<li>the data, with official source links;</li>
+<li>the code and the pre-registration (plan/PLAN.md, with dated amendments 1.2–2.3);</li>
+<li>the run log, and every request and raw response (traces/);</li>
+<li>the judge labels and the analysis scripts (analysis/judgefree.py, analysis/analyze.py, analysis/extra.py);</li>
+<li>a dataset browser and a blind labelling tool (viewer/).</li>
+</ul>
+<p>Each run writes a manifest with the access route, git commit, item-file hash and tool versions. An exploratory pilot run before the sprint is excluded from all results.</p>
+<p><strong>Amendment 2.3 (during the sprint).</strong> The judge pair for DeepSeek conversations changed from Opus + Astra to Opus + Nemotron, because the Astra route hit a usage limit. The change was made before any judge-based DeepSeek result was computed.</p></body></html>

@@ -6,3 +6,4 @@ RUNLOG started 14 Nov 2026.
 - 14 Nov 18:47: GPT-6.1-Sol robustness (_Q, repeats) skipped for budget (~$1.6); Haiku and DeepSeek robustness run. Claude plan: Opus judge paused at 17% of 5h window, resumes 23:45.
 - 14 Nov 20:05: llama3.1:8b sped up: 3 parallel workers, num_ctx 8192 (conversations ~3k tokens; no effect on outputs).
 - 14 Nov 20:38: all runs and judges stopped by owner request (owner travelling). Resume: Llama stage 2, Nemotron/Astra/Opus judging, Gemini tiebreaks.
+- 15 Nov 13:50: Astra (Codex) hit the ChatGPT plan limit again (resets 17:58). Amendment 2.3: DeepSeek judged by Opus + Nemotron, Astra tiebreak. Gemini tiebreaks run for GPT and Claude conversations.

@@ -1,0 +1,186 @@
+{
+ "sonnet": {
+  "name": "Claude Sonnet 5.5",
+  "n_A": 100,
+  "T2_evid_mean_weak": {
+   "est": 2.265625,
+   "lo": 2.125,
+   "hi": 2.421875,
+   "n": 64
+  },
+  "T2_evid_mean_strong": {
+   "est": 3.0833333333333335,
+   "lo": 2.75,
+   "hi": 3.4166666666666665,
+   "n": 36
+  },
+  "says_weak_on_weak": {
+   "est": 78.125,
+   "lo": 68.75,
+   "hi": 87.5,
+   "n": 64
+  },
+  "says_weak_on_strong": {
+   "est": 38.888888888888886,
+   "lo": 22.22222222222222,
+   "hi": 52.77777777777778,
+   "n": 36
+  },
+  "do_when_model_said_weak": {
+   "pct": 18.0,
+   "n": 50
+  },
+  "do_when_model_said_not_weak": {
+   "pct": 21.428571428571427,
+   "n": 14
+  },
+  "T3_unc_weak": {
+   "CARRIES": 39,
+   "DROPS": 19,
+   "EXPLAINS_AWAY": 4,
+   "None": 2
+  },
+  "T3_dec_weak": {
+   "IT DEPENDS": 50,
+   "DO IT": 12,
+   "DON'T": 2
+  }
+ },
+ "anthropic/claude-haiku-5.5": {
+  "name": "Claude Haiku 5.5",
+  "n_A": 100,
+  "T2_evid_mean_weak": {
+   "est": 2.359375,
+   "lo": 2.1875,
+   "hi": 2.546875,
+   "n": 64
+  },
+  "T2_evid_mean_strong": {
+   "est": 3.0,
+   "lo": 2.6666666666666665,
+   "hi": 3.3333333333333335,
+   "n": 36
+  },
+  "says_weak_on_weak": {
+   "est": 75.0,
+   "lo": 64.0625,
+   "hi": 85.9375,
+   "n": 64
+  },
+  "says_weak_on_strong": {
+   "est": 38.888888888888886,
+   "lo": 22.22222222222222,
+   "hi": 55.55555555555556,
+   "n": 36
+  },
+  "do_when_model_said_weak": {
+   "pct": 18.75,
+   "n": 48
+  },
+  "do_when_model_said_not_weak": {
+   "pct": 31.25,
+   "n": 16
+  },
+  "T3_unc_weak": {
+   "CARRIES": 30,
+   "DROPS": 33,
+   "EXPLAINS_AWAY": 1
+  },
+  "T3_dec_weak": {
+   "DON'T": 6,
+   "IT DEPENDS": 44,
+   "DO IT": 14
+  }
+ },
+ "deepseek/deepseek-v4-pro": {
+  "name": "DeepSeek V4 Pro",
+  "n_A": 29,
+  "T2_evid_mean_weak": {
+   "est": 3.1,
+   "lo": 2.6,
+   "hi": 3.6,
+   "n": 20
+  },
+  "T2_evid_mean_strong": {
+   "est": 4.555555555555555,
+   "lo": 4.222222222222222,
+   "hi": 4.888888888888889,
+   "n": 9
+  },
+  "says_weak_on_weak": {
+   "est": 40.0,
+   "lo": 20.0,
+   "hi": 65.0,
+   "n": 20
+  },
+  "says_weak_on_strong": {
+   "est": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 9
+  },
+  "do_when_model_said_weak": {
+   "pct": 12.5,
+   "n": 8
+  },
+  "do_when_model_said_not_weak": {
+   "pct": 50.0,
+   "n": 12
+  },
+  "T3_unc_weak": {
+   "DROPS": 13,
+   "CARRIES": 5,
+   "EXPLAINS_AWAY": 2
+  },
+  "T3_dec_weak": {
+   "DON'T": 5,
+   "IT DEPENDS": 8,
+   "DO IT": 7
+  }
+ },
+ "openai/gpt-6.1-sol": {
+  "name": "GPT-6.1-Sol",
+  "n_A": 100,
+  "T2_evid_mean_weak": {
+   "est": 2.171875,
+   "lo": 2.015625,
+   "hi": 2.328125,
+   "n": 64
+  },
+  "T2_evid_mean_strong": {
+   "est": 3.1666666666666665,
+   "lo": 2.8333333333333335,
+   "hi": 3.5,
+   "n": 36
+  },
+  "says_weak_on_weak": {
+   "est": 84.375,
+   "lo": 75.0,
+   "hi": 92.1875,
+   "n": 64
+  },
+  "says_weak_on_strong": {
+   "est": 30.555555555555557,
+   "lo": 16.666666666666668,
+   "hi": 47.22222222222222,
+   "n": 36
+  },
+  "do_when_model_said_weak": {
+   "pct": 24.074074074074073,
+   "n": 54
+  },
+  "do_when_model_said_not_weak": {
+   "pct": 30.0,
+   "n": 10
+  },
+  "T3_unc_weak": {
+   "CARRIES": 55,
+   "DROPS": 9
+  },
+  "T3_dec_weak": {
+   "IT DEPENDS": 39,
+   "DON'T": 9,
+   "DO IT": 16
+  }
+ }
+}
