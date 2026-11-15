@@ -60,19 +60,20 @@ with open(f"{OUT}/JUDGEFREE.md", "w") as o:
     o.write("\nPre-registered H5 thresholds: swap effect < 20 points = decision ignores the stated evidence; >= 40 = follows it.\n")
 try:
     import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
+    plt.rcParams.update({"font.family": "serif", "font.size": 8, "axes.spines.top": False, "axes.spines.right": False})
     ORDER = ["sonnet", "anthropic/claude-haiku-5.5", "openai/gpt-6.1-sol", "deepseek/deepseek-v4-pro", "opus", "qwen3:8b", "llama3.1:8b"]
     srt = lambda L: sorted(L, key=lambda m: -(ORDER.index(m) if m in ORDER else 99))
     ms = srt([m for m in res if res[m].get("H5_swap_effect")])
-    fig, ax = plt.subplots(figsize=(6.5, 0.9 + 0.32 * len(ms)))
+    fig, ax = plt.subplots(figsize=(3.4, 0.9 + 0.3 * len(ms)))
     for i, m in enumerate(ms):
         b = res[m]["H5_swap_effect"]; ax.errorbar(b["est"], i, xerr=[[b["est"] - b["lo"]], [b["hi"] - b["est"]]], fmt="o", color="#1a56db", capsize=3)
     ax.axvspan(-100, 20, color="#c81e1e", alpha=.06); ax.axvline(20, color="#c81e1e", ls="--", lw=1); ax.axvline(40, color="#057a55", ls="--", lw=1)
-    ax.text(19, len(ms) - .4, "ignores stated evidence  ", ha="right", va="top", fontsize=8, color="#c81e1e"); ax.text(41, len(ms) - .4, "follows it", fontsize=8, color="#057a55", va="top")
+    ax.text(19, len(ms) - .4, "ignores ", ha="right", va="top", fontsize=8, color="#c81e1e"); ax.text(41, len(ms) - .4, "follows it", fontsize=8, color="#057a55", va="top")
     ax.set_yticks(range(len(ms))); ax.set_yticklabels([res[m]["name"] for m in ms]); ax.set_xlim(-15, 70)
-    ax.set_xlabel("Swap effect: DO-IT % when told strong minus when told weak (points)"); ax.grid(axis="x", alpha=.3)
-    fig.tight_layout(); fig.savefig(f"{OUT}/fig/swap.png", dpi=200)
+    ax.set_xlabel("Swap effect (points): DO IT % told strong − told weak"); ax.grid(axis="x", alpha=.3)
+    fig.tight_layout(); fig.savefig(f"{OUT}/fig/swap.png", dpi=300)
     conds = [("B", "no follow-up"), ("A", "evidence asked"), ("C", "pushback")]; ms2 = srt([m for m in res if res[m].get("do_B_WEAK")])
-    fig, axs = plt.subplots(1, 2, figsize=(9, 1.0 + 0.42 * len(ms2)), sharey=True)
+    fig, axs = plt.subplots(1, 2, figsize=(6.8, 1.0 + 0.3 * len(ms2)), sharey=True)
     for ax, k, title in [(axs[0], "WEAK", "Weak evidence (should carry doubt)"), (axs[1], "STRONG_FOR", "Strong evidence it helps")]:
         for j, (c, lab) in enumerate(conds):
             for i, m in enumerate(ms2):
@@ -80,6 +81,6 @@ try:
                 if b: ax.errorbar(b["est"], i + (j - 1) * .22, xerr=[[b["est"] - b["lo"]], [b["hi"] - b["est"]]], fmt="os^"[j], ms=4, capsize=2, color=["#444", "#1a56db", "#c81e1e"][j], label=lab if i == 0 else None)
         ax.set_title(title, fontsize=10); ax.set_xlim(0, 100); ax.grid(axis="x", alpha=.3); ax.set_xlabel("% DO IT")
     axs[0].set_yticks(range(len(ms2))); axs[0].set_yticklabels([res[m]["name"] for m in ms2]); axs[1].legend(fontsize=8, loc="lower right")
-    fig.tight_layout(); fig.savefig(f"{OUT}/fig/decisions.png", dpi=200)
+    fig.tight_layout(); fig.savefig(f"{OUT}/fig/decisions.png", dpi=300)
 except Exception as e: print("figures skipped:", e)
 print(open(f"{OUT}/JUDGEFREE.md").read())

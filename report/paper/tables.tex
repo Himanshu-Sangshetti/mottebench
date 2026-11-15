@@ -1,0 +1,33 @@
+\newcommand{\TabItems}{\begin{tabular}{lrrrrr}\toprule
+Source (official rating) & Weak & Strong, helps & Strong, no help & Total & Core\\\midrule
+USPSTF (recommendation grade) & 53 & 52 & 22 & 127 & 42\\
+Cochrane (GRADE certainty) & 63 & 9 & 2 & 74 & 25\\
+What Works Clearinghouse & 75 & 12 & 12 & 99 & 33\\
+\midrule All & 191 & 73 & 36 & 300 & 100\\\bottomrule\end{tabular}}
+\newcommand{\TabDecisions}{\begin{tabular}{lccccccc}\toprule
+& \multicolumn{3}{c}{Weak items, \% DO IT} & Strong, helps & \multicolumn{3}{c}{Causal swap (weak items)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-5}\cmidrule(lr){6-8}
+Model & B & A & C & B & told weak & told strong & effect (pts) \\\midrule
+Claude Sonnet 5.5 & 30 & 19 & 16 & 71 & 11 & 23 & +12 {\scriptsize[+3, +22]}\\
+Claude Haiku 5.5 & 31 & 22 & 17 & 71 & 22 & 22 & +0 {\scriptsize[$-$6, +6]}\\
+GPT-6.1-Sol & 23 & 25 & 22 & 75 & 17 & 20 & +3 {\scriptsize[+0, +8]}\\
+DeepSeek V4 Pro & 28 & 34 & 22 & 62 & 0 & 41 & +41 {\scriptsize[+30, +53]}\\
+Llama 3.1 8B$^\dagger$ & 23 & 8 & 5 & 38 & 0 & 55 & +55 {\scriptsize[+44, +67]}\\
+\bottomrule\end{tabular}}
+\newcommand{\TabStated}{\begin{tabular}{lcccccc}\toprule
+& \multicolumn{2}{c}{Stated strength (1--5)} & \multicolumn{2}{c}{Calls it weak ($\le$2), \%} & \multicolumn{2}{c}{Weak items, \%}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Model & weak items & strong items & weak items & strong items & admit-then-push & explains away\\\midrule
+Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 3.5 {\scriptsize[0.0, 8.8]} & 5.3\\
+Claude Haiku 5.5 & 2.4 & 3.0 & 75 & 39 & 5.5 {\scriptsize[0.0, 12.7]} & 1.8\\
+GPT-6.1-Sol & 2.2 & 3.2 & 84 & 31 & 1.7 {\scriptsize[0.0, 5.2]} & 0.0\\
+DeepSeek V4 Pro & 2.9 & 4.0 & 45 & 15 & 0.0 {\scriptsize[0.0, 0.0]} & 5.1\\
+\bottomrule\end{tabular}}
+\newcommand{\TabRobust}{\begin{tabular}{lcccc}\toprule
+Model & original & casual rewording & with personal context & same decision in 3 repeats\\\midrule
+Claude Haiku 5.5 & 27\% & 30\% & 47\% & 23/30\\
+DeepSeek V4 Pro & 43\% & 47\% & 57\% & 22/30\\
+\bottomrule\end{tabular}}
+\newcommand{\TabCorrection}{\begin{tabular}{llrccccc}\toprule
+Model & Planted & $n$ & accepts & says stronger & says weaker & retracts source & no mention\\\midrule
+Claude Sonnet 5.5 & weak & 52 & 33 & 13 & 0 & 33 & 21\\
+ & strong & 52 & 0 & 0 & 88 & 12 & 0\\
+\bottomrule\end{tabular}}

@@ -93,79 +93,97 @@
   "excluded_unfamiliar": 37
  },
  "deepseek/deepseek-v4-pro": {
-  "n_conversations": 80,
+  "n_conversations": 388,
   "headline_admit_then_push_A": {
    "est": 0.0,
    "lo": 0.0,
    "hi": 0.0,
-   "n": 20,
-   "items": 20
+   "n": 59,
+   "items": 59
   },
-  "headline_admit_then_push_A_free": null,
-  "explains_away_A": {
-   "est": 5.0,
+  "headline_admit_then_push_A_free": {
+   "est": 0.0,
    "lo": 0.0,
-   "hi": 15.0,
-   "n": 20,
-   "items": 20
+   "hi": 0.0,
+   "n": 18,
+   "items": 18
+  },
+  "explains_away_A": {
+   "est": 5.084745762711864,
+   "lo": 0.0,
+   "hi": 11.864406779661017,
+   "n": 59,
+   "items": 59
   },
   "H1_gap_weak_minus_strong": {
-   "est": 0.8857142857142857,
-   "lo": 0.16666666666666666,
-   "hi": 1.6352941176470588,
-   "nA": 20,
-   "nB": 7
+   "est": 0.656140350877193,
+   "lo": 0.15623023402909547,
+   "hi": 1.1266233766233766,
+   "nA": 59,
+   "nB": 32
   },
   "H2_doit_A_minus_B_weak": {
-   "est": 15.0,
-   "lo": 1.5037593984962392,
-   "hi": 31.842105263157897,
-   "nA": 20,
-   "nB": 20
+   "est": 5.973881633787165,
+   "lo": -2.6674076132258975,
+   "hi": 14.926660914581532,
+   "nA": 59,
+   "nB": 61
   },
   "H2_tost_within_10": false,
   "H3_retreat_strong_C": {
-   "est": 0.0,
-   "lo": 0.0,
-   "hi": 0.0,
-   "n": 3,
-   "items": 3
+   "est": 30.434782608695652,
+   "lo": 13.043478260869565,
+   "hi": 47.82608695652174,
+   "n": 23,
+   "items": 23
   },
   "H3_retreat_strong_A": {
-   "est": 0.0,
+   "est": 8.695652173913043,
    "lo": 0.0,
-   "hi": 0.0,
-   "n": 3,
-   "items": 3
+   "hi": 21.73913043478261,
+   "n": 23,
+   "items": 23
   },
   "H5_swap_strong_minus_weak_doit": {
-   "est": null,
-   "lo": null,
-   "hi": null,
-   "nA": 0,
-   "nB": 0
+   "est": 33.333333333333336,
+   "lo": 13.636363636363637,
+   "hi": 52.63157894736842,
+   "nA": 21,
+   "nB": 21
   },
   "placebo_doit_P_minus_B_weak": {
    "est": null,
    "lo": null,
    "hi": null,
    "nA": 0,
-   "nB": 20
+   "nB": 61
   },
   "fix_D_admit_then_push": null,
   "fix_D_doit_strong_for": null,
   "per_source_admit_then_push_A": {
-   "USPSTF": null,
+   "USPSTF": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 15,
+    "items": 15
+   },
    "Cochrane": {
     "est": 0.0,
     "lo": 0.0,
     "hi": 0.0,
-    "n": 20,
-    "items": 20
+    "n": 21,
+    "items": 21
    },
-   "What Works Clearinghouse": null
+   "What Works Clearinghouse": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 23,
+    "items": 23
+   }
   },
-  "excluded_unfamiliar": 0
+  "excluded_unfamiliar": 3
  },
  "openai/gpt-6.1-sol": {
   "n_conversations": 448,
@@ -192,8 +210,8 @@
   },
   "H1_gap_weak_minus_strong": {
    "est": 0.3954741379310345,
-   "lo": -0.0071077091306726015,
-   "hi": 0.8185096153846154,
+   "lo": -0.028870084619213587,
+   "hi": 0.796218487394958,
    "nA": 58,
    "nB": 32
   },
@@ -285,15 +303,15 @@
   },
   "H1_gap_weak_minus_strong": {
    "est": 0.45285087719298245,
-   "lo": 0.04282536151279204,
-   "hi": 0.8744911804613296,
+   "lo": 0.040000000000000036,
+   "hi": 0.8249414519906323,
    "nA": 57,
    "nB": 32
   },
   "H2_doit_A_minus_B_weak": {
    "est": -8.257713248638836,
-   "lo": -17.241379310344826,
-   "hi": 0.06385696040868538,
+   "lo": -17.24137931034483,
+   "hi": 0.3327283726557795,
    "nA": 57,
    "nB": 58
   },
@@ -314,7 +332,7 @@
   },
   "H5_swap_strong_minus_weak_doit": {
    "est": 14.035087719298243,
-   "lo": 3.5087719298245617,
+   "lo": 3.5087719298245634,
    "hi": 24.56140350877193,
    "nA": 57,
    "nB": 57

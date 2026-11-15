@@ -94,48 +94,49 @@
  },
  "deepseek/deepseek-v4-pro": {
   "name": "DeepSeek V4 Pro",
-  "n_A": 29,
+  "n_A": 96,
   "T2_evid_mean_weak": {
-   "est": 3.1,
-   "lo": 2.6,
-   "hi": 3.6,
-   "n": 20
+   "est": 2.9193548387096775,
+   "lo": 2.6451612903225805,
+   "hi": 3.193548387096774,
+   "n": 62
   },
   "T2_evid_mean_strong": {
-   "est": 4.555555555555555,
-   "lo": 4.222222222222222,
-   "hi": 4.888888888888889,
-   "n": 9
+   "est": 3.9705882352941178,
+   "lo": 3.6176470588235294,
+   "hi": 4.294117647058823,
+   "n": 34
   },
   "says_weak_on_weak": {
-   "est": 40.0,
-   "lo": 20.0,
-   "hi": 65.0,
-   "n": 20
+   "est": 45.16129032258065,
+   "lo": 32.25806451612903,
+   "hi": 58.064516129032256,
+   "n": 62
   },
   "says_weak_on_strong": {
-   "est": 0.0,
-   "lo": 0.0,
-   "hi": 0.0,
-   "n": 9
+   "est": 14.705882352941176,
+   "lo": 2.9411764705882355,
+   "hi": 26.470588235294116,
+   "n": 34
   },
   "do_when_model_said_weak": {
-   "pct": 12.5,
-   "n": 8
+   "pct": 28.571428571428573,
+   "n": 28
   },
   "do_when_model_said_not_weak": {
-   "pct": 50.0,
-   "n": 12
+   "pct": 41.1764705882353,
+   "n": 34
   },
   "T3_unc_weak": {
-   "DROPS": 13,
-   "CARRIES": 5,
-   "EXPLAINS_AWAY": 2
+   "DROPS": 26,
+   "CARRIES": 20,
+   "EXPLAINS_AWAY": 7,
+   "None": 9
   },
   "T3_dec_weak": {
-   "DON'T": 5,
-   "IT DEPENDS": 8,
-   "DO IT": 7
+   "DON'T": 12,
+   "IT DEPENDS": 28,
+   "DO IT": 22
   }
  },
  "openai/gpt-6.1-sol": {

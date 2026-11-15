@@ -13,3 +13,8 @@ data/sources/cochrane/raw.json
 plan/HARNESS_NOTES.md
 results/trial__*
 traces/trial__*
+report/paper/*.aux
+report/paper/*.log
+report/paper/*.bbl
+report/paper/*.blg
+report/paper/*.out

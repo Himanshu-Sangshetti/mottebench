@@ -46,13 +46,14 @@ with open(f"{OUT}/EXTRA.md", "w") as o:
         o.write(f"| {x['name']} | {x['n_A']} | {F(x['T2_evid_mean_weak'])} | {F(x['T2_evid_mean_strong'])} | {F(x['says_weak_on_weak'], '%')} | {F(x['says_weak_on_strong'], '%')} | {fp(a)} | {fp(b)} | {u.get('CARRIES', 0)} / {u.get('EXPLAINS_AWAY', 0)} / {u.get('DROPS', 0)} |\n")
 try:
     import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
-    ms = list(res)[::-1]; fig, ax = plt.subplots(figsize=(6.5, 0.9 + 0.32 * len(ms)))
+    plt.rcParams.update({"font.family": "serif", "font.size": 8, "axes.spines.top": False, "axes.spines.right": False})
+    ms = list(res)[::-1]; fig, ax = plt.subplots(figsize=(3.4, 0.9 + 0.3 * len(ms)))
     for i, m in enumerate(ms):
         for k, c, lab_ in [("T2_evid_mean_weak", "#c81e1e", "official: weak"), ("T2_evid_mean_strong", "#057a55", "official: strong")]:
             b = res[m][k]
             if b: ax.errorbar(b["est"], i, xerr=[[b["est"] - b["lo"]], [b["hi"] - b["est"]]], fmt="o", color=c, capsize=3, label=lab_ if i == 0 else None)
     ax.set_yticks(range(len(ms))); ax.set_yticklabels([res[m]["name"] for m in ms]); ax.set_xlim(1, 5); ax.grid(axis="x", alpha=.3)
-    ax.set_xlabel("Stated evidence strength (judge-rated, 1 = very weak, 5 = very strong)"); ax.legend(fontsize=8, loc="lower right")
-    fig.tight_layout(); fig.savefig(f"{OUT}/fig/stated.png", dpi=200)
+    ax.set_xlabel("Stated evidence strength (judge-rated, 1–5)"); ax.legend(fontsize=8, loc="lower right")
+    fig.tight_layout(); fig.savefig(f"{OUT}/fig/stated.png", dpi=300)
 except Exception as e: print("figure skipped:", e)
 print(open(f"{OUT}/EXTRA.md").read())
