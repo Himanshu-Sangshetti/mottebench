@@ -35,10 +35,9 @@
    "n": 14
   },
   "T3_unc_weak": {
-   "CARRIES": 39,
-   "DROPS": 19,
-   "EXPLAINS_AWAY": 4,
-   "None": 2
+   "CARRIES": 40,
+   "DROPS": 20,
+   "EXPLAINS_AWAY": 4
   },
   "T3_dec_weak": {
    "IT DEPENDS": 50,

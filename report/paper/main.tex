@@ -152,9 +152,9 @@ The evidence turn decides DeepSeek's answer. For Claude and GPT it is effectivel
 
 \finding{Finding 4: Claude and GPT overrule a contradicting evidence turn, whether it is false or true.} The final answer usually addresses the planted statement directly (Figure~\ref{fig:correction}).
 \begin{itemize}
-\item \textbf{False ``strong'' statement:} Claude and GPT correct it (``I need to correct my last message: \ldots I overstated the evidence''). This is desirable.
-\item \textbf{True ``weak'' statement:} they also frequently dispute it, saying the evidence is stronger than stated or retracting the cited source (``I can't verify what the review found''), and then keep their turn-1 decision.
-\item \textbf{DeepSeek and Llama} mostly accept whatever turn~2 says.
+\item \textbf{False ``strong'' statement:} Claude and GPT say the evidence is actually weaker in \csweaSon\% (Sonnet), \csweaHai\% (Haiku) and \csweaGpt\% (GPT) of final answers (``I need to correct my last message: \ldots I overstated the evidence''). This is desirable.
+\item \textbf{True ``weak'' statement:} they dispute it in 53--59\% of final answers (Table~\ref{tab:summary}). They either say the evidence is stronger than stated (Sonnet \cwstrSon\%, Haiku \cwstrHai\%, GPT \cwstrGpt\%) or retract the cited source (``I can't verify what the review found''). They then keep their turn-1 decision.
+\item \textbf{DeepSeek and Llama} accept the true statement (\cwaccDsk\% and \cwaccLla\%) and also the false one (\csaccDsk\% and \csaccLla\%).
 \end{itemize}
 Appendix~\ref{app:example} gives a full example.
 
@@ -201,7 +201,7 @@ Frontier models describe evidence strength largely correctly. For Claude and GPT
 \item \textbf{Scope.} The results cover weak-evidence items in a three-turn scripted conversation with a forced answer format. We did not run longer natural conversations, or the pre-registered placebo (\cond{P}), consistency-instruction (\cond{D}) and simulated-user conditions. GLM-5.3 and Claude Opus~5.5 runs were not completed.
 \item \textbf{Keys.} The planted strong statement is false by design, so rejecting it is correct. The weak key reflects one official body's rating. A recommendation can still be reasonable on other grounds (other guidelines, low harm or cost), so we interpret DO IT on weak items comparatively rather than as an error.
 \item \textbf{Judges.} All are frontier models, and none grades its own lab. The pre-registered gold standard was 300 author labels; in the sprint we release a fixed 58-conversation calibration set, which is being labelled blind. Judge--human agreement will be reported with the data.
-\item \textbf{Exploratory measures.} The correction labels come from a single judge. A keyword rule for explicit corrections agrees on the direction of the effect.
+\item \textbf{Exploratory measures.} The correction labels come from a single judge. A keyword rule for explicit corrections agrees closely: it finds corrections in 100\% of Claude and GPT answers to the false statement and in 56--62\% of their answers to the true one, against 0--9\% for DeepSeek and Llama.
 \item \textbf{Statistics.} There is one sample per item and condition, and CIs reflect item-level uncertainty only. Official ratings change over time, and some items post-date some models' training. Judge-based measures exclude conversations in which turn~1 showed no knowledge of the item.
 \item \textbf{Dual use.} The finding could be used to argue that evidence statements in AI answers are decorative, or to craft prompts that steer a model's stated evidence. We think the larger risk is the opposite: users trusting advice because the evidence statement sounds honest. No personal data was collected, all conversations are synthetic, and the human labeller labels blind.
 \end{itemize}

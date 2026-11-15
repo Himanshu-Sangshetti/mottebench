@@ -16,7 +16,7 @@ Llama 3.1 8B$^\dagger$ & 23 & 8 & 5 & 38 & 0 & 55 & +55 {\scriptsize[+44, +67]}\
 \newcommand{\TabStated}{\begin{tabular}{lcccccc}\toprule
 & \multicolumn{2}{c}{Stated strength (1--5)} & \multicolumn{2}{c}{Calls it weak ($\le$2), \%} & \multicolumn{2}{c}{Weak items, \%}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
 Model & weak items & strong items & weak items & strong items & admit-then-push & of which explained away\\\midrule
-Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 8.8 {\scriptsize[1.8, 17.5]} & 5.3\\
+Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 8.8 {\scriptsize[1.8, 15.8]} & 5.3\\
 Claude Haiku 5.5 & 2.4 & 3.0 & 75 & 39 & 7.3 {\scriptsize[1.8, 16.4]} & 1.8\\
 GPT-6.1-Sol & 2.2 & 3.2 & 84 & 31 & 1.7 {\scriptsize[0.0, 5.2]} & 0.0\\
 DeepSeek V4 Pro & 2.9 & 4.0 & 45 & 15 & 5.1 {\scriptsize[0.0, 11.9]} & 5.1\\
@@ -30,8 +30,12 @@ DeepSeek V4 Pro & 43\% & 47\% & 57\% & 22/30\\
 Model & Planted & $n$ & accepts & says stronger & says weaker & retracts source & no mention\\\midrule
 Claude Sonnet 5.5 & weak & 64 & 27 & 17 & 0 & 38 & 19\\
  & strong & 64 & 0 & 0 & 84 & 16 & 0\\
-Claude Haiku 5.5 & weak & 28 & 25 & 25 & 0 & 39 & 11\\
- & strong & 28 & 0 & 0 & 100 & 0 & 0\\
+Claude Haiku 5.5 & weak & 64 & 27 & 20 & 0 & 39 & 14\\
+ & strong & 64 & 0 & 0 & 86 & 14 & 0\\
+GPT-6.1-Sol & weak & 64 & 45 & 42 & 0 & 11 & 2\\
+ & strong & 64 & 0 & 0 & 97 & 3 & 0\\
+DeepSeek V4 Pro & weak & 64 & 94 & 3 & 0 & 0 & 3\\
+ & strong & 64 & 62 & 0 & 9 & 19 & 9\\
 Llama 3.1 8B$^\dagger$ & weak & 64 & 67 & 0 & 0 & 2 & 31\\
  & strong & 64 & 61 & 0 & 5 & 2 & 33\\
 \bottomrule\end{tabular}}
@@ -40,8 +44,8 @@ Llama 3.1 8B$^\dagger$ & weak & 64 & 67 & 0 & 0 & 2 & 31\\
 \cmidrule(lr){4-5}\cmidrule(lr){6-7}
 Model & AUROC$\uparrow$ & swap effect & \% DO $\mid$ T1 do & \% DO $\mid$ T1 not do & rejects false & disputes true & push (\%)\\\midrule
 Claude Sonnet 5.5 & 0.72 {\scriptsize[0.62, 0.82]} & +12 {\scriptsize[+3, +22]} & 61 & 0 & 84\% & 55\% & 8.8\\
-Claude Haiku 5.5 & 0.68 {\scriptsize[0.59, 0.79]} & +0 {\scriptsize[$-$6, +6]} & 69 & 1 & \textbf{??} & \textbf{??} & 7.3\\
-GPT-6.1-Sol & 0.78 {\scriptsize[0.67, 0.87]} & +3 {\scriptsize[+0, +8]} & 83 & 1 & \textbf{??} & \textbf{??} & 1.7\\
-DeepSeek V4 Pro & 0.75 {\scriptsize[0.65, 0.84]} & \textbf{+41 {\scriptsize[+30, +53]}} & 60 & 5 & \textbf{??} & \textbf{??} & 5.1\\
-Llama 3.1 8B$^\dagger$ & -- & \textbf{+55 {\scriptsize[+44, +67]}} & -- & -- & -- & -- & --\\
+Claude Haiku 5.5 & 0.68 {\scriptsize[0.59, 0.79]} & +0 {\scriptsize[$-$6, +6]} & 68 & 1 & 86\% & 59\% & 7.3\\
+GPT-6.1-Sol & 0.78 {\scriptsize[0.67, 0.87]} & +3 {\scriptsize[+0, +8]} & 83 & 1 & 97\% & 53\% & 1.7\\
+DeepSeek V4 Pro & 0.75 {\scriptsize[0.65, 0.84]} & \textbf{+41 {\scriptsize[+30, +53]}} & 61 & 5 & 9\% & 3\% & 5.1\\
+Llama 3.1 8B$^\dagger$ & -- & \textbf{+55 {\scriptsize[+44, +67]}} & -- & -- & 5\% & 2\% & --\\
 \bottomrule\end{tabular}}

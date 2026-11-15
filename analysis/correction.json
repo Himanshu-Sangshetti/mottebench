@@ -46,66 +46,66 @@
  "anthropic/claude-haiku-5.5": {
   "EK_STRONG": {
    "n": 64,
-   "labelled": 28,
+   "labelled": 64,
    "keyword": 64,
    "ACCEPTS": 0,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 28,
-   "RETRACTS_SOURCE": 0,
+   "SAYS_WEAKER": 55,
+   "RETRACTS_SOURCE": 9,
    "NO_MENTION": 0
   },
   "EK_WEAK": {
    "n": 64,
-   "labelled": 28,
+   "labelled": 64,
    "keyword": 40,
-   "ACCEPTS": 7,
-   "SAYS_STRONGER": 7,
+   "ACCEPTS": 17,
+   "SAYS_STRONGER": 13,
    "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 11,
-   "NO_MENTION": 3
+   "RETRACTS_SOURCE": 25,
+   "NO_MENTION": 9
   }
  },
  "deepseek/deepseek-v4-pro": {
   "EK_WEAK": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 0,
-   "ACCEPTS": 0,
-   "SAYS_STRONGER": 0,
+   "ACCEPTS": 60,
+   "SAYS_STRONGER": 2,
    "SAYS_WEAKER": 0,
    "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "NO_MENTION": 2
   },
   "EK_STRONG": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 6,
-   "ACCEPTS": 0,
+   "ACCEPTS": 40,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "SAYS_WEAKER": 6,
+   "RETRACTS_SOURCE": 12,
+   "NO_MENTION": 6
   }
  },
  "openai/gpt-6.1-sol": {
   "EK_WEAK": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 36,
-   "ACCEPTS": 0,
-   "SAYS_STRONGER": 0,
+   "ACCEPTS": 29,
+   "SAYS_STRONGER": 27,
    "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "RETRACTS_SOURCE": 7,
+   "NO_MENTION": 1
   },
   "EK_STRONG": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 64,
    "ACCEPTS": 0,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
+   "SAYS_WEAKER": 62,
+   "RETRACTS_SOURCE": 2,
    "NO_MENTION": 0
   }
  }

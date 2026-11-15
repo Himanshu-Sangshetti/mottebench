@@ -111,7 +111,7 @@ for m in ORDER:
     dis = f"{100 * (cw['SAYS_STRONGER'] + cw['RETRACTS_SOURCE']) / cw['labelled']:.0f}\\%" if cw and cw["labelled"] >= 60 else "\\textbf{??}"
     atp = rs.get(m, {}).get("headline_admit_then_push_A")
     bold = lambda s, cond: f"\\textbf{{{s}}}" if cond else s
-    S.append(f"{NAME[m]} & {ci(a, 2) if a else '--'} & {bold(ci(sw, sign=True), sw['est'] >= 40)} & {p({'est': t1d}) if t1d is not None and m in ex else '--'} & {p({'est': t1n}) if t1n is not None and m in ex else '--'} & {rej if m in ex else '--'} & {dis if m in ex else '--'} & {p(atp, 1) if atp else '--'}\\\\")
+    S.append(f"{NAME[m]} & {ci(a, 2) if a else '--'} & {bold(ci(sw, sign=True), sw['est'] >= 40)} & {p({'est': t1d}) if t1d is not None and m in ex else '--'} & {p({'est': t1n}) if t1n is not None and m in ex else '--'} & {rej if cs else '--'} & {dis if cw else '--'} & {p(atp, 1) if atp else '--'}\\\\")
     k = MAC[m]
     if m in ex: N.append(f"\\newcommand{{\\tonedo{k}}}{{{t1d:.0f}}}"); N.append(f"\\newcommand{{\\tonenot{k}}}{{{t1n:.0f}}}")
     if a: N.append(f"\\newcommand{{\\auroc{k}}}{{{a['est']:.2f}}}")

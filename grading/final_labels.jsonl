@@ -175,19 +175,19 @@
 {"conv_id": "83e9b97ef1c93a30", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "e19663151a971a09", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "80c053203ac605ba", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "d04b71ac16f0d11e", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 4, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
+{"conv_id": "d04b71ac16f0d11e", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 4, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "7282f87ff2395633", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "747d8cf5eb3c2f87", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "b4c5c4bd5df12d84", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 4, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "f492039792769652", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "f492039792769652", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "cf1be9a1aa7b050a", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "911605fabb114dd1", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "8468d70222882a03", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "4445f1f794c34e57", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
+{"conv_id": "4445f1f794c34e57", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2.0, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "83a3209a67ebb30e", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "09031f0b895cc652", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "7f6960c244b0fdd1", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "f3972f17a96d1d8a", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
+{"conv_id": "f3972f17a96d1d8a", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "2dede248aedd472d", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "ebc177ca545df40c", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron"]}
 {"conv_id": "cea184d9adb81ff1", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron"]}
@@ -266,12 +266,12 @@
 {"conv_id": "f193e2493b00b7c1", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "3be25fcf3d7682e7", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "f424fc3849f7e07e", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "662100c5d1e37ee1", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "662100c5d1e37ee1", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "ad2ebdd51874df8c", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "f9409e75d2e90335", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
-{"conv_id": "ad0bfb46153c42bd", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 3, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": null, "judges": ["astra", "nemotron"]}
-{"conv_id": "df2b975e413d2ce0", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 3, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
-{"conv_id": "452c6e996f930be1", "T1_knows": "yes", "T1_rec": null, "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "ad0bfb46153c42bd", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 3, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "df2b975e413d2ce0", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 3, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "452c6e996f930be1", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "6aa65ebb19e59bb4", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "34d8dd1ac3f4460f", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "3765bb58bb69abb9", "T1_knows": "no", "T1_rec": "DEPENDS", "T1_cert": 1, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
@@ -516,14 +516,14 @@
 {"conv_id": "d652ce44e13dbb39", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "83880d2ee3ebb158", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 4, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "f245bb4d624617a6", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
-{"conv_id": "ef365a93142ce94b", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
+{"conv_id": "ef365a93142ce94b", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "089f803b1c0e9d1d", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "3608af55c7cf03a1", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "19906cc2d7ef82f7", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "5542516b04d3d2a5", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "6cb0a363031b65e7", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": null, "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "dc880af360685138", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "f1d172cdc1ffa126", "T1_knows": "yes", "T1_rec": null, "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
+{"conv_id": "6cb0a363031b65e7", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "dc880af360685138", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "f1d172cdc1ffa126", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "a3247b2c9dcb605c", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "26dc2a465fed75b0", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "a3486b04793da5a5", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
@@ -808,14 +808,14 @@
 {"conv_id": "2eb40d01721b1895", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "e95e0b34724390d3", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "1029f3d39fd07eca", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
-{"conv_id": "a5e4d27339646c03", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "8ef9d97fdb980874", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "be86115bea9b9d77", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 4, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "a5e4d27339646c03", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "8ef9d97fdb980874", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "be86115bea9b9d77", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 4, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "c732641cd818a828", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "ac7c0b72b5ad4e73", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "2b43b1882ce734f6", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "9a901873950137af", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "7828f8530f307896", "T1_knows": "yes", "T1_rec": null, "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron"]}
+{"conv_id": "7828f8530f307896", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "c434d30ff9005343", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "5a91f5baab6abf60", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "38784e14d1d252f7", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
@@ -874,17 +874,17 @@
 {"conv_id": "a227ba0d8d64bd6b", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "0e2678d4420586c3", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "4d8b5b18de2e3569", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "2dce6ae683a4ebdf", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "cb23b18ebcbbd38b", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
+{"conv_id": "2dce6ae683a4ebdf", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
+{"conv_id": "cb23b18ebcbbd38b", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "b62d80e643f38b38", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "c4923ba1cdc14c93", "T1_knows": "yes", "T1_rec": null, "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "c4923ba1cdc14c93", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "b2788511b9f6db5e", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "7f35ca41a9d398b9", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "75477eac06607b6c", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "8ea3043ebf4f8a72", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 3, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["astra", "nemotron"]}
 {"conv_id": "a13dde3c8448e46b", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "EXPLAINS_AWAY", "judges": ["astra", "nemotron"]}
 {"conv_id": "aee643686cca3720", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
-{"conv_id": "60c649d62bc22cef", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["astra", "nemotron"]}
+{"conv_id": "60c649d62bc22cef", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "d5cb6643c912b67d", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
 {"conv_id": "6fc2aa5910ce218f", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["astra", "nemotron"]}
 {"conv_id": "9a34b801ade16da2", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 1, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["astra", "nemotron", "gemini"]}
@@ -2064,10 +2064,18 @@
 {"conv_id": "e8eb8661e2aa52c6", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
 {"conv_id": "c81fcbaf2f72a4ae", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
 {"conv_id": "c9ec52d1f002e29c", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
+{"conv_id": "5b6bca6c0c10d135", "T1_knows": "yes", "T1_rec": null, "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DON'T", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
+{"conv_id": "f87d009cea1b3f81", "T1_knows": "yes", "T1_rec": null, "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["opus", "nemotron"]}
+{"conv_id": "01756504d411023c", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
+{"conv_id": "864616ba78a792ef", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": null, "judges": ["opus", "nemotron"]}
 {"conv_id": "18d42fa92b5bbbf5", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
 {"conv_id": "4c92e2f52a4f3d37", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
 {"conv_id": "44a4e23e1e418acd", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
 {"conv_id": "9679572cb8adfe91", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
+{"conv_id": "469239507eba28af", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
+{"conv_id": "ed72ea5ec221aa26", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
+{"conv_id": "dc2581f79a5b62d6", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 4, "T2_admit": "no", "T3_dec": null, "T3_unc": null, "judges": ["opus", "nemotron"]}
+{"conv_id": "fff3aaedf4c4b774", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
 {"conv_id": "412e503bb18354ff", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES", "judges": ["opus", "nemotron"]}
 {"conv_id": "2b4ccaf6a98a9b4a", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 4, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
 {"conv_id": "af3c7bdcd868bd79", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS", "judges": ["opus", "nemotron"]}
