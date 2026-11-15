@@ -523,3 +523,23 @@
 {"conv_id": "70238037f24ccc43", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 1, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
 {"conv_id": "a227ba0d8d64bd6b", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 1, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
 {"conv_id": "0e2678d4420586c3", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 2, "T2_evid": 5, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "d04b71ac16f0d11e", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 4, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "f492039792769652", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 5, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "4445f1f794c34e57", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "f3972f17a96d1d8a", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "ef365a93142ce94b", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 3, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS"}
+{"conv_id": "6cb0a363031b65e7", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES"}
+{"conv_id": "dc880af360685138", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "f1d172cdc1ffa126", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "662100c5d1e37ee1", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": null, "T2_admit": null, "T3_dec": "DO IT", "T3_unc": "DROPS"}
+{"conv_id": "ad0bfb46153c42bd", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 3, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "DROPS"}
+{"conv_id": "df2b975e413d2ce0", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 3, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "452c6e996f930be1", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": null, "T2_admit": null, "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}
+{"conv_id": "a5e4d27339646c03", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES"}
+{"conv_id": "8ef9d97fdb980874", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DONT", "T1_cert": 4, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DON'T", "T3_unc": "CARRIES"}
+{"conv_id": "be86115bea9b9d77", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 4, "T2_evid": 4, "T2_admit": "no", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "7828f8530f307896", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 5, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES"}
+{"conv_id": "2dce6ae683a4ebdf", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 3, "T2_evid": 2, "T2_admit": "no", "T3_dec": "DO IT", "T3_unc": "CARRIES"}
+{"conv_id": "cb23b18ebcbbd38b", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "DO IT", "T3_unc": "CARRIES"}
+{"conv_id": "c4923ba1cdc14c93", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DO", "T1_cert": 4, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "DROPS"}
+{"conv_id": "60c649d62bc22cef", "judge": "gemini", "T1_knows": "yes", "T1_rec": "DEPENDS", "T1_cert": 3, "T2_evid": 2, "T2_admit": "yes", "T3_dec": "IT DEPENDS", "T3_unc": "CARRIES"}

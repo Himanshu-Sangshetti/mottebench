@@ -24,7 +24,7 @@ def call_judge(J, prompt, max_usd):
     model, _, route = PANEL[J]
     if route == "claude": return claude(model, "Answer with JSON only.", [prompt])
     if route == "codex": return codex(model, "Answer with JSON only.", [prompt], opts={"effort": "medium"})
-    return openrouter(model, "Answer with JSON only.", [prompt], opts={"max_usd": max_usd})
+    return openrouter(model, "Answer with JSON only.", [prompt], opts={"max_usd": max_usd, "max_tokens": 8000 if J == "gemini" else 32000})  # 8k: credit reservation (Gemini replies ~2k)
 LABS = [("claude", "anthropic"), ("haiku", "anthropic"), ("sonnet", "anthropic"), ("opus", "anthropic"), ("anthropic", "anthropic"),
         ("gpt", "openai"), ("openai", "openai"), ("gemini", "google"), ("gemma", "google"), ("google", "google"), ("deepseek", "deepseek"),
         ("glm", "zhipu"), ("z-ai", "zhipu"), ("qwen", "alibaba"), ("llama", "meta"), ("mistral", "mistral"), ("nemotron", "nvidia"), ("nvidia", "nvidia")]

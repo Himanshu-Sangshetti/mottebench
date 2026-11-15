@@ -143,7 +143,7 @@ def openrouter(model, system, user_turns, swap=None, opts=None):
     for i, u in enumerate(user_turns):
         if cap and spend_total() >= float(cap): raise LimitHit(f"spend cap {cap} reached")
         msgs.append({"role": "user", "content": u})
-        body = {"model": model, "messages": msgs, "max_tokens": 32000, "usage": {"include": True}}  # temperature: provider default
+        body = {"model": model, "messages": msgs, "max_tokens": int((opts or {}).get("max_tokens", 32000)), "usage": {"include": True}}  # temperature: provider default
         hosts = (opts or {}).get("provider_order") or next((v for k, v in OR_HOSTS.items() if model.startswith(k)), None)
         body["provider"] = {"quantizations": ["fp8", "bf16", "fp16", "fp32", "unknown"], "allow_fallbacks": False, **({"order": hosts} if hosts else {})}
         req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=json.dumps(body).encode(),

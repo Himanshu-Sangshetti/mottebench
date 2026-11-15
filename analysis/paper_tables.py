@@ -29,7 +29,7 @@ for m in ORDER:
     T.append(f"{NAME[m]} & {p(x.get('do_B_WEAK'))} & {p(x.get('do_A_WEAK'))} & {p(x.get('do_C_WEAK'))} & {p(x.get('do_B_STRONG_FOR'))} & {p(x.get('swap_weak_do'))} & {p(x.get('swap_strong_do'))} & {ci(x.get('H5_swap_effect'), sign=True)}\\\\")
 T.append("\\bottomrule\\end{tabular}}")
 # Table 3: stated evidence and admit-then-push (judge-based)
-T.append("\\newcommand{\\TabStated}{\\begin{tabular}{lcccccc}\\toprule\n& \\multicolumn{2}{c}{Stated strength (1--5)} & \\multicolumn{2}{c}{Calls it weak ($\\le$2), \\%} & \\multicolumn{2}{c}{Weak items, \\%}\\\\\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}\nModel & weak items & strong items & weak items & strong items & admit-then-push & explains away\\\\\\midrule")
+T.append("\\newcommand{\\TabStated}{\\begin{tabular}{lcccccc}\\toprule\n& \\multicolumn{2}{c}{Stated strength (1--5)} & \\multicolumn{2}{c}{Calls it weak ($\\le$2), \\%} & \\multicolumn{2}{c}{Weak items, \\%}\\\\\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}\nModel & weak items & strong items & weak items & strong items & admit-then-push & of which explained away\\\\\\midrule")
 for m in ORDER:
     if m not in ex: continue
     x, r = ex[m], rs.get(m, {})
@@ -71,3 +71,51 @@ for m in ORDER:
             mac(f"{nm}{zz}{k}", f"{100 * d[z] / d['labelled']:.0f}" if d and d["labelled"] >= 60 else "\\textbf{??}")
 open(f"{OUT}/numbers.tex", "w").write("\n".join(N) + "\n")
 print("wrote tables.tex and numbers.tex")
+
+# ---------- Summary scorecard (Table 2) and mechanism numbers, computed from rows + final labels ----------
+import glob, re, random
+lab = {json.loads(l)["conv_id"]: json.loads(l) for l in open(f"{ROOT}/grading/final_labels.jsonl")}
+num = lambda v: float(v) if isinstance(v, (int, float)) or (isinstance(v, str) and v.replace(".", "", 1).isdigit()) else None
+def dec(t):
+    t = re.sub(r"^\W+", "", t or "").upper().replace("’", "'")
+    return "DO" if t.startswith("DO IT") else "DONT" if t.startswith("DON'T") else "DEP" if t.startswith("IT DEPENDS") else "NONE"
+RW = collections.defaultdict(list)
+for f in glob.glob(f"{ROOT}/results/main__*.jsonl"):
+    if f.endswith((".fails.jsonl", ".manifest.jsonl")): continue
+    for l in open(f):
+        r = json.loads(l)
+        if int(r.get("rep", 0)) == 0: r["dec"] = dec(r["replies"][-1]); r.update({k: v for k, v in lab.get(r["conv_id"], {}).items() if k != "conv_id"}); RW[r["model"]].append(r)
+def auroc(pos, neg): return sum((p > n) + .5 * (p == n) for p in pos for n in neg) / (len(pos) * len(neg)) if pos and neg else None
+def boot(rows, f, B=1000):
+    random.seed(0); by = collections.defaultdict(list)
+    for r in rows: by[r["item_id"]].append(r)
+    ks = list(by); pt = f(rows); v = sorted(x for x in (f([y for k in random.choices(ks, k=len(ks)) for y in by[k]]) for _ in range(B)) if x is not None)
+    return dict(est=pt, lo=v[int(.025 * len(v))], hi=v[int(.975 * len(v)) - 1]) if pt is not None and v else None
+def au(rs):
+    rs = [r for r in rs if num(r.get("T2_evid")) is not None]
+    return auroc([num(r["T2_evid"]) for r in rs if r["key_class"] != "WEAK"], [num(r["T2_evid"]) for r in rs if r["key_class"] == "WEAK"])
+def dorate(rs): return 100 * sum(r["dec"] == "DO" for r in rs) / len(rs) if rs else None
+S = ["\\newcommand{\\TabSummary}{\\begin{tabular}{l@{\\hspace{8pt}}c@{\\hspace{8pt}}c@{\\hspace{8pt}}cc@{\\hspace{8pt}}cc@{\\hspace{8pt}}c}\\toprule",
+     "& Says & Acts & \\multicolumn{2}{c}{Decision follows turn 1} & \\multicolumn{2}{c}{Reaction to planted turn 2} & Admit-then-\\\\",
+     "\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}",
+     "Model & AUROC$\\uparrow$ & swap effect & \\% DO $\\mid$ T1 do & \\% DO $\\mid$ T1 not do & rejects false & disputes true & push (\\%)\\\\\\midrule"]
+for m in ORDER:
+    if m not in RW: continue
+    R_ = RW[m]; A = [r for r in R_ if r["cond"] == "A"]
+    a = boot(A, au) if any(num(r.get("T2_evid")) is not None for r in A) else None
+    sw = jf[m]["H5_swap_effect"]
+    EK = [r for r in R_ if r["cond"] in ("A", "EK_WEAK", "EK_STRONG") and r["key_class"] == "WEAK" and r.get("T1_rec")]
+    t1d = dorate([r for r in EK if r["T1_rec"] == "DO"]); t1n = dorate([r for r in EK if r["T1_rec"] in ("DEPENDS", "DONT")])
+    c = cor.get(m, {}); cw, cs = c.get("EK_WEAK"), c.get("EK_STRONG")
+    rej = f"{100 * cs['SAYS_WEAKER'] / cs['labelled']:.0f}\\%" if cs and cs["labelled"] >= 60 else "\\textbf{??}"
+    dis = f"{100 * (cw['SAYS_STRONGER'] + cw['RETRACTS_SOURCE']) / cw['labelled']:.0f}\\%" if cw and cw["labelled"] >= 60 else "\\textbf{??}"
+    atp = rs.get(m, {}).get("headline_admit_then_push_A")
+    bold = lambda s, cond: f"\\textbf{{{s}}}" if cond else s
+    S.append(f"{NAME[m]} & {ci(a, 2) if a else '--'} & {bold(ci(sw, sign=True), sw['est'] >= 40)} & {p({'est': t1d}) if t1d is not None and m in ex else '--'} & {p({'est': t1n}) if t1n is not None and m in ex else '--'} & {rej if m in ex else '--'} & {dis if m in ex else '--'} & {p(atp, 1) if atp else '--'}\\\\")
+    k = MAC[m]
+    if m in ex: N.append(f"\\newcommand{{\\tonedo{k}}}{{{t1d:.0f}}}"); N.append(f"\\newcommand{{\\tonenot{k}}}{{{t1n:.0f}}}")
+    if a: N.append(f"\\newcommand{{\\auroc{k}}}{{{a['est']:.2f}}}")
+S.append("\\bottomrule\\end{tabular}}")
+open(f"{OUT}/tables.tex", "a").write("\n".join(S) + "\n")
+open(f"{OUT}/numbers.tex", "w").write("\n".join(N) + "\n")
+print("summary table added")

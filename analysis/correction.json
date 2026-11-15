@@ -2,67 +2,67 @@
  "sonnet": {
   "EK_STRONG": {
    "n": 64,
-   "labelled": 52,
+   "labelled": 64,
    "keyword": 64,
    "ACCEPTS": 0,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 46,
-   "RETRACTS_SOURCE": 6,
+   "SAYS_WEAKER": 54,
+   "RETRACTS_SOURCE": 10,
    "NO_MENTION": 0
   },
   "EK_WEAK": {
    "n": 64,
-   "labelled": 52,
+   "labelled": 64,
    "keyword": 36,
    "ACCEPTS": 17,
-   "SAYS_STRONGER": 7,
+   "SAYS_STRONGER": 11,
    "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 17,
-   "NO_MENTION": 11
+   "RETRACTS_SOURCE": 24,
+   "NO_MENTION": 12
   }
  },
  "llama3.1:8b": {
   "EK_WEAK": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 1,
-   "ACCEPTS": 0,
+   "ACCEPTS": 43,
    "SAYS_STRONGER": 0,
    "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "RETRACTS_SOURCE": 1,
+   "NO_MENTION": 20
   },
   "EK_STRONG": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 64,
    "keyword": 0,
-   "ACCEPTS": 0,
+   "ACCEPTS": 39,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "SAYS_WEAKER": 3,
+   "RETRACTS_SOURCE": 1,
+   "NO_MENTION": 21
   }
  },
  "anthropic/claude-haiku-5.5": {
   "EK_STRONG": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 28,
    "keyword": 64,
    "ACCEPTS": 0,
    "SAYS_STRONGER": 0,
-   "SAYS_WEAKER": 0,
+   "SAYS_WEAKER": 28,
    "RETRACTS_SOURCE": 0,
    "NO_MENTION": 0
   },
   "EK_WEAK": {
    "n": 64,
-   "labelled": 0,
+   "labelled": 28,
    "keyword": 40,
-   "ACCEPTS": 0,
-   "SAYS_STRONGER": 0,
+   "ACCEPTS": 7,
+   "SAYS_STRONGER": 7,
    "SAYS_WEAKER": 0,
-   "RETRACTS_SOURCE": 0,
-   "NO_MENTION": 0
+   "RETRACTS_SOURCE": 11,
+   "NO_MENTION": 3
   }
  },
  "deepseek/deepseek-v4-pro": {

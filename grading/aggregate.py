@@ -10,6 +10,7 @@ from judge import PANEL, eligible, FIELDS
 NUM = {"T1_cert", "T2_evid"}
 L = collections.defaultdict(dict)
 for f in glob.glob(f"{ROOT}/grading/labels/*.jsonl"):
+    if os.path.basename(f).split(".")[0] not in PANEL: continue  # panel judges only (exploratory labels live elsewhere)
     for l in open(f):
         x = json.loads(l); L[x["conv_id"]][x["judge"]] = x
 def rule_dec(reply):
