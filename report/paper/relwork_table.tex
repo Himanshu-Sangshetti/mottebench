@@ -4,22 +4,14 @@
 \providecommand{\rwY}{\ensuremath{\checkmark}}
 \providecommand{\rwN}{\ensuremath{\times}}
 \providecommand{\rwP}{\ensuremath{\sim}}
-\begin{table}[H]
+\begin{table}[!t]
 \centering
-\caption{Prior work compared with MotteBench. \emph{Turns}: model turns per item.
-\emph{What moves the model}: what the design uses to make the model change its answer.
-\emph{Scored against}: the reference an answer is checked against.
-\emph{Own claims compared}: whether the design compares the same model's claims or
-actions at different points. \emph{Own turn edited}: whether the design writes or
-replaces text in the model's own earlier turn. Only MotteBench compares what one model
-implies, defends and decides in one conversation with no pushback, scores the defence
-against an official evidence grade, and plants a true or a false statement in the
-model's own turn to test whether the final decision depends on it.}
+\caption{\textbf{Prior work compared with MotteBench.} \emph{Turns}: model turns per item. \emph{What moves the model}: what the design uses to make the model change its answer. \emph{Own claims compared}: whether the same model's claims or actions at different points are compared. \emph{Own turn edited}: whether text is written into the model's own earlier turn. Only MotteBench compares what one model implies, defends and decides with no pushback, against an official evidence grade, and plants both a true and a false statement in the model's own turn.}
 \label{tab:relwork}
 \footnotesize
-\setlength{\tabcolsep}{3.5pt}
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\textwidth}{@{}l c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X c c >{\raggedright\arraybackslash}p{1.25in}@{}}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\textwidth}{@{}l c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X c c >{\raggedright\arraybackslash}p{1.0in}@{}}
 \toprule
 Work & Turns & What moves the model & Scored against & \begin{tabular}[b]{@{}c@{}}Own claims\\compared\end{tabular} & \begin{tabular}[b]{@{}c@{}}Own turn\\edited\end{tabular} & Domain \\
 \midrule

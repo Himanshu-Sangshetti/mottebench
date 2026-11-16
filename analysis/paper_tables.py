@@ -246,6 +246,11 @@ fa = FUN[("all", "A")]
 S.append(f"\\midrule Four frontier models & {fa['ad']}/{fa['n']} & {fa['do']}/{fa['ad']} &&&&&&\\\\")
 S.append("\\bottomrule\\end{tabular}}")
 open(f"{OUT}/tables.tex", "a").write("\n".join(S).replace("\\newcommand{\\TabSummary}", "\\renewcommand{\\TabSummary}") + "\n")
+_all = [json.loads(l) for f in glob.glob(f"{ROOT}/results/main__*.jsonl") if not f.endswith((".fails.jsonl", ".manifest.jsonl")) for l in open(f)]
+_all = [r for r in _all if r["item_id"] in CORE]
+mac("convTotal", f"{len(_all):,}".replace(",", "{,}")); mac("convWeak", f"{sum(r['key_class'] == 'WEAK' for r in _all):,}".replace(",", "{,}"))
+mac("replyTotal", f"{sum(len(r['replies']) for r in _all):,}".replace(",", "{,}")); mac("convFront", f"{sum('llama' not in r['model'] for r in _all):,}".replace(",", "{,}"))
+mac("nModels", len({r['model'] for r in _all}))
 import re as _re
 open(f"{OUT}/numbers.tex", "w").write(_re.sub(r"\{\+0\}", "{0}", "\n".join(N)) + "\n")
 print("funnel and hypothesis numbers added")
