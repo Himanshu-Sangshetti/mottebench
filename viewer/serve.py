@@ -31,14 +31,17 @@ def runs():
     return dict(rows=rows, fails=fails)
 
 HUMAN = f"{ROOT}/grading/human_labels.jsonl"; CAL = f"{ROOT}/grading/calibration_set.txt"
+SETS = {"headline": f"{ROOT}/grading/headline_set.txt"}; HUMAN_SET = {"headline": f"{ROOT}/grading/human_labels_headline.jsonl"}
 
 class H(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
-        if self.path != "/api/label": return self.send_error(404)
+        u = urllib.parse.urlparse(self.path); q = urllib.parse.parse_qs(u.query)
+        if u.path != "/api/label": return self.send_error(404)
+        out = HUMAN_SET.get(q.get("set", [""])[0], HUMAN)
         x = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         x = {k: x.get(k) for k in ["conv_id", "T1_knows", "T1_rec", "T1_cert", "T2_evid", "T2_admit", "T3_dec", "T3_unc", "note"]}
         x["labeler"] = "human"; x["ts"] = __import__("datetime").datetime.now().isoformat(timespec="seconds")
-        with open(HUMAN, "a") as f: f.write(json.dumps(x) + "\n")
+        with open(out, "a") as f: f.write(json.dumps(x) + "\n")
         return self.send_json({"ok": True})
     def log_message(self, *a): pass
     def send_json(self, obj):
@@ -61,9 +64,10 @@ class H(http.server.SimpleHTTPRequestHandler):
 
             return self.send_json(items)
         if u.path == "/api/calibration":
-            ids = [l.strip() for l in open(CAL)] if os.path.exists(CAL) else []
+            st = q.get("set", [""])[0]; cal, hum = SETS.get(st, CAL), HUMAN_SET.get(st, HUMAN)
+            ids = [l.strip() for l in open(cal) if l.strip()] if os.path.exists(cal) else []
             rows = {r["conv_id"]: r for r in runs()["rows"]}
-            done = {json.loads(l)["conv_id"] for l in open(HUMAN)} if os.path.exists(HUMAN) else set()
+            done = {json.loads(l)["conv_id"] for l in open(hum)} if os.path.exists(hum) else set()
             # blind: only the conversation text is sent to the labelling page
             return self.send_json([dict(conv_id=i, user_turns=rows[i]["user_turns"], replies=[rows[i]["swap_text"] if (rows[i].get("swap_text") and k == 1) else x for k, x in enumerate(rows[i]["replies"])], done=i in done) for i in ids if i in rows])
         if u.path == "/label":
