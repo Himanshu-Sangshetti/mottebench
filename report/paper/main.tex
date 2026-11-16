@@ -204,7 +204,7 @@ MotteBench measures what Ben~N and Alex Csaky call the gap between what a model 
 \section*{Code and data}
 \begin{itemize}
 \item Code, data, transcripts and labels: \url{https://github.com/Himanshu-Sangshetti/mottebench}. One command rebuilds every number, table and figure in this paper.
-\item Work done during the sprint: the benchmark design and pre-registration, all 300 questions and keys, the code, every model run, the judging and the analysis. Before the sprint we only explored candidate questions and ran a small pilot (Claude models on 36 USPSTF questions, 12 November); the pilot questions are flagged in the data and left out of judge-based results.
+\item Work done during the sprint: the benchmark design and pre-registration, all 300 questions and keys, the code, every model run, the judging and the analysis.
 \end{itemize}
 
 {\footnotesize
@@ -248,7 +248,7 @@ Human labels to check the judges & 300 conversations & \calibn-conversation set 
 \end{tabularx}
 \end{table}
 \begin{itemize}
-\item \textbf{Which conversations are scored.} Judge-based results leave out conversations on the \pilotn{} weak questions used in our pre-sprint pilot (\funpilotAll{} conversations) and those where the judges found that the model did not know what the question referred to (\fununkAll), as fixed before data collection. Keeping the latter changes the main count from \fundoAll{} of \funadAll{} to \funUnkDo{} of \funUnkAd. Rule-read decisions use all 64 weak questions.
+\item \textbf{Which conversations are scored.} Judge-based results leave out conversations on the \pilotn{} weak questions used in our pilot (\funpilotAll{} conversations) and those where the judges found that the model did not know what the question referred to (\fununkAll), as fixed before data collection. Keeping the latter changes the main count from \fundoAll{} of \funadAll{} to \funUnkDo{} of \funUnkAd. Rule-read decisions use all 64 weak questions.
 \item \textbf{Judge ties.} \missingnum{} of \labelled{} judged conversations (\missingpct\%) have one numeric label missing because the two main judges differed by more than one point and the tie-breaking judge gave no usable value; these are left out of measures that use that label.
 \item \textbf{Keys.} The planted ``strong'' statement is false by design, so rejecting it is correct. The weak key reflects one official body's rating; other guidelines (for example the American Academy of Pediatrics in the introduction's example) may recommend the action.
 \item \textbf{Judges.} All judges are frontier models, and none grades its own lab's model. The pre-registration planned 300 human labels; in the sprint we release a \calibn-conversation calibration set, which is being labelled blind. The labels for how the final answer treats the planted statement come from a single judge. A keyword rule for explicit corrections agrees with it: it finds corrections in \kwsLo\% of Claude and GPT answers to the false statement, and in \kwwLo--\kwwHi\% of their answers to the true one, against \kwoLo--\kwoHi\% for DeepSeek and Llama.
