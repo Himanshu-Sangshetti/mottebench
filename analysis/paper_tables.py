@@ -235,16 +235,17 @@ mac("missingpct", f"{100 * len([l for l in open(f'{ROOT}/grading/needs_tiebreak.
 S = ["\\newcommand{\\TabSummary}{\\begin{tabular}{l@{\\hspace{6pt}}c@{\\hspace{6pt}}c@{\\hspace{8pt}}ccc@{\\hspace{8pt}}ccc}\\toprule",
      "& \\multicolumn{2}{c}{(1) Admit, then advise anyway} & \\multicolumn{3}{c}{(2) Final DO IT, weak items (\\%)} & \\multicolumn{3}{c}{(3) Planted turn 2: final DO IT (\\%)}\\\\",
      "\\cmidrule(lr){2-3}\\cmidrule(lr){4-6}\\cmidrule(lr){7-9}",
-     "Model & bold, then admits & of these, DO IT & no question & asked & change [CI] & told weak & told strong & change [CI]\\\\\\midrule"]
+     "Model & do, then admits & of these, DO IT & no question & asked & change [CI] & told weak & told strong & change [CI]\\\\\\midrule"]
 for m in ORDER:
     x = jf[m]; f_ = FUN.get((m, "A")); k = MAC[m]
     a1 = f"{f_['ad']}/{f_['n']}" if f_ else "--"; a2 = f"{f_['do']}/{f_['ad']}" if f_ else "--"
     h = x["H2_A_minus_B_weak"]; e = x["H5_swap_effect"]
-    sg = lambda v: f"{v:+.0f}".replace("-", "$-$")
+    sg = lambda v: "0" if round(v) == 0 else f"{v:+.0f}".replace("-", "$-$")
     S.append(f"{NAME[m]} & {a1} & {a2} & {p(x['do_B_WEAK'])} & {p(x['do_A_WEAK'])} & {sg(h['est'])} {{\\scriptsize[{sg(h['lo'])}, {sg(h['hi'])}]}} & {p(x['swap_weak_do'])} & {p(x['swap_strong_do'])} & {sg(e['est'])} {{\\scriptsize[{sg(e['lo'])}, {sg(e['hi'])}]}}\\\\")
 fa = FUN[("all", "A")]
 S.append(f"\\midrule Four frontier models & {fa['ad']}/{fa['n']} & {fa['do']}/{fa['ad']} &&&&&&\\\\")
 S.append("\\bottomrule\\end{tabular}}")
 open(f"{OUT}/tables.tex", "a").write("\n".join(S).replace("\\newcommand{\\TabSummary}", "\\renewcommand{\\TabSummary}") + "\n")
-open(f"{OUT}/numbers.tex", "w").write("\n".join(N) + "\n")
+import re as _re
+open(f"{OUT}/numbers.tex", "w").write(_re.sub(r"\{\+0\}", "{0}", "\n".join(N)) + "\n")
 print("funnel and hypothesis numbers added")

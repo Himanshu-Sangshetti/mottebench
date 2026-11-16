@@ -2,6 +2,7 @@
 usage: python3 analysis/paper_figs.py   (after grading/aggregate.py, analysis/correction.py report) -> report/paper/fig_*.pdf
 Every panel is computed here from results/*.jsonl and grading/*.jsonl (rep 0, original wording unless stated)."""
 import json, glob, os, re, random, collections
+import re as _re
 import numpy as np
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -105,7 +106,7 @@ for ax, cls, t in [(axs[0], "WEAK", "(a) Weak-evidence items ($n$=64 per model)"
             ax.errorbar(v["est"], y + off, xerr=[[v["est"] - v["lo"]], [v["hi"] - v["est"]]], fmt="o", ms=4, mfc=face, mec=MCOL[m], ecolor=MCOL[m], elinewidth=.8, capsize=1.5, zorder=3)
         if cls == "WEAK":
             h = jf[m]["H2_A_minus_B_weak"]; ok = -10 < h["lo"] and h["hi"] < 10
-            ax.text(104, y, (f"{h['est']:+.0f} [{h['lo']:+.0f}, {h['hi']:+.0f}]  ").replace("-", "−") + ("within ±10" if ok else "not within ±10"), va="center", fontsize=6, color="#067647" if ok else "#b42318")
+            ax.text(104, y, _re.sub(r"^\+0 ", "0 ", f"{h['est']:+.0f} [{h['lo']:+.0f}, {h['hi']:+.0f}]  ").replace("-", "−") + ("within ±10" if ok else "not within ±10"), va="center", fontsize=6, color="#067647" if ok else "#b42318")
     ax.set_xlim(0, 100); ax.set_xlabel("% final answer DO IT"); ax.grid(axis="x", lw=.3, alpha=.4); ax.set_title(t, loc="left")
 axs[0].set_yticks(range(len(ms))); axs[0].set_yticklabels([NAME[m] for m in ms[::-1]]); axs[0].tick_params(axis="y", length=0)
 axs[0].text(104, len(ms) - .35, "change, pts [95% CI]", fontsize=6, color="#475467")
@@ -133,7 +134,7 @@ ax = fig.add_subplot(gs[0, 1])
 for i, m in enumerate(ms):
     y = len(ms) - 1 - i; e = jf[m]["H5_swap_effect"]
     ax.errorbar(e["est"], y, xerr=[[e["est"] - e["lo"]], [e["hi"] - e["est"]]], fmt="o", ms=4.5, color=MCOL[m], capsize=2, elinewidth=1.1, zorder=3)
-    ax.text(e["hi"] + 2, y + .22, f"{e['est']:+.0f} [{e['lo']:+.0f}, {e['hi']:+.0f}]".replace("-", "−"), va="center", fontsize=6)
+    ax.text(e["hi"] + 2, y + .22, _re.sub(r"^\+0 ", "0 ", f"{e['est']:+.0f} [{e['lo']:+.0f}, {e['hi']:+.0f}]").replace("-", "−"), va="center", fontsize=6)
 ax.axvspan(-10, 20, color="#b42318", alpha=.07, lw=0); ax.axvspan(40, 80, color="#067647", alpha=.07, lw=0)
 ax.text(5, len(ms) - .35, "ignores (<20)", ha="center", fontsize=6, color="#b42318"); ax.text(60, len(ms) - .35, "follows (≥40)", ha="center", fontsize=6, color="#067647")
 ax.set_xlim(-10, 80); ax.set_ylim(-.6, len(ms) - .1); ax.set_yticks(range(len(ms))); ax.set_yticklabels([]); ax.tick_params(axis="y", length=0)
