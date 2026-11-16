@@ -155,6 +155,11 @@ downloads them. A self-check of the whole setup: [VERIFY.md](VERIFY.md).
 }
 ```
 
+## License
+
+Code: [MIT](LICENSE). Data, labels, transcripts, paper and website: [CC BY 4.0](LICENSE-DATA.md), with notes on the
+official sources and on model outputs. Nothing here is medical or educational advice.
+
 ## Author
 
 Himanshu Sangshetti · himanshusangshetti@gmail.com
