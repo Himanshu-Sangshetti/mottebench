@@ -4,6 +4,8 @@
 
 A benchmark for the gap between what a language model implies and what it will defend.
 
+**Website:** https://himanshu-sangshetti.github.io/mottebench/ (every question and conversation, browsable)
+
 **Paper:** [report/MotteBench.pdf](report/MotteBench.pdf), submitted to the AI × Epistemics Research Sprint (November 2026)
 
 **Questions and keys:** [data/QUESTIONS.md](data/QUESTIONS.md) · **Every conversation:** [results/](results/) · **Words sent to models:** [runner/protocol.py](runner/protocol.py)

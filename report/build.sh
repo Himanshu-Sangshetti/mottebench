@@ -13,3 +13,4 @@ python3 analysis/paper_tables.py
 (cd report/paper && tectonic -X compile main.tex)
 cp report/paper/main.pdf report/MotteBench.pdf
 echo "built report/MotteBench.pdf"
+python3 site/build_site.py
