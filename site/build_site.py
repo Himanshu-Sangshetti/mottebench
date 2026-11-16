@@ -28,5 +28,15 @@ for f in sorted(glob.glob(f"{ROOT}/results/main__*.jsonl")):
 json.dump(C, open(f"{D}/data/conversations.json", "w"), separators=(",", ":"))
 for fig, out in [("fig1_funnel", "funnel"), ("fig3_planted", "planted")]:
     subprocess.run(["pdftoppm", "-png", "-r", "220", "-singlefile", f"{ROOT}/report/paper/{fig}.pdf", f"{D}/img/{out}"], check=True)
+# small data for the home-page visuals: every scored weak-evidence conversation (evidence question, frontier models)
+H = []
+for c in C:
+    l = L.get(c["id"], {})
+    if c["v"] != "Evidence question" or c["key"] != "WEAK" or c["m"] == "Llama 3.1 8B" or not l: continue
+    it = next(i for i in items if i["item_id"] == c["item"])
+    if it.get("pilot") in (True, "True") or l.get("T1_knows") == "no": continue
+    H.append(dict(id=c["id"], m=c["m"], q=it["question"], t1=l.get("T1_rec"), t2=l.get("T2_evid"), d=c["d"]))
+json.dump(H, open(f"{D}/data/home.json", "w"), separators=(",", ":"))
+print(len(H), "home lines;", sum(h["t1"] == "DO" for h in H), "turn-1 do")
 shutil.copy(f"{ROOT}/report/MotteBench.pdf", f"{D}/MotteBench.pdf")
 print(len(Q), "questions;", len(C), "conversations")

@@ -52,6 +52,22 @@ footer{border-top:1px solid var(--line)}footer .in{max-width:960px;margin:0 auto
 footer a{color:var(--mut)}
 pre{font:14px/1.6 Geist,ui-sans-serif,system-ui,sans-serif;background:var(--surface);border:1px solid var(--line);padding:16px;overflow:auto;color:var(--ink)}
 button.more{font:inherit;background:none;border:0;color:var(--ink);font-weight:500;cursor:pointer;padding:14px 0}button.more::after{content:" →";color:var(--acc)}
+
+#tip{position:fixed;display:none;z-index:20;max-width:340px;background:var(--surface);border:1px solid var(--line);padding:10px 12px;font-size:14px;color:var(--text);box-shadow:0 6px 24px rgba(22,20,15,.08);pointer-events:auto}
+.viz{margin:22px 0 8px}.viz svg{display:block;width:100%;height:auto;overflow:visible}
+.ax{font-size:14px;fill:var(--ink);font-weight:500}.axm{font-size:14px;fill:var(--mut)}.ann{font-size:14px;fill:var(--text);font-weight:500;transition:opacity .6s}.ann.acc{fill:var(--acc)}
+.col{stroke:var(--line);stroke-width:1}.grid{stroke:var(--line);stroke-width:1}
+.band{fill:none;stroke:var(--acc);stroke-opacity:.35;stroke-width:1.5}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;cursor:pointer}.ln.oth{stroke:var(--mut);stroke-opacity:.35}.ln.adm{stroke:var(--mut);stroke-opacity:.75}.ln.ret{stroke:var(--acc);stroke-opacity:.6}.ln.hl{stroke-width:4;stroke-opacity:1}
+.db{stroke:var(--ink);stroke-width:2;transition:x2 1.2s cubic-bezier(.3,.7,.2,1)}.db.acc{stroke:var(--acc)}
+.dw{fill:var(--bg);stroke:var(--ink);stroke-width:2}.ds{fill:var(--ink);stroke:var(--bg);stroke-width:2;transition:cx 1.2s cubic-bezier(.3,.7,.2,1)}.ds.acc{fill:var(--acc)}
+.fr{display:grid;grid-template-columns:minmax(220px,38%) 1fr 90px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.ft{height:14px;background:transparent}.fb{height:14px;width:0;background:var(--mut);opacity:.55;border-radius:0 4px 4px 0;transition:width 1s cubic-bezier(.3,.7,.2,1)}.fb.acc{background:var(--acc);opacity:1}
+.fn{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500}
+.key{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--mut);margin-top:6px}.key i{display:inline-block;width:22px;height:3px;vertical-align:middle;margin-right:8px;border-radius:2px}
+.key i.o{background:var(--acc)}.key i.g{background:var(--mut);opacity:.75}.key i.l{background:var(--mut);opacity:.35}
+.key i.c{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink)}.key i.cf{width:12px;height:12px;border-radius:50%;background:var(--ink)}
+@media(max-width:640px){.fr{grid-template-columns:1fr 70px}.fr .ft{grid-column:1/-1;order:3}}
 </style>
 </head>
 <body>
@@ -98,14 +114,21 @@ ${T('Model','the return','"DO IT. It takes about five minutes, carries little ri
 <div><h3>A planted turn</h3><p>We replace the model's own second answer with "the evidence is weak" (true) or "strong" (false). If the decision listens to the evidence statement, it should change.</p></div>
 </div>
 
-<h2>What we found</h2>
-<div class="cols two">
-<div><h3>Honest when asked</h3><p>The Claude and GPT models called weak evidence weak in 75–84% of conversations.</p></div>
-<div><h3>But the admission does not change the advice</h3><p>After recommending an action and then calling the evidence weak, models said DO IT again 30 of 40 times, just as often as when they admitted nothing (24 of 33).</p></div>
-<div><h3>Claude and GPT are anchored</h3><p>Their decision barely moved after a planted "weak" or "strong" turn (0 to +12 points), and they disputed even the true statement 53–59% of the time.</p></div>
-<div><h3>DeepSeek and Llama are suggestible</h3><p>They followed the planted turn even when it was false: DeepSeek went from 0% to 41% DO IT, Llama from 0% to 55%.</p></div>
-</div>
-<div class="links"><a href="#/results">Full results and what was not run</a></div>
+<h2>The same pattern in 73 real conversations</h2>
+<p>Every line is one conversation on a weak-evidence question where the model's first answer recommended the action. It then moves to what the model said about the evidence, and ends at its final answer. Hover a line to see the question; click it to read the conversation.</p>
+<div class="viz" id="v-lines"></div>
+<div class="key"><span><i class="o"></i>called the evidence weak, then said DO IT again</span><span><i class="g"></i>called the evidence weak, then did not say DO IT</span><span><i class="l"></i>did not call the evidence weak</span></div>
+
+<h2>Counted step by step</h2>
+<p class="mut">Four frontier models pooled. Bars are drawn to the same scale.</p>
+<div class="viz" id="v-funnel"></div>
+<p style="margin-top:14px">Three in four models that admitted weak evidence went back to DO IT. Models that admitted nothing did the same (24 of 33), so the admission made no visible difference.</p>
+
+<h2>Why: we planted the evidence statement</h2>
+<p>For 64 weak-evidence questions per model, we replaced the model's own second answer with "the evidence is weak" (true) or "the evidence is strong" (false), then asked for the bottom line. If the decision listens to the evidence statement, the dot should move far to the right.</p>
+<div class="viz" id="v-planted"></div>
+<div class="key"><span><i class="c"></i>after a planted "weak" (true)</span><span><i class="cf"></i>after a planted "strong" (false)</span></div>
+<p style="margin-top:14px">Claude and GPT barely move: they are anchored to their first answer, and even dispute the true statement. DeepSeek and Llama jump: they follow whatever the second turn says, even when it is false. No model accepts the true statement and rejects the false one.</p>
 
 <h2>Everything is open</h2>
 <p>Every question links to its official record. Every conversation is here turn by turn, with planted turns marked and the labels shown. The <a href="https://github.com/Himanshu-Sangshetti/mottebench">repository</a> has every raw request and response, the pre-registered plan, the judge labels, and one command that rebuilds every number in the paper.</p>
@@ -212,9 +235,57 @@ async function conv(id){await getQ();await getC();const c=C.find(x=>x.id==id);if
  ${L.T1_rec?`<div>Judges, turn 1</div><div>${REC[L.T1_rec]||L.T1_rec}</div>`:''}${L.T2_evid!=null?`<div>Judges, turn 2</div><div>evidence called ${L.T2_evid} on a scale from 1 (very weak) to 5 (strong)</div>`:''}${L.T3_unc?`<div>Judges, final turn</div><div>${UNC[L.T3_unc]||L.T3_unc}</div>`:''}
  <div>Conversation ID</div><div>${esc(c.id)}</div></div>${turns(c)}`}
 
+const NS='http://www.w3.org/2000/svg',el=(t,a={},p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+function tip(){let t=$('#tip');if(!t){t=document.createElement('div');t.id='tip';document.body.appendChild(t)}return t}
+function showTip(ev,html){const t=tip();t.innerHTML=html;t.style.display='block';const x=Math.min(ev.clientX+14,innerWidth-t.offsetWidth-12);t.style.left=x+'px';t.style.top=(ev.clientY+14)+'px'}
+function hideTip(){const t=$('#tip');if(t)t.style.display='none'}
+const seen=(node,fn)=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){fn();io.disconnect()}}),{threshold:.25});io.observe(node)};
+async function drawLines(){const box=$('#v-lines');if(!box)return;const H=await (await fetch('data/home.json')).json();
+ const D=H.filter(h=>h.t1=='DO'&&h.t2!=null),W=box.clientWidth,Ht=380,pl=110,pr=150,pt=30,pb=44,xs=[pl,pl+(W-pl-pr)/2,W-pr];
+ const y=v=>pt+(1-v)*(Ht-pt-pb),t2y=e=>y((e-1)/4),t3y=d=>y(d=='DO IT'?1:d=='IT DEPENDS'?.5:0);
+ const svg=el('svg',{viewBox:`0 0 ${W} ${Ht}`,width:W,height:Ht,role:'img','aria-label':'Each line is one conversation where turn 1 recommended the action'},box);
+ [['Turn 1','the advice'],['Turn 2','what it says about the evidence'],['Turn 3','the final answer']].forEach(([a,b],i)=>{const g=el('text',{x:xs[i],y:Ht-22,'text-anchor':'middle',class:'ax'},svg);g.textContent=a;const g2=el('text',{x:xs[i],y:Ht-4,'text-anchor':'middle',class:'axm'},svg);g2.textContent=b;el('line',{x1:xs[i],x2:xs[i],y1:pt-8,y2:Ht-pb+6,class:'col'},svg)});
+ [[1,'recommends it'],[0,'']].forEach(([v,t])=>{if(!t)return;const e=el('text',{x:xs[0]-14,y:y(v)+5,'text-anchor':'end',class:'axm'},svg);e.textContent=t});
+ [[5,'strong'],[1,'very weak']].forEach(([v,t])=>{const e=el('text',{x:xs[1]-14,y:t2y(v)+5,'text-anchor':'end',class:'axm'},svg);e.textContent=t});
+ [['DO IT',1],['IT DEPENDS',.5],["DON'T",0]].forEach(([t,v])=>{const e=el('text',{x:xs[2]+14,y:y(v)+5,class:'axm'},svg);e.textContent=t});
+ const rnd=i=>{const s=Math.sin(i*99.1)*1e4;return s-Math.floor(s)};const paths=[];
+ D.forEach((h,i)=>{const j=k=>(rnd(i*3+k)-.5)*(k==0?40:k==1?34:30),adm=h.t2<=2,ret=adm&&h.d=='DO IT';
+  const p=[[xs[0],y(1)+j(0)],[xs[1],t2y(h.t2)+j(1)],[xs[2],t3y(h.d)+j(2)]],c=(a,b)=>`C${a[0]+(b[0]-a[0])*.5},${a[1]} ${a[0]+(b[0]-a[0])*.5},${b[1]} ${b[0]},${b[1]}`;
+  const path=el('path',{d:`M${p[0][0]},${p[0][1]} ${c(p[0],p[1])} ${c(p[1],p[2])}`,class:'ln '+(ret?'ret':adm?'adm':'oth')},svg);paths.push(path);
+  path.addEventListener('mousemove',ev=>{path.classList.add('hl');showTip(ev,`<b>${esc(h.q)}</b><br>${esc(h.m)} · turn 2 evidence: ${h.t2} of 5 · final: ${esc(h.d||'free answer')}<br><a href="#/c/${h.id}">open conversation</a>`)});
+  path.addEventListener('mouseleave',()=>{path.classList.remove('hl');hideTip()});path.addEventListener('click',()=>location.hash='#/c/'+h.id)});
+ paths.sort((a,b)=>a.classList.contains('ret')-b.classList.contains('ret')).forEach(p=>svg.appendChild(p));
+ const lab=(t,x,yy,cls)=>{const e=el('text',{x,y:yy,class:cls},svg);e.textContent=t};
+ lab('40 retreat to weak',xs[1]+22,t2y(1.2)+4,'ann');
+ lab('30 return to DO IT',xs[2]+14,y(1)-16,'ann acc');
+ paths.forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L});
+ seen(box,()=>paths.forEach((p,i)=>{p.style.transition=`stroke-dashoffset 1.6s cubic-bezier(.3,.7,.2,1) ${i*12}ms`;p.style.strokeDashoffset=0}))}
+function drawFunnel(){const box=$('#v-funnel');if(!box)return;
+ const R=[['Weak-evidence conversations, scored',229,''],['Turn 1 recommends the action',73,'the bold claim'],['…then turn 2 calls the evidence weak',40,'the retreat'],['…then turn 3 says DO IT again',30,'the return']];
+ box.innerHTML=R.map(([t,n,s],i)=>`<div class="fr"><div class="fl">${t}${s?` <span class="mut">· ${s}</span>`:''}</div><div class="ft"><div class="fb${i==3?' acc':''}" data-w="${n/229*100}"></div></div><div class="fn">${n}</div></div>`).join('')+
+ `<div class="fr"><div class="fl mut">For comparison: turn 1 recommends, turn 2 does not call it weak, turn 3 says DO IT</div><div class="ft"><div class="fb" data-w="${24/229*100}"></div></div><div class="fn">24 of 33</div></div>`;
+ seen(box,()=>box.querySelectorAll('.fb').forEach((b,i)=>setTimeout(()=>b.style.width=b.dataset.w+'%',i*180)))}
+function drawPlanted(){const box=$('#v-planted');if(!box)return;
+ const R=[['Claude Sonnet 5.5',11,23],['Claude Haiku 5.5',22,22],['GPT-6.1-Sol',17,20],['DeepSeek V4 Pro',0,41],['Llama 3.1 8B',0,55]];
+ const W=box.clientWidth,row=56,pl=170,pr=150,Ht=R.length*row+56,x=v=>pl+v/60*(W-pl-pr);
+ const svg=el('svg',{viewBox:`0 0 ${W} ${Ht}`,width:W,height:Ht,role:'img','aria-label':'DO IT rate after a planted weak versus strong turn, per model'},box);
+ [0,20,40,60].forEach(v=>{el('line',{x1:x(v),x2:x(v),y1:10,y2:Ht-34,class:'grid'},svg);const t=el('text',{x:x(v),y:Ht-14,'text-anchor':'middle',class:'axm'},svg);t.textContent=v+'%'});
+ const ax=el('text',{x:pl+(W-pl-pr)/2,y:Ht,'text-anchor':'middle',class:'axm'},svg);ax.textContent='share of final answers that are DO IT';
+ const anim=[];
+ R.forEach(([m,a,b],i)=>{const yy=28+i*row,d=b-a,fol=d>=40;
+  const t=el('text',{x:pl-16,y:yy+5,'text-anchor':'end',class:'ax'},svg);t.textContent=m;
+  const ln=el('line',{x1:x(a),x2:x(a),y1:yy,y2:yy,class:'db'+(fol?' acc':'')},svg);
+  el('circle',{cx:x(a),cy:yy,r:7,class:'dw'},svg);const s=el('circle',{cx:x(a),cy:yy,r:7,class:'ds'+(fol?' acc':'')},svg);
+  const lb=el('text',{x:x(Math.max(a,b))+18,y:yy+5,class:'ann'+(fol?' acc':'')},svg);lb.textContent=(d>0?'+':'')+d+' pts · '+(fol?'follows it':'ignores it');lb.style.opacity=0;
+  const hit=el('rect',{x:0,y:yy-row/2,width:W,height:row,fill:'transparent'},svg);
+  hit.addEventListener('mousemove',ev=>showTip(ev,`<b>${m}</b><br>DO IT after planted "weak" (true): ${a}%<br>DO IT after planted "strong" (false): ${b}%`));hit.addEventListener('mouseleave',hideTip);
+  anim.push(()=>{ln.setAttribute('x2',x(b));s.setAttribute('cx',x(b));lb.style.opacity=1})});
+ const lg=el('g',{},svg);el('circle',{cx:pl,cy:-2,r:0},lg);
+ seen(box,()=>anim.forEach((f,i)=>setTimeout(f,300+i*160)))}
+
 async function route(){const h=location.hash.replace(/^#\/?/,''),[path,qs]=h.split('?'),p=new URLSearchParams(qs||'');
  document.querySelectorAll('nav a[data-r]').forEach(a=>a.classList.toggle('on',a.dataset.r==(path.startsWith('c/')?'conversations':path)));
- if(!path)$('#app').innerHTML=home();else if(path=='results')$('#app').innerHTML=results();else if(path=='questions')await questions();
+ if(!path){$('#app').innerHTML=home();drawLines();drawFunnel();drawPlanted()}else if(path=='results')$('#app').innerHTML=results();else if(path=='questions')await questions();
  else if(path=='conversations')await conversations(p);else if(path.startsWith('c/'))await conv(path.slice(2));else $('#app').innerHTML=home();scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 </script>
