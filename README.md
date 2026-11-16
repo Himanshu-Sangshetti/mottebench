@@ -1,14 +1,15 @@
 # MotteBench
 
-**Language models admit the evidence is weak, then advise anyway.**
+### Language models admit the evidence is weak, then advise anyway.
+
+[**Website**](https://himanshu-sangshetti.github.io/mottebench/) · [**Paper (PDF)**](report/MotteBench.pdf) · [**All 300 questions**](https://himanshu-sangshetti.github.io/mottebench/#/questions) · [**All 2,700 conversations**](https://himanshu-sangshetti.github.io/mottebench/#/conversations)
+
+![Threads chart: 73 conversations where the model first recommended the action. The orange ones admit the evidence is weak at turn 2, then go back to DO IT at turn 3.](docs/img/threads.png)
+
+*Each line is one real conversation. The model recommends an action, admits the evidence is weak when asked (orange lines dip),
+then goes straight back to "DO IT". 30 of the 40 that admitted weak evidence did this; 24 of 33 that admitted nothing ended the same way.*
 
 A benchmark for the gap between what a language model implies and what it will defend.
-
-**Website:** https://himanshu-sangshetti.github.io/mottebench/ (every question and conversation, browsable)
-
-**Paper:** [report/MotteBench.pdf](report/MotteBench.pdf), submitted to the AI × Epistemics Research Sprint (November 2026)
-
-**Questions and keys:** [data/QUESTIONS.md](data/QUESTIONS.md) · **Every conversation:** [results/](results/) · **Words sent to models:** [runner/protocol.py](runner/protocol.py)
 
 ## The question
 
@@ -54,6 +55,8 @@ evidence question (229 of 256 conversations are scored: pilot questions and topi
 
 Models went back to DO IT just as often whether or not they had admitted the evidence was weak.
 
+![Each step of the pattern per model, and the final DO IT rate by path](docs/img/funnel.png)
+
 **3. The planted turn shows two opposite failures.** Share of DO IT on weak-evidence questions after a planted
 second answer (64 questions per model, read by rule). Before collecting data we fixed the cut-offs: a difference under
 20 points means the decision ignores the statement; 40 or more means it follows it.
@@ -69,6 +72,8 @@ second answer (64 questions per model, read by rule). Before collecting data we 
 Claude and GPT are **anchored**: they keep their first answer whatever the second turn says, and even dispute the
 true statement 53–59% of the time. DeepSeek and Llama are **suggestible**: they follow the second turn, even when it is
 false. No model accepts the true statement and rejects the false one.
+
+![DO IT after a planted weak versus strong turn, per model, and how replies treat the planted statement](docs/img/planted.png)
 
 **How much to trust this.** The planted-turn result is the strongest (direct test of cause, 64 questions per model per
 version). The 75% return rate is solid, but rests on 40 conversations from 20 questions. The paper rates every claim in its Table 6.
