@@ -3,7 +3,8 @@
 **Language models admit the evidence is weak, then advise anyway.**
 A benchmark for the gap between what a language model implies and what it will defend.
 
-Paper: [report/MotteBench.pdf](report/MotteBench.pdf), submitted to the AI × Epistemics Research Sprint (November 2026).
+**Paper:** [report/MotteBench.pdf](report/MotteBench.pdf), submitted to the AI × Epistemics Research Sprint (November 2026)
+**Questions and keys:** [data/QUESTIONS.md](data/QUESTIONS.md) · **Every conversation:** [results/](results/) · **Words sent to models:** [runner/protocol.py](runner/protocol.py)
 
 ## The question
 
@@ -35,7 +36,8 @@ each on the same 100-question core: 2,700 conversations in total, 2,080 of them 
 **1. When asked, the Claude and GPT models are mostly honest about weak evidence.** They called it weak in 75–84% of
 weak-evidence conversations (DeepSeek: 47%).
 
-**2. But the admission does not change the advice.** Four frontier models pooled, weak-evidence questions:
+**2. But the admission does not change the advice.** Four frontier models pooled, weak-evidence questions with the
+evidence question (229 of 256 conversations are scored: pilot questions and topics the model did not know are left out):
 
 | Step | Conversations | Share of the row above |
 |---|---|---|
@@ -65,8 +67,8 @@ true statement 53–59% of the time. DeepSeek and Llama are **suggestible**: the
 false. No model accepts the true statement and rejects the false one.
 
 **How much to trust this.** The planted-turn result is the strongest (direct test of cause, 64 questions per model per
-version). The 75% return rate is solid, but rests on 40 conversations from 20 questions. The judges are AI models; a
-hand-labelled check is in progress. The paper rates every claim in its Table 6.
+version). The 75% return rate is solid, but rests on 40 conversations from 20 questions. The judges are AI models and have not yet
+been checked against human labels; a 100-conversation set for that check is prepared. The paper rates every claim in its Table 6.
 
 ### What was planned and what was run
 
@@ -78,7 +80,7 @@ hand-labelled check is in progress. The paper rates every claim in its Table 6.
 | Rewording the user's question, 3 repeats | 30 questions, frontier models | 30 questions, Haiku and DeepSeek only |
 | Placebo turn, consistency instruction, longer chats with a simulated user | yes | not run |
 | Claude Opus 5.5 and GLM-5.3 Flash as tested models | yes | not run |
-| Human labels to check the judges | 300 conversations | 100-conversation set being labelled |
+| Human labels to check the judges | 300 conversations | 100-conversation set prepared, not yet labelled |
 
 ## The data
 
@@ -136,6 +138,18 @@ python3 viewer/serve.py     # trace viewer at http://127.0.0.1:8800 (dataset at 
 
 OpenRouter runs need `OPENROUTER_API_KEY`. Cochrane abstracts are not redistributed; `data/sources/cochrane/fetch.py`
 downloads them. A self-check of the whole setup: [VERIFY.md](VERIFY.md).
+
+## Cite
+
+```bibtex
+@misc{sangshetti2026mottebench,
+  title  = {MotteBench: Language Models Admit the Evidence Is Weak, Then Advise Anyway},
+  author = {Sangshetti, Himanshu},
+  year   = {2026},
+  note   = {AI x Epistemics Research Sprint},
+  url    = {https://github.com/Himanshu-Sangshetti/mottebench}
+}
+```
 
 ## Author
 
