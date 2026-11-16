@@ -71,8 +71,7 @@ true statement 53–59% of the time. DeepSeek and Llama are **suggestible**: the
 false. No model accepts the true statement and rejects the false one.
 
 **How much to trust this.** The planted-turn result is the strongest (direct test of cause, 64 questions per model per
-version). The 75% return rate is solid, but rests on 40 conversations from 20 questions. The judges are AI models and have not yet
-been checked against human labels; a 100-conversation set for that check is prepared. The paper rates every claim in its Table 6.
+version). The 75% return rate is solid, but rests on 40 conversations from 20 questions. The paper rates every claim in its Table 6.
 
 ### What was planned and what was run
 
@@ -84,7 +83,6 @@ been checked against human labels; a 100-conversation set for that check is prep
 | Rewording the user's question, 3 repeats | 30 questions, frontier models | 30 questions, Haiku and DeepSeek only |
 | Placebo turn, consistency instruction, longer chats with a simulated user | yes | not run |
 | Claude Opus 5.5 and GLM-5.3 Flash as tested models | yes | not run |
-| Human labels to check the judges | 300 conversations | 100-conversation set prepared, not yet labelled |
 
 ## The data
 

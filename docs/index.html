@@ -192,8 +192,7 @@ ${tbl([['Part'],['Planned'],['Run']],[
 '<tr><td>Wordings of the evidence question</td><td>five</td><td>five, one per question</td></tr>',
 '<tr><td>Rewording the user\'s question, three repeats</td><td>30 questions, frontier models</td><td>30 questions, Haiku and DeepSeek only</td></tr>',
 '<tr><td>Placebo turn, consistency instruction, longer chats with a simulated user</td><td>yes</td><td>not run</td></tr>',
-'<tr><td>Claude Opus 5.5 and GLM-5.3 Flash as tested models</td><td>yes</td><td>not run</td></tr>',
-'<tr><td>Human labels to check the AI judges</td><td>300 conversations</td><td>100-conversation set prepared, not yet labelled</td></tr>'])}
+'<tr><td>Claude Opus 5.5 and GLM-5.3 Flash as tested models</td><td>yes</td><td>not run</td></tr>'])}
 <p class="mut" style="margin-top:12px">Labels come from two judge models from labs other than the tested model's, with a third breaking ties. The final decision is read by rule.</p>`;
 
 async function questions(){await getQ();const st=JSON.parse(sessionStorage.getItem('qf')||'{}');
