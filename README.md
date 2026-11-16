@@ -125,7 +125,7 @@ All models run at their provider's default settings, with no tools or web search
 
 | Folder | Contents |
 |---|---|
-| `plan/` | the pre-registered plan with dated changes, the run order, and a log of every stop and fix |
+| `plan/` | the run order, and a log of every stop and fix |
 | `data/` | the 300 questions, readable copies, the cross-check, official source files, build scripts |
 | `runner/` | every word sent to models (`protocol.py`), the runner, providers and request recorder |
 | `grading/` | rubric, judge panel, label aggregation, human-label sets |

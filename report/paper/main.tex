@@ -256,7 +256,7 @@ Claude Opus~5.5 and GLM-5.3 Flash as tested models & Yes & Not run\\\bottomrule
 \end{itemize}
 
 \section{Reproducibility and access routes}\label{app:repro}
-\paragraph{Released with the repository} The questions with official source links and a script that re-derives every key; the pre-registered plan with its dated changes; every request and raw response, with a record per run of the access route and code version; all judge labels; and the analysis code that generates every number, table and figure in this paper from the result files.
+\paragraph{Released with the repository} The questions with official source links and a script that re-derives every key; every request and raw response, with a record per run of the access route and code version; all judge labels; and the analysis code that generates every number, table and figure in this paper from the result files.
 
 \paragraph{Access routes} Claude Sonnet~5.5 was run through the Claude Code command-line tool behind a local recorder that strips all added context; every forwarded request is logged and contains only our system prompt and messages. Claude Haiku~5.5, GPT-6.1-Sol and DeepSeek V4 Pro were run through the OpenRouter chat API with fallbacks off: the OpenAI and Anthropic models on their own labs' hosts, and DeepSeek V4 Pro on a fixed third-party host serving 8-bit (fp8) weights (StreamLake, with Baidu as a fixed backup for 3 calls). Llama~3.1~8B was run locally. Judges: GPT-6-Astra through the Codex command-line tool; Claude Opus~5.5 through Claude Code with the recorder; Nemotron and Gemini through OpenRouter.
 
