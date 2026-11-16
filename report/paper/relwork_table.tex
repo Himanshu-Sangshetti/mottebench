@@ -1,0 +1,73 @@
+% Related-work comparison table for MotteBench. Use with \input{relwork.tex}.
+% Needs refs_new.bib in \bibliography{refs,refs_new}. Every cell is backed by a
+% quote from the cited paper's full text (evidence log kept outside the repo).
+\providecommand{\rwY}{\ensuremath{\checkmark}}
+\providecommand{\rwN}{\ensuremath{\times}}
+\providecommand{\rwP}{\ensuremath{\sim}}
+\begin{table}[H]
+\centering
+\caption{Prior work compared with MotteBench. \emph{Turns}: model turns per item.
+\emph{What moves the model}: what the design uses to make the model change its answer.
+\emph{Scored against}: the reference an answer is checked against.
+\emph{Own claims compared}: whether the design compares the same model's claims or
+actions at different points. \emph{Own turn edited}: whether the design writes or
+replaces text in the model's own earlier turn. Only MotteBench compares what one model
+implies, defends and decides in one conversation with no pushback, scores the defence
+against an official evidence grade, and plants a true or a false statement in the
+model's own turn to test whether the final decision depends on it.}
+\label{tab:relwork}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}l c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X c c >{\raggedright\arraybackslash}p{1.25in}@{}}
+\toprule
+Work & Turns & What moves the model & Scored against & \begin{tabular}[b]{@{}c@{}}Own claims\\compared\end{tabular} & \begin{tabular}[b]{@{}c@{}}Own turn\\edited\end{tabular} & Domain \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Single-turn honesty and knowledge reliability}}\\
+MASK \citep{ren2025mask} & 1--2 & Pressure prompt (incentive to lie) & Own belief; answer label & \rwP$^a$ & ?$^b$ & General facts \\
+AA-Omniscience \citep{jackson2025omniscience} & 1 & None & Answer key from authoritative sources & \rwN & \rwN & 42 topics, 6 domains \\
+AbstentionBench \citep{kirichenko2025abstentionbench} & 1 & None (unanswerable or underspecified items) & Abstention label & \rwN & \rwN & 20 datasets, incl.\ medical QA \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Multi-turn sycophancy and consistency}}\\
+FlipFlop \citep{laban2023flipflop} & 2 & User pushback (``Are you sure?'') & Answer key & \rwY & \rwN & 7 classification tasks \\
+Firm or Fickle \citep{li2025firm} & many & User follow-ups (8 types) & Answer key & \rwY & \rwN & MCQ (MMLU and others) \\
+SYCON-Bench \citep{hong2025sycon} & 5 & User pressure & Model's initial stance & \rwY & \rwN & Debate, unethical queries, false presuppositions \\
+MedPRESS \citep{joy2026medpress} & 5 & Escalating patient pressure & Expected safe stance & \rwY & \rwN & Health advice \\
+SPINE \citep{tang2026spine} & $\le$25 & Adaptive LLM user pushback & Correct position & \rwY$^c$ & \rwN & False presuppositions, unethical queries \\
+Reset Is Not Recovery \citep{shnaidman2026reset} & many & User pressure, then reset & Answer key; clean-context run & \rwP$^d$ & \rwN$^e$ & TruthfulQA-MC, MMLU-Pro \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Evidence and health advice}}\\
+MedEvidence \citep{polzak2025medevidence} & 1 & None & Systematic-review conclusion$^f$ & \rwN & \rwN & Medicine \\
+CPGBench \citep{tan2026cpgbench} & many & None & Official clinical guideline recommendation & \rwP$^g$ & \rwN & Medicine, 9 regions \\
+HealthBench \citep{arora2025healthbench} & many & None & Physician-written rubrics & ? & ? & Health \\
+Yun et al.\ \citep{yun2026framing} & 1 or 4 & Question framing; user persuasion & Agreement between paired framings & \rwN & \rwN & Medicine (Cochrane RCT abstracts) \\
+Reporting Under Pressure \citep{balani2026reporting} & 1 & Editorial framing in prompt & Known data pattern & \rwN & \rwN & Statistical reports \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Says versus does}}\\
+Knowing Is Not Enough \citep{pal2025knowing} & 1--2 & User challenge; bets; tool option & Answer correctness & \rwP$^h$ & \rwN & QA, forecasting, code, math \\
+RiskEval \citep{wang2026riskeval} & 1 & Error penalty in prompt & Answer key & \rwP$^h$ & \rwN & HLE, GPQA, GSM8K \\
+Doing What They Say \citep{wang2026doing} & 1 & None & Reference action (pot odds) & \rwY$^i$ & \rwN & Poker agent \\
+Deception by Omission \citep{florin2026omission} & 2 & Neutral or reminding user follow-up & Planted mistake (always false) & \rwP$^j$ & \rwY & Chat and agentic tasks \\
+\midrule
+\textbf{MotteBench (this work)} & 3 & \textbf{None} (neutral question) & \textbf{Official evidence grade} (USPSTF, GRADE, WWC) & \rwY & \rwY$^k$ & Health, education \\
+\bottomrule
+\end{tabularx}
+
+\vspace{3pt}
+\begin{minipage}{\textwidth}
+\scriptsize
+\rwY\ yes; \rwP\ partly; \rwN\ no; ? not stated in the text we read (HealthBench: abstract only).
+$^a$Pressured statement vs.\ belief elicited in a separate prompt.
+$^b$The Doubling Down archetype has a prior falsehood in context; the text does not say how it was written.
+$^c$Also compares the reasoning trace with the reply.
+$^d$Compares against a separate clean-context run.
+$^e$Edits the user's pressure turns (delete, truncate, summarise); assistant turns are a fixed ``Understood.''
+$^f$Labels include ``uncertain effect'' and ``insufficient data''; GRADE certainty kept as metadata.
+$^g$Guideline detection vs.\ adherence, as separate tasks.
+$^h$Stated confidence vs.\ a later action or abstain decision.
+$^i$Reasoning vs.\ stated conclusion vs.\ executed action.
+$^j$Whether the later reply discloses the planted mistake.
+$^k$Turn 2 replaced by a true (evidence weak) or false (evidence strong) statement.
+\end{minipage}
+\end{table}
+

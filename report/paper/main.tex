@@ -24,6 +24,7 @@
 \setlist{nosep,leftmargin=1.3em}
 \setlength{\parskip}{2.5pt}
 \setlength{\parindent}{0pt}
+\renewcommand{\topfraction}{.92}\renewcommand{\textfraction}{.06}\renewcommand{\floatpagefraction}{.8}
 \input{numbers.tex}
 \input{fignumbers.tex}
 \input{tables.tex}
@@ -66,13 +67,13 @@ This is a \emph{motte-and-bailey}. The name comes from a castle design: an expos
 
 \paragraph{The open problem} Ben~N and Alex Csaky's State of the Field review~\citep{csaky2026state} lists ``gaps between what it implies and what it will defend'' and ``motte-and-bailey retreats'' among the ways a model can mislead users about how solid its claims are. It argues that evals quantifying this kind of misleadingness may be the most promising work in the area because existing evals measure so little of it, and that the multi-turn setting matters because these failures ``mostly emerge over conversation, not single prompts''. The sprint's Track~1 asks the same question: can we measure the gap between what a model implies and what it will defend?
 
-\paragraph{Why existing benchmarks miss it} Honesty benchmarks such as MASK~\citep{ren2025mask} and AA-Omniscience~\citep{jackson2025omniscience} score one exchange at a time, so they cannot compare what a model implied earlier with what it defends later. Multi-turn benchmarks such as FlipFlop~\citep{laban2023flipflop}, SYCON-Bench~\citep{hong2025sycon} and MedPRESS~\citep{joy2026medpress} do span several turns, but in each one a user pushes back and the measure is whether the model gives in. In the benchmarks we reviewed (Section~\ref{sec:related}), none asks what happens when nobody pushes: whether a model's own admission changes its own advice. Answering that also needs a ground truth for how strong the evidence really is, which no model or judge should set.
+\paragraph{Why existing benchmarks miss it} We compared 18 related benchmarks and studies (Section~\ref{sec:related}, Table~\ref{tab:relwork}). Honesty benchmarks such as MASK~\citep{ren2025mask} and AA-Omniscience~\citep{jackson2025omniscience} score one reply, so they cannot compare what a model implied earlier with what it defends later. Multi-turn benchmarks such as FlipFlop~\citep{laban2023flipflop}, SYCON-Bench~\citep{hong2025sycon}, SPINE~\citep{tang2026spine} and MedPRESS~\citep{joy2026medpress} do compare a model's earlier and later answers, but in every one of them the change is set off by a user who pushes back. Evidence benchmarks such as MedEvidence~\citep{polzak2025medevidence} check a model's judgement of the evidence once, and never ask whether that judgement reaches a decision. The closest design, Deception by Omission~\citep{florin2026omission}, writes into the model's own earlier turn, but always plants a mistake and asks whether the model later discloses it. None of these asks the question here: with nobody pushing, does what a model defends about the evidence reach what it decides? Answering it also needs a ground truth for how strong the evidence really is, which no model or judge should set.
 
 \paragraph{MotteBench} The benchmark has four parts (Section~\ref{sec:setup}):
 \begin{enumerate}
 \item \textbf{Questions with an official answer key.} 300 everyday ``should I do X?'' questions, each written from one official record whose evidence rating is copied, never set by a model: 191 rated weak, 73 strong that it helps, 36 strong that it does not.
 \item \textbf{A multi-turn protocol.} The model advises, is asked neutrally how strong the evidence is, and gives a bottom line. Comparison versions skip the evidence question, replace it with ``Are you sure?'', or let the model answer freely. The measure is defined across turns: does the decision in the last turn reflect what the model defended in the middle?
-\item \textbf{A planted-turn test.} We replace the model's own middle turn with a statement that the evidence is weak (true) or strong (false), naming the question's real source. Whether the decision moves shows whether it depends on the evidence statement at all.
+\item \textbf{A planted-turn test.} We replace the model's own middle turn with a statement that the evidence is weak (true) or strong (false), naming the question's real source. Whether the decision moves shows whether it depends on the evidence statement at all. Prior work has planted only mistakes in a model's turn~\citep{florin2026omission}; planting both a true and a false statement is what separates ``follows its evidence statement'' from ``ignores it''.
 \item \textbf{Open release.} Questions, keys, scripts, every transcript and label, a viewer, and one command that rebuilds every number and figure in this paper.
 \end{enumerate}
 
@@ -85,6 +86,25 @@ This is a \emph{motte-and-bailey}. The name comes from a castle design: an expos
 \end{enumerate}
 The design, measures and thresholds were pre-registered before data collection. This first pass is smaller than the plan: each model ran on a fixed core of 100 of the 300 questions, with one wording per question, and several conditions were not run (Table~\ref{tab:scope}).
 
+\section{Related work}\label{sec:related}
+\input{relwork_table.tex}
+Table~\ref{tab:relwork} groups prior work into four families. Single-turn honesty and
+knowledge benchmarks score one reply against an answer key; MASK goes further and
+compares a pressured statement with a belief elicited in a separate prompt. Multi-turn
+sycophancy benchmarks compare a model's earlier and later answers, but in every one of
+them the change is set off by a user who pushes back. Evidence and health-advice
+benchmarks score answers against systematic reviews, guidelines or physician rubrics;
+MedEvidence comes closest to our key, since its labels include ``uncertain effect'' and
+it records GRADE certainty, but the model answers once and is never asked to defend or
+act on that judgement. Says-versus-does work compares a stated confidence or conclusion
+with a later action, and Deception by Omission is the one prior row that writes into the
+model's own earlier turn, always with a mistake, to see whether the model later discloses
+it. MotteBench combines what none of these rows does together: it compares what one model
+implies, defends and decides inside one conversation with no pushback, it scores the
+defence against official grades (USPSTF, Cochrane GRADE, What Works Clearinghouse), and it
+plants a true or a false statement about the evidence in the model's own turn to test
+whether the final decision depends on it.
+
 \section{The MotteBench benchmark}\label{sec:setup}
 \paragraph{Questions with known evidence strength} Each question is written from one official record (Table~\ref{tab:items}). The evidence class is copied from that record, never set by a model:
 \begin{itemize}
@@ -94,7 +114,7 @@ The design, measures and thresholds were pre-registered before data collection. 
 \end{itemize}
 A separate script re-derives every class from the raw official data (300 of 300 agree). The main runs use a fixed core set of 100 questions: 64 weak, 24 strong-helps, 12 strong-does-not-help. ``Weak'' means one official body found the evidence insufficient or of low certainty. It does not mean the action is wrong; another guideline may still recommend it.
 
-\begin{table}[t]\centering\small
+\begin{table}[H]\centering\small
 \caption{Questions by source and official evidence class. \emph{Core}: the 100 questions used in the main runs.}
 \label{tab:items}\TabItems
 \end{table}
@@ -228,9 +248,6 @@ On a 30-question subset, run for Haiku and DeepSeek only, adding personal contex
 \finding{Finding 6. We cannot say whether honesty-benchmark scores predict this behaviour.}\label{sec:h4}
 The sprint's Track~1 asks whether models that rank well on honesty benchmarks make better decisions. We pre-registered a rank correlation between MASK~\citep{ren2025mask} or AA-Omniscience~\citep{jackson2025omniscience} scores and our measures. With four frontier models, any rank correlation is too uncertain to mean anything, so we report this hypothesis as not tested.
 
-\section{Related work}\label{sec:related}
-\textbf{Honesty and calibration.} MASK~\citep{ren2025mask} tests whether a model states something it does not believe under pressure; AA-Omniscience~\citep{jackson2025omniscience} penalises confident wrong answers. Both score single exchanges. \textbf{Multi-turn consistency.} FlipFlop~\citep{laban2023flipflop}, Firm or Fickle~\citep{li2025firm}, SYCON-Bench~\citep{hong2025sycon} and MedPRESS~\citep{joy2026medpress} measure how answers change when a user pushes back. In MotteBench the follow-up is neutral, and the question is whether the model's own statement carries into its own decision. \textbf{Evidence and advice.} HealthBench~\citep{arora2025healthbench} grades final replies in physician-written conversations; MedEvidence~\citep{polzak2025medevidence} finds models overconfident about systematic-review conclusions; Yun et al.~\citep{yun2026framing} show that question framing changes the conclusions models draw from the same trial evidence; and Wang~\citep{wang2026doing} finds that agents' actions can differ from their stated reasoning. MotteBench adds an official evidence-strength key, a cross-turn measure of implied versus defended claims, and a planted-turn test of what the decision depends on.
-
 \section{Discussion and limitations}
 \paragraph{What this means for users} A user who reads ``the evidence is weak'' will reasonably assume the advice that follows takes it into account. In our test it mostly does not. For the Claude and GPT models, the advice follows the first answer and the evidence statement does not change it: the model can describe the evidence accurately and still advise as it first did. For DeepSeek and Llama, the advice does depend on the evidence statement, but on any statement, including a false one. No model we tested both changes its advice when the evidence it states changes and checks that statement against what it knows.
 
@@ -287,7 +304,7 @@ For users, the practical point is that asking an assistant how good the evidence
 
 {\footnotesize
 \bibliographystyle{plainnat}
-\bibliography{refs}}
+\bibliography{refs,refs_new}}
 
 \clearpage
 \appendix
