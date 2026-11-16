@@ -37,11 +37,10 @@
 {\LARGE\bfseries MotteBench: Do Language Models Act on\\[3pt] What They Admit About the Evidence?}\\[6pt]
 {\large Measuring the gap between what a model implies and what it will defend}\\[6pt]
 \rule{\linewidth}{.8pt}\\[10pt]
-\begin{tabular}{c@{\hspace{4em}}c}
-\textbf{[Author name]} & \textit{With}\\
-{[Affiliation]} & \textbf{Apart Research}
-\end{tabular}\\[4pt]
-{\small AI $\times$ Epistemics Research Sprint, November 2026}
+{\large\textbf{Himanshu Sangshetti}}\\[2pt]
+Independent researcher\\[1pt]
+\href{mailto:himanshusangshetty@gmail.com}{\texttt{himanshusangshetty@gmail.com}}\\[5pt]
+{\small Submitted to the AI $\times$ Epistemics Research Sprint, November 2026}
 \end{center}
 \vspace{2pt}
 \begin{center}\textbf{\large Abstract}\end{center}
@@ -186,8 +185,8 @@ Claim & Based on & Support\\\midrule
 Claude and GPT decisions ignore a planted evidence statement; DeepSeek and Llama follow it, even when false & 64 questions per model per version; rule-read decisions; direct test of cause & Strong (Sonnet borderline)\\
 After admitting weak evidence, models usually return to their first advice & \fundoAll{} of \funadAll{} conversations from \funqAll{} questions; CI \funciAll & Solid\\
 The admission does not change how often they return & \funpctAll\% vs.\ \funnapctAll\%; difference CI \fundiffciAll{} points & Suggestive; backed by the planted turn\\
-Asking about the evidence barely changes the advice & 64 questions per model; rule-read & Fairly strong\\
-Models' evidence statements partly match official ratings & 100 questions per model; AI judges & Moderate\\
+Asking about the evidence barely changes the frontier models' advice & 64 questions per model; rule-read & Fairly strong\\
+Claude and GPT mostly call weak evidence weak; DeepSeek does so less than half the time & 100 questions per model; AI judges & Moderate\\
 Rewording the question moves the advice & 30 questions, 2 models & Weak\\
 Differences between individual models in the pattern & 7 to 12 conversations per model & Not supported\\
 Link to honesty-benchmark scores (Track~1) & 4 frontier models & Not testable\\\bottomrule
