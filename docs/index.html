@@ -91,6 +91,13 @@ p{font-size:17px}.lead{font-size:20px;line-height:1.55;color:var(--text);max-wid
 .big{font-family:var(--serif);font-size:30px;line-height:1.25;color:var(--ink);max-width:820px;margin:28px 0}
 .big em{font-style:italic;color:var(--acc)}
 @media(max-width:760px){h1{font-size:44px}h2{font-size:30px}.stats b{font-size:36px}}
+
+.castle{margin:26px 0 18px}.castle svg{width:100%;height:auto;display:block}
+.cg{stroke:var(--line);stroke-width:2}.cm{fill:#efe6d8;stroke:var(--ink);stroke-width:2}.ct{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.cb{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:6 6}.ch path{fill:var(--surface);stroke:var(--mut);stroke-width:2}
+.cl{font-size:15px;fill:var(--mut)}.cd{fill:var(--acc)}
+.quote{font-family:var(--serif);font-size:24px;line-height:1.25;color:var(--ink)}
+.mb3{margin:22px 0}
 </style>
 </head>
 <body>
@@ -116,6 +123,28 @@ const home=()=>`
 <h1>Language models admit the evidence is weak, <em>then advise anyway.</em></h1>
 <p class="lead">MotteBench measures the gap between what a language model implies and what it will defend. A model gives advice, is asked how strong the evidence is, and then gives a bottom line. Does what it admits in the middle change what it decides?</p>
 <div class="links"><a href="#/results">Results</a><a href="#/questions">The 300 questions</a><a href="#/conversations">Every conversation</a><a href="MotteBench.pdf">Paper</a></div>
+<h2 style="margin-top:72px">First, what is a motte-and-bailey?</h2>
+<p class="lead">The name comes from an old kind of castle. Next to a small, steep hill with a tower on top (the <b>motte</b>) lay a large, open yard where people actually lived and worked (the <b>bailey</b>). The bailey was valuable but hard to defend. When attackers came, everyone retreated up to the motte. When they left, everyone went back down to the bailey.</p>
+<div class="castle"><svg viewBox="0 0 900 300" role="img" aria-label="A castle: a small hill with a tower on the left, a large open yard on the right. A dot moves from the yard up to the tower and back.">
+ <line x1="20" y1="250" x2="880" y2="250" class="cg"/>
+ <path d="M60 250 Q120 120 200 110 Q280 120 340 250" class="cm"/>
+ <rect x="178" y="60" width="44" height="52" class="ct"/><path d="M178 60 v-10 h9 v10 h9 v-10 h8 v10 h9 v-10 h9 v10" class="ct"/>
+ <path d="M380 250 V200 H860 V250" class="cb"/>
+ <g class="ch"><path d="M440 250 v-28 l16 -14 l16 14 v28"/><path d="M520 250 v-22 l14 -12 l14 12 v22"/><path d="M610 250 v-30 l18 -15 l18 15 v30"/><path d="M710 250 v-24 l15 -13 l15 13 v24"/><path d="M790 250 v-26 l16 -13 l16 13 v26"/></g>
+ <text x="200" y="285" text-anchor="middle" class="cl">the motte: easy to defend, not much there</text>
+ <text x="620" y="285" text-anchor="middle" class="cl">the bailey: valuable, hard to defend</text>
+ <path id="mbpath" d="M620 236 C 520 236, 420 236, 330 200 C 280 170, 230 120, 200 104 C 230 120, 280 170, 330 200 C 420 236, 520 236, 620 236" fill="none"/>
+ <circle r="9" class="cd"><animateMotion dur="6s" repeatCount="indefinite" keyPoints="0;0.5;0.5;1;1" keyTimes="0;0.35;0.5;0.85;1" calcMode="linear"><mpath href="#mbpath"/></animateMotion></circle>
+</svg></div>
+<p>In an argument it works the same way. Someone makes a bold claim, which is the bailey. When challenged, they fall back to a modest claim that is hard to argue with, the motte. Once the challenge passes, they act as if the bold claim had been defended all along.</p>
+<div class="cols mb3">
+<div><h3>1. The bold claim</h3><p class="quote">"Homework is useless. Schools should scrap it."</p></div>
+<div><h3>2. The retreat, when challenged</h3><p class="quote">"Well, I only mean that too much homework doesn't help young children."</p></div>
+<div><h3>3. The return, once the challenge passes</h3><p class="quote">"So, as I said, schools should scrap homework."</p></div>
+</div>
+<p>Nobody is lying outright. The modest claim is true. The trick is that it is used to protect the bold one, which was never actually defended.</p>
+<p class="big">Our question: do AI assistants do this when they give advice, <em>even when nobody challenges them?</em></p>
+
 <h2 style="margin-top:56px">Watch it happen in 73 real conversations</h2>
 <p>Every line is one conversation on a weak-evidence question where the model's first answer recommended the action. It then moves to what the model said about the evidence, and ends at its final answer. Hover a line to see the question; click it to read the conversation.</p>
 <div class="mf" id="v-mf"><button data-m="" class="on">All four models</button><button data-m="Claude Sonnet 5.5">Claude Sonnet 5.5</button><button data-m="Claude Haiku 5.5">Claude Haiku 5.5</button><button data-m="GPT-6.1-Sol">GPT-6.1-Sol</button><button data-m="DeepSeek V4 Pro">DeepSeek V4 Pro</button></div><div class="viz" id="v-lines"></div><p id="v-count" class="vc"></p>
