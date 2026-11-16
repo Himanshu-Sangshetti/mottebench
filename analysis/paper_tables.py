@@ -171,7 +171,7 @@ for m in FRONT:
 runA = [r for m in FRONT for r in RW[m] if r["cond"] == "A" and r["key_class"] == "WEAK"]
 mac("funrunAll", len(runA)); mac("funnpAll", sum(not r.get("pilot_item") for r in runA))
 fa = FUN[("all", "A")]; mac("funnapctAll", f"{100 * fa['nado'] / fa['na']:.0f}"); mac("funntpctAll", f"{100 * fa['ntdo'] / fa['nt']:.0f}")
-mac("funfullpctAll", f"{100 * fa['do'] / fa['n']:.0f}"); mac("funtonepctAll", f"{100 * fa['t1'] / fa['n']:.0f}")
+mac("funfullpctAll", f"{100 * fa['do'] / fa['n']:.0f}"); mac("funadoftAll", f"{100 * fa['ad'] / fa['t1']:.0f}"); mac("funpilotAll", len(runA) - sum(not r.get("pilot_item") for r in runA)); mac("fununkAll", sum(not r.get("pilot_item") for r in runA) - fa["n"]); mac("funtonepctAll", f"{100 * fa['t1'] / fa['n']:.0f}")
 allA = [r for m in FRONT for r in funnel_rows(m, "A")]
 pt, lo, hi = ratio_boot(allA, lambda r: r["T1_rec"] == "DO" and not (num(r.get("T2_evid")) is not None and num(r["T2_evid"]) <= 2) and r["dec"] == "DO",
                         lambda r: r["T1_rec"] == "DO" and not (num(r.get("T2_evid")) is not None and num(r["T2_evid"]) <= 2)); mac("funnaciAll", f"[{lo:.0f}, {hi:.0f}]")
