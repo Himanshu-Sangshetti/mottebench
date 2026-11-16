@@ -221,6 +221,13 @@ v = [ex[m]["says_weak_on_strong"]["est"] for m in FRONT]; mac("saywSLo", f"{min(
 for m in ORDER:
     w = jf[m].get("wording"); ra = jf[m].get("repeat_agreement")
     if w: mac(f"wo{MAC[m]}", f"{w['A_orig']:.0f}"); mac(f"wq{MAC[m]}", f"{w['A_Q2']:.0f}"); mac(f"wd{MAC[m]}", f"{w['A_Q2'] - w['A_orig']:+.0f}"); mac(f"rep{MAC[m]}", f"{ra['all_same']}/{ra['items']}")
+kw = lambda m, c: 100 * cor[m][c]["keyword"] / cor[m][c]["n"]
+v = [kw(m, "EK_STRONG") for m in FRONT[:3]]; mac("kwsLo", f"{min(v):.0f}"); mac("kwsHi", f"{max(v):.0f}")
+v = [kw(m, "EK_WEAK") for m in FRONT[:3]]; mac("kwwLo", f"{min(v):.0f}"); mac("kwwHi", f"{max(v):.0f}")
+v = [kw(m, c) for m in ORDER[3:] for c in ("EK_WEAK", "EK_STRONG")]; mac("kwoLo", f"{min(v):.0f}"); mac("kwoHi", f"{max(v):.0f}")
+mac("complMin", f"{min(jf[m]['label_compliance'] for m in ORDER):.1f}")
+mac("convPerModel", len([r for r in RW[FRONT[0]] if r.get("question_variant", 0) == 0]))
+mac("pilotn", len({r["item_id"] for r in RW[FRONT[0]] if r["key_class"] == "WEAK" and r.get("pilot_item")}))
 mac("labelled", len(lab)); mac("missingnum", len([l for l in open(f"{ROOT}/grading/needs_tiebreak.txt").read().split() if l]))
 mac("calibn", len([l for l in open(f"{ROOT}/grading/calibration_set.txt").read().splitlines() if l.strip()]))
 mac("missingpct", f"{100 * len([l for l in open(f'{ROOT}/grading/needs_tiebreak.txt').read().split() if l]) / len(lab):.1f}")
