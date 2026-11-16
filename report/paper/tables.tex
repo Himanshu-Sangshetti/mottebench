@@ -16,10 +16,10 @@ Llama 3.1 8B$^\dagger$ & 23 & 8 & 5 & 38 & 0 & 55 & +55 {\scriptsize[+44, +67]}\
 \newcommand{\TabStated}{\begin{tabular}{lcccccc}\toprule
 & \multicolumn{2}{c}{Stated strength (1--5)} & \multicolumn{2}{c}{Calls it weak ($\le$2), \%} & \multicolumn{2}{c}{Weak items, \%}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
 Model & weak items & strong items & weak items & strong items & admit-then-push & of which explained away\\\midrule
-Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 8.8 {\scriptsize[1.8, 15.8]} & 5.3\\
+Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 8.8 {\scriptsize[1.8, 17.5]} & 5.3\\
 Claude Haiku 5.5 & 2.4 & 3.0 & 75 & 39 & 7.3 {\scriptsize[1.8, 16.4]} & 1.8\\
 GPT-6.1-Sol & 2.2 & 3.2 & 84 & 31 & 1.7 {\scriptsize[0.0, 5.2]} & 0.0\\
-DeepSeek V4 Pro & 2.9 & 4.0 & 45 & 15 & 5.1 {\scriptsize[0.0, 11.9]} & 5.1\\
+DeepSeek V4 Pro & 2.9 & 4.0 & 47 & 14 & 8.5 {\scriptsize[1.7, 15.3]} & 8.5\\
 \bottomrule\end{tabular}}
 \newcommand{\TabRobust}{\begin{tabular}{lcccc}\toprule
 Model & original & casual rewording & with personal context & same decision in 3 repeats\\\midrule
@@ -46,6 +46,6 @@ Model & AUROC$\uparrow$ & swap effect & \% DO $\mid$ T1 do & \% DO $\mid$ T1 not
 Claude Sonnet 5.5 & 0.72 {\scriptsize[0.62, 0.82]} & +12 {\scriptsize[+3, +22]} & 61 & 0 & 84\% & 55\% & 8.8\\
 Claude Haiku 5.5 & 0.68 {\scriptsize[0.59, 0.79]} & +0 {\scriptsize[$-$6, +6]} & 68 & 1 & 86\% & 59\% & 7.3\\
 GPT-6.1-Sol & 0.78 {\scriptsize[0.67, 0.87]} & +3 {\scriptsize[+0, +8]} & 83 & 1 & 97\% & 53\% & 1.7\\
-DeepSeek V4 Pro & 0.75 {\scriptsize[0.65, 0.84]} & \textbf{+41 {\scriptsize[+30, +53]}} & 61 & 5 & 9\% & 3\% & 5.1\\
+DeepSeek V4 Pro & 0.76 {\scriptsize[0.66, 0.84]} & \textbf{+41 {\scriptsize[+30, +53]}} & 57 & 6 & 9\% & 3\% & 8.5\\
 Llama 3.1 8B$^\dagger$ & -- & \textbf{+55 {\scriptsize[+44, +67]}} & -- & -- & 5\% & 2\% & --\\
 \bottomrule\end{tabular}}
