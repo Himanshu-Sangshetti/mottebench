@@ -3,6 +3,7 @@ usage: python3 analysis/judgefree.py  -> analysis/judgefree.json, analysis/JUDGE
 Cluster bootstrap over items (2000 resamples, seed 0). Only rep 0 and original wording, except the robustness section."""
 import json, glob, os, re, random, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = f"{ROOT}/analysis"; os.makedirs(f"{OUT}/fig", exist_ok=True)
+CORE = {x["item_id"] for x in map(json.loads, open(f"{ROOT}/data/items.jsonl")) if x["split"] == "core"}  # the paper reports the core item set only
 NAME = {"sonnet": "Claude Sonnet 5.5", "anthropic/claude-haiku-5.5": "Claude Haiku 5.5", "openai/gpt-6.1-sol": "GPT-6.1-Sol",
         "deepseek/deepseek-v4-pro": "DeepSeek V4 Pro", "opus": "Claude Opus 5.5", "llama3.1:8b": "Llama 3.1 8B (local)", "qwen3:8b": "Qwen3 8B (local)"}
 def dec(t):
@@ -19,7 +20,7 @@ def pct(rs, d="DO"): return 100 * sum(dec(r["replies"][-1]) == d for r in rs) / 
 res = {}
 for f in sorted(glob.glob(f"{ROOT}/results/main__*.jsonl")):
     if f.endswith((".fails.jsonl", ".manifest.jsonl")): continue
-    R = [json.loads(l) for l in open(f) if l.strip()]
+    R = [r for r in (json.loads(l) for l in open(f) if l.strip()) if r["item_id"] in CORE]
     if not R: continue
     m = R[0]["model"]; base = [r for r in R if r.get("rep", 0) == 0]
     g = lambda c, k=None: [r for r in base if r["cond"] == c and (k is None or (r["key_class"] == "WEAK") == (k == "WEAK") if k in ("WEAK", "STRONG") else r["key_class"] == k)]

@@ -8,6 +8,7 @@ Per model, condition A (neutral evidence question), rep 0, original wording:
 Cluster bootstrap over items (2000 resamples, seed 0)."""
 import json, glob, os, random, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = f"{ROOT}/analysis"
+CORE = {x["item_id"] for x in map(json.loads, open(f"{ROOT}/data/items.jsonl")) if x["split"] == "core"}  # the paper reports the core item set only
 NAME = {"sonnet": "Claude Sonnet 5.5", "anthropic/claude-haiku-5.5": "Claude Haiku 5.5", "openai/gpt-6.1-sol": "GPT-6.1-Sol", "deepseek/deepseek-v4-pro": "DeepSeek V4 Pro"}
 lab = {json.loads(l)["conv_id"]: json.loads(l) for l in open(f"{ROOT}/grading/final_labels.jsonl")}
 num = lambda v: float(v) if isinstance(v, (int, float)) or (isinstance(v, str) and v.replace(".", "", 1).isdigit()) else None
@@ -24,7 +25,7 @@ def mean_ev(rs):
 res = {}
 for f in sorted(glob.glob(f"{ROOT}/results/main__*.jsonl")):
     if f.endswith((".fails.jsonl", ".manifest.jsonl")) or "local" in f: continue
-    R = [dict(r, **{k: v for k, v in lab[r["conv_id"]].items() if k != "conv_id"}) for r in map(json.loads, open(f)) if r["conv_id"] in lab]
+    R = [dict(r, **{k: v for k, v in lab[r["conv_id"]].items() if k != "conv_id"}) for r in map(json.loads, open(f)) if r["conv_id"] in lab and r["item_id"] in CORE]
     if not R: continue
     m = R[0]["model"]; A = [r for r in R if r["cond"] == "A" and r.get("rep", 0) == 0 and num(r.get("T2_evid")) is not None]
     W = [r for r in A if r["key_class"] == "WEAK"]; S = [r for r in A if r["key_class"] != "WEAK"]

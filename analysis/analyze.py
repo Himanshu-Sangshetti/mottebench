@@ -4,6 +4,7 @@ Writes analysis/results.json, analysis/RESULTS.md and figures in analysis/fig/.
 All CIs: cluster bootstrap over items (2000 resamples, seed 0)."""
 import json, glob, os, random, collections, statistics
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = f"{ROOT}/analysis"; os.makedirs(f"{OUT}/fig", exist_ok=True)
+CORE = {x["item_id"] for x in map(json.loads, open(f"{ROOT}/data/items.jsonl")) if x["split"] == "core"}  # the paper reports the core item set only
 random.seed(0); B = 2000
 items = {json.loads(l)["item_id"]: json.loads(l) for l in open(f"{ROOT}/data/items.jsonl")}
 lab = {json.loads(l)["conv_id"]: json.loads(l) for l in open(f"{ROOT}/grading/final_labels.jsonl")} if os.path.exists(f"{ROOT}/grading/final_labels.jsonl") else {}
@@ -12,6 +13,7 @@ for f in glob.glob(f"{ROOT}/results/main__*.jsonl"):
     if f.endswith((".fails.jsonl", ".manifest.jsonl")): continue
     for l in open(f):
         r = json.loads(l); L = lab.get(r["conv_id"])
+        if r["item_id"] not in CORE: continue
         if L: rows.append(dict(r, **{k: v for k, v in L.items() if k != "conv_id"}))
 known = lambda r: str(r.get("T1_knows")).lower() != "no"
 num = lambda v: float(v) if isinstance(v, (int, float)) or (isinstance(v, str) and v.replace(".", "", 1).isdigit()) else None

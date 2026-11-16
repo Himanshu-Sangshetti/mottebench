@@ -5,8 +5,8 @@ Cochrane (GRADE certainty) & 63 & 9 & 2 & 74 & 25\\
 What Works Clearinghouse & 75 & 12 & 12 & 99 & 33\\
 \midrule All & 191 & 73 & 36 & 300 & 100\\\bottomrule\end{tabular}}
 \newcommand{\TabDecisions}{\begin{tabular}{lccccccc}\toprule
-& \multicolumn{3}{c}{Weak items, \% DO IT} & Strong, helps & \multicolumn{3}{c}{Causal swap (weak items)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-5}\cmidrule(lr){6-8}
-Model & B & A & C & B & told weak & told strong & effect (pts) \\\midrule
+& \multicolumn{3}{c}{Weak items, \% DO IT} & Strong, helps & \multicolumn{3}{c}{Planted turn 2 (weak items)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-5}\cmidrule(lr){6-8}
+Model & no question & evidence question & ``Are you sure?'' & no question & told weak & told strong & change (pts) \\\midrule
 Claude Sonnet 5.5 & 30 & 19 & 16 & 71 & 11 & 23 & +12 {\scriptsize[+3, +22]}\\
 Claude Haiku 5.5 & 31 & 22 & 17 & 71 & 22 & 22 & +0 {\scriptsize[$-$6, +6]}\\
 GPT-6.1-Sol & 23 & 25 & 22 & 75 & 17 & 20 & +3 {\scriptsize[+0, +8]}\\
@@ -14,8 +14,8 @@ DeepSeek V4 Pro & 28 & 34 & 22 & 62 & 0 & 41 & +41 {\scriptsize[+30, +53]}\\
 Llama 3.1 8B$^\dagger$ & 23 & 8 & 5 & 38 & 0 & 55 & +55 {\scriptsize[+44, +67]}\\
 \bottomrule\end{tabular}}
 \newcommand{\TabStated}{\begin{tabular}{lcccccc}\toprule
-& \multicolumn{2}{c}{Stated strength (1--5)} & \multicolumn{2}{c}{Calls it weak ($\le$2), \%} & \multicolumn{2}{c}{Weak items, \%}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
-Model & weak items & strong items & weak items & strong items & admit-then-push & of which explained away\\\midrule
+& \multicolumn{2}{c}{Stated strength (1--5)} & \multicolumn{2}{c}{Calls it weak ($\le$2), \%} & \multicolumn{2}{c}{Weak items: DO IT after calling evidence weak, \%}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Model & weak items & strong items & weak items & strong items & doubt dropped or explained away & of which explained away\\\midrule
 Claude Sonnet 5.5 & 2.3 & 3.1 & 78 & 39 & 8.8 {\scriptsize[1.8, 17.5]} & 5.3\\
 Claude Haiku 5.5 & 2.4 & 3.0 & 75 & 39 & 7.3 {\scriptsize[1.8, 16.4]} & 1.8\\
 GPT-6.1-Sol & 2.2 & 3.2 & 84 & 31 & 1.7 {\scriptsize[0.0, 5.2]} & 0.0\\
@@ -27,7 +27,7 @@ Claude Haiku 5.5 & 27\% & 30\% & 47\% & 23/30\\
 DeepSeek V4 Pro & 43\% & 47\% & 57\% & 22/30\\
 \bottomrule\end{tabular}}
 \newcommand{\TabCorrection}{\begin{tabular}{llrccccc}\toprule
-Model & Planted & $n$ & accepts & says stronger & says weaker & retracts source & no mention\\\midrule
+Model & Planted & $n$ & accepts & says stronger & says weaker & doubts source & no mention\\\midrule
 Claude Sonnet 5.5 & weak & 64 & 27 & 17 & 0 & 38 & 19\\
  & strong & 64 & 0 & 0 & 84 & 16 & 0\\
 Claude Haiku 5.5 & weak & 64 & 27 & 20 & 0 & 39 & 14\\
@@ -48,4 +48,15 @@ Claude Haiku 5.5 & 0.68 {\scriptsize[0.59, 0.79]} & +0 {\scriptsize[$-$6, +6]} &
 GPT-6.1-Sol & 0.78 {\scriptsize[0.67, 0.87]} & +3 {\scriptsize[+0, +8]} & 83 & 1 & 97\% & 53\% & 1.7\\
 DeepSeek V4 Pro & 0.76 {\scriptsize[0.66, 0.84]} & \textbf{+41 {\scriptsize[+30, +53]}} & 57 & 6 & 9\% & 3\% & 8.5\\
 Llama 3.1 8B$^\dagger$ & -- & \textbf{+55 {\scriptsize[+44, +67]}} & -- & -- & 5\% & 2\% & --\\
+\bottomrule\end{tabular}}
+\renewcommand{\TabSummary}{\begin{tabular}{l@{\hspace{6pt}}c@{\hspace{6pt}}c@{\hspace{8pt}}ccc@{\hspace{8pt}}ccc}\toprule
+& \multicolumn{2}{c}{(1) Admit, then advise anyway} & \multicolumn{3}{c}{(2) Final DO IT, weak items (\%)} & \multicolumn{3}{c}{(3) Planted turn 2: final DO IT (\%)}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+Model & bold, then admits & of these, DO IT & no question & asked & change [CI] & told weak & told strong & change [CI]\\\midrule
+Claude Sonnet 5.5 & 12/57 & 9/12 & 30 & 19 & $-$11 {\scriptsize[$-$20, $-$3]} & 11 & 23 & +12 {\scriptsize[+3, +22]}\\
+Claude Haiku 5.5 & 9/55 & 7/9 & 31 & 22 & $-$9 {\scriptsize[$-$19, +0]} & 22 & 22 & +0 {\scriptsize[$-$6, +6]}\\
+GPT-6.1-Sol & 12/58 & 10/12 & 23 & 25 & +2 {\scriptsize[$-$3, +8]} & 17 & 20 & +3 {\scriptsize[+0, +8]}\\
+DeepSeek V4 Pro & 7/59 & 4/7 & 28 & 34 & +6 {\scriptsize[$-$2, +14]} & 0 & 41 & +41 {\scriptsize[+30, +53]}\\
+Llama 3.1 8B$^\dagger$ & -- & -- & 23 & 8 & $-$16 {\scriptsize[$-$25, $-$6]} & 0 & 55 & +55 {\scriptsize[+44, +67]}\\
+\midrule Four frontier models & 40/229 & 30/40 &&&&&&\\
 \bottomrule\end{tabular}}
